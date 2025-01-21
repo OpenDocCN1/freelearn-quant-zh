@@ -1,11 +1,15 @@
 - en: '2'
+  id: totrans-0
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: '2'
 - en: Quantum Machine Learning Algorithms and Their Ecosystem
+  id: totrans-1
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 量子机器学习算法及其生态系统
 - en: In recent decades, many quantum computing scientists have leaned towards researching
     and generating quantum algorithms and their practical realization (*Cerezo et
     al., 2021; Montanaro, 2016*). As discussed in the previous chapter, quantum computers
@@ -18,8 +22,10 @@
     the level of maturity attained by their classical counterparts, where millions
     of transistors can be placed in a limited space without compromising their accuracy
     or functioning.
+  id: totrans-2
   prefs: []
   type: TYPE_NORMAL
+  zh: 在最近几十年，许多量子计算科学家倾向于研究和生成量子算法及其实际实现（*Cerezo等，2021；Montanaro，2016*）。正如前一章所讨论的，量子计算机与经典计算机的主要区别在于它们采用的计算形式。量子计算机能够解决经典系统无法处理的问题（*Arute等，2019*）。在量子计算机中，**量子比特**代替经典比特，成为信息的基本单元。量子算法的实现主要依赖于这些量子比特与经典比特相比的物理特性。然而，量子计算机的物理实现尚未达到经典计算机所取得的成熟水平，后者可以在有限的空间内放置数百万个晶体管，而不影响其精度或功能。
 - en: Noise and error control are crucial for quantum information processing, and
     effective strategies to deal with noise are an active area of research (as reviewed
     by *Fedorov et al., 2022*). In this regard, **quantum error correction** (**QEC**)
@@ -34,16 +40,20 @@
     qubits while ensuring they remain usable via efficient implementation and measurement
     operations. More detail on how we can work in this error-filled environment will
     be covered in [*Chapter 9*](B19146_09.xhtml#_idTextAnchor165).
+  id: totrans-3
   prefs: []
   type: TYPE_NORMAL
+  zh: 噪声和错误控制对于量子信息处理至关重要，应对噪声的有效策略是当前活跃的研究领域（正如*Fedorov等，2022*所回顾的）。在这方面，**量子纠错**（**QEC**）协议已经被提出，用以抑制噪声的影响（*Campagne-Ibarcq等，2020*）。不幸的是，即使在量子纠错取得进展的情况下，我们仍未开发出容错的机器；从物理量子比特到逻辑量子比特（没有错误）所需的量子比特数目过于庞大。目前基于量子门的设备大约具有100个物理量子比特，通常被称为**噪声中间规模量子**（**NISQ**）设备，因为它们的操作并不完美（*Bharti等，2021*）。在这种情况下，实现容错量子计算的一种可能性是增加量子比特的数量，同时通过高效的实现和测量操作确保它们保持可用。关于如何在这种充满错误的环境中工作，我们将在[*第9章*](B19146_09.xhtml#_idTextAnchor165)中详细讨论。
 - en: 'Classical computers have not yet been dethroned, in any case. Classical computers
     have been used for many tasks, and realizing quantum computation and interfacing
     with quantum devices is essential, particularly when data is involved. Most of
     the data we use daily comes in bytes, so it is necessary to use classical resources
     for storing, preprocessing, and postprocessing, as well as describing the algorithm
     implementations that will run on our specialized hardware: the quantum computer.'
+  id: totrans-4
   prefs: []
   type: TYPE_NORMAL
+  zh: 经典计算机在任何情况下仍未被取代。经典计算机已被用于许多任务，实现量子计算并与量子设备进行接口尤为重要，尤其是在涉及数据时。我们日常使用的大多数数据都是以字节为单位的，因此必须使用经典资源进行存储、预处理和后处理，并描述将在我们专用硬件——量子计算机上运行的算法实现。
 - en: These quantum and classical algorithms can be applied in many regimes to solve
     problems related to our daily activity. In particular, one area that has attracted
     a lot of attention is **Quantum Machine Learning** (**QML**), where **Variational
@@ -57,8 +67,10 @@
     variations, modified versions, and different implementations related to specific
     **Software Development Kits** (**SDKs**), code languages, platforms, and hardware
     (*Cerezo et* *al., 2021*).
+  id: totrans-5
   prefs: []
   type: TYPE_NORMAL
+  zh: 这些量子和经典算法可以应用于许多领域，以解决与我们日常活动相关的问题。特别是，一个备受关注的领域是**量子机器学习**（**QML**），其中**变分量子算法**（**VQA**）代表了一类使用经典计算来寻找**参数化量子电路**（**PQC**）或假设（在文献中称为ansatz）参数的算法。将在本章中解释的VQA家族的具体实现包括**变分量子本征求解器**（**VQE**）、**变分量子求解器**（**VQS**）、**变分量子分类器**（**VQC**）和**量子近似优化算法**（**QAOA**）。这些是最著名的算法，但我们也将研究一些变体、修改版本以及与特定**软件开发工具包**（**SDK**）、代码语言、平台和硬件相关的不同实现（*Cerezo等人，2021*）。
 - en: One of the first tasks we must tackle when dealing with those algorithms is
     encoding our classical data into the quantum regime. Quantum algorithms work using
     quantum states; we will need to encode our data in those states to be able to
@@ -73,8 +85,10 @@
     This recognition feature is specific to data that requires more than two or three
     dimensions to be properly represented for classification (nonlinear embeddings)
     and is often difficult to interpret.
+  id: totrans-6
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们在处理这些算法时必须解决的首要任务之一是将经典数据编码到量子领域。量子算法通过量子态进行工作；我们需要将数据编码到这些量子态中，才能利用量子算法的优势。最早使用经典与量子领域之间映射的实现之一是核方法，它展示了在处理监督式机器学习挑战时量子编码的优势（*Mengoni等人，2019*）。这些算法采用传统的机器学习模型，例如**支持向量机**（**SVM**），但通过将经典数据编码到量子态中，受益于更好的数据可分性。它们的优势来源于量子计算机能够识别数据集中固有的标签模式，而这些模式对于经典计算机而言看起来像是随机噪声。这种识别特性对于需要更多于两三个维度才能正确表示以便分类（非线性嵌入）的数据尤其重要，且通常难以解释。
 - en: This chapter offers a survey of the NISQ-era algorithms, focusing on the efforts
     to draw the highest computational potential from existing devices and develop
     techniques to meet the sector’s long-term goals, including fault-tolerant quantum
@@ -82,8 +96,10 @@
     computing, hybrid quantum-classical and quantum-inspired algorithms represent
     one of the best current approaches to challenges including QML, optimization,
     and simulations (*Gilyén et* *al., 2022*).
+  id: totrans-7
   prefs: []
   type: TYPE_NORMAL
+  zh: 本章概述了NISQ时代的算法，重点介绍了如何从现有设备中发挥最大计算潜力，并开发技术以实现该领域的长期目标，包括容错量子计算。在从当前量子计算状态中获取优势的过程中，混合量子-经典算法和量子启发式算法代表了应对诸如QML、优化和模拟等挑战的最佳当前方法之一（*Gilyén等人，2022*）。
 - en: There are dozens of **quantum computing** (**QC**) algorithms throughout the
     literature, and more are under investigation. This chapter will exemplify the
     use cases, articles, platforms, and implementation methods in the contemporary
@@ -93,51 +109,73 @@
     be presented in detail and from different angles for a better understanding of
     the libraries, code languages, cloud services, and qubit-realization approaches,
     highlighting the most important players of this ecosystem.
+  id: totrans-8
   prefs: []
   type: TYPE_NORMAL
+  zh: 文献中有数十种**量子计算**（**QC**）算法，并且更多的算法正在研究中。本章将举例说明当代NISQ阶段的应用案例、文章、平台和实现方法。量子计算公司和学术团体已做出努力，力求在当今充分发挥量子计算的优势。为此，他们已经实现了本章和以下页面中分享的大多数算法。这些算法将从不同角度进行详细介绍，以帮助更好地理解库、编程语言、云服务和量子比特实现方法，突显出这一生态系统中最重要的参与者。
 - en: 'To summarize, this chapter will cover the following:'
+  id: totrans-9
   prefs: []
   type: TYPE_NORMAL
+  zh: 总结来说，本章将涵盖以下内容：
 - en: Baseline quantum algorithms (Grover, Shor, Deutsch-Jozsa, and others)
+  id: totrans-10
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 基础量子算法（Grover、Shor、Deutsch-Jozsa等）
 - en: The main NISQ QML and optimization algorithms (variational, quantum-kernel-based,
     and QUBO-based)
+  id: totrans-11
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 主要的NISQ QML和优化算法（变分算法、量子核算法和QUBO基础算法）
 - en: Technological ecosystems that use the aforementioned algorithms (code languages,
     libraries or SDKs, hardware, clouds, and tools)
+  id: totrans-12
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 使用上述算法（编程语言、库或SDK、硬件、云服务和工具）的技术生态系统
 - en: Technical challenges (using real-world data, analyzing business applications,
     and current advantages)
+  id: totrans-13
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 技术挑战（使用现实世界的数据，分析商业应用以及当前的优势）
 - en: Technical requirements
+  id: totrans-14
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 技术要求
 - en: 'To be able to follow this chapter, you will require the following technical
     skills:'
+  id: totrans-15
   prefs: []
   type: TYPE_NORMAL
+  zh: 要跟随本章的内容，您需要具备以下技术技能：
 - en: A basic level of Python
+  id: totrans-16
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 基础Python知识
 - en: Familiarity with Visual Studio Code or any **Integrated Development Environment**
     (**IDE**) that supports Jupyter Notebooks
+  id: totrans-17
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 熟悉 Visual Studio Code 或任何支持 Jupyter Notebooks 的**集成开发环境**（**IDE**）
 - en: Foundational quantum algorithms
+  id: totrans-18
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 基础量子算法
 - en: A review of foundational quantum algorithms is necessary to understand the state-of-the-art
     progress in QC and its potential to overcome problems intractable for classical
     computation. Starting from the basic concepts, an algorithm is a series of computer-executable
@@ -149,16 +187,23 @@
     superposition or entanglement. One of the main attributes of quantum computers
     is quantum parallelism, which allows for many existing quantum algorithms (*Álvarez
     et* *al., 2008*).
+  id: totrans-19
   prefs: []
   type: TYPE_NORMAL
+  zh: 复习基础量子算法是理解量子计算最前沿进展及其解决经典计算无法处理问题潜力的必要步骤。从基本概念出发，算法是一系列可由计算机执行的步骤，用于进行计算或解决问题（*Montanaro,
+    2016*）。因此，当一个算法能够在量子计算机上成功运行时，它被认为是量子算法。一般而言，所有经典算法理论上都可以在这样的系统上运行。然而，从严格意义上讲，量子算法是指那些至少有一步涉及量子力学特性的算法，例如叠加或纠缠。量子计算机的主要特性之一是量子并行性，它使得许多现有的量子算法成为可能（*Álvarez
+    et al., 2008*）。
 - en: A quantum circuit often characterizes a quantum algorithm. A quantum circuit
     is a structure where the problem-solving stages are performed on ≥1 qubits that
     modify their quantum status; this procedure is known as a quantum gate (*Chow
     et al., 2012; Mitarai et al., 2018*). Quantum gates are divided into single, two-qubit,
     or three-qubit gates based on how many qubits they simultaneously operate on.
     All quantum circuits terminate with a measurement of one or more qubits.
+  id: totrans-20
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子电路通常用来描述量子算法。量子电路是一种结构，其中问题解决阶段在≥1个量子比特上进行，这些量子比特会修改它们的量子状态；这个过程被称为量子门操作（*Chow
+    et al., 2012; Mitarai et al., 2018*）。量子门根据其操作的量子比特数量分为单比特门、双比特门或三比特门。所有量子电路的终点都是对一个或多个量子比特进行测量。
 - en: '*Figure 2**.1* shows how to construct a Bell state (an entangled two-qubit
     state) to exemplify this process. The circuit is read from left to right, starting
     with the basic state of all devices composed by |0⟩ state qubits (two in this
@@ -167,32 +212,47 @@
     perspective. One of the most used gates is the following blue gate entangling
     both qubits, the CNOT gate. This acts over the second qubits if the first one
     is active (|1>). Therefore, at this stage, the quantum state looks as follows:'
+  id: totrans-21
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图 2.1* 展示了如何构造一个贝尔态（一个纠缠的二量子比特态），以示范这一过程。电路从左到右读取，首先是所有设备的基本状态，由 |0⟩ 状态的量子比特组成（此处为两个量子比特）。我们看到的第一个门是哈达玛门，它将量子比特置于叠加态（|0⟩+
+    |1⟩），从经典位的角度来看，这代表了所有可能的选项。最常用的门之一是以下蓝色门，它使两个量子比特纠缠，即 CNOT 门。如果第一个量子比特处于活动状态（|1⟩），则该门作用于第二个量子比特。因此，在这个阶段，量子态如下所示：'
 - en: '|Φ +⟩ =  1 _ √ _ 2 (|0⟩ A ⊗ |0⟩ B + |1⟩ A ⊗ |1⟩ B)'
+  id: totrans-22
   prefs: []
   type: TYPE_NORMAL
+  zh: '|Φ +⟩ =  1 _ √ _ 2 (|0⟩ A ⊗ |0⟩ B + |1⟩ A ⊗ |1⟩ B)'
 - en: This is the canonical representation of one of the Bell states. After this,
     we only need to measure our quantum state into a sequence of classically read
     bits.
+  id: totrans-23
   prefs: []
   type: TYPE_NORMAL
+  zh: 这是贝尔态的标准表示。之后，我们只需要将我们的量子态测量为一系列经典可读的位。
 - en: Note
+  id: totrans-24
   prefs: []
   type: TYPE_NORMAL
+  zh: 注
 - en: Bell states are the simplest form of states for quantum entanglement. This means
     the state can’t be separated into the state of each qubit. The entanglement is
     the result of the CNOT gate (blue gate in *Figure 2**.1*).
+  id: totrans-25
   prefs: []
   type: TYPE_NORMAL
+  zh: 贝尔态是量子纠缠的最简单形式。这意味着该状态无法分解为每个量子比特的状态。纠缠是 CNOT 门（*图 2.1* 中的蓝色门）的结果。
 - en: '![Figure 2.1 – Quantum circuit of two qubits under Hadamard and CNOT gates.
     The result is a Bell state entanglement](img/B19146_02_001.jpg)'
+  id: totrans-26
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.1 – 施加哈达玛门和 CNOT 门的二量子比特量子电路。结果是一个贝尔态纠缠](img/B19146_02_001.jpg)'
 - en: Figure 2.1 – Quantum circuit of two qubits under Hadamard and CNOT gates. The
     result is a Bell state entanglement
+  id: totrans-27
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.1 – 施加哈达玛门和 CNOT 门的二量子比特量子电路。结果是一个贝尔态纠缠
 - en: In many instances, quantum algorithms can be more effective under the simultaneous
     usage of classical and quantum computers for the same task. Comparing classical
     and quantum means to solve a task takes the complexity order shown in *Figure
@@ -206,38 +266,57 @@
     class (*Yung, 2019*). The latter is a category of judgment problems that can be
     solved by quantum computers in polynomial time with a maximum error chance of
     ⅓.
+  id: totrans-28
   prefs: []
   type: TYPE_NORMAL
+  zh: 在许多情况下，量子算法在经典计算机和量子计算机同时用于相同任务时，可能更为有效。比较经典与量子计算手段解决任务的方式，其复杂度顺序如*图 2.2*所示。一个问题可能所属的复杂度类别通常通过是否能够在**多项式时间**（**P**）内解决来讨论。如果不能解决，我们就进入了**非确定性多项式时间**（**NP**）类别，意味着对于经典计算来说，这个任务相当具有挑战性。例如，投资组合优化将在[*第
+    5 章*](B19146_05.xhtml#_idTextAnchor100)中讨论，被认为是 NP 完全问题（*Kellerer, 2000*）。量子算法通常属于**有限误差量子多项式时间**（**BQP**）复杂度类（*Yung,
+    2019*）。后者是一类量子计算机能够在多项式时间内解决并且最大错误几率为⅓的判定问题。
 - en: '![Figure 2.2 – Graphical representation of the connection between the problems
     of BQP and classical P, NP, and PH](img/B19146_02_002.jpg)'
+  id: totrans-29
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.2 – BQP 问题与经典 P、NP 和 PH 问题之间关系的图形表示](img/B19146_02_002.jpg)'
 - en: Figure 2.2 – Graphical representation of the connection between the problems
     of BQP and classical P, NP, and PH
+  id: totrans-30
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.2 – BQP 问题与经典 P、NP 和 PH 问题之间关系的图形表示
 - en: Note
+  id: totrans-31
   prefs: []
   type: TYPE_NORMAL
+  zh: 注
 - en: '**Complexity theory** (**CT**) primarily involves the evaluation of quantum
     computation. In CT, an algorithm or a family of problems is typically associated
     with a specific class. *Figure 2**.2* illustrates the connections between several
     classes. **Polynomial Hierarchy** (**PH**) serves as a broader class than NP,
     indicating higher complexity levels.'
+  id: totrans-32
   prefs: []
   type: TYPE_NORMAL
+  zh: '**复杂度理论**（**CT**）主要涉及量子计算的评估。在 CT 中，一个算法或一类问题通常与特定的类别相关联。*图 2.2* 展示了多个类别之间的联系。**多项式层次结构**（**PH**）作为比
+    NP 更广泛的类别，表示更高的复杂度级别。'
 - en: As mentioned earlier, a broad overview of the quantum algorithms that impacted
     the history of this field should be conducted to better understand the current
     trends of QC and the foundations of contemporary algorithms.
+  id: totrans-33
   prefs: []
   type: TYPE_NORMAL
+  zh: 如前所述，应对影响该领域历史的量子算法进行广泛概述，以便更好地理解量子计算的当前趋势和当代算法的基础。
 - en: We will now look at three foundational algorithms.
+  id: totrans-34
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们现在将讨论三个基础算法。
 - en: Deutsch-Jozsa algorithm
+  id: totrans-35
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 德意志-乔萨算法
 - en: This is a quantum algorithm that solves a particular problem in linear time,
     for which a classical algorithm would require exponential time. Consequently,
     it is considered one of the first quantum algorithms to demonstrate a quantum
@@ -249,33 +328,48 @@
     the classical regime will estimate half of the values plus one (*0.5*n+1*, where
     n is the number of inputs) to test the function to find whether it is constant
     or balanced.
+  id: totrans-36
   prefs: []
   type: TYPE_NORMAL
+  zh: 这是一个量子算法，它解决了一个特定问题，并且在时间复杂度上是线性的，而经典算法则需要指数级的时间。因此，它被认为是第一个展示量子加速的量子算法之一（*Z.
+    Li等，2020*）。该算法以David Deutsch和Richard Jozsa的名字命名，他们于1992年提出了这个算法（*Deutsch等，1992*）。它可以用来确定一个布尔函数是平衡的还是常数的。如果该函数是常数函数，德意志算法将输出0，而在平衡情况下，输出将是1。这意味着经典方法中的最坏情况将需要估算一半的值加一（*0.5*n+1*，其中n是输入数量）来测试该函数，以判断它是常数函数还是平衡函数。
 - en: '*Figure 2**.3* shows the actual form it takes when described over quantum registers
     with the following steps:'
+  id: totrans-37
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图 2**.3*显示了它在量子寄存器中描述时的实际形式，包含以下步骤：'
 - en: Apply Hadamard gates so that all combinations of classically readable values
     (0 and 1) are considered.
+  id: totrans-38
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 应用哈达玛门，使所有可以被经典读取的值组合（0和1）都被考虑在内。
 - en: Apply a unitary gate to encode the output for a given function in the last qubit
     that is initialized as |1⟩ (instead of the usual |0⟩ state).
+  id: totrans-39
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 对最后一个初始化为|1⟩（而非通常的|0⟩状态）量子比特应用单一门，以编码给定函数的输出。
 - en: Apply back the Hadamard gate to all qubits and measure the first N qubits used
     as function input.
+  id: totrans-40
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 将哈达玛门应用回所有量子比特，并测量作为函数输入的前N个量子比特。
 - en: '![Figure 2.3 – Deutsch-Jozsa’s schematic circuit](img/B19146_02_003.jpg)'
+  id: totrans-41
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.3 – 德意志-乔萨的示意电路](img/B19146_02_003.jpg)'
 - en: Figure 2.3 – Deutsch-Jozsa’s schematic circuit
+  id: totrans-42
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.3 – 德意志-乔萨的示意电路
 - en: 'It uses what is called an oracle (black box unitary) that performs the action
     of a binary function f(x) : {0,1} n → {0,1} where x represents the inputs to which
     a Hadamard gate is applied in the preceding figure. Thanks to the action over
@@ -285,8 +379,10 @@
     in which the properties are unknown in advance, but that you can call with queries
     in order to determine them. You have inputs and outputs to evaluate the operation
     of the oracle.'
+  id: totrans-43
   prefs: []
   type: TYPE_NORMAL
+  zh: '它使用所谓的“神谕”（黑箱单一门），执行一个二进制函数f(x) : {0,1} n → {0,1}，其中x表示前述图中的哈达玛门所作用的输入。通过对初始化为|1⟩的量子比特的作用以及神谕对输入量子比特的作用，德意志-乔萨算法能够确定一个二进制函数是平衡的还是常数的。神谕（黑箱）是一种属性事先未知的函数，但你可以通过查询来调用它，以确定其性质。你有输入和输出，可以用来评估神谕的操作。'
 - en: This algorithm accelerates the search to determine whether a function possesses
     a particular attribute (being balanced). The algorithm saves time since it requires
     the function (or, more accurately, a function derivative) to be called *only once*,
@@ -294,20 +390,28 @@
     being the input size). When the function is extremely “expensive,” for example,
     in terms of processing resources, it might be advantageous to compute it just
     once.
+  id: totrans-44
   prefs: []
   type: TYPE_NORMAL
+  zh: 该算法加速了搜索过程，以确定一个函数是否具有特定的属性（即是否平衡）。该算法节省了时间，因为它只需要调用一次函数（或者更准确地说，是函数的导数），而经典算法则需要调用*
+    n**_**2**+**1*次（其中n为输入大小）。当函数非常“昂贵”时，例如在处理资源方面，计算它一次可能更具优势。
 - en: Grover’s algorithm
+  id: totrans-45
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 格罗弗算法
 - en: In 1996, Lov Grover developed a quantum technique that locates an item four
     times faster than traditional search methods for unsorted databases. This search
     method for unstructured data is known as Grover’s algorithm (*Grover, 1996*),
     and can alternatively be described as an oracle. As previously defined in the
     Deutsch-Jozsa section, the oracle will be evaluated repeatedly to determine its
     characteristics.
+  id: totrans-46
   prefs: []
   type: TYPE_NORMAL
+  zh: 1996年，Lov Grover开发了一种量子技术，使得在未排序数据库中定位一个项目比传统搜索方法快四倍。这种用于无结构数据的搜索方法被称为Grover算法（*Grover,
+    1996*），也可以被描述为一个oracle。正如在Deutsch-Jozsa部分定义的那样，oracle将被反复评估以确定其特性。
 - en: An example of such a task is searching for a specific card in a shuffled deck
     of *N* cards. Traditionally, this can only be done by sequentially examining each
     card, requiring N steps in the worst-case scenario using classical approaches
@@ -316,104 +420,147 @@
     in the worst case. However, it is important to note that the probability of obtaining
     the correct answer is not guaranteed to be 100 percent due to the influence of
     the algorithm’s phases.
+  id: totrans-47
   prefs: []
   type: TYPE_NORMAL
+  zh: 这样一个任务的示例是从一副洗牌的*N*张卡牌中搜索特定的一张。传统上，这只能通过逐一检查每一张卡牌来完成，在最坏情况下使用经典方法需要N步（N张卡牌需要N次评估）。而Grover算法只需进行√_N次oracle评估，就能完成此任务，从而在最坏情况下达到O(√_N)的时间复杂度。然而，需要注意的是，由于算法的相位影响，得到正确答案的概率并不能保证是100%。
 - en: '*Figure 2**.4* shows the quantum circuit that implements Grover’s algorithm.
     It follows a similar shape to the previous example.'
+  id: totrans-48
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图2.4*展示了实现Grover算法的量子电路。它的形状与之前的示例类似。'
 - en: '![Figure 2.4 – Grover’s algorithm schematic circuit](img/B19146_02_004.jpg)'
+  id: totrans-49
   prefs: []
   type: TYPE_IMG
+  zh: '![图2.4 – Grover算法示意电路](img/B19146_02_004.jpg)'
 - en: Figure 2.4 – Grover’s algorithm schematic circuit
+  id: totrans-50
   prefs: []
   type: TYPE_NORMAL
+  zh: 图2.4 – Grover算法示意电路
 - en: 'For the two-qubit case, the first set of Hadamard gates puts our initial |00⟩
     state, into the superposition of all potential combinations:'
+  id: totrans-51
   prefs: []
   type: TYPE_NORMAL
+  zh: 对于两比特的情况，第一组Hadamard门将我们的初始|00⟩态转换为所有潜在组合的叠加态：
 - en: '|ψ⟩ = 1 _ 2(|00⟩ + |01⟩ + |10⟩ + |11⟩)'
+  id: totrans-52
   prefs: []
   type: TYPE_NORMAL
+  zh: '|ψ⟩ = 1 _ 2(|00⟩ + |01⟩ + |10⟩ + |11⟩)'
 - en: Then we apply the unitary operator *U* of our problem so that the solution gets
     tagged by a phase change by putting a minus sign in front of it.
+  id: totrans-53
   prefs: []
   type: TYPE_NORMAL
+  zh: 然后我们应用问题中的单元算符*U*，使得解的相位发生变化，方法是在其前面加上负号。
 - en: '|ψ⟩ = 1 _ 2(|00⟩ − |01⟩ + |10⟩ + |11⟩)'
+  id: totrans-54
   prefs: []
   type: TYPE_NORMAL
+  zh: '|ψ⟩ = 1 _ 2(|00⟩ − |01⟩ + |10⟩ + |11⟩)'
 - en: 'Thanks to this flagging, the Grover operator can identify our candidate solution
     state such that we would measure |01⟩ at the end of our first iteration. An illustration
     can be seen in *Figure 2**.5*:'
+  id: totrans-55
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于这种标记，Grover算符可以识别我们的候选解状态，以便我们在第一次迭代结束时测量到|01⟩。一个示意图可以见于*图2.5*：
 - en: '![Figure 2.5 – Phase change of the flag element by Grover’s algorithm during
     the first application](img/B19146_02_005.jpg)'
+  id: totrans-56
   prefs: []
   type: TYPE_IMG
+  zh: '![图2.5 – Grover算法第一次应用时标记元素的相位变化](img/B19146_02_005.jpg)'
 - en: Figure 2.5 – Phase change of the flag element by Grover’s algorithm during the
     first application
+  id: totrans-57
   prefs: []
   type: TYPE_NORMAL
+  zh: 图2.5 – Grover算法第一次应用时标记元素的相位变化
 - en: When the oracle function has N potential input values (4 in our two-qubit system),
     the approach requires only O( √ _ N ) evaluations. In contrast, the best classical
     algorithm requires O(N) executions. That is why, by only applying our Grover operator
     one time, we were able to find the solution to our problem in the example just
     shown.
+  id: totrans-58
   prefs: []
   type: TYPE_NORMAL
+  zh: 当oracle函数有N个潜在输入值（在我们两比特系统中为4）时，这种方法只需要O(√_N)次评估。相比之下，最佳的经典算法需要O(N)次执行。这就是为什么通过只应用一次Grover算符，我们能够在刚才的示例中找到问题的解。
 - en: This could be used to efficiently search in a big search space (a needle in
     a haystack). We will see how to use it in [*Chapter 5*](B19146_05.xhtml#_idTextAnchor100)
     to find the best portfolio from all potential combinations.
+  id: totrans-59
   prefs: []
   type: TYPE_NORMAL
+  zh: 这可以用来在一个大的搜索空间中高效地进行搜索（如大海捞针）。我们将在[*第5章*](B19146_05.xhtml#_idTextAnchor100)中看到如何使用它来从所有潜在组合中找到最佳投资组合。
 - en: 'To summarize, the core of Grover’s algorithm is *amplitude amplification*.
     This is the process that Grover’s algorithm uses to speed up the search. It’s
     all about manipulating the probability amplitudes of the quantum states involved.
     The process works as follows:'
+  id: totrans-60
   prefs: []
   type: TYPE_NORMAL
+  zh: 总结来说，Grover算法的核心是*振幅放大*。这是Grover算法加速搜索的过程，核心在于操控所涉及量子态的概率振幅。这个过程的工作原理如下：
 - en: '**Initial state**: At the beginning of Grover’s algorithm, you start with a
     quantum system in an equal superposition of all possible states. This means that
     if you have a system of *n* qubits, you have 2 n possible states, and each of
     these states has the same probability of 1 / 2 n.'
+  id: totrans-61
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '**初始状态**：在 Grover 算法的开始，你将量子系统置于所有可能状态的均等叠加态中。这意味着，如果你有 *n* 个量子比特，你就有 2^n 个可能的状态，并且这些状态的每一个都有
+    1 / 2^n 的相同概率。'
 - en: '**Oracle application**: An oracle is then applied to the system, which inverts
     the state sign corresponding to the solution. This means the solution state now
     has a negative amplitude while all other states retain their positive amplitude.'
+  id: totrans-62
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '**Oracle 应用**：然后将一个 oracle 应用到系统中，它会反转与解对应的状态符号。这意味着解的状态现在具有负的幅度，而所有其他状态保持正的幅度。'
 - en: '**Amplitude amplification**: The amplitude amplification process then amplifies
     the amplitude (or probability) of the correct state and decreases the amplitude
     of the incorrect states. It is achieved by applying the Grover diffusion operator
     (also called Grover iteration), which flips the state around the mean amplitude.'
+  id: totrans-63
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '**幅度放大**：幅度放大过程会放大正确状态的幅度（或概率），并减少错误状态的幅度。它是通过应用 Grover 扩散算子（也称为 Grover 迭代）来实现的，这个操作会使状态围绕均值幅度反转。'
 - en: Steps *2* and *3* are repeated approximately √ _ N  times to maximize the amplitude
     of the correct state.
+  id: totrans-64
   prefs: []
   type: TYPE_NORMAL
+  zh: 步骤 *2* 和 *3* 会大约重复 √ _N_ 次，以最大化正确状态的幅度。
 - en: The beauty of Grover’s algorithm is that the amplitude of the “correct” state
     (the solution we’re interested in) gets amplified after each iteration of the
     algorithm. By contrast, the amplitudes of the “incorrect” states get reduced.
     This leads to a high probability of measuring the correct state when the final
     measurement is made.
+  id: totrans-65
   prefs: []
   type: TYPE_NORMAL
+  zh: Grover 算法的美妙之处在于，每次迭代后，“正确”状态（我们感兴趣的解）的幅度会被放大。相比之下，“错误”状态的幅度则会被缩小。这导致在最终测量时，正确状态被测量到的概率较高。
 - en: Shor’s algorithm
+  id: totrans-66
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: Shor 算法
 - en: The mathematician Peter Shor was working on the discrete log problem in 1994\.
     Using the quantum Fourier transformation, he found a solution by using the periodicity
     between two numbers. He then extended his discovery to the factorization problem.
     Factorization can be used to find the prime numbers of an integer.
+  id: totrans-67
   prefs: []
   type: TYPE_NORMAL
+  zh: 数学家彼得·肖尔（Peter Shor）在 1994 年研究离散对数问题时，通过量子傅里叶变换，他发现了一个通过两个数字之间的周期性来找到解决方案的方法。随后，他将这一发现扩展到了因式分解问题。因式分解可以用来找出一个整数的素数因子。
 - en: The main approach to encrypting data is the RSA protocol, which employs asymmetric
     encryption by generating public and private keys based on multiplying two big
     prime numbers. Shor’s algorithm could find these two prime numbers by factoring
@@ -421,19 +568,29 @@
     RSA key would require thousands of years with an **high-performance computing**
     (**HPC**). Shor’s can break the key in polynomial time. This algorithm can’t be
     yet used to break the 2,048-bit RSA key due to the high number of qubits required.
+  id: totrans-68
   prefs: []
   type: TYPE_NORMAL
+  zh: 加密数据的主要方法是 RSA 协议，它通过基于两个大素数的乘积生成公钥和私钥，从而实现非对称加密。Shor 算法可以通过因式分解密钥来找到这两个素数。从经典计算角度来看，这个问题是无法处理的，因为破解一个
+    2048 位的 RSA 密钥需要几千年的时间，使用 **高性能计算**（**HPC**）也难以实现。Shor 算法能够在多项式时间内破解该密钥。然而，由于所需的量子比特数量庞大，这个算法尚不能用来破解
+    2048 位的 RSA 密钥。
 - en: Shor’s method is probabilistic, as are many other algorithms. Specifically,
     it provides the right response with a robust degree of probability, and the likelihood
     of failure can decrease through repetition of the procedure.
+  id: totrans-69
   prefs: []
   type: TYPE_NORMAL
+  zh: 肯定，Shor 的方法是概率性的，就像许多其他算法一样。具体来说，它以较高的概率提供正确的答案，且通过重复这一过程，失败的可能性可以降低。
 - en: '![Figure 2.6 – Shor’s algorithm schematic circuit](img/B19146_02_006.jpg)'
+  id: totrans-70
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.6 – Shor 算法示意电路](img/B19146_02_006.jpg)'
 - en: Figure 2.6 – Shor’s algorithm schematic circuit
+  id: totrans-71
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.6 – Shor 算法示意电路
 - en: '*Figure 2**.6* shows that the algorithm performs two main actions besides the
     already covered superposition by the Hadamard gates. The qubit at the bottom (1)
     are used as the entry point, and the remaining qubits (0) the ones used to encode
@@ -442,53 +599,74 @@
     By the action of an inverse quantum Fourier transformation (QFT −1), we can read
     the set of bit strings that encodes a numeric value encoding the phase that is
     used to derive the two numbers factoring our target value N.'
+  id: totrans-72
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图 2.6* 显示了该算法除了已由哈达玛门控制的叠加操作外，还执行了两项主要操作。底部的量子比特（1）用作入口点，其余的量子比特（0）用于编码我们的解。第一阶段将给定函数的不同指数应用于下面的量子比特，这会切换应用操作的量子比特的相位。通过反向量子傅里叶变换（QFT −1）的作用，我们可以读取编码数字值的比特字符串集合，该值用于推导出分解目标值
+    N 的两个数字。'
 - en: Next, we will explore a new field that has been created from the merge of **Quantum
     Computing** (**QC**) and **Machine Learning** (**ML**), called **Quantum Machine
     Learning** (**QML**) (*Martín-Guerrero et* *al., 2022*).
+  id: totrans-73
   prefs: []
   type: TYPE_NORMAL
+  zh: 接下来，我们将探索由**量子计算**（**QC**）和**机器学习**（**ML**）合并而成的新领域，称为**量子机器学习**（**QML**）（*Martín-Guerrero
+    等，2022*）。
 - en: QML algorithms
+  id: totrans-74
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: QML 算法
 - en: This discipline combines classical machine learning with quantum capabilities
     to produce better solutions. Enhancing ML algorithms and/or classical training
     with quantum resources broadens the scope of pure ML, as happens with some classical
     devices such as GPUs or TPUs.
+  id: totrans-75
   prefs: []
   type: TYPE_NORMAL
+  zh: 这一学科结合了经典机器学习与量子能力，以产生更好的解决方案。通过量子资源增强机器学习算法和/或经典训练，拓宽了纯机器学习的应用范围，正如某些经典设备（如
+    GPU 或 TPU）所带来的效果一样。
 - en: It has been extensively reported that using quantum approaches in learning algorithms
     could have several advantages (reviewed by *Schuld et al., 2018*). However, most
     of the earliest research in this framework chased a decrease in computational
     complexity in conjunction with a speedup. Current investigations also study methods
     for quantum techniques to provide unconventional learning representations that
     could even outperform standard ML in the future.
+  id: totrans-76
   prefs: []
   type: TYPE_NORMAL
+  zh: 大量文献已报告使用量子方法在学习算法中可能带来的多个优势（*Schuld 等，2018* 综述）。然而，大多数早期的研究在这一框架下追求的是计算复杂性的降低与加速的结合。当前的研究还在探讨量子技术提供非常规学习表示的方法，这些方法未来甚至可能超越标准机器学习。
 - en: In recent years, the theories and techniques of QC have evolved rapidly, and
     the potential benefits for real-world applications have become increasingly evident
     (*Deb et al., 2021; Egger et al., 2021*). How QC may affect ML is a key topic
     of research. Recent experimentations have demonstrated that quantum computers
     may successfully tackle certain problems with intricate correlations between inputs
     that are exceptionally challenging for conventional systems.
+  id: totrans-77
   prefs: []
   type: TYPE_NORMAL
+  zh: 近年来，量子计算的理论和技术发展迅速，现实应用的潜在利益日益显现（*Deb 等，2021；Egger 等，2021*）。量子计算如何影响机器学习是一个关键的研究话题。最近的实验表明，量子计算机可能成功解决某些具有复杂输入相关性的难题，这些问题对传统系统来说异常具有挑战性。
 - en: There is a consensus that quantum computers could provide advantages in several
     applications. However, they are not yet a perfect substitute for classical ML.
     The quantum models generated by QC may be significantly more effective for particular
     applications, enabling faster processing time and generalization with less input.
     Consequently, it is crucial to ascertain whether a quantum advantage can be realized.
+  id: totrans-78
   prefs: []
   type: TYPE_NORMAL
+  zh: 目前已有共识认为量子计算机在多个应用中可能提供优势。然而，它们尚未能完全替代经典机器学习。由量子计算生成的量子模型在特定应用中可能显著更有效，从而实现更快的处理时间和更少输入下的泛化能力。因此，至关重要的是要确认是否能够实现量子优势。
 - en: The following sections offer a thorough review of the most relevant QML algorithms.
+  id: totrans-79
   prefs: []
   type: TYPE_NORMAL
+  zh: 以下部分将提供对最相关的 QML 算法的详细回顾。
 - en: Variational Quantum Classifiers
+  id: totrans-80
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 变分量子分类器
 - en: '**Variational Quantum Classifiers** (**VQCs**) belong to the regime of hybrid
     algorithms as they require a classical interaction in order to set the free parameters
     of the quantum ansatz. The *Variational* part determines how the quantum circuit
@@ -506,34 +684,49 @@
     the output becomes classical and is used to update the parameters of the parametrized
     circuit. This procedure is similar to a neural network where the output is used
     to compute the loss.'
+  id: totrans-81
   prefs: []
   type: TYPE_NORMAL
+  zh: '**变分量子分类器**（**VQC**）属于混合算法范畴，因为它们需要经典的交互作用来设置量子假设电路的自由参数。*变分*部分决定了量子电路如何根据一些经典标准进行迭代训练，从而确保选择的参数使电路收敛于目标函数。当这个目标是一个给定数据集标签之间的分类任务时，这使得我们的算法成为一个VQC（*W.
+    Li 等，2021*）。*图 2.7* 展示了VQC的经典步骤。数据必须在第一步进行预处理，并以量子态的形式引入，以表示经典数据。之前，我们展示了Hadamard操作如何在初始编码态上设置所有潜在的组合。我们使用特征映射（量子电路的一种特定类型）将经典数据编码为量子态。然后描述一组参数化门来表示不同的配置（稍后我们会详细讨论），最后是一个测量步骤，获取结果。在VQC中，关键步骤是测量；输出变成经典数据，用于更新参数化电路的参数。这个过程类似于神经网络，其中输出用于计算损失。'
 - en: '![Figure 2.7 – VQC schematic circuit](img/B19146_02_007.jpg)'
+  id: totrans-82
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.7 – VQC 示意电路](img/B19146_02_007.jpg)'
 - en: Figure 2.7 – VQC schematic circuit
+  id: totrans-83
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.7 – VQC 示意电路
 - en: Gradient- and non-gradient-based techniques can be used to train a QML model.
     The gradient-based approaches are known to be prone to falling into local minima
     of a function during the classical execution.
+  id: totrans-84
   prefs: []
   type: TYPE_NORMAL
+  zh: 基于梯度和非梯度的方法都可以用来训练QML模型。已知基于梯度的方法在经典执行过程中容易陷入函数的局部最小值。
 - en: Quantum regimens may overcome this fact thanks to quantum tunneling, even though
     some problems known to classical methods are magnified in the quantum regime (vanishing
     gradients or barren plateaus, among others). That is why a big effort exists to
     design **parameterized circuits** (**PQC**) or ansatz and methods to deal with
     those issues, in the hope of surpassing classical means.
+  id: totrans-85
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子方案可能会通过量子隧道效应克服这一事实，即使某些经典方法已知的问题在量子方案中被放大（例如梯度消失或荒 plateau 等问题）。这也是为什么人们投入大量努力设计**参数化电路**（**PQC**）或假设电路和方法来处理这些问题，希望能够超越经典手段。
 - en: 'When defining those PQCs, we can also learn from classical ML and mimic what
     is known to be the Swiss Army knife of the field: neural networks.'
+  id: totrans-86
   prefs: []
   type: TYPE_NORMAL
+  zh: 在定义这些PQC时，我们也可以借鉴经典机器学习，并模仿已知的该领域瑞士军刀——神经网络。
 - en: Quantum neural networks
+  id: totrans-87
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子神经网络
 - en: '**Quantum neural networks** (**QNNs**) are a subtype of VQA that consist of
     circuits with parameterized gate operations (*Abbas et al., 2021*) as described
     earlier. Initially, the information is encoded into prepared quantum states that
@@ -548,26 +741,36 @@
     estimations of the parameters in the PQC. This whole pass from the initialization
     of the qubits to the final measurement phase describes a QNN, as shown in *Figure
     2**.8*.'
+  id: totrans-88
   prefs: []
   type: TYPE_NORMAL
+  zh: '**量子神经网络**（**QNNs**）是变分量子算法（VQA）的一种子类型，由带有参数化门操作的电路组成（*Abbas等，2021*），如前所述。最初，信息被编码进准备好的量子态，可能涉及特征映射。通常，选择特定的特征映射是为了提高量子模型的性能，该模型需要优化和训练。该特征映射，如*图2.8*所示的黄色框，指的是数据被编码到电路中的步骤。在数据被编码到量子态后，带有参数化门的变分量子电路（PQC或蓝色变分模型）被应用并优化以完成特定任务。变分模型输出的量子态随后被测量，以估算损失函数。然后，经典部分估算误差，并将其传播到PQC中参数的估计值。这一从量子比特初始化到最终测量阶段的过程描述了一个量子神经网络（QNN），如*图2.8*所示。'
 - en: '![Figure 2.8 – QNN schematic circuit](img/B19146_02_008.jpg)'
+  id: totrans-89
   prefs: []
   type: TYPE_IMG
+  zh: '![图2.8 – QNN示意电路](img/B19146_02_008.jpg)'
 - en: Figure 2.8 – QNN schematic circuit
+  id: totrans-90
   prefs: []
   type: TYPE_NORMAL
+  zh: 图2.8 – QNN示意电路
 - en: QNNs are trained using the previously mentioned approaches where gradient-based
     optimizers are very much the ones showing good results in general. The Adam (*Carena
     et al., 2022*) optimizer is one of the most widely used, coming as it does from
     classical neural network optimization. We will see a working example in [*Chapter
     4*](B19146_04.xhtml#_idTextAnchor079) of how to train a QNN using gradient-based
     approaches when dealing with derivative valuation.
+  id: totrans-91
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子神经网络（QNN）使用前面提到的方式进行训练，其中基于梯度的优化器通常能展现出良好的结果。Adam（*Carena等，2022*）优化器是最广泛使用的优化器之一，它源于经典神经网络优化。我们将在[*第4章*](B19146_04.xhtml#_idTextAnchor079)中看到一个工作示例，展示如何在处理导数估值时使用基于梯度的方法来训练量子神经网络（QNN）。
 - en: Quantum Support Vector Classification (QSVC)
+  id: totrans-92
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子支持向量分类（QSVC）
 - en: Supervised classification systems are trained on labeled data and later used
     to predict the labels of unseen data points. This type of training is called supervised
     learning and has also made its way into QML (*Schuld et al., 2018*). Well-known
@@ -576,8 +779,10 @@
     tasks. We can get an improved separability over the classical data by using previously
     discussed feature maps. This fact is exploited simply by encoding and decoding
     this data into a larger domain using quantum SVMs.
+  id: totrans-93
   prefs: []
   type: TYPE_NORMAL
+  zh: 监督分类系统通过有标签的数据进行训练，之后用于预测未见数据点的标签。这种训练方式称为监督学习，并且已被应用到量子机器学习（QML）中（*Schuld等，2018*）。著名的经典方法如**支持向量机**（**SVMs**）（*Meyer，2015*）已经经过此类训练，并被用于各种大规模分类任务。通过使用先前讨论过的特征映射，我们可以在经典数据上获得更好的可分性。这一事实通过将数据编码并解码到更大的领域中，利用量子支持向量机（SVM）得以实现。
 - en: 'In supervised classification, a set of labeled data points indicates whether
     they are related to one particular class. The learning process establishes a dividing
     line or hyperplane between the groups. Kernel-based classifiers, such as SVC,
@@ -588,8 +793,12 @@
     (more complex) to transform the data and help the separation. In this function,
     φ : x → F, where F is the feature space. The output of the map on individual data
     points, φ(x) for every x ∈ X, is known as a feature vector.'
+  id: totrans-94
   prefs: []
   type: TYPE_NORMAL
+  zh: '在监督分类中，一组标记的数据点表示它们是否属于某一特定类别。学习过程会在这些类别之间建立一个分界线或超平面。基于核的分类器，如SVC，极度依赖核概念（*Park
+    et al., 2020*）。通常情况下，超平面无法在原始空间中分隔数据；因此，一个常见的策略是应用非线性变换函数（φ），也称为特征映射，以寻找这样的超平面。特征映射将编码后的数据投影到一个新的表示（更复杂的空间），以转化数据并帮助分隔。在这个函数中，φ
+    : x → F，其中F是特征空间。该映射对每个数据点的输出，φ(x)对于每个x ∈ X，被称为特征向量。'
 - en: Another helpful tool is the kernel trick. The data will be only represented
     by pairwise similarity. Using a kernel trick and a high-dimensional non-linear
     feature map, the quantum kernel approach may be expanded to decision functions
@@ -600,18 +809,25 @@
     Classifying data points in this new feature space involves evaluating their proximity.
     For its part, the kernel is the collection of inner products between every pair
     of data points.
+  id: totrans-95
   prefs: []
   type: TYPE_NORMAL
+  zh: 另一个有用的工具是核技巧。数据将仅通过成对相似性来表示。通过使用核技巧和高维非线性特征映射，量子核方法可以扩展到依赖于非线性数据的决策函数。在这种情况下，数据会从低维空间转移到高维非线性希尔伯特空间（H）（*Skorohod,
+    2012*），有时也被称为特征空间。在选择了合适的特征映射后，将SVM分类器应用到映射后的希尔伯特空间数据中是可行的。在这个新的特征空间中对数据点进行分类，涉及评估它们的接近度。就其本身而言，核是每对数据点之间内积的集合。
 - en: The execution of these computations is easier on a quantum computer than on
     a regular system. The kernel can be estimated easily using a quantum processor.
     After the kernel matrix has been formed, the quantum kernel information must be
     extracted from the quantum circuit and fed into the SVM or SVC algorithm.
+  id: totrans-96
   prefs: []
   type: TYPE_NORMAL
+  zh: 这些计算在量子计算机上执行比在常规系统上更为容易。核可以通过量子处理器轻松估算。一旦形成了核矩阵，就必须从量子电路中提取量子核信息，并将其输入到SVM或SVC算法中。
 - en: Variational Quantum Eigensolver
+  id: totrans-97
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 变分量子特征解算器
 - en: From the previous definition of VQCs, we know that the **Variational Quantum
     Eigensolver** (**VQE**) is composed of both classical and quantum parts that are
     integreted together to achieve a specific goal. When used to find the state of
@@ -622,8 +838,11 @@
     of the minimum expectation of the Hamiltonian upon measurement. The energy expectation
     value is the metric used to drive this training as if it were the cost function
     of any classical ML method.
+  id: totrans-98
   prefs: []
   type: TYPE_NORMAL
+  zh: 从前面的VQC定义中，我们知道**变分量子特征解算器**（**VQE**）由经典部分和量子部分组成，这些部分被集成在一起以实现特定目标。当用于寻找某一哈密顿量的最小能量状态，也称为基态时，学习算法呈现为VQE（*Wang
+    et al., 2019*）。它属于VQA的广泛范畴。它遵循相同的步骤，其中经典优化过程调整给定假设（PQC）的参数，以产生哈密顿量在测量时的最小期望边界。能量期望值是驱动此训练的度量，就像任何经典机器学习方法的成本函数一样。
 - en: 'Simply expressed, VQE refers to the usage of a quantum computer, on one hand,
     to assess the energy of an Hamiltonian and usage of a classical computer, and
     on the other hand, to enhance the parameters for energy reduction in the subsequent
@@ -632,102 +851,144 @@
     Everything else is carried out on a traditional computer. VQE is mostly utilized
     to predict the characteristics of molecules and materials, and is generally used
     for combinatorial optimization problems such as in the case of portfolio optimization.'
+  id: totrans-99
   prefs: []
   type: TYPE_NORMAL
+  zh: 简单来说，VQE 是指在量子计算机上评估哈密顿量的能量，另一方面使用经典计算机来增强参数，从而在后续的量子迭代中减少能量。VQE 背后的概念是通过量子计算机实现一个单一目的：计算一组给定参数的能量值。其他所有操作则在传统计算机上进行。VQE
+    主要用于预测分子和材料的特性，通常用于组合优化问题，如投资组合优化。
 - en: QAOA
+  id: totrans-100
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: QAOA
 - en: '**Quantum Approximation Optimization Algorithm** (**QAOA**) is one of the most
     promising techniques for demonstrating quantum advantage (*Choi et al., 2019*).
     QAOA is an approximation method that does not provide the “best” result, but rather
     seeks a “good enough” outcome instead, characterized by the lower bound of the
     approximation ratio.'
+  id: totrans-101
   prefs: []
   type: TYPE_NORMAL
+  zh: '**量子近似优化算法**（**QAOA**）是展示量子优势的最有前景的技术之一（*Choi 等人, 2019*）。QAOA 是一种近似方法，它并不会提供“最佳”结果，而是追求一个“足够好”的结果，特点是近似比的下限。'
 - en: It takes inspiration from digitizing the adiabatic approach. The adiabatic theorem
     establishes that if we can start with a simple case where the optimal solution
     is known, then by making small perturbations, we change it to the problem we aim
     to solve. If the target state we obtain at the end of the circuit execution remains
     as the ground state of the problem, its readout will reveal the classical set
     of bits we were looking for.
+  id: totrans-102
   prefs: []
   type: TYPE_NORMAL
+  zh: 它的灵感来自于数字化的绝热方法。绝热定理表明，如果我们从一个已知最优解的简单情况开始，通过小的扰动将其转变为我们要解决的问题。如果我们在电路执行结束时获得的目标状态仍然是问题的基态，那么其读取结果将显示我们正在寻找的经典位集。
 - en: This is one of the approaches quantum annealers use to solve complex problems.
     One of the digital implementations of this annealing procedure involves the use
     of alternating blocks of operations, where the initial candidates are encoded
     by the superposition of all possible options (the H gates at the beginning of
     *Figure 2**.9*) and a discrete number of steps is added, alternating and enhancing
     our target problem the final quantum states generated is our target state.
+  id: totrans-103
   prefs: []
   type: TYPE_NORMAL
+  zh: 这是量子退火器用来解决复杂问题的方法之一。这种退火过程的数字实现之一涉及交替操作块的使用，其中初始候选者通过所有可能选项的叠加进行编码（见*图 2.9*中的
+    H 门），并添加离散的步骤，通过交替来增强我们的目标问题，最终生成的量子状态即为我们的目标状态。
 - en: Establishing the optimal amount of perturbation required is not trivial, and
     classical optimizers can be used for this to establish the best parameters that
     will work to solve our problem.
+  id: totrans-104
   prefs: []
   type: TYPE_NORMAL
+  zh: 确定所需扰动的最佳量并非易事，可以使用经典优化器来确定最佳参数，从而解决我们的问题。
 - en: The entirety of this process is pictured in *Figure 2**.9*, where β and γ correspond
     to the parameters affecting the problem Hamiltonian (*C* in yellow) and mixer
     Hamiltonian (*B* in green) for *p* levels or layers.
+  id: totrans-105
   prefs: []
   type: TYPE_NORMAL
+  zh: 这个过程的完整图示见*图 2.9*，其中 β 和 γ 分别对应影响问题哈密顿量（*C*，黄色）和混合器哈密顿量（*B*，绿色）的参数，适用于 *p* 层或层级。
 - en: '![Figure 2.9 – QAOA schematic circuit](img/B19146_02_009.jpg)'
+  id: totrans-106
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.9 – QAOA 示意电路](img/B19146_02_009.jpg)'
 - en: Figure 2.9 – QAOA schematic circuit
+  id: totrans-107
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.9 – QAOA 示意电路
 - en: For a given NP-Hard problem (*Bittel et al., 2021*), an approximation algorithm
     is a polynomial-time solution that solves all instances of the problem with a
     quality guarantee. The merit value is the ratio between the quality of the polynomial
     time solution and the quality of the actual solution.
+  id: totrans-108
   prefs: []
   type: TYPE_NORMAL
+  zh: 对于给定的 NP-Hard 问题（*Bittel 等人, 2021*），近似算法是一种多项式时间解法，可以解决问题的所有实例，并提供质量保证。优势值是多项式时间解法的质量与实际解法的质量之间的比值。
 - en: Quantum programming
+  id: totrans-109
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 量子编程
 - en: 'In the last decade, the development of QC has accelerated. A significant example
     is the development of tools to offer solutions using high-level coding languages
     (*Chong et al., 2017; Ganguly et al., 2021*). Quantum programming languages are
     the basis for translating concepts into instructions for quantum computers. Nature
     Reviews (*Heim et al., 2020*) states that quantum programming languages are used
     for the following purposes:'
+  id: totrans-110
   prefs: []
   type: TYPE_NORMAL
+  zh: 在过去的十年里，QC 的发展加速了。一个重要的例子是开发了使用高级编码语言提供解决方案的工具（*Chong 等，2017；Ganguly 等，2021*）。量子编程语言是将概念转换为量子计算机指令的基础。Nature
+    Reviews（*Heim 等，2020*）指出，量子编程语言用于以下目的：
 - en: Examining the QC fundamentals (qubits, superposition, entanglement), then testing
     and validating quantum algorithms and their implementations
+  id: totrans-111
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 检查 QC 基础（量子位、叠加、纠缠），然后测试和验证量子算法及其实现
 - en: Managing existing physical quantum hardware
+  id: totrans-112
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 管理现有的物理量子硬件
 - en: Forecasting the costs of quantum program execution on probable hardware
+  id: totrans-113
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 预测量子程序在可能的硬件上的执行成本
 - en: 'Current quantum programming languages primarily aim to optimize quantum gate-based
     low-level circuits. Quantum circuits are constructed from quantum gates and used
     for universal quantum computers. A list of the main quantum gates is provided
     as follows:'
+  id: totrans-114
   prefs: []
   type: TYPE_NORMAL
+  zh: 当前的量子编程语言主要旨在优化基于量子门的低级电路。量子电路是由量子门构成的，用于通用量子计算机。以下是主要量子门的列表：
 - en: '![Figure 2.10 – Core gates for quantum computing](img/B19146_02_010.jpg)'
+  id: totrans-115
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.10 – 量子计算的核心门](img/B19146_02_010.jpg)'
 - en: Figure 2.10 – Core gates for quantum computing
+  id: totrans-116
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.10 – 量子计算的核心门
 - en: Quantum programming started in 1996 when E. Knill introduced the **Quantum Random
     Access Machine** (**QRAM**) model and proposed what could be recognized as the
     first convention of quantum pseudocode (*Knill, 1996*). Since then, numerous methods
     have been developed, such as the quantum programming language (QCL) by Ömer (*Ömer,
     2002*), C++ quantum extensions (*McCaskey et al., 2021*), and many other acronyms
     that represent the different evolution stages of these languages.
+  id: totrans-117
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子编程始于 1996 年，当时 E. Knill 提出了**量子随机访问机**（**QRAM**）模型，并提出了可以被认为是第一个量子伪代码规范的概念（*Knill,
+    1996*）。此后，开发了许多方法，例如 Ömer 提出的量子编程语言（QCL）（*Ömer, 2002*）、C++ 量子扩展（*McCaskey 等，2021*）以及代表这些语言不同发展阶段的许多其他缩写。
 - en: The focus of this section is to specifically explore quantum **Software Development
     Kits** (**SDKs**), which are tools for developing quantum algorithms to be used
     in quantum computers, simulators, and emulators (*Ablayev et al., 2020*). Microsoft,
@@ -735,96 +996,140 @@
     development kits. SDKs provide the tools for software developers to solve their
     problems and give them access to simulators or quantum computers for the cloud-based
     implementation of their quantum algorithms.
+  id: totrans-118
   prefs: []
   type: TYPE_NORMAL
+  zh: 本节的重点是特别探讨量子**软件开发工具包**（**SDKs**），它们是用于开发量子算法的工具，可以在量子计算机、模拟器和仿真器中使用（*Ablayev
+    等，2020*）。微软、IBM、谷歌、Xanadu 和 Rigetti 等公司已发布了开源开发工具包。SDK 提供了软件开发人员解决问题的工具，并让他们能够访问模拟器或量子计算机，用于基于云的量子算法实现。
 - en: '![Figure 2.11 – Comparison of QC programming levels](img/B19146_02_011.jpg)'
+  id: totrans-119
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.11 – QC 编程水平比较](img/B19146_02_011.jpg)'
 - en: Figure 2.11 – Comparison of QC programming levels
+  id: totrans-120
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.11 – QC 编程水平比较
 - en: These kits frequently permit the use of traditional programming languages, such
     as Python, as the main interpreter over which a framework with specific functionalities
     are built. Others prefer to build their own versions of quantum software languages,
     such as Microsoft’s Q#.
+  id: totrans-121
   prefs: []
   type: TYPE_NORMAL
+  zh: 这些工具包通常允许使用传统编程语言，如 Python，作为主要解释器，框架的特定功能则在其之上构建。其他公司则倾向于构建自己版本的量子软件语言，例如微软的
+    Q#。
 - en: Even though we are not yet at the top of the ladder shown in *Figure 2**.11*
     ([https://medium.com/@quantum_wa/quantum-computing-languages-landscape-1bc6dedb2a35](mailto:https://medium.com/@quantum_wa/quantum-computing-languages-landscape-1bc6dedb2a35)),
     different frameworks specialize in particular tasks or fields where certain specific
     hardware implementations perform better than others.
+  id: totrans-122
   prefs: []
   type: TYPE_NORMAL
+  zh: 尽管我们尚未达到*图 2.11*所示的顶部（[https://medium.com/@quantum_wa/quantum-computing-languages-landscape-1bc6dedb2a35](mailto:https://medium.com/@quantum_wa/quantum-computing-languages-landscape-1bc6dedb2a35)），不同的框架专注于特定任务或领域，其中某些特定的硬件实现比其他实现更优秀。
 - en: 'The most prominent ecosystems of tools are the following:'
+  id: totrans-123
   prefs: []
   type: TYPE_NORMAL
+  zh: 最主要的工具生态系统包括以下几种：
 - en: Qiskit from IBM offers high-abstraction modules for finance, among things
+  id: totrans-124
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 IBM 的 Qiskit 提供面向金融等领域的高抽象模块
 - en: PennyLane from Xanadu specializes in QML and differentiable computing
+  id: totrans-125
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 Xanadu 的 PennyLane 专注于 QML 和可微分计算
 - en: Cirq from Google, which allows the use of Sycamore and QSVM simulators can be
     used
+  id: totrans-126
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 Google 的 Cirq，它可以使用 Sycamore 和 QSVM 模拟器
 - en: The **Quantum Development Kit** (**QDK**) from Microsoft for Q# users
+  id: totrans-127
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 微软为 Q# 用户提供的 **量子开发工具包** (**QDK**)
 - en: 'Other SDKs can also be found on the market, usually more specialized or specifically
     related to the efforts of particular companies to improve their own solutions,
     hardware, and infrastructure. These SDKs include the following:'
+  id: totrans-128
   prefs: []
   type: TYPE_NORMAL
+  zh: 市场上也可以找到其他 SDK，通常更为专业或特定于某些公司为改善自己的解决方案、硬件和基础设施而进行的努力。这些 SDK 包括以下内容：
 - en: Ocean from D-Wave
+  id: totrans-129
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 D-Wave 的 Ocean
 - en: Orquestra from Zapata
+  id: totrans-130
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 Zapata 的 Orquestra
 - en: Braket SDK from **Amazon Web** **Services** (**AWS**)
+  id: totrans-131
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 **Amazon Web** **Services** (**AWS**) 的 Braket SDK
 - en: Anian from Riverlane
+  id: totrans-132
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 Riverlane 的 Anian
 - en: Forest from Rigetti
+  id: totrans-133
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 来自 Rigetti 的 Forest
 - en: In the following sections, the most relevant SDKs with the largest communities,
     documentation, and online support will be discussed. By making use of these support
     bases, anyone with an average knowledge of math and/or physics can start learning
     from scratch and interacting very quickly with real or simulated quantum devices.
+  id: totrans-134
   prefs: []
   type: TYPE_NORMAL
+  zh: 在接下来的章节中，将讨论最相关的 SDK，它们拥有最大社区、文档和在线支持。通过利用这些支持基础，任何具有平均数学和/或物理知识的人都可以从零开始学习，并能迅速与真实或模拟的量子设备进行互动。
 - en: Qiskit
+  id: totrans-135
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: Qiskit
 - en: Qiskit (originally called QISKit) is an SDK for Python released by IBM Research
     in 2017 ([https://qiskit.org/](https://qiskit.org/)). The purpose of this package/library
     is to provide a bridge between quantum algorithms and physical devices so that
     more people can understand and interact with quantum computers. Qiskit was also
     created to help widen access to quantum education and expand quantum information
     challenges and structures.
+  id: totrans-136
   prefs: []
   type: TYPE_NORMAL
+  zh: Qiskit（最初称为 QISKit）是 IBM Research 于 2017 年发布的一个 Python SDK（[https://qiskit.org/](https://qiskit.org/)）。这个软件包/库的目的是提供量子算法和物理设备之间的桥梁，以便更多人可以理解和与量子计算机互动。Qiskit
+    的创建也旨在帮助拓宽量子教育的访问，并扩展量子信息挑战和结构。
 - en: Currently, Qiskit enables users to quickly construct experiments and applications
     and run them on genuine quantum computers and classical quantum simulators. Another
     aim is the advancement of quantum software, both at the machine-code level with
     OpenQASM and at the abstract level for end users without experience in quantum
     computing.
+  id: totrans-137
   prefs: []
   type: TYPE_NORMAL
+  zh: 目前，Qiskit 使用户能够快速构建实验和应用，并在真正的量子计算机和经典量子模拟器上运行它们。另一个目标是量子软件的进步，既包括使用 OpenQASM
+    进行机器代码层面的工作，也包括面向没有量子计算经验的终端用户的抽象层面。
 - en: Since Qiskit is an open source SDK, anyone can cooperate and interact with it.
     It is well known for having the largest QC community in the world, featuring many
     people from different backgrounds and places who collaborate. In 2020, Qiskit
@@ -833,8 +1138,12 @@
     computation. In 2021, 157 research articles were published involving implementations
     of Qiskit. The community continues to grow today, with certified users and advocates
     all over the globe ([https://quantumcomputingreport.com/](https://quantumcomputingreport.com/)).
+  id: totrans-138
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于 Qiskit 是一个开源 SDK，任何人都可以与它合作和互动。它以拥有全球最大的量子计算社区而闻名，社区成员来自不同背景和地区，大家共同合作。到
+    2020 年，Qiskit 已经有 15,000 名科学家和开发者在该领域使用 Qiskit 工具工作，超过 300,000 人使用这些资源学习量子计算。2021
+    年，涉及 Qiskit 实现的研究文章达到了 157 篇。今天，社区仍在不断壮大，全球范围内有认证用户和倡导者（[https://quantumcomputingreport.com/](https://quantumcomputingreport.com/)）。
 - en: The classical elements (Terra, Ignis, Aer, Metal, and Aqua) were used for naming
     Qiskit packages in the early days. This convention has been abandoned in favor
     of more descriptive titles for Qiskit packages. Terra and Aer retain their original
@@ -842,8 +1151,12 @@
     been replaced by high-level application modules, and Ignis by Qiskit Experiments.
     Qiskit Metal is more related to circuit design and thus has a very specific appeal
     to those seeking to design quantum computing chips based on superconducting circuits.
+  id: totrans-139
   prefs: []
   type: TYPE_NORMAL
+  zh: 早期，Qiskit 的包名称采用了经典元素（Terra、Ignis、Aer、Metal 和 Aqua）作为命名依据。这个惯例已经被放弃，取而代之的是更具描述性的
+    Qiskit 包名称。Terra 和 Aer 保留了原名，而其他的则已被弃用并替换。例如，Aqua 已被更高级的应用模块替代，Ignis 则被 Qiskit
+    Experiments 取代。Qiskit Metal 更侧重于电路设计，因此对那些寻求基于超导电路设计量子计算芯片的人具有非常特定的吸引力。
 - en: 'Qiskit Terra contains the most relevant functionalities. Across the Qiskit
     ecosystem, Terra is the largest package with the most comprehensive set of quantum
     computation tools; many other packages interact with it. Considering Terra as
@@ -852,38 +1165,56 @@
     formerly comprised a single bundle (Qiskit Aqua). Each application package focuses
     on an area where QC has the potential to significantly impact the real world,
     as follows:'
+  id: totrans-140
   prefs: []
   type: TYPE_NORMAL
+  zh: Qiskit Terra 包含了最相关的功能。在 Qiskit 生态系统中，Terra 是最大的包，拥有最全面的量子计算工具集；许多其他包与其交互。将
+    Terra 视为 Qiskit 的核心，对于商业领域最有趣的部分可能是它所提供的高级应用，这些应用包含了四个不同的产品，这些产品曾经组成了一个单一的包（Qiskit
+    Aqua）。每个应用包都专注于量子计算在现实世界中具有显著影响的一个领域，具体如下：
 - en: Qiskit Nature, with a focus on quantum simulations
+  id: totrans-141
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Qiskit Nature，专注于量子模拟
 - en: Qiskit Machine Learning, which provides tools for various applications related
     to QML
+  id: totrans-142
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Qiskit Machine Learning，提供了与量子机器学习相关的各种应用工具
 - en: Qiskit Finance, which aims to help researchers discover and expand quantum financial
     solutions
+  id: totrans-143
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Qiskit Finance，旨在帮助研究人员发现并扩展量子金融解决方案
 - en: Qiskit Optimization, which offers tools to explore optimization problems, such
     as Traveling Salesman or Knapsack
+  id: totrans-144
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Qiskit Optimization，提供探索优化问题的工具，例如旅行商问题或背包问题
 - en: '*Chapters 4*, *5*, and *6* explore these solutions in depth, mostly focusing
     on Qiskit for Finance, given its interesting modules to develop some topics covered
     in the following chapters. Also, [*Chapter 9*](B19146_09.xhtml#_idTextAnchor165)
     highlights some basic usages of Qiskit Terra and Qiskit Experiments for error
     mitigation. Qiskit Machine Learning will also be mentioned and referenced.'
+  id: totrans-145
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第 4 章*、*第 5 章* 和 *第 6 章* 深入探讨了这些解决方案，主要聚焦于 Qiskit 在金融领域的应用，鉴于其有趣的模块可以开发接下来章节中涵盖的一些话题。此外，[*第
+    9 章*](B19146_09.xhtml#_idTextAnchor165) 重点介绍了 Qiskit Terra 和 Qiskit Experiments
+    在误差缓解中的一些基本用法。Qiskit Machine Learning 也将被提及并引用。'
 - en: PennyLane
+  id: totrans-146
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: PennyLane
 - en: PennyLane presents a robust and novel method to program on quantum computers
     (*Bergholm et al., 2018*). It merges conventional ML libraries with quantum hardware
     and simulators; as a result, users can train quantum computers similarly to neural
@@ -891,247 +1222,360 @@
     most widespread QC systems with the top ML tools through a device-agnostic and
     open source strategy. Data scientists (including ML researchers) who use TensorFlow,
     PyTorch, or NumPy will quickly adapt to PennyLane’s work environment.
+  id: totrans-147
   prefs: []
   type: TYPE_NORMAL
+  zh: PennyLane 提供了一种强大且新颖的方法来编程量子计算机 (*Bergholm et al., 2018*)。它将传统的机器学习库与量子硬件和模拟器相结合；因此，用户可以像训练神经网络一样训练量子计算机。这个用于
+    Python 的软件开发工具包（SDK）由 Xanadu 于 2018 年发布，并通过设备无关的开源策略将最广泛使用的量子计算系统与顶级机器学习工具结合起来。使用
+    TensorFlow、PyTorch 或 NumPy 的数据科学家（包括机器学习研究人员）会很快适应 PennyLane 的工作环境。
 - en: As mentioned previously, PennyLane provides a simple Python-based user interface
     compatible with any gate-based QC platform (such as Qiskit), including qubit and
     continuous-variable designs.
+  id: totrans-148
   prefs: []
   type: TYPE_NORMAL
+  zh: 如前所述，PennyLane 提供了一个基于 Python 的简洁用户界面，兼容任何基于门的量子计算平台（如 Qiskit），包括量子比特和连续变量设计。
 - en: The user creates a quantum function circuit coupled to a device, constituting
     a QNode, as illustrated in *Figure 2**.12*. One of the main advantages of PennyLane
     and its approach is that all computations done in the device are taped, which
     means gradients can be directly requested with almost no computational effort.
     This is why it is placed alongside TensorFlow or PyTorch, given that these automatic
     differentiation capabilities have made them successful within the ML community.
+  id: totrans-149
   prefs: []
   type: TYPE_NORMAL
+  zh: 用户创建一个量子函数电路并将其与设备耦合，构成一个QNode，如*图2.12*所示。PennyLane及其方法的主要优势之一是，设备中执行的所有计算都会被记录，这意味着几乎无需计算就可以直接请求梯度。这就是为什么它与TensorFlow或PyTorch一起被列为工具，因为这些自动微分功能使它们在机器学习社区中取得了成功。
 - en: '![Figure 2.12 – PennyLane basic core structure](img/B19146_02_012.jpg)'
+  id: totrans-150
   prefs: []
   type: TYPE_IMG
+  zh: '![图2.12 – PennyLane基本核心结构](img/B19146_02_012.jpg)'
 - en: Figure 2.12 – PennyLane basic core structure
+  id: totrans-151
   prefs: []
   type: TYPE_NORMAL
+  zh: 图2.12 – PennyLane基本核心结构
 - en: When dealing with specific needs for QML, as seen in *Chapters 4* and *6*, we
     will see how PennyLane can easily tackle those techniques that may sound complicated
     from a technical standpoint. Further, thanks to PennyLane, implementations are
     easier to tackle at an experimental level.
+  id: totrans-152
   prefs: []
   type: TYPE_NORMAL
+  zh: 在处理QML的特定需求时，如*第4章*和*第6章*所示，我们将看到PennyLane如何轻松解决那些从技术角度看起来可能复杂的技术。此外，得益于PennyLane，实验层面的实现变得更加容易。
 - en: Cirq
+  id: totrans-153
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: Cirq
 - en: Another Python framework is Cirq, released by Google in 2018 ([https://github.com/quantumlib/Cirq](https://github.com/quantumlib/Cirq)).
     It can compose, execute, and evaluate quantum computer program results. It was
     built for quantum computers with a few hundred qubits (NISQ) and a few thousand
     quantum gates. At present, with over 3,000 commits since its launch, version 1.0
     of Cirq is available.
+  id: totrans-154
   prefs: []
   type: TYPE_NORMAL
+  zh: 另一个Python框架是Cirq，由Google于2018年发布（[https://github.com/quantumlib/Cirq](https://github.com/quantumlib/Cirq)）。它可以编排、执行并评估量子计算机程序的结果。它是为拥有几百个量子比特（NISQ）和几千个量子门的量子计算机构建的。目前，Cirq的1.0版本已发布，自推出以来已有超过3000个提交。
 - en: 'A thriving community of libraries that facilitate many fields of research in
     QC has developed around Cirq. These libraries include the following:'
+  id: totrans-155
   prefs: []
   type: TYPE_NORMAL
+  zh: 一个围绕Cirq发展的库社区，促进了量子计算领域的许多研究。这些库包括以下内容：
 - en: '**TensorFlow Quantum**: An instrument for investigating QML.'
+  id: totrans-156
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**TensorFlow Quantum**：一个用于研究QML的工具。'
 - en: '**OpenFermion**: An open source tool for QC, used in chemical simulations.'
+  id: totrans-157
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**OpenFermion**：一个开源工具，用于化学模拟中的量子计算。'
 - en: '**Pytket**: A Python-based optimization and manipulation tool for quantum circuits.'
+  id: totrans-158
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Pytket**：一个基于Python的量子电路优化与操作工具。'
 - en: '**Mitiq**: An open source library for error prevention strategies. Developed
     by the non-profit Unitary Fund.'
+  id: totrans-159
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Mitiq**：一个开源库，用于误差预防策略。由非营利组织Unitary Fund开发。'
 - en: '**Qsim**: A high-performance state vector emulator created with AVX/FMA vectorized
     instructions. Includes GPU acceleration as an option. Qsimcirq is the Cirq interface
     for gaining access to qsim.'
+  id: totrans-160
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Qsim**：一个高性能的状态矢量仿真器，使用AVX/FMA向量化指令创建。包括GPU加速作为选项。Qsimcirq是Cirq接口，用于访问qsim。'
 - en: Additionally, Cirq is one element of the Google quantum ecosystem (*Figure 2**.13*)
     that can be integrated with previous SDKs such as PennyLane and other cloud services
     such as Microsoft Azure Quantum.
+  id: totrans-161
   prefs: []
   type: TYPE_NORMAL
+  zh: 此外，Cirq是Google量子生态系统的一个组成部分（*图2.13*），可以与之前的SDK（如PennyLane）及其他云服务（如Microsoft
+    Azure Quantum）进行集成。
 - en: '![Figure 2.13 – Cirq quantum ecosystem](img/B19146_02_013.jpg)'
+  id: totrans-162
   prefs: []
   type: TYPE_IMG
+  zh: '![图2.13 – Cirq量子生态系统](img/B19146_02_013.jpg)'
 - en: Figure 2.13 – Cirq quantum ecosystem
+  id: totrans-163
   prefs: []
   type: TYPE_NORMAL
+  zh: 图2.13 – Cirq量子生态系统
 - en: When no quantum processor is available, Cirq can be tested using Google Quantum
     Virtual Machine, a Colab laptop replicating a Google quantum processor (currently,
     Weber or Rainbow). If greater emulation power is required, it’s simple enough
     to update the Google Quantum Virtual Machine to operate in Google Cloud.
+  id: totrans-164
   prefs: []
   type: TYPE_NORMAL
+  zh: 当没有量子处理器可用时，可以使用Google量子虚拟机进行Cirq测试，这是一种Colab笔记本，用于模拟Google量子处理器（目前为Weber或Rainbow）。如果需要更强的仿真能力，只需简单地更新Google量子虚拟机，使其在Google
+    Cloud中运行。
 - en: Quantum Development Kit (QDK)
+  id: totrans-165
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子开发工具包（QDK）
 - en: 'The QDK was launched by Microsoft in 2017 and comprises the foundational elements
     for getting started in quantum software development (Microsoft, 2017). These include
     the following:'
+  id: totrans-166
   prefs: []
   type: TYPE_NORMAL
+  zh: QDK由微软于2017年推出，包含了量子软件开发入门的基础元素（微软，2017）。这些元素包括以下内容：
 - en: APIs for QC simulation utilizing .NET or Python
+  id: totrans-167
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 使用.NET或Python进行QC仿真的API
 - en: A language for quantum programming by Microsoft, called Q#
+  id: totrans-168
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 由微软开发的量子编程语言，称为Q#
 - en: Development and simulation tools for quantum applications using command-line
     tools
+  id: totrans-169
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 使用命令行工具进行量子应用程序的开发和仿真工具
 - en: This and the other SDKs on the market have recently converged; thus, the QDK
     currently allows the building and running of QC applications using Cirq and Qiskit.
+  id: totrans-170
   prefs: []
   type: TYPE_NORMAL
+  zh: 市场上的这一SDK和其他SDK最近已经趋于一致，因此QDK目前允许使用Cirq和Qiskit构建和运行QC应用程序。
 - en: This kit is intended for programmers eager to learn how to program quantum computers.
     No prior knowledge of quantum physics is required. The QDK is an open source structure
     with a suite of documentation, tutorials, libraries, example algorithms, and a
     community of contributors (*Figure 2**.14*). As previously stated, the QDK supports
     various development platforms, including Windows, Linux, and macOS, as well as
     programming languages such as Python.
+  id: totrans-171
   prefs: []
   type: TYPE_NORMAL
+  zh: 这个工具包旨在帮助程序员学习如何编程量子计算机。不需要事先了解量子物理知识。QDK是一个开源框架，包含一套文档、教程、库、示例算法以及一个社区（*图 2.14*）。如前所述，QDK支持多种开发平台，包括Windows、Linux和macOS，以及Python等编程语言。
 - en: '![Figure 2.14 – The QDK and Microsoft Azure Quantum workflow](img/B19146_02_014.jpg)'
+  id: totrans-172
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.14 – QDK 和 Microsoft Azure Quantum 工作流](img/B19146_02_014.jpg)'
 - en: Figure 2.14 – The QDK and Microsoft Azure Quantum workflow
+  id: totrans-173
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.14 – QDK 和 Microsoft Azure Quantum 工作流
 - en: The ever-growing Microsoft quantum ecosystem enables problem-solvers from various
     fields and at different skill levels to explore the realm of quantum development
     to address game-changing real-world issues.
+  id: totrans-174
   prefs: []
   type: TYPE_NORMAL
+  zh: 日益壮大的微软量子生态系统使各领域的解决问题者，无论技能水平如何，都能够探索量子开发领域，以解决具有变革性的现实问题。
 - en: Quantum clouds
+  id: totrans-175
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 量子云
 - en: Along with programming languages, widespread research and commercial use of
     quantum programs requires the fundamental element of cloud access (*Gong et al.,
     2021*). These cloud solutions are directly linked to quantum circuits and chips
     for the final testing and experiments with quantum algorithms.
+  id: totrans-176
   prefs: []
   type: TYPE_NORMAL
+  zh: 除了编程语言，量子程序的广泛研究和商业应用还需要一个基本元素——云访问（*Gong等，2021*）。这些云解决方案直接与量子电路和芯片连接，用于最终的量子算法测试和实验。
 - en: 'Cloud access has allowed institutions and individuals to advance their QC exploration.
     Businesses and universities can now experiment with QC on the cloud regardless
     of how technology evolves and becomes popular. This began back in 2016, when IBM
     linked a quantum computer to the cloud and enabled the development and execution
     of basic cloud-based quantum apps (*Castelvecchi, 2017*). By 2022, at least 13
     well-known companies were offering online access to quantum computers:'
+  id: totrans-177
   prefs: []
   type: TYPE_NORMAL
+  zh: 云访问使机构和个人能够推进他们的量子计算探索。无论技术如何发展并变得流行，企业和大学现在都可以在云上实验量子计算。这个过程始于2016年，当时IBM将量子计算机连接到云，并启用了基本的基于云的量子应用程序的开发和执行（*Castelvecchi,
+    2017*）。到2022年，至少有13家知名公司提供了量子计算机的在线访问：
 - en: Amazon Braket (AWS)
+  id: totrans-178
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Amazon Braket (AWS)
 - en: Leap (D-Wave)
+  id: totrans-179
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Leap (D-Wave)
 - en: IBM Q Experience (IBM)
+  id: totrans-180
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: IBM Q Experience (IBM)
 - en: Google Quantum AI (Google)
+  id: totrans-181
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Google Quantum AI (Google)
 - en: Xanadu Quantum Cloud (Xanadu)
+  id: totrans-182
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Xanadu Quantum Cloud (Xanadu)
 - en: Azure Quantum (Microsoft)
+  id: totrans-183
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Azure Quantum (Microsoft)
 - en: Forest (Rigetti)
+  id: totrans-184
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Forest (Rigetti)
 - en: Quantum Inspire (Qutech)
+  id: totrans-185
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Quantum Inspire (Qutech)
 - en: Forge (QC Ware)
+  id: totrans-186
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Forge (QC Ware)
 - en: AQT
+  id: totrans-187
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: AQT
 - en: Quantinuum
+  id: totrans-188
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Quantinuum
 - en: Alibaba Cloud
+  id: totrans-189
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 阿里云
 - en: Oxford Quantum Circuits
+  id: totrans-190
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: Oxford Quantum Circuits
 - en: Quantum cloud services also enable direct connections between users, quantum
     emulators, and simulators. Moreover, some vendors accommodate different programming
     languages, tools, and documentation to help users build QC applications more efficiently.
+  id: totrans-191
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子云服务还使用户、量子仿真器和模拟器之间能够直接连接。此外，一些供应商还提供支持不同编程语言、工具和文档的服务，帮助用户更高效地构建QC应用程序。
 - en: The following sections will review in depth the most prominent services in this
     field and how they work and evolve.
+  id: totrans-192
   prefs: []
   type: TYPE_NORMAL
+  zh: 接下来的章节将深入回顾该领域中最重要的服务，以及它们如何运作和发展。
 - en: IBM Quantum
+  id: totrans-193
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: IBM Quantum
 - en: As mentioned earlier, IBM launched its QC cloud platform in 2016\. **IBM Quantum
     Experience** has a 5-qubit quantum processor and a simulator. Anyone can access
     7-qubit and 5-qubit quantum machines and cloud simulators for free. Moreover,
     many features in the IBM platform, such as the IBM Quantum Composer, Qiskit examples
     and learning materials, and IBM Quantum Lab, allow users to create, explore, and
     run quantum applications through Jupyter Notebooks.
+  id: totrans-194
   prefs: []
   type: TYPE_NORMAL
+  zh: 如前所述，IBM于2016年推出了其QC云平台。**IBM Quantum Experience**拥有一个5量子比特的量子处理器和一个模拟器。任何人都可以免费访问7量子比特和5量子比特的量子机器以及云模拟器。此外，IBM平台中的许多功能，如IBM
+    Quantum Composer、Qiskit示例和学习材料、以及IBM Quantum Lab，允许用户通过Jupyter Notebooks创建、探索和运行量子应用程序。
 - en: '![Figure 2.15 – IBM Quantum roadmap](img/B19146_02_015.jpg)'
+  id: totrans-195
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.15 – IBM Quantum 路线图](img/B19146_02_015.jpg)'
 - en: Figure 2.15 – IBM Quantum roadmap
+  id: totrans-196
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.15 – IBM Quantum 路线图
 - en: 'IBM’s quantum technology development roadmap may seem quite aggressive but,
     at the same time, it is concrete, as the company has accomplished every intended
     step so far. By 2025, IBM expects to have multiple QPUs interconnected on a new
     arrangement of a 4,158-qubit machine called Kookaburra. If a higher number of
     qubits is required (beyond the free tier of machines), there are also two possibilities:'
+  id: totrans-197
   prefs: []
   type: TYPE_NORMAL
+  zh: IBM 的量子技术发展路线图看起来相当激进，但同时也很具体，因为该公司迄今为止已经完成了每一个预定步骤。到 2025 年，IBM 预计将在一个名为 Kookaburra
+    的新型 4,158 比特机器上实现多个量子处理单元（QPU）的互联。如果需要更高数量的量子比特（超出免费层级的机器），也有两个可能的方案：
 - en: 'Pay-as-you-go: Access to the 27-qubit Falcon R5 processors, paying per runtime
     second with a credit card'
+  id: totrans-198
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 按需付费：通过信用卡按运行时间秒数支付，访问 27 比特的 Falcon R5 处理器
 - en: 'Premium plan: Access the 127-qubit Eagle processor and pay through a customized
     agreement as a member of the IBM Quantum Network'
+  id: totrans-199
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 高级计划：访问 127 比特的 Eagle 处理器，并通过定制协议作为 IBM 量子网络成员进行支付
 - en: A further important challenge for IBM is the increment of the quantum volume
     of their machines. This is the maximum square circuit of random two-qubit gates
     that a processor can properly execute. Success is considered to be reached when
@@ -1139,12 +1583,17 @@
     circuit) more than two-thirds of the time with a 2-confidence interval. If a processor
     can employ 8 qubits to operate a circuit with eight-time steps’ worth of gates,
     then its quantum volume is 256 — we raise 2 to the power of the number of qubits.
+  id: totrans-200
   prefs: []
   type: TYPE_NORMAL
+  zh: IBM 面临的另一个重要挑战是增加其机器的量子体积。量子体积是指处理器能够正确执行的最大随机两比特门电路的平方。当处理器能够在 2-置信区间内，三分之二以上的时间内计算出重输出（电路中最可能的输出）时，认为成功达成。如果一个处理器可以利用
+    8 个量子比特操作一个包含八个时间步长门的电路，那么它的量子体积就是 256——我们将 2 的量子比特数次方计算出来。
 - en: Amazon Braket
+  id: totrans-201
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 亚马逊 Braket
 - en: '**Amazon Web Services** (**AWS**) launched Amazon Braket in 2019 (*Patterson,
     2019*). Amazon Braket is a quantum cloud **platform as a service** (**PaaS**)
     provided in collaboration with five hardware-based QC companies: D-Wave, IonQ,
@@ -1155,14 +1604,23 @@
     advantages and drawbacks according to five criteria: well-characterized and scalable
     qubits, qubit initialization, extended coherence duration, universal set of gates,
     and quantification of individual qubits.'
+  id: totrans-202
   prefs: []
   type: TYPE_NORMAL
+  zh: '**亚马逊网络服务**（**AWS**）于 2019 年推出了 Amazon Braket（*Patterson, 2019*）。Amazon Braket
+    是一个量子云**平台即服务**（**PaaS**），与五家基于硬件的量子计算公司合作提供：D-Wave、IonQ、Rigetti、OQC 和 Xanadu。Amazon
+    Braket 不仅通过 D-Wave 提供量子退火服务，还通过不同类型的硬件技术提供对通用量子计算机的访问；这些技术包括陷阱离子（IonQ）、超导（Rigetti
+    和 OQC）和光子（Xanadu）技术。根据五个标准，每种技术都有其优缺点：良好表征和可扩展的量子比特、量子比特初始化、延长的相干时间、通用的门集以及对单个量子比特的量化。'
 - en: '![Figure 2.16 – AWS quantum roadmap](img/B19146_02_016.jpg)'
+  id: totrans-203
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.16 – AWS 量子路线图](img/B19146_02_016.jpg)'
 - en: Figure 2.16 – AWS quantum roadmap
+  id: totrans-204
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.16 – AWS 量子路线图
 - en: Overall, Amazon Braket offers a coherent set of services based on a Python environment
     to build, test, run, and analyze quantum algorithms based on a Python environment.
     With Braket, users can access universal quantum computers, simulators, hybrid
@@ -1173,23 +1631,34 @@
     **Tensor Network 1** (**TN1**) simulators can be employed simultaneously to run
     and test quantum algorithms and mitigate the effect of noise on the algorithm
     performance (*Figure 2**.16*).
+  id: totrans-205
   prefs: []
   type: TYPE_NORMAL
+  zh: 总体来说，亚马逊 Braket 提供了一套基于 Python 环境的完整服务，支持构建、测试、运行和分析量子算法。使用 Braket，用户可以访问通用量子计算机、模拟器、混合作业和管理的笔记本。基于门的量子计算机可以通过**量子处理单元**（**QPU**）或
+    D-Wave 提供的量子退火器来使用。此外，用户还可以使用可用的 SDK 来构建和实现他们的量子算法。**状态矢量 1**（**SV1**）、**密度矩阵
+    1**（**DM1**）和**张量网络 1**（**TN1**）模拟器可以同时用于运行和测试量子算法，并减轻噪声对算法性能的影响（*图 2.16*）。
 - en: To test hybrid algorithms, AWS combines its classical EC2-based computer resources
     (the job instance) with Braket **quantum processing units** (**QPUs**) or quantum
     circuit simulat[ors. Users can also access a notebook](https://aws.amazon.com/braket/pricing/)
     to test quantum algorithms, share code, and visualize the results ([https://aws.amazon.com/braket/pricing/](https://aws.amazon.com/braket/pricing/)).
+  id: totrans-206
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了测试混合算法，AWS 将其基于经典 EC2 的计算资源（作业实例）与 Braket **量子处理单元** (**QPUs**) 或量子电路模拟器结合使用。[用户还可以访问笔记本](https://aws.amazon.com/braket/pricing/)来测试量子算法、共享代码并可视化结果
+    ([https://aws.amazon.com/braket/pricing/](https://aws.amazon.com/braket/pricing/))。
 - en: Amazon Braket offers access to various QC microprocessors at a reasonable price.
     The efficiency of a quantum algorithm can be tested on different systems and a
     use case then developed on the more efficient system.
+  id: totrans-207
   prefs: []
   type: TYPE_NORMAL
+  zh: 亚马逊 Braket 提供了多种量子计算微处理器的访问，价格合理。量子算法的效率可以在不同系统上进行测试，然后在更高效的系统上开发相应的应用案例。
 - en: Microsoft Quantum
+  id: totrans-208
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 微软量子
 - en: Since 2019, Microsoft has provided researchers, businesses, and developers with
     cloud access to quantum computers (*Kanamori et al., 2020*). The company has created
     a dynamic environment for this ecosystem to thrive and sustain itself by creating
@@ -1197,14 +1666,21 @@
     quantum algorithms. In particular, the Azure cloud has facilitated access to multiple
     platforms offered by companies like (but not limited to) 1QBit, Quantinuum, QCL,
     and Pasqal (*Figure 2**.17*).
+  id: totrans-209
   prefs: []
   type: TYPE_NORMAL
+  zh: 自2019年以来，微软已为研究人员、企业和开发者提供了云端量子计算机的访问权限（*Kanamori 等，2020*）。该公司为这一生态系统的繁荣与持续创造了一个动态环境，为企业、研究员和开发者提供空间，以便他们能够生产、测试和部署量子算法。特别是，Azure
+    云平台促进了对由 1QBit、Quantinuum、QCL 和 Pasqal 等公司（但不限于这些公司）提供的多个平台的访问（*图 2.17*）。
 - en: '![Figure 2.17 – Microsoft quantum ecosystem](img/B19146_02_017.jpg)'
+  id: totrans-210
   prefs: []
   type: TYPE_IMG
+  zh: '![图 2.17 – 微软量子生态系统](img/B19146_02_017.jpg)'
 - en: Figure 2.17 – Microsoft quantum ecosystem
+  id: totrans-211
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 2.17 – 微软量子生态系统
 - en: 'Microsoft’s quantum services are positioned at three levels: business, researcher,
     and developer. Through its enterprise acceleration program, the company provides
     easy access to the industry via optimization solvers and quantum hardware. Prestigious
@@ -1212,315 +1688,475 @@
     quantum computing through the cloud to develop solutions for scheduling problems
     and vehicle tracking. At the same time, by having access to modules such as Cirq,
     Qiskit, and Q#, researchers and developers can now engage in developing new algorithms.'
+  id: totrans-212
   prefs: []
   type: TYPE_NORMAL
+  zh: 微软的量子服务分为三个层级：商业、研究员和开发者。通过其企业加速计划，该公司通过优化求解器和量子硬件为行业提供便捷访问。包括 NASA 和福特在内的知名组织已经通过云计算探索量子计算，旨在开发调度问题和车辆追踪的解决方案。同时，借助
+    Cirq、Qiskit 和 Q# 等模块，研究员和开发者现在可以参与新算法的开发。
 - en: Summary
+  id: totrans-213
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 摘要
 - en: The foundational quantum computing algorithms have already demonstrated the
     potential benefits of this new computational paradigm, provided that a specific
     set of hardware capable of harnessing the advantages of the physical approach
     is available.
+  id: totrans-214
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 基础的量子计算算法已经展示了这种新计算范式的潜在优势，前提是有一套特定的硬件可以利用物理方法的优势。
 - en: There is an interesting variety of options regarding quantum and hybrid quantum-classical
     algorithms for solving problems related to machine learning, optimization, and
     simulation. Most have documentation and open source code available to reduce the
     learning curve for new adopters.
+  id: totrans-215
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 在解决与机器学习、优化和仿真相关的问题时，有各种各样有趣的量子和混合量子-经典算法选项可供选择。大多数都有文档和开源代码，旨在降低新用户的学习曲线。
 - en: Quantum computers are a reality since anyone who needs to can access them and
     start the process of research and discovery toward a potential solution. Also,
     if there is commercial interest, multiple cloud services provide access to several
     quantum technologies that can be explored in parallel with high computational
     power to run quantum simulators.
+  id: totrans-216
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 量子计算机已经成为现实，因为任何需要的人都可以访问它们，并开始进行研究和探索潜在的解决方案。如果有商业需求，多种云服务提供对多种量子技术的访问，用户可以并行探索这些技术，同时具备运行量子模拟器的高计算能力。
 - en: References
+  id: totrans-217
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 参考文献
 - en: '*Abbas, A., Sutter, D., Zoufal, C., Lucchi, A., Figalli, A., & Woerner, S.
     (2021). The power of quantum neural networks. Nature Computational Science 2021
     1:6, 1(6), 403–409\.* *doi: 10.1038/s43588-021-00084-1*'
+  id: totrans-218
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Abbas, A., Sutter, D., Zoufal, C., Lucchi, A., Figalli, A., & Woerner, S.
+    (2021). 量子神经网络的力量。《自然计算科学》2021年第1卷第6期，1(6)，403–409\.* *doi: 10.1038/s43588-021-00084-1*'
 - en: '*Ablayev, F., Ablayev, M., Huang, J. Z., Khadiev, K., Salikhova, N., & Wu,
     D. (2020). On quantum methods for machine learning problems part I: Quantum tools.
     Big Data Mining and Analytics, 3(1), 41–55\.* *doi: 10.26599/BDMA.2019.9020016*'
+  id: totrans-219
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Ablayev, F., Ablayev, M., Huang, J. Z., Khadiev, K., Salikhova, N., & Wu,
+    D. (2020). 量子方法在机器学习问题中的应用，第I部分：量子工具。大数据挖掘与分析, 3(1), 41–55\.* *doi: 10.26599/BDMA.2019.9020016*'
 - en: '*Albash, T., & Lidar, D. A. (2018). Adiabatic quantum computation. Reviews
     of Modern Physics, 90(1), 015002\.* *doi: 10.1103/REVMODPHYS.90.015002/FIGURES/11/MEDIUM*'
+  id: totrans-220
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Albash, T., & Lidar, D. A. (2018). 惰性量子计算。现代物理学评论, 90(1), 015002\.* *doi:
+    10.1103/REVMODPHYS.90.015002/FIGURES/11/MEDIUM*'
 - en: '*Álvarez, G. A., Danieli, E. P., Levstein, P. R., & Pastawski, H. M. (2008).
     Quantum parallelism as a tool for ensemble spin dynamics calculations. Physical
     Review Letters, 101(12), 120503\.* *doi: 10.1103/PHYSREVLETT.101.120503/FIGURES/3/MEDIUM*'
+  id: totrans-221
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Álvarez, G. A., Danieli, E. P., Levstein, P. R., & Pastawski, H. M. (2008).
+    量子并行性作为集体自旋动力学计算的工具。物理评论快报, 101(12), 120503\.* *doi: 10.1103/PHYSREVLETT.101.120503/FIGURES/3/MEDIUM*'
 - en: '*Arute, F., Arya, K., Babbush, R., Bacon, D., Bardin, J. C., Barends, R., Biswas,
     R., Boixo, S., Brandao, F. G. S. L., Buell, D. A., Burkett, B., Chen, Y., Chen,
     Z., Chiaro, B., Collins, R., Courtney, W., Dunsworth, A., Farhi, E., Foxen, B.,
     … Martinis, J. M. (2019). Quantum supremacy using a programmable superconducting
     processor. Nature 2019 574:7779, 574(7779), 505–510\.* *doi: 10.1038/s41586-019-1666-5*'
+  id: totrans-222
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Arute, F., Arya, K., Babbush, R., Bacon, D., Bardin, J. C., Barends, R., Biswas,
+    R., Boixo, S., Brandao, F. G. S. L., Buell, D. A., Burkett, B., Chen, Y., Chen,
+    Z., Chiaro, B., Collins, R., Courtney, W., Dunsworth, A., Farhi, E., Foxen, B.,
+    … Martinis, J. M. (2019). 使用可编程超导处理器实现量子霸权。自然, 574(7779), 505–510\.* *doi: 10.1038/s41586-019-1666-5*'
 - en: '*Bayerstadler, A., Becquin, G., Binder, J., Botter, T., Ehm, H., Ehmer, T.,
     Erdmann, M., Gaus, N., Harbach, P., Hess, M., Klepsch, J., Leib, M., Luber, S.,
     Luckow, A., Mansky, M., Mauerer, W., Neukart, F., Niedermeier, C., Palackal, L.,
     … Winter, F. (2021). Industry quantum computing applications. EPJ Quantum Technology,
     8(1), 25\.* *doi: 10.1140/EPJQT/S40507-021-00114-X*'
+  id: totrans-223
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Bayerstadler, A., Becquin, G., Binder, J., Botter, T., Ehm, H., Ehmer, T.,
+    Erdmann, M., Gaus, N., Harbach, P., Hess, M., Klepsch, J., Leib, M., Luber, S.,
+    Luckow, A., Mansky, M., Mauerer, W., Neukart, F., Niedermeier, C., Palackal, L.,
+    … Winter, F. (2021). 行业量子计算应用。欧洲物理学杂志量子技术, 8(1), 25\.* *doi: 10.1140/EPJQT/S40507-021-00114-X*'
 - en: '*Bergholm, V., Izaac, J., Schuld, M., Gogolin, C., Ahmed, S., Ajith, V., Alam,
     M. S., Alonso-Linaje, G., AkashNarayanan, B., Asadi, A., Arrazola, J. M., Azad,
     U., Banning, S., Blank, C., Bromley, T. R., Cordier, B. A., Ceroni, J., Delgado,
     A., Di Matteo, O., … Killoran, N. (2018). PennyLane: Automatic differentiation
     of hybrid quantum-classical computations.* *doi: 10.48550/arxiv.1811.04968*'
+  id: totrans-224
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Bergholm, V., Izaac, J., Schuld, M., Gogolin, C., Ahmed, S., Ajith, V., Alam,
+    M. S., Alonso-Linaje, G., AkashNarayanan, B., Asadi, A., Arrazola, J. M., Azad,
+    U., Banning, S., Blank, C., Bromley, T. R., Cordier, B. A., Ceroni, J., Delgado,
+    A., Di Matteo, O., … Killoran, N. (2018). PennyLane: 自动微分的混合量子-经典计算。* *doi: 10.48550/arxiv.1811.04968*'
 - en: '*Bharti, K., Cervera-Lierta, A., Kyaw, T. H., Haug, T., Alperin-Lea, S., Anand,
     A., Degroote, M., Heimonen, H., Kottmann, J. S., Menke, T., Mok, W.-K., Sim, S.,
     Kwek, L.-C., & Aspuru-Guzik, A. (2021). Noisy intermediate-scale quantum (NISQ)
     algorithms. Reviews of Modern Physics, 94(1).* *doi: 10.1103/RevModPhys.94.015004*'
+  id: totrans-225
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Bharti, K., Cervera-Lierta, A., Kyaw, T. H., Haug, T., Alperin-Lea, S., Anand,
+    A., Degroote, M., Heimonen, H., Kottmann, J. S., Menke, T., Mok, W.-K., Sim, S.,
+    Kwek, L.-C., & Aspuru-Guzik, A. (2021). 噪声中等规模量子（NISQ）算法。现代物理学评论, 94(1).\* *doi:
+    10.1103/RevModPhys.94.015004*'
 - en: '*Bittel, L., & Kliesch, M. (2021). Training Variational Quantum Algorithms
     Is NP-Hard. Physical Review Letters, 127(12), 120502\.* *doi: 10.1103/PHYSREVLETT.127.120502/FIGURES/1/MEDIUM*'
+  id: totrans-226
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Bittel, L., & Kliesch, M. (2021). 训练变分量子算法是NP难的。物理评论快报, 127(12), 120502\.*
+    *doi: 10.1103/PHYSREVLETT.127.120502/FIGURES/1/MEDIUM*'
 - en: '*Campagne-Ibarcq, P., Eickbusch, A., Touzard, S., Zalys-Geller, E., Frattini,
     N. E., Sivak, V. V., Reinhold, P., Puri, S., Shankar, S., Schoelkopf, R. J., Frunzio,
     L., Mirrahimi, M., & Devoret, M. H. (2020). Quantum error correction of a qubit
     encoded in grid states of an oscillator. Nature 2020 584:7821, 584(7821), 368–372\.*
     *doi: 10.1038/s41586-020-2603-3*'
+  id: totrans-227
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Campagne-Ibarcq, P., Eickbusch, A., Touzard, S., Zalys-Geller, E., Frattini,
+    N. E., Sivak, V. V., Reinhold, P., Puri, S., Shankar, S., Schoelkopf, R. J., Frunzio,
+    L., Mirrahimi, M., & Devoret, M. H. (2020). 量子误差校正：在振荡器的格点状态中编码的量子比特。自然, 584(7821),
+    368–372\.* *doi: 10.1038/s41586-020-2603-3*'
 - en: '*Carena, M., Lamm, H., Li, Y.-Y., & Liu, W. (2022). Improved Hamiltonians for
     Quantum Simulations of Gauge Theories. Physical Review Letters, 129(5), 051601\.*
     *doi: 10.1103/PhysRevLett.129.051601*'
+  id: totrans-228
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Carena, M., Lamm, H., Li, Y.-Y., & Liu, W. (2022). 量子模拟规范理论的改进哈密顿量。物理评论快报,
+    129(5), 051601\.* *doi: 10.1103/PhysRevLett.129.051601*'
 - en: '*Castelvecchi, D. (2017). IBM’s quantum cloud computer goes commercial.* *Nature,
     543(7644).*'
+  id: totrans-229
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Castelvecchi, D. (2017). IBM的量子云计算机正式商用。* *自然, 543(7644)。*'
 - en: '*Cerezo, M., Arrasmith, A., Babbush, R., Benjamin, S. C., Endo, S., Fujii,
     K., McClean, J. R., Mitarai, K., Yuan, X., Cincio, L., & Coles, P. J. (2021).
     Variational quantum algorithms. Nature Reviews Physics 2021 3:9, 3(9), 625–644\.*
     *doi: 10.1038/s42254-021-00348-9*'
+  id: totrans-230
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Cerezo, M., Arrasmith, A., Babbush, R., Benjamin, S. C., Endo, S., Fujii,
+    K., McClean, J. R., Mitarai, K., Yuan, X., Cincio, L., & Coles, P. J. (2021).
+    变分量子算法。自然物理学评论 2021 3:9, 3(9), 625–644\.* *doi: 10.1038/s42254-021-00348-9*'
 - en: '*Choi, J., & Kim, J. (2019). A Tutorial on Quantum Approximate Optimization
     Algorithm (QAOA): Fundamentals and Applications. ICTC 2019 - 10th International
     Conference on ICT Convergence: ICT Convergence Leading the Autonomous Future,
     138–142\.* *doi: 10.1109/ICTC46691.2019.8939749*'
+  id: totrans-231
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Choi, J., & Kim, J. (2019). 量子近似优化算法（QAOA）教程：基础与应用。ICTC 2019 - 第十届国际信息通信技术融合会议：ICT融合引领自主未来,
+    138–142\.* *doi: 10.1109/ICTC46691.2019.8939749*'
 - en: '*Chong, F. T., Franklin, D., & Martonosi, M. (2017). Programming languages
     and compiler design for realistic quantum hardware. Nature 2017 549:7671, 549(7671),
     180–187\.* *doi: 10.1038/nature23459*'
+  id: totrans-232
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Chong, F. T., Franklin, D., & Martonosi, M. (2017). 面向现实量子硬件的编程语言与编译器设计。自然
+    2017 549:7671, 549(7671), 180–187\.* *doi: 10.1038/nature23459*'
 - en: '*Chow, J. M., Gambetta, J. M., Córcoles, A. D., Merkel, S. T., Smolin, J. A.,
     Rigetti, C., Poletto, S., Keefe, G. A., Rothwell, M. B., Rozen, J. R., Ketchen,
     M. B., & Steffen, M. (2012). Universal quantum gate set approaching fault-tolerant
     thresholds with superconducting qubits. Physical Review Letters, 109(6), 060501\.*
     *doi: 10.1103/PHYSREVLETT.109.060501/FIGURES/4/MEDIUM*'
+  id: totrans-233
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Chow, J. M., Gambetta, J. M., Córcoles, A. D., Merkel, S. T., Smolin, J. A.,
+    Rigetti, C., Poletto, S., Keefe, G. A., Rothwell, M. B., Rozen, J. R., Ketchen,
+    M. B., & Steffen, M. (2012). 接近容错门限的通用量子门集，使用超导量子比特。物理评论快报, 109(6), 060501\.*
+    *doi: 10.1103/PHYSREVLETT.109.060501/FIGURES/4/MEDIUM*'
 - en: '*Deb, A., Dueck, G. W., & Wille, R. (2021). Exploring the Potential Benefits
     of Alternative Quantum Computing Architectures. IEEE Transactions on Computer-Aided
     Design of Integrated Circuits and Systems, 40(9), 1825–1835\.* *doi: 10.1109/TCAD.2020.3032072*'
+  id: totrans-234
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Deb, A., Dueck, G. W., & Wille, R. (2021). 探索替代量子计算架构的潜在好处。IEEE集成电路与系统计算机辅助设计学报,
+    40(9), 1825–1835\.* *doi: 10.1109/TCAD.2020.3032072*'
 - en: '*Deutsch, D., & Jozsa, R. (1992). Rapid solution of problems by quantum computation.
     Proceedings of the Royal Society of London. Series A: Mathematical and Physical
     Sciences, 439(1907), 553–558\.* *doi: 10.1098/RSPA.1992.0167*'
+  id: totrans-235
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Deutsch, D., & Jozsa, R. (1992). 通过量子计算快速解决问题。伦敦皇家学会学报。数学与物理科学系列, 439(1907),
+    553–558\.* *doi: 10.1098/RSPA.1992.0167*'
 - en: '*Egger, D. J., Gambella, C., Marecek, J., McFaddin, S., Mevissen, M., Raymond,
     R., Simonetto, A., Woerner, S., & Yndurain, E. (2021). Quantum Computing for Finance:
     State-of-the-Art and Future Prospects. IEEE Transactions on Quantum Engineering,
     1, 1–24\.* *doi: 10.1109/TQE.2020.3030314*'
+  id: totrans-236
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Egger, D. J., Gambella, C., Marecek, J., McFaddin, S., Mevissen, M., Raymond,
+    R., Simonetto, A., Woerner, S., & Yndurain, E. (2021). 金融领域的量子计算：现状与未来展望。IEEE量子工程学报,
+    1, 1–24\.* *doi: 10.1109/TQE.2020.3030314*'
 - en: '*Endo, S., Cai, Z., Benjamin, S. C., & Yuan, X. (2021). Hybrid Quantum-Classical
     Algorithms and Quantum Error Mitigation. Https://Doi.Org/10.7566/JPSJ.90.032001,
     90(3).* *doi: 10.7566/JPSJ.90.032001*'
+  id: totrans-237
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Endo, S., Cai, Z., Benjamin, S. C., & Yuan, X. (2021). 混合量子-经典算法与量子误差缓解。Https://Doi.Org/10.7566/JPSJ.90.032001,
+    90(3).\* *doi: 10.7566/JPSJ.90.032001*'
 - en: '*Fedorov, A. K., Gisin, N., Beloussov, S. M., & Lvovsky, A. I. (2022). Quantum
     computing at the quantum advantage threshold: a down-to-business review.* *doi:
     10.48550/arxiv.2203.17181*'
+  id: totrans-238
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Fedorov, A. K., Gisin, N., Beloussov, S. M., & Lvovsky, A. I. (2022). 量子优势门槛下的量子计算：一次实用的回顾。\*
+    *doi: 10.48550/arxiv.2203.17181*'
 - en: '*Ganguly, S., & Cambier, T. (2021). Quantum Computing with Silq Programming:
     get up and running with the new high-level programming language for quantum computing.
     PACKT* *PUBLISHING LIMITED.*'
+  id: totrans-239
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Ganguly, S., & Cambier, T. (2021). 使用Silq编程进行量子计算：使用新型高级量子计算编程语言快速入门。PACKT*
+    *PUBLISHING LIMITED.*'
 - en: '*Gilyén, A., Song, Z., & Tang, E. (2022). An improved quantum-inspired algorithm
     for linear regression. Quantum, 6, 754\.* *doi: 10.22331/q-2022-06-30-754*'
+  id: totrans-240
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Gilyén, A., Song, Z., & Tang, E. (2022). 一种改进的量子启发式算法用于线性回归。量子, 6, 754\.*
+    *doi: 10.22331/q-2022-06-30-754*'
 - en: '*Gong, C., Dong, Z., Gani, A., & Qi, H. (2021). Quantum k-means algorithm based
     on trusted server in quantum cloud computing. Quantum Information Processing,
     20(4), 1–22\.* *doi: 10.1007/S11128-021-03071-7/FIGURES/16*'
+  id: totrans-241
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Gong, C., Dong, Z., Gani, A., & Qi, H. (2021). 基于受信服务器的量子云计算中的量子k-means算法。量子信息处理,
+    20(4), 1–22\.* *doi: 10.1007/S11128-021-03071-7/FIGURES/16*'
 - en: '*Grover, L. K. (1996). A fast quantum mechanical algorithm for database search.
     Proceedings of the Annual ACM Symposium on Theory of Computing, Part F129452,
     212–219\.* *doi: 10.1145/237814.237866*'
+  id: totrans-242
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Grover, L. K. (1996). 一种快速的量子数据库搜索算法. 《年度ACM计算理论研讨会论文集》F129452, 212–219\.*
+    *doi: 10.1145/237814.237866*'
 - en: '*Heim, B., Soeken, M., Marshall, S., Granade, C., Roetteler, M., Geller, A.,
     Troyer, M., & Svore, K. (2020). Quantum programming languages. Nature Reviews
     Physics 2020 2:12, 2(12), 709–722\.* *doi: 10.1038/S42254-020-00245-7*'
+  id: totrans-243
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Heim, B., Soeken, M., Marshall, S., Granade, C., Roetteler, M., Geller, A.,
+    Troyer, M., & Svore, K. (2020). 量子编程语言. 《自然物理评论》2020 2:12, 2(12), 709–722\.* *doi:
+    10.1038/S42254-020-00245-7*'
 - en: '*Kanamori, Y., & Yoo, S.-M. (2020). Quantum Computing: Principles and Applications.
     Journal of International Technology and Information Management, 29(2). Retrieved*
     *from https://scholarworks.lib.csusb.edu/jitim/vol29/iss2/3*'
+  id: totrans-244
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Kanamori, Y., & Yoo, S.-M. (2020). 量子计算：原理与应用. 《国际技术与信息管理期刊》29(2). 取自* [https://scholarworks.lib.csusb.edu/jitim/vol29/iss2/3](https://scholarworks.lib.csusb.edu/jitim/vol29/iss2/3)'
 - en: '*Kaoudi, Z., Quiané-Ruiz, J.-A., Thirumuruganathan, S., Chawla, S., & Agrawal,
     D. (2017). A Cost-based Optimizer for Gradient Descent Optimization. Proceedings
     of the 2017 ACM International Conference on Management of Data.* *doi: 10.1145/3035918*'
+  id: totrans-245
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Kaoudi, Z., Quiané-Ruiz, J.-A., Thirumuruganathan, S., Chawla, S., & Agrawal,
+    D. (2017). 基于成本的梯度下降优化器. 第2017年ACM国际数据管理会议论文集.* *doi: 10.1145/3035918*'
 - en: '*Kellerer, Hans et al. “Selecting Portfolios with Fixed Costs and Minimum Transaction
     Lots.” Annals of Operations Research 99 (**2000): 287-304.*'
+  id: totrans-246
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Kellerer, Hans 等. “带固定成本和最小交易批量的投资组合选择.” 《运筹学年刊》99 (**2000): 287-304.*'
 - en: '*Knill, E. (1996). Conventions for quantum pseudocode. Retrieved* *from* [https://www.osti.gov/biblio/366453](https://www.osti.gov/biblio/366453)'
+  id: totrans-247
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Knill, E. (1996). 量子伪代码的约定. 取自* [https://www.osti.gov/biblio/366453](https://www.osti.gov/biblio/366453)'
 - en: '*Li, W., & Deng, D. L. (2021). Recent advances for quantum classifiers. Science
     China Physics, Mechanics & Astronomy 2021 65:2, 65(2), 1–23\.* *doi: 10.1007/S11433-021-1793-6*'
+  id: totrans-248
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Li, W., & Deng, D. L. (2021). 量子分类器的最新进展. 《科学中国物理学、力学与天文学》2021 65:2, 65(2),
+    1–23\.* *doi: 10.1007/S11433-021-1793-6*'
 - en: '*Li, Z., Dai, J., Pan, S., Zhang, W., & Hu, J. (2020). Synthesis of Deutsch-Jozsa
     Circuits and Verification by IBM Q. International Journal of Theoretical Physics,
     59(6), 1668–1678\.* *doi: 10.1007/S10773-020-04434-Z/FIGURES/11*'
+  id: totrans-249
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Li, Z., Dai, J., Pan, S., Zhang, W., & Hu, J. (2020). Deutsch-Jozsa电路的合成与IBM
+    Q的验证. 《国际理论物理期刊》59(6), 1668–1678\.* *doi: 10.1007/S10773-020-04434-Z/FIGURES/11*'
 - en: '*Martín-Guerrero, J. D., & Lamata, L. (2022). Quantum Machine Learning: A tutorial.
     Neurocomputing, 470, 457–461\.* *doi: 10.1016/J.NEUCOM.2021.02.102*'
+  id: totrans-250
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Martín-Guerrero, J. D., & Lamata, L. (2022). 量子机器学习：教程. 《神经计算》470, 457–461\.*
+    *doi: 10.1016/J.NEUCOM.2021.02.102*'
 - en: '*Mccaskey, A., Nguyen, T., Santana, A., Claudino, D., Kharazi, T., & Finkel,
     H. (2021). Extending C++ for Heterogeneous Quantum-Classical Computing. ACM Transactions
     on Quantum Computing, 2(2), 1–36\.* *doi: 10.1145/3462670*'
+  id: totrans-251
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Mccaskey, A., Nguyen, T., Santana, A., Claudino, D., Kharazi, T., & Finkel,
+    H. (2021). 扩展C++以支持异构量子-经典计算. 《ACM量子计算学报》2(2), 1–36\.* *doi: 10.1145/3462670*'
 - en: '*Mengoni, R., & Di Pierro, A. (2019). Kernel methods in Quantum Machine Learning.
     Quantum Machine Intelligence 2019 1:3, 1(3), 65–71\.* *doi: 10.1007/S42484-019-00007-4*'
+  id: totrans-252
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Mengoni, R., & Di Pierro, A. (2019). 量子机器学习中的核方法. 《量子机器智能》2019 1:3, 1(3),
+    65–71\.* *doi: 10.1007/S42484-019-00007-4*'
 - en: '*Meyer, D. (2015). Support Vector Machines * The Interface to libsvm in package
     e1071\. Retrieved* *from http://www.csie.ntu.edu.tw/~cjlin/papers/ijcnn.ps.gz.*'
+  id: totrans-253
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Meyer, D. (2015). 支持向量机 * libsvm接口在e1071包中的应用\. 取自* [http://www.csie.ntu.edu.tw/~cjlin/papers/ijcnn.ps.gz](http://www.csie.ntu.edu.tw/~cjlin/papers/ijcnn.ps.gz)'
 - en: '*Microsoft. (2017). Get started with quantum development. Get Started with
     Quantum Development. Retrieved* *from https://www.microsoft.com/en-us/quantum/development-kit*'
+  id: totrans-254
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*微软公司. (2017). 开始量子开发之旅. 开始量子开发之旅. 取自* [https://www.microsoft.com/en-us/quantum/development-kit](https://www.microsoft.com/en-us/quantum/development-kit)'
 - en: '*Milanov, E. (2009). The RSA algorithm. Retrieved* *from* [https://sites.math.washington.edu/~morrow/336_09/papers/Yevgeny.pdf](https://sites.math.washington.edu/~morrow/336_09/papers/Yevgeny.pdf)'
+  id: totrans-255
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Milanov, E. (2009). RSA算法. 取自* [https://sites.math.washington.edu/~morrow/336_09/papers/Yevgeny.pdf](https://sites.math.washington.edu/~morrow/336_09/papers/Yevgeny.pdf)'
 - en: '*Mitarai, K., Negoro, M., Kitagawa, M., & Fujii, K. (2018). Quantum circuit
     learning. Physical Review A, 98(3), 032309\.* *doi: 10.1103/PHYSREVA.98.032309/FIGURES/6/MEDIUM*'
+  id: totrans-256
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Mitarai, K., Negoro, M., Kitagawa, M., & Fujii, K. (2018). 量子电路学习. 《物理评论A》98(3),
+    032309\.* *doi: 10.1103/PHYSREVA.98.032309/FIGURES/6/MEDIUM*'
 - en: '*Montanaro, A. (2016). Quantum algorithms: an overview. Npj Quantum Information
     2016 2:1, 2(1), 1–8\.* *doi: 10.1038/npjqi.2015.23*'
+  id: totrans-257
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Montanaro, A. (2016). 量子算法：概述. 《npj量子信息》2016 2:1, 2(1), 1–8\.* *doi: 10.1038/npjqi.2015.23*'
 - en: '*Ömer, B. (2002). Procedural Quantum Programming. AIP Conference Proceedings,
     627(1), 276\.* *doi: 10.1063/1.1503695*'
+  id: totrans-258
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Ömer, B. (2002). 程序化量子编程。AIP会议论文集，627(1)，276\.* *doi: 10.1063/1.1503695*'
 - en: '*Park, D. K., Blank, C., & Petruccione, F. (2020). The theory of the quantum
     kernel-based binary classifier. Physics Letters A, 384(21), 126422\.* *doi: 10.1016/J.PHYSLETA.2020.126422*'
+  id: totrans-259
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Park, D. K., Blank, C., & Petruccione, F. (2020). 基于量子核的二元分类器理论。物理快报A，384(21)，126422\.*
+    *doi: 10.1016/J.PHYSLETA.2020.126422*'
 - en: '*Patterson, S. (2019). Learn AWS serverless computing : a beginner’s guide
     to using AWS Lambda, Amazon API Gateway, and services from Amazon Web Services.*
     *Packt Publishing.*'
+  id: totrans-260
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Patterson, S. (2019). 学习AWS无服务器计算：AWS Lambda、Amazon API Gateway及Amazon Web
+    Services服务的初学者指南。* *Packt出版。*'
 - en: '*Schuld, M., & Petruccione, F. (2018). Supervised Learning with Quantum Computers.
     Springer International Publishing.* *doi: 10.1007/978-3-319-96424-9*'
+  id: totrans-261
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Schuld, M., & Petruccione, F. (2018). 使用量子计算机的监督学习。Springer国际出版。* *doi: 10.1007/978-3-319-96424-9*'
 - en: '*Shor, P. W. (1994). Algorithms for quantum computation: Discrete logarithms
     and factoring. Proceedings - Annual IEEE Symposium on Foundations of Computer
     Science, FOCS, 124–134\.* *doi: 10.1109/SFCS.1994.365700*'
+  id: totrans-262
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Shor, P. W. (1994). 量子计算算法：离散对数与因式分解。会议录 - IEEE计算机科学基础年会，FOCS，124–134\.* *doi:
+    10.1109/SFCS.1994.365700*'
 - en: '*Skorohod, A. V. (2012). Integration in Hilbert Space (Springer Science & …).
     Springer* *Berlin Heidelberg.*'
+  id: totrans-263
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Skorohod, A. V. (2012). 希尔伯特空间中的积分（Springer科学出版社）。Springer* *柏林海德堡。*'
 - en: '*Wang, D., Higgott, O., & Brierley, S. (2019). Accelerated variational quantum
     eigensolver. Physical Review Letters, 122(14), 140504\.* *doi: 10.1103/PHYSREVLETT.122.140504/FIGURES/3/MEDIUM*'
+  id: totrans-264
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Wang, D., Higgott, O., & Brierley, S. (2019). 加速变分量子本征求解器。物理评论快报，122(14)，140504\.*
+    *doi: 10.1103/PHYSREVLETT.122.140504/FIGURES/3/MEDIUM*'
 - en: '*Yung, M. H. (2019). Quantum supremacy: some fundamental concepts. National
     Science Review, 6(1), 22–23\.* *doi: 10.1093/NSR/NWY072*'
+  id: totrans-265
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*Yung, M. H. (2019). 量子霸权：一些基本概念。国家科学评论，6(1)，22–23\.* *doi: 10.1093/NSR/NWY072*'

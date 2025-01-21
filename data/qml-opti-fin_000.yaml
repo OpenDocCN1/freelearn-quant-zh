@@ -1,63 +1,85 @@
 - en: Preface
+  id: totrans-0
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 前言
 - en: Quantum Machine Learning – Most **overhyped** and **underestimated** field at
     the same time
+  id: totrans-1
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子机器学习 – 既是最**被夸大**的领域，也是最**被低估**的领域。
 - en: '* * *'
+  id: totrans-2
   prefs: []
   type: TYPE_NORMAL
+  zh: '* * *'
 - en: Iordanis Kerenidis
+  id: totrans-3
   prefs: []
   type: TYPE_NORMAL
+  zh: 约尔达尼斯·凯雷尼迪斯
 - en: Introduction
+  id: totrans-4
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 引言
 - en: '**Why Quantum Computing?** Quantum computing and AI will revolutionise and
     disrupt our society in the same way as classical digital computing did in the
     second half of the 20th century and the internet did in the first two decades
     of the 21st century.'
+  id: totrans-5
   prefs: []
   type: TYPE_NORMAL
+  zh: '**为什么是量子计算？** 量子计算和人工智能将像20世纪下半叶的经典数字计算以及21世纪前二十年的互联网一样，彻底改变并颠覆我们的社会。'
 - en: Quantum computing (or, more generally, Quantum Information Theory) has been
     the subject of extensive research since the 1960s, but it was only in the last
     decade that progress on the hardware side has made it possible to test quantum
     computing algorithms; and it was only in the last several years that quantum computing’s
     supremacy was finally claimed as an experimental fact (i.e., a landmark experiment
     conducted on Google’s 53-qubit Sycamore quantum chip  [[16](Biblography.xhtml#XArute2019)]).
+  id: totrans-6
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算（或者更广泛地说，量子信息理论）自1960年代以来一直是广泛研究的主题，但直到最近十年，硬件方面的进展才使得量子计算算法的测试成为可能；而且直到最近几年，量子计算的优越性才最终被确认为一种实验事实（即在谷歌的53量子位Sycamore量子芯片上进行的具有里程碑意义的实验[[16](Biblography.xhtml#XArute2019)]）。
 - en: 'The story of quantum computing is, in this respect, similar to the story of
     AI: AI was born in the 1950s but then experienced two “winters”, when interest
     in AI and Machine Learning declined considerably (following the Lighthill report
     in the UK and the Speech Understanding Research debacle in the US in the 1970s,
     and the LISP collapse in the 1990s), before becoming widely used and adopted to
     the point that we can no longer imagine our life without it.'
+  id: totrans-7
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算的发展历程在这方面类似于人工智能的故事：人工智能诞生于1950年代，但经历了两次“寒冬”，在那时人工智能和机器学习的兴趣大幅下降（先是1970年代英国的Lighthill报告和美国的语音理解研究灾难，随后是1990年代LISP的崩溃），之后才广泛应用和接受，以至于我们现在无法想象没有它的生活。
 - en: Even though we cannot rule out a “quantum computing winter” before quantum computing
     technology becomes embedded in everyday life to the same extent as the internet,
     smartphones, and AI, the whole range of quantum computing breakthroughs we have
     witnessed in the last few years makes it somewhat unlikely.
+  id: totrans-8
   prefs: []
   type: TYPE_NORMAL
+  zh: 尽管我们不能排除在量子计算技术像互联网、智能手机和人工智能那样深入日常生活之前会经历“量子计算寒冬”，但我们在过去几年中目睹的量子计算突破使这一可能性变得不太可能。
 - en: With recent advances in the field, we have finally reached the era of Noisy
     Intermediate-Scale Quantum (NISQ) computing  [[237](Biblography.xhtml#XPreskill2018)].
     NISQ-era computers are powerful enough to test quantum computing algorithms and
     solve non-trivial real-world problems – and establish quantum speedup and quantum
     advantage over comparable classical hardware.
+  id: totrans-9
   prefs: []
   type: TYPE_NORMAL
+  zh: 随着近期在该领域的进展，我们终于进入了噪声中间规模量子（NISQ）计算时代[[237](Biblography.xhtml#XPreskill2018)]。NISQ时代的计算机足够强大，可以测试量子计算算法并解决具有挑战性的实际问题——并且在可比的经典硬件上建立量子加速和量子优势。
 - en: However, it is likely that the first real-world production-level business applications
     will be a hybrid quantum-classical protocol, where most of the computation and
     data processing is done classically, but the hardest problems are outsourced to
     the quantum chip. In finance, discrete portfolio optimisation problems, which
     are NP-hard, are such examples and clear objectives to tackle.
+  id: totrans-10
   prefs: []
   type: TYPE_NORMAL
+  zh: 然而，首批真正的生产级商业应用可能会是混合量子-经典协议，其中大部分计算和数据处理是经典完成的，但最难的问题会外包给量子芯片。在金融领域，离散投资组合优化问题（即NP难问题）就是这样的例子，并且是明确的解决目标。
 - en: '**Why Quantum Machine Learning?** It is a combination of quantum computing
     and AI that will likely generate the most exciting opportunities, including a
     whole range of possible applications in finance, but also in medicine, chemistry,
@@ -67,8 +89,10 @@
     models (such as a Quantum Neural Network that can be trained as a classifier).
     The possible use cases include market generators, data anonymisers, credit scoring,
     and the generation of trading signals.'
+  id: totrans-11
   prefs: []
   type: TYPE_NORMAL
+  zh: '**为什么选择量子机器学习？** 它是量子计算和人工智能的结合，可能会带来最激动人心的机会，包括在金融领域的广泛应用，同时也包括在医学、化学、物理学等领域的应用。我们已经见证了使用参数化量子电路训练的第一个有前景的结果，这些电路可以作为生成模型（如量子电路博恩机，可作为合成数据生成器使用）或判别模型（如量子神经网络，可以作为分类器训练）。可能的应用场景包括市场生成器、数据匿名化、信用评分和交易信号生成。'
 - en: All the models and techniques mentioned so far rely on the existence of universal,
     gate model quantum computers. However, there is another type of quantum hardware
     – quantum annealers – which realise the principle of adiabatic quantum computing.
@@ -78,8 +102,10 @@
     the fact that many supervised and reinforcement learning tools used in finance
     are trained via solving optimisation problems (minimisation of a cost function,
     maximisation of reward).
+  id: totrans-12
   prefs: []
   type: TYPE_NORMAL
+  zh: 到目前为止提到的所有模型和技术都依赖于通用的门模型量子计算机的存在。然而，还有另一种类型的量子硬件——量子退火器——它实现了绝热量子计算的原理。量子退火器是模拟量子计算机，非常适合解决对于经典计算机来说是NP难的复杂优化问题。优化问题是金融领域中大量难以解决的问题，更不用说许多金融中使用的监督学习和强化学习工具是通过解决优化问题（最小化成本函数，最大化奖励）进行训练的。
 - en: An example of discriminative machine learning problems solved using quantum
     annealers includes building a strong classifier from several weak ones – the Quantum
     Boosting algorithm. The strong classifier is highly resilient against overtraining
@@ -89,8 +115,10 @@
     annealing-based classifiers are simple functions of directly interpretable experimental
     parameters with clear physical meaning and demonstrate some advantage over traditional
     machine learning methods for small training datasets.
+  id: totrans-13
   prefs: []
   type: TYPE_NORMAL
+  zh: 使用量子退火器解决的判别式机器学习问题的一个例子是通过多个弱分类器构建一个强分类器——量子提升算法。强分类器对过度训练和训练数据中物理可观察量相关性错误具有较强的抗干扰能力。量子退火训练的分类器的表现与最先进的经典机器学习方法相当。然而，与这些方法不同，基于退火的分类器是直接可解释的实验参数的简单函数，具有明确的物理意义，并且在小型训练数据集上，相比传统机器学习方法表现出一定的优势。
 - en: Another application of quantum annealing is in generative learning. In Deep
     Learning, a well-known approach for training a deep neural network starts with
     training a generative Deep Boltzmann Machine, typically using the Contrastive
@@ -99,8 +127,10 @@
     consuming due to the slow mixing of Boltzmann (Gibbs) sampling. The quantum sampling-based
     training approach can achieve comparable or better accuracy with significantly
     fewer iterations of generative training than conventional CD-based training.
+  id: totrans-14
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子退火的另一个应用是生成学习。在深度学习中，训练深度神经网络的一个著名方法是先训练生成式深度玻尔兹曼机，通常使用对比散度（CD）算法，然后使用反向传播或其他判别技术对权重进行微调。然而，生成式训练通常耗时较长，因为玻尔兹曼（吉布斯）采样的混合速度较慢。基于量子采样的训练方法可以在生成式训练的迭代次数显著减少的情况下，达到与传统CD方法相当甚至更好的准确性。
 - en: The main focus of this book is therefore on tackling practical real-world applications
     of Quantum Machine Learning (QML) algorithms executable on NISQ hardware rather
     than adopting the more traditional quantum computing textbook approach, diligently
@@ -110,8 +140,10 @@
     reflect the most productive way of harnessing the power of quantum computing –
     it is in tandem with classical computing that quantum computing solutions can
     provide maximum benefits to the users.
+  id: totrans-15
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，本书的主要焦点是解决可以在NISQ硬件上执行的量子机器学习（QML）算法的实际应用问题，而非采用传统的量子计算教材方式，详尽描述标准量子计算算法（如Shor算法、Grover算法、*…*），这些算法的量子硬件需求远超NISQ计算机的能力。书中还重点介绍了反映最有效利用量子计算能力的混合量子-经典计算协议——量子计算解决方案在与经典计算协同工作时，能为用户提供最大效益。
 - en: In this book, we cover all major QML algorithms that have been the subject of
     intensive research by the industry and that have shown early signs of potential
     quantum advantage. We also provide a balanced view of both analog and digital
@@ -121,8 +153,10 @@
     on the fundamental characteristics of the algorithms rather than their hardware
     realisations, although we do not ignore the question of algorithms’ embedding
     and the practical limitations of the existing quantum computing hardware.
+  id: totrans-16
   prefs: []
   type: TYPE_NORMAL
+  zh: 本书涵盖了所有主要的量子机器学习（QML）算法，这些算法已成为业界深入研究的对象，并且显示出了早期的量子优势潜力。我们还提供了对模拟量子计算机和数字量子计算机的平衡视角，并未试图预测哪种量子计算技术（超导量子比特、困束离子、中性原子等）最终会获胜。内容以硬件无关的方式呈现，重点强调算法的基本特性，而非它们的硬件实现，尽管我们并没有忽视算法的嵌入问题以及现有量子计算硬件的实际限制。
 - en: '**Why Finance?** It is reasonable to expect that the incredibly fast rate of
     quantum hardware improvements we have witnessed over the last several years will
     lead to the widespread adoption of quantum computing techniques in finance. The
@@ -130,8 +164,10 @@
     hard practical problems and assist in achieving digital transformation. We might
     have moved past the point of quantum computing supremacy, but our quest to establish
     quantum computing advantage has just begun.'
+  id: totrans-17
   prefs: []
   type: TYPE_NORMAL
+  zh: '**为什么选择金融？** 可以合理预期，近年来我们所见证的量子硬件的快速进步，将促使量子计算技术在金融领域的广泛应用。金融行业已经在研究量子机器学习（QML）解决经典计算难题的潜力，并帮助实现数字化转型。我们可能已经超越了量子计算霸主地位的阶段，但我们探索量子计算优势的旅程才刚刚开始。'
 - en: Quantitative finance is a discipline rich in interesting but computationally
     hard problems. Many such problems are interdisciplinary in nature and often require
     the transformation and adoption of mathematical and computational techniques developed
@@ -139,8 +175,10 @@
     of stochastic differential equations to option pricing  [[226](Biblography.xhtml#XOksendal2000)],
     methods of optimal control theory to management science and economics  [[260](Biblography.xhtml#XSethi2019)],
     machine learning techniques to portfolio construction, and optimisation  [[193](Biblography.xhtml#XMLDP2018)].
+  id: totrans-18
   prefs: []
   type: TYPE_NORMAL
+  zh: 定量金融是一门充满有趣但计算上非常复杂的问题的学科。许多此类问题具有跨学科的特性，通常需要将其他领域中发展出的数学和计算技术进行转化和应用。例如，我们可以提到随机微分方程理论在期权定价中的应用[[226](Biblography.xhtml#XOksendal2000)]，最优控制理论方法在管理科学和经济学中的应用[[260](Biblography.xhtml#XSethi2019)]，以及机器学习技术在投资组合构建和优化中的应用[[193](Biblography.xhtml#XMLDP2018)]。
 - en: This is why we turn to finance when we are looking for a wide range of real-world
     use cases to test (and improve!) quantum computing algorithms. The book provides
     many examples of the quantum computing techniques and algorithms applied to solving
@@ -149,44 +187,60 @@
     same time, the methods and techniques are formulated and presented in the most
     general form – we hope our readers will discover many new exciting quantum computing
     use cases in finance and beyond.
+  id: totrans-19
   prefs: []
   type: TYPE_NORMAL
+  zh: 这就是为什么当我们寻找各种现实世界的应用案例来测试（并改进！）量子计算算法时，我们转向金融领域。本书提供了许多量子计算技术和算法的示例，应用于解决实际的金融问题，如投资组合优化、信用卡违约预测、信用审批以及生成合成市场数据。同时，方法和技术以最一般的形式进行了表述和展示——我们希望读者能在金融及其他领域发现许多新的、令人兴奋的量子计算应用案例。
 - en: Who this book is for
+  id: totrans-20
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 本书适合的读者
 - en: 'The book is primarily aimed at three main groups: academic researchers and
     STEM students; finance professionals working in the field of quantitative finance
     and related areas; computer scientists and ML/AI experts. At the same time, the
     book is organised in such a way as to be accessible and useful to a much wider
     audience.'
+  id: totrans-21
   prefs: []
   type: TYPE_NORMAL
+  zh: 本书主要面向三个群体：学术研究人员和STEM（科学、技术、工程和数学）学生；从事定量金融和相关领域的金融专业人士；计算机科学家以及机器学习/人工智能专家。同时，本书的组织方式使其对更广泛的受众也具备可读性和实用性。
 - en: 'The book does not require any prior knowledge of quantum mechanics and the
     complexity of the mathematical apparatus should not feel intimidating: although
     we do not sacrifice mathematical rigour, the emphasis is very much on the understanding
     of the fundamental properties of the models and algorithms.'
+  id: totrans-22
   prefs: []
   type: TYPE_NORMAL
+  zh: 本书不要求读者具备量子力学的前置知识，数学工具的复杂性不应让人感到畏惧：尽管我们没有牺牲数学的严谨性，但重点是理解模型和算法的基本属性。
 - en: What this book covers
+  id: totrans-23
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 本书的内容
 - en: The book is split into two parts reflecting the natural progression from analog
     to digital quantum computing, with an increasing depth in the analysis and understanding
     of algorithms. However, we start with a chapter that covers the basic principles
     of quantum mechanics and provides the motivation for the computational methods
     based on those principles.
+  id: totrans-24
   prefs: []
   type: TYPE_NORMAL
+  zh: 本书分为两部分，反映了从类比量子计算到数字量子计算的自然进展，同时深入分析和理解算法。然而，我们从一章开始，讲解量子力学的基本原理，并为基于这些原理的计算方法提供动机。
 - en: '*Chapter 1, The Principles of Quantum Mechanics*, covers the basic mathematical
     principles of quantum mechanics. It provides the necessary definitions and discusses
     the postulates of quantum mechanics and their relevance to quantum computing.'
+  id: totrans-25
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第一章，量子力学原理*，涵盖了量子力学的基本数学原理。它提供了必要的定义，并讨论了量子力学的公设及其与量子计算的相关性。'
 - en: '**Part I: Analog Quantum Computing – Quantum Annealing**'
+  id: totrans-26
   prefs: []
   type: TYPE_NORMAL
+  zh: '**第一部分：类比量子计算 – 量子退火**'
 - en: For a number of years, quantum annealers were the only large-scale quantum computing
     devices available for experiments in solving non-trivial NP-hard combinatorial
     optimisation problems. Although quantum annealing specifically targets solving
@@ -194,16 +248,20 @@
     hybrid quantum-classical problems, such as samplers and classifiers. The book
     provides detailed coverage of these applications and illustrates them on specific
     financial use cases.
+  id: totrans-27
   prefs: []
   type: TYPE_NORMAL
+  zh: 多年来，量子退火器是唯一可用的大规模量子计算设备，用于解决非平凡的NP困难组合优化问题。尽管量子退火特别针对解决经典上难以解决的优化问题，但它也可以用于许多不同的量子-经典混合问题，例如采样器和分类器。本书详细介绍了这些应用，并通过具体的金融案例进行说明。
 - en: '*Chapter 2, Adiabatic Quantum Computing*, introduces the concept of analog
     quantum computing. The chapter starts with the principles of adiabatic quantum
     computing and proceeds with the quantum adiabatic theorem. The physical realisation
     of adiabatic quantum computing is quantum annealing, which is explained alongside
     its classical counterpart – simulated annealing. The chapter also discusses the
     implementation, limitations, and universality of adiabatic quantum computing.'
+  id: totrans-28
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第二章，绝热量子计算*，介绍了类比量子计算的概念。本章首先讲解了绝热量子计算的原理，并接着阐述了量子绝热定理。绝热量子计算的物理实现是量子退火，它与经典的退火方法——模拟退火一起进行解释。本章还讨论了绝热量子计算的实现、局限性和普适性。'
 - en: '*Chapter 3, Quadratic Unconstrained Binary Optimisation*, describes the single
     most important application of quantum annealing: solving classically hard optimisation
     problems. A wide range of combinatorial optimisation problems can be formulated
@@ -211,25 +269,33 @@
     as Ising problems) solvable on a quantum annealer. The chapter provides in-depth
     coverage of the forward and reverse quantum annealing techniques and demonstrates
     the power of quantum annealing on a discrete portfolio optimisation use case.'
+  id: totrans-29
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第三章，二次无约束二进制优化*，描述了量子退火最重要的应用：解决经典难度的优化问题。许多组合优化问题可以被表述为二次无约束二进制优化（QUBO）问题（或等价地，作为伊辛问题），这些问题可以通过量子退火器求解。本章深入讲解了前向和反向量子退火技术，并展示了量子退火在离散投资组合优化案例中的强大能力。'
 - en: '*Chapter 4, Quantum Boosting*, extends the range of QUBO applications beyond
     combinatorial optimisation and outlines the Quantum Boosting algorithm designed
     to combine a large number of weak classical classifiers into a strong classifier.
     The algorithm is formulated as a QUBO problem executable on a quantum annealer
     and applied to the use case of building a strong predictor of credit card defaults
     from a large number of weak predictors.'
+  id: totrans-30
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第四章，量子增强*，将QUBO应用的范围扩展到组合优化以外，并概述了量子增强算法，该算法旨在将大量弱经典分类器组合成一个强分类器。该算法被表述为一个可在量子退火器上执行的QUBO问题，并应用于从大量弱预测器中构建信用卡违约强预测器的案例。'
 - en: '*Chapter 5, Quantum Boltzmann Machine*, explores further machine learning applications
     of quantum annealing. The Quantum Boltzmann Machine can be used as a generative
     model for sampling from a learned probability distribution as well as an efficient
     method of pre-training deep feedforward neural networks.'
+  id: totrans-31
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第五章，量子玻尔兹曼机*，进一步探讨了量子退火在机器学习中的应用。量子玻尔兹曼机可以作为生成模型，用于从学习到的概率分布中进行采样，同时也是预训练深度前馈神经网络的高效方法。'
 - en: '**Part II: Gate Model Quantum Computing**'
+  id: totrans-32
   prefs: []
   type: TYPE_NORMAL
+  zh: '**第二部分：门模型量子计算**'
 - en: Gate model quantum computing hardware has demonstrated enormous progress in
     recent years and is quickly approaching the quantum advantage threshold. The search
     for quantum advantage – the real-world productive application of a quantum computing
@@ -238,23 +304,29 @@
     explores the main quantum computing algorithms implementable on existing NISQ
     devices and highlights a range of possible financial applications that may benefit
     from this new quantum computing paradigm.
+  id: totrans-33
   prefs: []
   type: TYPE_NORMAL
+  zh: 门模型量子计算硬件近年来取得了巨大的进展，正迅速接近量子优势的门槛。寻找量子优势——即量子计算解决方案在现实世界中能够优于任何可行的经典替代方案——是金融及其他领域量子计算研究的主要动力之一。本书探讨了在现有的NISQ设备上可实现的主要量子计算算法，并突出了可能从这一新量子计算范式中受益的各种金融应用。
 - en: '*Chapter 6, Qubits and Quantum Logic Gates*, introduces the paradigm of gate
     model quantum computing. We start with the basic concepts of classical digital
     computing and expand the computational logic to accommodate the new principles
     of superposition and entanglement. The chapter draws parallels between and contrasts
     classical and quantum logic gates and shows how to assemble quantum circuits from
     individual quantum logic gates.'
+  id: totrans-34
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第六章，量子比特与量子逻辑门*，介绍了门模型量子计算的范式。我们从经典数字计算的基本概念开始，扩展计算逻辑以适应叠加和纠缠的新原则。本章对比了经典与量子逻辑门，并展示了如何从单个量子逻辑门组装量子电路。'
 - en: '*Chapter 7, Parameterised Quantum Circuits and Data Encoding*, proceeds with
     the construction of quantum algorithms covering both the theoretical and the practical
     aspects of building Parameterised Quantum Circuits (PQCs), and demonstrates how
     classical samples can be encoded into quantum states processed by the PQCs. The
     chapter provides a detailed description of specific data encoding techniques.'
+  id: totrans-35
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第七章，参数化量子电路与数据编码*，继续构建量子算法，涵盖了构建参数化量子电路（PQCs）的理论和实践方面，并展示了如何将经典样本编码为由PQCs处理的量子态。本章提供了具体数据编码技术的详细描述。'
 - en: '*Chapter 8, Quantum Neural Network*, considers parameterised quantum circuits
     trained as classifiers. Throughout this chapter, we show how differentiable and
     non-differentiable learning algorithms can be used to efficiently train quantum
@@ -262,154 +334,225 @@
     how to design quantum circuits that extract maximum benefit from the available
     quantum computing hardware. We investigate QNN performance on a credit approval
     use case and benchmark it against several standard classical classifiers.'
+  id: totrans-36
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第8章，量子神经网络*，探讨了训练为分类器的参数化量子电路。在本章中，我们展示了如何利用可微分和不可微分的学习算法高效地训练量子神经网络。本章还讨论了现有量子处理单元（QPUs）的局限性，以及如何设计量子电路以最大程度地从现有的量子计算硬件中获得益处。我们在信用审批的应用案例上调查了量子神经网络的性能，并将其与几种标准的经典分类器进行了对比。'
 - en: '*Chapter 9, Quantum Circuit Born Machine*, introduces a quantum counterpart
     to classical generative models such as Boltzmann Machines – the Quantum Circuit
     Born Machine (QCBM). The chapter starts with the definition of QCBM and how it
     can be efficiently configured and run on available QPUs, continues with the differentiable
     and non-differentiable learning and training procedures, and concludes with the
     market generator use case benchmarked against classical Restricted Boltzmann Machine.'
+  id: totrans-37
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第9章，量子电路博恩机器*，介绍了量子版的经典生成模型，例如玻尔兹曼机——量子电路博恩机器（QCBM）。本章首先定义了QCBM，并介绍了如何在现有的量子处理单元（QPUs）上高效地配置和运行它，接着讨论了可微分和不可微分的学习与训练过程，并以经典限制玻尔兹曼机为基准，最后讨论了市场生成器的应用案例。'
 - en: '*Chapter 10, Variational Quantum Eigensolver*, introduces the variational principle
     and formulates the Variational Quantum Eigensolver (VQE) approach to optimisation
     problems. The chapter discusses a hybrid quantum-classical approach to training
     the VQE and looks at the practical aspects of running it on NISQ devices.'
+  id: totrans-38
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第10章，变分量子特征求解器*，介绍了变分原理，并制定了变分量子特征求解器（VQE）在优化问题中的方法。本章讨论了量子-经典混合方法来训练VQE，并探讨了在NISQ设备上运行VQE的实际问题。'
 - en: '*Chapter 11, Quantum Approximate Optimisation Algorithm*, describes the gate
     model quantum computing approach (inspired by quantum annealing) to solving QUBO-type
     problems, such as NP-hard Max-Cut optimisation problems.'
+  id: totrans-39
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第11章，量子近似优化算法*，描述了门模型量子计算方法（受量子退火启发）解决QUBO类型问题的思路，例如NP难度的最大割优化问题。'
 - en: '*Chapter 12, The Power of Parameterised Quantum Circuits*, investigates the
     main sources of quantum advantage we expect to demonstrate on practical applications
     of parameterised quantum circuits. The chapter focuses on two elements: strong
     regularisation provided by quantum neural networks and the expressive power of
     quantum generative models.'
+  id: totrans-40
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第12章，参数化量子电路的力量*，探讨了我们期望在参数化量子电路的实际应用中展示量子优势的主要来源。本章重点讨论了两个方面：量子神经网络提供的强正则化和量子生成模型的表达能力。'
 - en: '*Chapter 13, Looking Ahead*, discusses new promising quantum algorithms and
     techniques such as the quantum kernel method, quantum GAN, Bayesian quantum circuit,
     and quantum semi-definite programming.'
+  id: totrans-41
   prefs: []
   type: TYPE_NORMAL
+  zh: '*第13章，展望未来*，讨论了新兴的有前景的量子算法和技术，例如量子核方法、量子生成对抗网络（GAN）、贝叶斯量子电路和量子半正定编程。'
 - en: To get the most out of this book
+  id: totrans-42
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 如何最大化本书的价值
 - en: This book is intended as an in-depth introduction to the power of quantum computing
     techniques for quantitative finance problems. While it is designed as self-contained,
     this book assumes that the reader has some familiarity with basic mathematical
     concepts in algebra, analysis, and computing. Knowledge of quantum mechanics is
     not required, and the main tools thereof shall be explained and made accessible
     to non-physicists.
+  id: totrans-43
   prefs: []
   type: TYPE_NORMAL
+  zh: 本书旨在深入介绍量子计算技术在量化金融问题中的应用。虽然本书设计为自包含的，但假设读者对代数、分析和计算中的基本数学概念有所了解。不要求具备量子力学的知识，但书中的主要工具将会被解释，并使非物理学家也能理解。
 - en: Conventions used
+  id: totrans-44
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 使用的约定
 - en: There are a number of text conventions used throughout this book.
+  id: totrans-45
   prefs: []
   type: TYPE_NORMAL
+  zh: 本书中使用了多种文本约定。
 - en: '`CodeInText`: indicates code words in the text, software packages, folder names,
     path names, etc.'
+  id: totrans-46
   prefs: []
   type: TYPE_NORMAL
+  zh: '`CodeInText`：表示文本中的代码词汇、软件包、文件夹名称、路径名等。'
 - en: When we wish to draw your attention to a particular definition or notation,
     the relevant lines or items are set in either *italic* or **bold**.
+  id: totrans-47
   prefs: []
   type: TYPE_NORMAL
+  zh: 当我们希望引起您对某个特定定义或符号的注意时，相关的行或条目将采用*斜体*或**粗体**显示。
 - en: Important remarks and conclusions are shown in boxes.
+  id: totrans-48
   prefs: []
   type: TYPE_NORMAL
+  zh: 重要的备注和结论以框框形式展示。
 - en: Get in touch
+  id: totrans-49
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 联系我们
 - en: Feedback from our readers is always welcome.
+  id: totrans-50
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们始终欢迎来自读者的反馈。
 - en: '**General feedback:** Email [feedback@packtpub.com](mailto:feedback@packtpub.com),
     and mention the book’s title in the subject of your message. If you have questions
     about any aspect of this book, please email us at [questions@packtpub.com](mailto:questions@packtpub.com).'
+  id: totrans-51
   prefs: []
   type: TYPE_NORMAL
+  zh: '**一般反馈：** 请通过电子邮件 [feedback@packtpub.com](mailto:feedback@packtpub.com)，并在邮件主题中提及书名。如果您对本书的任何内容有疑问，请通过电子邮件联系
+    [questions@packtpub.com](mailto:questions@packtpub.com)。'
 - en: '**Errata:** Although we have taken every care to ensure the accuracy of our
     content, mistakes do happen. If you have found a mistake in this book, we would
     be grateful if you could report this to us. Please visit [http://www.packtpub.com/submit-errata](http://www.packtpub.com/submit-errata),
     select your book, click on the Errata Submission Form link, and enter the details.'
+  id: totrans-52
   prefs: []
   type: TYPE_NORMAL
+  zh: '**勘误：** 虽然我们已尽全力确保内容的准确性，但错误有时难以避免。如果您在本书中发现任何错误，我们将非常感激您向我们报告。请访问 [http://www.packtpub.com/submit-errata](http://www.packtpub.com/submit-errata)，选择您的书籍，点击勘误提交表单链接，并填写相关详情。'
 - en: '**Piracy:** If you come across any illegal copies of our works in any form
     on the internet, we would be grateful if you would provide us with the location
     address or website name. Please contact us at [copyright@packtpub.com](mailto:copyright@packtpub.com)
     with a link to the material.'
+  id: totrans-53
   prefs: []
   type: TYPE_NORMAL
+  zh: '**盗版：** 如果您在互联网上遇到任何非法的我们的作品副本，无论以何种形式，我们将非常感激您提供具体地址或网站名称。请通过 [copyright@packtpub.com](mailto:copyright@packtpub.com)
+    联系我们，并提供链接。'
 - en: '**If you are interested in becoming an author:** If there is a topic that you
     have expertise in, and you are interested in either writing or contributing to
     a book, please visit [http://authors.packtpub.com](http://authors.packtpub.com).'
+  id: totrans-54
   prefs: []
   type: TYPE_NORMAL
+  zh: '**如果您有兴趣成为作者：** 如果您在某个领域有专业知识，并且有兴趣撰写或为书籍贡献内容，请访问 [http://authors.packtpub.com](http://authors.packtpub.com)。'
 - en: Share your thoughts
+  id: totrans-55
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 分享您的想法
 - en: Once you’ve read *Quantum Machine Learning and Optimisation in Finance*, we’d
     love to hear your thoughts! Please [click here to go straight to the Amazon review
     page for this book](https://packt.link/r/1801813574) and share your feedback.
+  id: totrans-56
   prefs: []
   type: TYPE_NORMAL
+  zh: 一旦您阅读了 *《量子机器学习与金融优化》*，我们非常希望听到您的想法！请 [点击这里直接前往亚马逊评论页面](https://packt.link/r/1801813574)
+    并分享您的反馈。
 - en: Your review is important to us and the tech community and helps us deliver excellent
     content.
+  id: totrans-57
   prefs: []
   type: TYPE_NORMAL
+  zh: 您的评价对我们和技术社区非常重要，它帮助我们提供优秀的内容。
 - en: Download a free PDF copy of this book
+  id: totrans-58
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 下载此书的免费PDF版本
 - en: Thanks for purchasing this book!
+  id: totrans-59
   prefs: []
   type: TYPE_NORMAL
+  zh: 感谢您购买本书！
 - en: Do you like to read on the go but are unable to carry your print books everywhere?
     Is your eBook purchase not compatible with the device of your choice?
+  id: totrans-60
   prefs: []
   type: TYPE_NORMAL
+  zh: 您是否喜欢随时随地阅读，但又无法将纸质书籍随身携带？您的电子书购买是否与您选择的设备不兼容？
 - en: Don’t worry, now with every Packt book you get a DRM-free PDF version of that
     book at no cost.
+  id: totrans-61
   prefs: []
   type: TYPE_NORMAL
+  zh: 别担心，现在购买每本Packt书籍时，您都可以免费获得该书的无DRM PDF版本。
 - en: Read anywhere, any place, on any device. Search, copy, and paste code from your
     favorite technical books directly into your application.
+  id: totrans-62
   prefs: []
   type: TYPE_NORMAL
+  zh: 在任何地方、任何设备上随时阅读。直接从您最喜欢的技术书籍中搜索、复制并粘贴代码到您的应用程序中。
 - en: The perks don’t stop there, you can get exclusive access to discounts, newsletters,
     and great free content in your inbox daily.
+  id: totrans-63
   prefs: []
   type: TYPE_NORMAL
+  zh: 福利不仅仅止步于此，您还可以独享折扣、新闻简报，并每天将精彩的免费内容发送到您的收件箱。
 - en: 'Follow these simple steps to get the benefits:'
+  id: totrans-64
   prefs: []
   type: TYPE_NORMAL
+  zh: 按照以下简单步骤获取福利：
 - en: 'Scan the QR code or visit the link below:'
+  id: totrans-65
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 扫描二维码或访问下面的链接：
 - en: '![PIC](img/file2.png)'
+  id: totrans-66
   prefs:
   - PREF_IND
   type: TYPE_IMG
+  zh: '![图片](img/file2.png)'
 - en: '[https://packt.link/free-ebook/9781801813570](https://packt.link/free-ebook/9781801813570)'
+  id: totrans-67
   prefs:
   - PREF_IND
   type: TYPE_NORMAL
+  zh: '[https://packt.link/free-ebook/9781801813570](https://packt.link/free-ebook/9781801813570)'
 - en: Submit your proof of purchase
+  id: totrans-68
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 提交您的购买证明
 - en: That’s it! We’ll send your free PDF and other benefits to your email directly
+  id: totrans-69
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 就是这样！我们会直接将您的免费PDF和其他福利发送到您的电子邮件。

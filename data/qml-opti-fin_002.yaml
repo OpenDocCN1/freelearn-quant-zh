@@ -1,7 +1,11 @@
 - en: Part I
+  id: totrans-0
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 第一部分
 - en: Analog Quantum Computing – Quantum Annealing
+  id: totrans-1
   prefs: []
   type: TYPE_NORMAL
+  zh: 模拟量子计算 – 量子退火

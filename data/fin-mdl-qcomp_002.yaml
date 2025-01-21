@@ -1,11 +1,15 @@
 - en: '1'
+  id: totrans-0
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: '1'
 - en: Quantum Computing Paradigm
+  id: totrans-1
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 量子计算范式
 - en: Quantum computers have shown the potential to be game-changing for large-scale
     industries in the near future. Quantum solutions (hardware and software), in their
     prime, have the potential to put humankind on planet Pluto with their optimized
@@ -15,112 +19,161 @@
     promises to achieve better accuracy and deliver real-world experiences via simulations.
     This book delves into the potential applications of quantum solutions to solve
     real-world financial problems.
+  id: totrans-2
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算机在不久的将来展示了对大规模行业带来革命性变革的潜力。量子解决方案（硬件和软件）在其巅峰时期，有可能通过优化计算将人类送上冥王星。根据Gartner报告，到2023年，20%的组织将为量子计算项目进行预算(*CIO的量子计算指南*，
+    [https://tinyurl.com/yrk4rp2u](https://tinyurl.com/yrk4rp2u))。该技术承诺通过模拟实现更高的准确性，并提供真实世界的体验。本书深入探讨了量子解决方案在解决现实世界金融问题中的潜在应用。
 - en: In this chapter, we will discuss various computing paradigms currently in the
     research phase. A chronicle of quantum computing is also curated and presented.
     Then, we will cover the limitations faced by classical computers and how these
     challenges will be overcome with the help of quantum computers. After that, the
     role of quantum computing in shaping the next generation of business is defined.
+  id: totrans-3
   prefs: []
   type: TYPE_NORMAL
+  zh: 在本章中，我们将讨论目前处于研究阶段的各种计算范式。还将呈现量子计算的历史。接下来，我们将介绍经典计算机面临的限制，以及这些挑战如何通过量子计算机得以克服。之后，量子计算在塑造下一代商业中的作用将得到定义。
 - en: Later in the chapter, we will go through the basics of quantum computing. The
     types of hardware powering quantum computers are described in a subsequent section.
     We will also look into the potential business applications of this technology
     and how organizations can align their business strategy accordingly to harness
     their true potential.
+  id: totrans-4
   prefs: []
   type: TYPE_NORMAL
+  zh: 本章后续将介绍量子计算的基础知识。驱动量子计算机的硬件类型将在接下来的章节中描述。我们还将探讨这项技术的潜在商业应用，以及组织如何根据其商业战略来充分利用这些潜力。
 - en: 'The following topics will be covered in this chapter:'
+  id: totrans-5
   prefs: []
   type: TYPE_NORMAL
+  zh: 本章将涵盖以下主题：
 - en: The evolution of quantum technology and its related paradigms
+  id: totrans-6
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 量子技术及其相关范式的发展
 - en: Basic quantum mechanics principles and their application
+  id: totrans-7
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 基本量子力学原理及其应用
 - en: The business applications of quantum computing
+  id: totrans-8
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 量子计算的商业应用
 - en: The evolution of quantum technology and its related paradigms
+  id: totrans-9
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 量子技术及其相关范式的发展
 - en: Computing paradigms can be defined as the significant milestones that have been
     achieved over the years. To say that computers have made the lives of humans easier
     is an understatement. On a daily basis, we need machines that can analyze, simulate,
     and optimize solutions to complex problems. Although the shapes and sizes of computers
     have changed over time, they still operate on the doctrines proposed by Alan Turing
     and John von Neumann.
+  id: totrans-10
   prefs: []
   type: TYPE_NORMAL
+  zh: 计算范式可以定义为多年来取得的重要里程碑。说计算机使人类的生活变得更容易，简直是轻描淡写。日常生活中，我们需要能够分析、模拟和优化复杂问题解决方案的机器。尽管计算机的形态和大小随着时间的推移发生了变化，但它们仍然基于艾伦·图灵和约翰·冯·诺依曼提出的学说进行运作。
 - en: In this section, we will study the evolution of quantum technology over the
     years. We will also study some of the technology’s limitations in the face of
     certain business challenges.
+  id: totrans-11
   prefs: []
   type: TYPE_NORMAL
+  zh: 在本节中，我们将研究量子技术多年来的发展。我们还将研究该技术在面对某些商业挑战时的局限性。
 - en: The evolution of computing paradigms
+  id: totrans-12
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 计算范式的演变
 - en: 'Turing showed us the types of problems computers can solve, von Neumann built
     programmable computers, and Michael Moore’s pioneering work in semiconductors
     made computers more capable. *Figure 1**.1* shows the advancement of computing
     paradigms over the years, and their ability to affect growth in human history:'
+  id: totrans-13
   prefs: []
   type: TYPE_NORMAL
+  zh: 图灵向我们展示了计算机能够解决的问题类型，冯·诺依曼构建了可编程计算机，迈克尔·摩尔在半导体领域的开创性工作使计算机变得更加强大。*图1.1*展示了计算范式多年来的发展，以及它们对人类历史增长的影响：
 - en: '| 1821 | Mechanical calculator | Has Enabled humans to migrate from mechanical
     devices to electronic devices with better accuracy in calculations. |'
+  id: totrans-14
   prefs: []
   type: TYPE_TB
+  zh: '| 1821 | 机械计算器 | 使人类能够从机械设备过渡到电子设备，在计算精度上有了更好的提升。 |'
 - en: '| 1890 | Punch-card system | Demonstrated first use case of large-scale computing
     by aiding in the US Census. |'
+  id: totrans-15
   prefs: []
   type: TYPE_TB
+  zh: '| 1890 | 穿孔卡片系统 | 通过协助美国人口普查，展示了大规模计算的首次应用案例。 |'
 - en: '| 1936 | Turing machine | Theoretical conceptual framework was laid down to
     solve large computational problems. |'
+  id: totrans-16
   prefs: []
   type: TYPE_TB
+  zh: '| 1936 | 图灵机 | 为解决大型计算问题奠定了理论框架。 |'
 - en: '| 1941 | Digital electronic computer | First time a computer was able to store
     information on its main memory. |'
+  id: totrans-17
   prefs: []
   type: TYPE_TB
+  zh: '| 1941 | 数字电子计算机 | 首次实现计算机能够在主内存中存储信息。 |'
 - en: '| 1945 | Electronic Numerical Integrator and Calculator (ENIAC) | First digital
     computer to perform large class of numerical problems through reprogramming. |'
+  id: totrans-18
   prefs: []
   type: TYPE_TB
+  zh: '| 1945 | 电子数值积分与计算机 (ENIAC) | 第一台通过重编程执行大规模数值问题的数字计算机。 |'
 - en: '| 1958 | Integrated Circuit (IC) | Helped in the transition of enterprise-level
     computing to personal computing. |'
+  id: totrans-19
   prefs: []
   type: TYPE_TB
+  zh: '| 1958 | 集成电路 (IC) | 帮助企业级计算向个人计算转型。 |'
 - en: '| 1976 | Cray-1 Supercomputer | Aided 240 million calculations useful for large-scale
     scientific applications and simulations. |'
+  id: totrans-20
   prefs: []
   type: TYPE_TB
+  zh: '| 1976 | Cray-1 超级计算机 | 提供了240百万次计算，支持大规模科学应用和仿真。 |'
 - en: '| 1997 | Parallel computing | Multiple-CPU core was used to solve complex problems
     in a limited timeframe, enabling Google to form a better search engine. |'
+  id: totrans-21
   prefs: []
   type: TYPE_TB
+  zh: '| 1997 | 并行计算 | 使用多核CPU在有限时间内解决复杂问题，帮助谷歌形成更好的搜索引擎。 |'
 - en: '| 2006 | Cloud computing | Technology has enabled users to access large computational
     resources from remote locations. |'
+  id: totrans-22
   prefs: []
   type: TYPE_TB
+  zh: '| 2006 | 云计算 | 使用户能够从远程位置访问大型计算资源。 |'
 - en: '| 2016 | Reprogrammable quantum computer | Offers a better platform to solve
     complex simulation or optimization problems in comparison to classical computers
     |'
+  id: totrans-23
   prefs: []
   type: TYPE_TB
+  zh: '| 2016 | 可重编程量子计算机 | 提供了一个更好的平台，用于解决与经典计算机相比更复杂的仿真或优化问题。 |'
 - en: '| 2017 | Molecular informatics | Harnesses molecular properties for rapid,
     scalable information storage and processing. |'
+  id: totrans-24
   prefs: []
   type: TYPE_TB
+  zh: '| 2017 | 分子信息学 | 利用分子特性进行快速、可扩展的信息存储和处理。 |'
 - en: Figure 1.1 – Evolution of computing paradigms
+  id: totrans-25
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 1.1 – 计算范式的演变
 - en: The evolution of computing technology has enabled humans to evolve from an agrarian
     society to an industrial society. Progress in computing prowess has catapulted
     society from bartering goods to building e-commerce platforms. *Figure 1**.1*
@@ -129,12 +182,16 @@
     multifunction device in its present form. In the next section, we are going to
     assess the challenges faced by large-scale businesses and the limitations of current
     digital technology in addressing them.
+  id: totrans-26
   prefs: []
   type: TYPE_NORMAL
+  zh: 计算技术的发展使人类从农业社会演变为工业社会。计算能力的进步将社会从以物易物推进到建立电子商务平台。*图 1.1* 给出了计算技术如何通过从单纯执行计算的设备到如今的多功能设备，推动社会发展的总结。在下一部分，我们将评估大型企业面临的挑战以及当前数字技术在应对这些挑战时的局限性。
 - en: Business challenges and technology solutions
+  id: totrans-27
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 企业挑战与技术解决方案
 - en: 'Current digital technologies have advantages as well as limitations in providing
     solutions and insights in real time. The rise of numerous variables and their
     increasing complexity can affect decision-making in the real world. It is essential
@@ -142,8 +199,10 @@
     The need for a reliable technology stack has prompted scientists worldwide to
     investigate technology that is beyond the reach of humans. The current challenges
     faced by large-scale businesses are as follows:'
+  id: totrans-28
   prefs: []
   type: TYPE_NORMAL
+  zh: 当前的数字技术在实时提供解决方案和洞察方面既有优势也有局限性。众多变量的出现及其日益复杂化可能会影响现实世界中的决策。拥有一种既可靠又精准、同时又快速的技术是至关重要的。对于一种可靠技术堆栈的需求促使全球科学家研究超出人类能力范围的技术。大型企业目前面临的挑战如下：
 - en: '**Faster task completion**: In the current era, where manufacturing firms are
     looking to achieve super-large-scale production capacity and efficiency, there
     is a need to build faster and more reliable systems. For instance, according to
@@ -154,9 +213,12 @@
     Bay Area, around 8,543,811,434,435,330 combinations were possible. Now, how can
     this distribution be optimized when such a large number of combinations is possible?
     A quantum computer theoretically solved this problem in less than 3 seconds.'
+  id: totrans-29
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**更快的任务完成**：在当前时代，制造公司致力于实现超大规模生产能力和效率，因此需要建立更快、更可靠的系统。例如，根据人工智能大脑的一项令人兴奋的研究（*如何通过量子退火和遗传算法为电动汽车充电站选址，Quantum
+    Zeitgeist*， [https://tinyurl.com/bdep5eze](https://tinyurl.com/bdep5eze)），在旧金山湾区设置充电站的50英里半径内，大约有8,543,811,434,435,330种组合是可能的。那么，当可能的组合数如此庞大时，如何优化这种分布呢？量子计算机在不到3秒的时间内理论上解决了这个问题。'
 - en: '**Content discovery**: With the advent of social media websites, a plethora
     of content is available to analyze. This content is available in different sizes
     and shapes, in the form of text and images. An organization would need a computer
@@ -165,9 +227,11 @@
     machines. However, much needs to be achieved in this field in order to mine real-time
     business insights from the underlying data. **Quantum natural language processing**
     (**QNLP**) is a promising technique to resolve problems in real time.'
+  id: totrans-30
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**内容发现**：随着社交媒体网站的兴起，能够分析的内容种类繁多。这些内容以文本和图像的形式存在，大小各异。一个组织需要一台具有超强计算能力的计算机来探索这些内容。这种特殊的计算能力通过并行计算和本地优化机器实现。然而，在这一领域还有许多工作要做，以便从潜在的数据中挖掘出实时的商业洞察。**量子自然语言处理**（**QNLP**）是一种有前景的技术，可以实时解决问题。'
 - en: '**Lower administration cost****s**: It is always a good strategy to optimize
     costs. Automation of mega factories has provided the owners with a solution in
     the right direction. Large-scale automation comes with a set of problems of its
@@ -181,9 +245,13 @@
     have the potential to make our products more desirable and sustainable” (*Winners
     announced in the BMW Group Quantum Computing Challenge, AWS Quantum Computing*
     *Blog*, [https://aws.amazon.com/blogs/quantum-computing/winners-announced-in-the-bmw-group-quantum-computing-challenge/](https://aws.amazon.com/blogs/quantum-computing/winners-announced-in-the-bmw-group-quantum-computing-challenge/)).'
+  id: totrans-31
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**降低管理成本**：优化成本始终是一个不错的策略。大规模工厂的自动化为业主提供了一个正确方向的解决方案。大规模自动化伴随着一系列自身的问题，但精确度和实时决策帮助提高了准确性和可靠性。最近，宝马提出了一个挑战，竞争者必须专注于解决基于生产前车辆配置、生产中的材料变形、车辆传感器放置和用于自动化质量评估的机器学习等问题。基于获得的结果，宝马集团研究与新技术数字化汽车副总裁Peter
+    Lehnert博士评论道：“我们宝马集团深信，未来的技术，如量子计算，具有使我们的产品更具吸引力和可持续性的潜力”(*在宝马集团量子计算挑战赛中宣布获胜者，AWS量子计算*
+    *博客*， [https://aws.amazon.com/blogs/quantum-computing/winners-announced-in-the-bmw-group-quantum-computing-challenge/](https://aws.amazon.com/blogs/quantum-computing/winners-announced-in-the-bmw-group-quantum-computing-challenge/))。'
 - en: '**Remote working**: The year 2020 played a pivotal role in the history of humankind.
     Due to the advent of COVID-19, humans have discovered that they can work from
     anywhere in the world. This has given rise to the demand for remote working from
@@ -194,9 +262,11 @@
     businesses can overcome this particular challenge. At the same time, it lowers
     the administration costs for management. It also helps in reducing storage costs
     further, which helps in reducing the unit cost for the company.'
+  id: totrans-32
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**远程办公**：2020年在人类历史中发挥了至关重要的作用。由于新冠疫情的爆发，人们发现自己可以在世界任何地方工作。这促进了管理层和员工对远程办公的需求。由于有些情况需要更高的计算能力，远程办公可能并非在所有情况下都可行。然而，随着大多数技术转向在线并通过虚拟现实和增强现实技术以及更好的连接性提供类似办公室环境的实时工作体验，企业可以克服这一挑战。同时，这也降低了管理层的行政成本。它还有助于进一步降低存储成本，从而帮助公司降低单位成本。'
 - en: In order to perform a business task more efficiently and optimally, the business
     fraternity has started looking for technological solutions. Digital computing
     in its current state has helped businesses to achieve more efficiency via automation
@@ -205,12 +275,16 @@
     data and the limitation of computing memory. The following section highlights
     the types of problems that can be solved by digital computing, and other problems
     that have generated the need to look beyond the current computing paradigm.
+  id: totrans-33
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了更高效和更优化地执行业务任务，商业界开始寻求技术解决方案。当前状态下的数字计算帮助企业通过自动化和增强智能提高了效率。然而，现有的硬件技术尚未能够解决一些复杂任务，这些任务与大量数据和计算内存的限制有关。以下部分将突出数字计算能够解决的各种问题，以及需要超越当前计算范式的其他问题。
 - en: Current business challenges and limitations of digital technology
+  id: totrans-34
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 当前的商业挑战与数字技术的局限性
 - en: Digital computers are powered by **integrated circuits** (**ICs**), a technology
     that reached its peak in the 20th century. According to Moore’s law, the number
     of transistors powering microchips will double every year. In 2021, IBM announced
@@ -218,8 +292,10 @@
     allows a chip to fit in a space the size of a fingernail. The presence of a large
     number of transistors has enabled the classical computer to perform large calculations
     and complex procedures that help in solving day-to-day problems much faster.
+  id: totrans-35
   prefs: []
   type: TYPE_NORMAL
+  zh: 数字计算机由**集成电路**（**ICs**）提供动力，这项技术在 20 世纪达到了顶峰。根据摩尔定律，推动微芯片的晶体管数量每年将翻倍。2021年，IBM宣布其2纳米芯片技术能够容纳500亿个晶体管，这基本上使得一颗芯片能够装进指甲大小的空间。大量晶体管的存在使得经典计算机能够执行大量计算和复杂的程序，从而帮助更快地解决日常问题。
 - en: However, due to internal leakages and the miniaturization effect, classical
     gates (OR and AND gates) have been showcasing the quantum effect. Also, digital
     computers are traditionally unable to solve NP-hard problems (*Figure 1**.2*).
@@ -230,14 +306,22 @@
     the San Francisco Bay Area. While it would take years for a classical computer
     to solve the aforementioned problem, ideally, quantum computers can solve it in
     3 seconds.
+  id: totrans-36
   prefs: []
   type: TYPE_NORMAL
+  zh: 然而，由于内部泄漏和微型化效应，经典门电路（或门和与门）展示了量子效应。此外，数字计算机传统上无法解决 NP-难问题（*图 1.2*）。用外行话来说，NP-难问题是根据问题的复杂度和变量数量来衡量解决一个问题所需的时间。例如，前文所述的如何从
+    8,543,811,434,435,330 种充电站位置组合中选择最优路线的问题。尽管经典计算机解决上述问题可能需要数年时间，但理想情况下，量子计算机可以在
+    3 秒内解决该问题。
 - en: '![Figure 1.2 – Classification of NP-hard problems based on level of complexity](img/B19146_01_002.jpg)'
+  id: totrans-37
   prefs: []
   type: TYPE_IMG
+  zh: '![图 1.2 – 基于复杂度水平的 NP-难问题分类](img/B19146_01_002.jpg)'
 - en: Figure 1.2 – Classification of NP-hard problems based on level of complexity
+  id: totrans-38
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 1.2 – 基于复杂度水平的 NP-难问题分类
 - en: 'To understand the limitations of classical computers in a better way, imagine
     that you have to pick a portfolio of 100 penny stocks with a limited budget, and
     let’s assume that the prices are discrete (for example, tick size on stock markets).
@@ -255,12 +339,17 @@
     a sudoku or tic-tac-toe problem: this is an NP problem for which it is difficult
     to obtain the solution (it takes exponential time), but easy to verify in polynomial
     time.'
+  id: totrans-39
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了更好地理解传统计算机的局限性，假设你必须在有限的预算下挑选100只便士股的投资组合，并且假设股票价格是离散的（例如，股市中的最小价格变动）。假设你必须在多项式时间内构建一个投资组合（p
+    = 计算机可以在合理时间内解决的问题），并且假设需要100步（n = 输入数量）来获得一个优化的投资组合，换句话说，所需的时间是n³。从理论上讲，数字计算机将在三小时内解决这个问题。这个问题很容易解决，专家也能轻松验证解决方案，因为我们处理的是同一类股票。因此，我们可以自信地说，p类问题很容易验证和解决。现在，假设同样的问题发生变化（在有限的时间内优化属于不同风险类别的100只股票的投资组合），这将需要约300万亿年才能解决，因为尽管解决方案可以在多项式时间（n）内验证，但它是以指数时间（NP）获得的。这个问题被归类为NP问题。打个比方，想象一个数独或井字游戏问题：这是一个NP问题，尽管它的解决方案很难获得（需要指数时间），但可以在多项式时间内轻松验证。
 - en: 'Following on from the preceding discussion, four types of NP problems that
     are deemed difficult to be solved by digital computers are as follows:'
+  id: totrans-40
   prefs: []
   type: TYPE_NORMAL
+  zh: 继续前面的讨论，以下是被认为数字计算机难以解决的四种NP问题类型：
 - en: '**Simulation**: Computation simulation is modeling a natural world or physical
     system into a virtual scenario to understand its outcome and impact in advance.
     For instance, after the subprime crisis of 2008, financial institutions must run
@@ -273,9 +362,11 @@
     in nature and hints at solving a problem’s complexity in n steps in p time, which
     will not work using current digital technology and thus requires an advanced system
     to give a faster turnaround.'
+  id: totrans-41
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**模拟**：计算模拟是将自然世界或物理系统建模为虚拟场景，以便提前了解其结果和影响。例如，在2008年次贷危机之后，金融机构必须对其基础资产和交叉持股进行压力测试，以预测下一次金融崩溃可能发生的场景。据估计，对于一个简单的20-30家机构组成的网络，这些机构涉及股票、衍生品、固定收益证券，并彼此有风险暴露，评估金融崩溃的概率将需要137亿年时间，由数字计算机计算得出。这是估算的时间，用于运行一个本质上是确定性的模拟问题，暗示着在p时间内通过n步解决问题的复杂性，这种问题不能使用当前的数字技术解决，因此需要一个更先进的系统来提供更快的处理速度。'
 - en: '**Optimization**: Optimization refers to improving the efficiency of an existing
     algorithm to reduce time complexity. Suppose you have to build a portfolio of
     1,000 stocks belonging to 10 sectors. Your client, an international hedge fund,
@@ -285,9 +376,11 @@
     computer may be able to solve the puzzle using parallel computing, but this might
     not be the most cost-effective and time-effective strategy. This problem underlies
     a need for an efficient computer to solve the puzzle in real time.'
+  id: totrans-42
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**优化**：优化是指改进现有算法的效率，以降低时间复杂度。假设你需要构建一个包含1,000只股票的投资组合，涉及10个行业。你的客户，一家国际对冲基金，必须根据市场条件生成多个情景，从而寻找一个有效前沿。这些情景需要实时更新，并根据为投资组合定义的风险容忍限额进行调整。传统计算机可以使用并行计算来解决这个难题，但这可能不是最具成本效益和时间效率的策略。这个问题凸显了实时解决该难题的高效计算机的需求。'
 - en: '**Pattern recognition**: The pattern recognition method uses underlying data
     to discover hidden patterns and trends using machine learning algorithms. However,
     recent advances in GPU and related technology have enabled programmers to meet
@@ -296,39 +389,51 @@
     for machine learning algorithms to understand the patterns. Theoretically, a computer
     able to comprehend data in real time can help decode the patterns of financial
     fraud more successfully.'
+  id: totrans-43
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**模式识别**：模式识别方法利用基础数据，通过机器学习算法发现隐藏的模式和趋势。然而，近年来GPU及相关技术的进步使程序员在理解和揭示给定数据中的隐藏模式方面取得了相当大的成功。然而，在金融欺诈领域，由于人类行为的复杂性，机器学习算法很难理解其中的模式。理论上，一台能够实时理解数据的计算机可以更成功地解码金融欺诈的模式。'
 - en: '**Cryptography**: Providing a secure channel for customers to do transactions
     online in this e-connected world is a foremost priority for banks in the 21st
     century. All over the world, banks use **Rivest, Shamir, and Adleman** (**RSA**)
     technology based on linear factorization. The recent development of computing
     prowess hints that such encryption can be easily broken using quantum computers.'
+  id: totrans-44
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**密码学**：在这个互联的世界中，为客户提供安全的在线交易通道是21世纪银行的首要任务。在全球范围内，银行使用基于线性因式分解的**里维斯特、沙米尔和阿德尔曼**（**RSA**）技术。最近计算能力的发展表明，这种加密技术可以通过量子计算机轻松破解。'
 - en: To summarize, it will suffice to say that with the limitations observed in current
     technology, it is time to explore new computing paradigms that can help solve
     the problems faced by the business fraternity at large and help the industry bring
     in innovations and creativity.
+  id: totrans-45
   prefs: []
   type: TYPE_NORMAL
+  zh: 总结来说，可以简单地说，在当前技术的局限性下，探索新的计算范式已经到了时机，这些新范式能够帮助解决商业界面临的问题，并推动行业创新与创造力。
 - en: Basic quantum mechanics principles and their application
+  id: totrans-46
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 基本量子力学原理及其应用
 - en: Quantum computers use principles and theories (such as quantum field theory
     and group theory) to describe the quantum mechanics phenomenon. Quantum mechanics
     principles, such as superposition, decoherence, and entanglement, have been utilized
     to build processors that process and relay information at exponential speed. The
     following section maps the quantum computer’s evolution journey and briefly describes
     quantum mechanics principles.
+  id: totrans-47
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算机使用原理和理论（如量子场论和群论）来描述量子力学现象。量子力学原理，如叠加、去相干和纠缠，已被应用于构建处理和传递信息的处理器，其速度呈指数级增长。以下部分展示了量子计算机的演变过程，并简要描述了量子力学原理。
 - en: The emerging role of quantum computing technology for next-generation businesses
+  id: totrans-48
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子计算技术在下一代企业中的新兴角色
 - en: For a long time, advances in digital computers at economies of scale have suppressed
     the development of other computing paradigms. Moore’s law (*Figure 1**.3*) has
     predicted exponential growth and advancement in the microprocessor. However, the
@@ -336,14 +441,20 @@
     has put a limitation on computing power, storage, and communication. To overcome
     the limits of the current architectures, we must overcome challenges such as finite
     memory, self-programmable computers, large number factorization, and faster microprocessors.
+  id: totrans-49
   prefs: []
   type: TYPE_NORMAL
+  zh: 长期以来，由于数字计算机在规模经济上的进步，抑制了其他计算范式的发展。摩尔定律（*图1**.3*）预测了微处理器的指数增长和进步。然而，几十年来积累的大量数据使计算能力、存储和通信受到了限制。为了克服当前架构的局限性，我们必须克服有限内存、自编程计算机、大数分解和更快微处理器等挑战。
 - en: '![Figure 1.3 – Transistor number growth according to Moore’s law](img/B19146_01_003.jpg)'
+  id: totrans-50
   prefs: []
   type: TYPE_IMG
+  zh: '![图1.3 – 根据摩尔定律的晶体管数量增长](img/B19146_01_003.jpg)'
 - en: Figure 1.3 – Transistor number growth according to Moore’s law
+  id: totrans-51
   prefs: []
   type: TYPE_NORMAL
+  zh: 图1.3 – 根据摩尔定律的晶体管数量增长
 - en: 'Looking at the current limitations of digital computers due to their fundamental
     principles and assumptions, there is a need for new computing paradigms to emerge.
     To solve the problems related to various domains related to climate, process automation,
@@ -354,191 +465,268 @@
     are the current areas of interest and innovation in the pursuit of overcoming
     the aforementioned challenges. *Figure 1**.4* charts the journey and impact of
     the quantum-computing paradigm from theoretical to practical application:'
+  id: totrans-52
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于数字计算机的基本原理和假设存在当前的局限性，需要出现新的计算范式。为了应对与气候、过程自动化、工业机械化和自主系统等多个领域相关的问题，需要克服当前的挑战。量子计算、分子计算、自然启发的算法以及人机协同互动（《计算机特刊
+    2016年9月研究“下一代计算范式”》，IEEE计算机学会，[https://tinyurl.com/4b5wjepk](https://tinyurl.com/4b5wjepk))是当前为克服上述挑战而进行的创新和研究方向。*图1**.4*描绘了量子计算范式从理论到实际应用的历程和影响：
 - en: '| **Year** | **Phenomenon** | **Effect** |'
+  id: totrans-53
   prefs: []
   type: TYPE_TB
+  zh: '| **年份** | **现象** | **影响** |'
 - en: '| 1905 | Photoelectric effect was discovered by Albert Einstein and discovery
     of photon took place. | Laid the foundation to discover quantum behavior in atomic
     particles. |'
+  id: totrans-54
   prefs: []
   type: TYPE_TB
+  zh: '| 1905 | 阿尔伯特·爱因斯坦发现了光电效应，并且光子被发现。 | 为发现原子粒子中的量子行为奠定了基础。 |'
 - en: '| 1924 to 1927 | Max Born coined the term Quantum Mechanics and Heisenberg,
     Born, and Jordan discovered matrix mechanics. | Discovery of quantum mechanics
     principles, which were harnessed to produce the quantum processor. |'
+  id: totrans-55
   prefs: []
   type: TYPE_TB
+  zh: '| 1924至1927年 | 马克斯·玻恩创造了“量子力学”这一术语，海森堡、玻恩和乔丹发现了矩阵力学。 | 发现了量子力学原理，这些原理被用来生产量子处理器。
+    |'
 - en: '| 1935 | Erwin Schrödinger conceptualized and wrote his thought experiment
     known as Schrödinger’s cat. | The principle of quantum entanglement was discovered.
     |'
+  id: totrans-56
   prefs: []
   type: TYPE_TB
+  zh: '| 1935 | 埃尔温·薛定谔构思并写下了他的思想实验——薛定谔的猫。 | 发现了量子纠缠原理。 |'
 - en: '| 1976 | Quantum information theory was proposed by Roman Stanisław Ingarden.
     | Quantum Information science as a discipline was formulated, which laid the foundation
     for quantum algorithms. |'
+  id: totrans-57
   prefs: []
   type: TYPE_TB
+  zh: '| 1976 | 罗曼·斯坦尼斯瓦夫·英加登提出了量子信息理论。 | 量子信息科学作为一门学科被制定，奠定了量子算法的基础。 |'
 - en: '| 1981 | Richard Feynman proposed that a quantum computer had the potential
     to simulate physical phenomena. | The practical application of quantum mechanics
     was harnessed to develop working quantum computers. |'
+  id: totrans-58
   prefs: []
   type: TYPE_TB
+  zh: '| 1981 | 理查德·费曼提出量子计算机有潜力模拟物理现象。 | 量子力学的实际应用被用来开发工作量子计算机。 |'
 - en: '| 1994 | Shor’s algorithm for factoring integers was discovered. | Formulated
     the basis of cryptography for post quantum key distribution. |'
+  id: totrans-59
   prefs: []
   type: TYPE_TB
+  zh: '| 1994 | 发现了肖尔算法用于整数分解。 | 为量子密钥分发后的密码学奠定了基础。 |'
 - en: '| 1996 | Grover’s algorithm was discovered. | Laid the way for storing information
     in database form. |'
+  id: totrans-60
   prefs: []
   type: TYPE_TB
+  zh: '| 1996 | 发现了格罗弗算法。 | 为以数据库形式存储信息铺平了道路。 |'
 - en: '| 2011 | D-Wave offered the first quantum computing solution using quantum
     annealing. | Opened up the possibilities of using quantum computers for commercial
     purposes. |'
+  id: totrans-61
   prefs: []
   type: TYPE_TB
+  zh: '| 2011 | D-Wave 提供了首个使用量子退火技术的量子计算解决方案。 | 开启了量子计算在商业用途上的可能性。 |'
 - en: '| 2019 | Google claimed quantum supremacy. | Showed a use case of quantum supremacy
     that can help in better encryption. |'
+  id: totrans-62
   prefs: []
   type: TYPE_TB
+  zh: '| 2019 | Google 宣称量子霸权。 | 展示了量子霸权的一个应用案例，有助于更好的加密。 |'
 - en: '| 2021 | IBM unveiled the first 127-qubit quantum computer named Eagle. | Facilitated
     faster processing of the complex NP-hard problem. |'
+  id: totrans-63
   prefs: []
   type: TYPE_TB
+  zh: '| 2021 | IBM 揭晓了首个127量子比特的量子计算机，名为Eagle。 | 加速了复杂的NP困难问题的处理。 |'
 - en: Figure 1.4 – Journey from quantum mechanics to quantum computing
+  id: totrans-64
   prefs: []
   type: TYPE_NORMAL
+  zh: 图1.4 – 从量子力学到量子计算的历程
 - en: As you can see from the evolution point of view (*Figure 1**.4*), quantum technologies
     are making rapid strides to overcome problems such as accurate simulation, efficient
     optimization, and correct pattern recognition. Once researchers can overcome the
     related problems that limit current users, and implement quantum technology to
     solve day-to-day problems, one can see how the industry-wide adoption of quantum
     technology can solve large-scale problems.
+  id: totrans-65
   prefs: []
   type: TYPE_NORMAL
+  zh: 如图所示（*图1.4*），从发展历程的角度来看，量子技术正快速进展，解决诸如精准仿真、高效优化和正确模式识别等问题。一旦研究人员能够克服当前用户面临的相关问题，并实现量子技术来解决日常问题，便能看到量子技术在整个行业中的广泛应用将如何解决大规模问题。
 - en: The next section describes some of the common terminologies and principles of
     quantum mechanics used in building and operating quantum computers.
+  id: totrans-66
   prefs: []
   type: TYPE_NORMAL
+  zh: 下一节将介绍一些在构建和操作量子计算机中常用的量子力学术语和原理。
 - en: From quantum mechanics to quantum computing
+  id: totrans-67
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 从量子力学到量子计算
 - en: Deciphering the quantum mechanics principles involved in quantum computing is
     an uphill task for a layperson. This section describes each quantum mechanics
     postulate in easy-to-understand language, explaining how it is involved in the
     quantum computing mechanism.
+  id: totrans-68
   prefs: []
   type: TYPE_NORMAL
+  zh: 解读涉及量子计算的量子力学原理对外行人来说是一项艰巨的任务。本节将用通俗易懂的语言描述每一个量子力学公设，并解释它是如何参与量子计算机制的。
 - en: '| Postulate | Definition | Usage | Further Reading |'
+  id: totrans-69
   prefs: []
   type: TYPE_TB
+  zh: '| 公设 | 定义 | 用法 | 深入阅读 |'
 - en: '| Qubits | The qubit is a basic unit of quantum information stored on a two-state
     device encoding information in 0s and 1s) · | Facilitates faster processing of
     information for complex processes like simulation and optimization. | What is
     a qubit? (quantuminspire.com) |'
+  id: totrans-70
   prefs: []
   type: TYPE_TB
+  zh: '| 量子比特（Qubits） | 量子比特是量子信息的基本单位，存储在一个二态设备中，以0和1的形式编码信息。 | 有助于加速复杂过程（如仿真和优化）中的信息处理。
+    | 什么是量子比特？（quantuminspire.com） |'
 - en: '| Quantum State | Quantum state is the position and value of attributes (change
     and spin) of atomic particles obtained naturally or induced by creating physical
     environments (e.g. laser and heat). | Used in processing and transforming information
     using qubits in a controlled environment. | Superposition and entanglement     (quantuminspire.com) |'
+  id: totrans-71
   prefs: []
   type: TYPE_TB
+  zh: '| 量子态 | 量子态是原子粒子的位置和属性（变化与自旋）的值，这些值可以通过自然获得或通过创造物理环境（例如激光和热量）来诱导。 | 用于在受控环境中通过量子比特处理和转换信息。
+    | 叠加与纠缠（quantuminspire.com） |'
 - en: '| Quantum Superposition | It refers to a phenomenon that tells us that quantum
     superposition can be seen as the linear combination of quantum states. | This
     property makes it hard for a system to decrypt quantum communication and thus
     provides a safer way to transfer information. | Superposition and entanglement     (quantuminspire.com) |'
+  id: totrans-72
   prefs: []
   type: TYPE_TB
+  zh: '| 量子叠加 | 量子叠加指的是量子叠加现象，告诉我们量子叠加可以被视为量子态的线性组合。 | 这一特性使得系统很难解密量子通信，从而提供了一种更安全的信息传输方式。
+    | 叠加与纠缠（quantuminspire.com） |'
 - en: '| Quantum Entanglement | Quantum entanglement refers to the linking of two
     particles in the same quantum state and the existence of correlation between them.
     | Facilitates the ability of a system to do calculations exponentially faster
     by more and more qubits. | Superposition and entanglement     (quantuminspire.com) |'
+  id: totrans-73
   prefs: []
   type: TYPE_TB
+  zh: '| 量子纠缠 | 量子纠缠指的是两个粒子处于相同量子态并且它们之间存在关联的现象。 | 通过越来越多的量子比特（qubits），使得系统能够以指数速度进行计算。
+    | 叠加与纠缠（quantuminspire.com） |'
 - en: '| Quantum Measurement | A set of mathematical operators to understand and measure
     the amount of information that can be recovered and processed from qubits. | Useful
     in understanding the complexities of quantum mechanics. | Quantum measurement
     splits information three ways - Physics World. |'
+  id: totrans-74
   prefs: []
   type: TYPE_TB
+  zh: '| 量子测量 | 一组数学算子，用于理解和测量可以从量子比特中恢复和处理的信息量。 | 有助于理解量子力学的复杂性。 | 量子测量将信息分为三部分 -
+    Physics World. |'
 - en: '| Quantum Interference | It refers to the ability of atomic particles to behave
     like wave particles, thus resulting in information or the collapse of qubit state
     thus leading to quantum coherence or dechorence. | It measures the ability of
     quantum computers to accurately compute and carry the information stored in them.
     | What is quantum mechanics? Institute for Quantum Computing (uwaterloo.ca) |'
+  id: totrans-75
   prefs: []
   type: TYPE_TB
+  zh: '| 量子干涉 | 它指的是原子粒子能够像波粒一样表现的能力，从而导致信息或量子比特状态的坍缩，进而引发量子相干或去相干。 | 它衡量量子计算机准确计算和承载存储在其中的信息的能力。
+    | 什么是量子力学？量子计算研究所（uwaterloo.ca）|'
 - en: '| No Cloning Theorem | The “**no cloning theorem**” is a result of quantum
     mechanics that forbids the creation of identical copies of an arbitrary unknown
     quantum state. | The no cloning theorem is a vital ingredient in quantum cryptography,
     as it forbids eavesdroppers fom creating copies of a transmitted quantum cryptographic
     key. | The no cloning theorem – Quantiki |'
+  id: totrans-76
   prefs: []
   type: TYPE_TB
+  zh: '| 无克隆定理 | “**无克隆定理**”是量子力学的一个结果，禁止创建任意未知量子状态的相同副本。 | 无克隆定理是量子密码学中的一个重要组成部分，因为它禁止窃听者创建传输的量子密码学密钥的副本。
+    | 无克隆定理 - Quantiki |'
 - en: Figure 1.5 – Quantum computing glossary
+  id: totrans-77
   prefs: []
   type: TYPE_NORMAL
+  zh: 图1.5 – 量子计算术语表
 - en: The postulates mentioned in *Figure 1**.5* have enabled computer scientists
     to migrate from classical to quantum computers. As we will see in subsequent sections,
     postulates such as quantum interference and the no-cloning theorem have enabled
     quantum technologies to come to the fore, and laid the basis for achieving faster,
     more efficient, and more accurate computational power. The following section will
     look at technologies fueling innovations in quantum computing paradigms.
+  id: totrans-78
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图1.5*中提到的假设使计算机科学家能够从经典计算机过渡到量子计算机。正如我们在后续章节中将看到的那样，量子干涉和无克隆定理等假设使量子技术走到前沿，并为实现更快、更高效、更准确的计算能力奠定了基础。接下来的部分将探讨推动量子计算范式创新的技术。'
 - en: Approaches to quantum innovation
+  id: totrans-79
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子创新方法
 - en: 'In its current form, quantum computing relies on a plethora of technologies
     to expand its footprint. It will take years for quantum computers to fully reach
     their commercial potential. However, when they work in hybrid mode (in tandem
     with classical computers), they are expected to produce much better results than
     in standalone mode. Let’s have a look at the technologies that make them tick:'
+  id: totrans-80
   prefs: []
   type: TYPE_NORMAL
+  zh: 在当前形式下，量子计算依赖于多种技术来扩展其影响力。量子计算机要完全实现其商业潜力还需要数年时间。然而，当它们与经典计算机以混合模式工作时，预计它们会比单独运行时产生更好的结果。让我们来看看推动它们运行的技术：
 - en: '**Superconducting**: This technology takes advantage of the superposition property
     of quantum physics. Information is circulated by two charged electron currents
     flowing in opposite directions around the superconductor, and then exchanging
     the info stored in the qubit while entangling each other. This technology needs
     the quantum computer to be operated at extremely low temperatures.'
+  id: totrans-81
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**超导**：这项技术利用了量子物理中的叠加特性。信息通过两股方向相反的带电电子电流在超导体中循环流动，然后在纠缠的过程中交换存储在量子比特中的信息。这项技术需要量子计算机在极低的温度下运行。'
 - en: '**Trapped ions**: An ion is a charged atom (Ca+ or Br+). Suppose a piece of
     information is coded on this charged atom. The atom is transported from state
     0 to state 1 by emitting an energy pulse. This charged atom will carry the information
     and be decoded with the help of lasers. These ions are trapped in electric fields.
     Information coded is interpreted using a photonic unit and then passed on using
     optic fibers.'
+  id: totrans-82
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**困陷离子**：离子是带电的原子（如Ca+或Br+）。假设一段信息编码在这个带电的原子上。通过发射能量脉冲，原子从状态0被转移到状态1。这个带电的原子将携带信息，并在激光的帮助下解码。这些离子被困在电场中。编码的信息通过光子单元进行解释，然后通过光纤传递。'
 - en: '**Photonics**: This technology uses photons to carry information in a quantum
     state. Using current silicon chips, the behavior of photons is controlled, and
     the information is transmitted over the circuit. Due to its compatibility with
     existing infrastructure and chip-making capabilities, it shows promise to achieve
     great success.'
+  id: totrans-83
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**光子学**：这项技术利用光子在量子态中承载信息。通过当前的硅芯片，可以控制光子的行为，并将信息通过电路传输。由于与现有基础设施和芯片制造能力的兼容性，它有望取得巨大的成功。'
 - en: '**Quantum dots**: Quantum dots are small semiconducting nanocrystals made up
     of elements such as silicon and cadmium. Their size ranges from 2 to 10 nm. The
     physical implementation of a qubit involves exchanging information via charged
     qubits in capacitive states. Due to its conducive conditions, photonics is less
     error-prone.'
+  id: totrans-84
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子点**：量子点是由硅、镉等元素构成的小型半导体纳米晶体，其大小范围为2到10纳米。量子比特的物理实现涉及通过电荷量子比特在电容状态下交换信息。由于其有利的条件，光子学更少出现错误。'
 - en: '**Cold atoms**: Cold atoms use a ploy similar to trapped ions, where atoms
     are cooled below 1 mK and then used as an information highway to bounce off the
     information. Lasers are programmed to control the quantum behavior of cold atoms,
     and to then leverage them to transfer data.'
+  id: totrans-85
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**冷原子**：冷原子使用与困束离子类似的方法，原子被冷却至低于1 mK，然后用作信息通道，将信息反射回来。激光被编程以控制冷原子的量子行为，并利用它们来传输数据。'
 - en: 'To understand the milestones achieved by each technology, we will take the
     help of DiVincenzo’s criteria. In the year 2000, David DiVincenzo proposed a wish
     list of the experimental characteristics of a quantum computer. DiVincenzo’s criteria
@@ -546,80 +734,115 @@
     computers (Alvaro Ballon, *Quantum computing with superconducting qubits*, PennyLane,
     [https://tinyurl.com/4pvpzj6a](https://tinyurl.com/4pvpzj6a)). These criteria
     are as follows:'
+  id: totrans-86
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了理解每项技术所取得的里程碑，我们将借助迪文琴佐标准。2000年，David DiVincenzo提出了一份量子计算机实验特性的愿望清单。自那时以来，迪文琴佐标准已成为物理学家和工程师构建量子计算机的主要指南（Alvaro
+    Ballon，*超导量子比特的量子计算*，PennyLane，[https://tinyurl.com/4pvpzj6a](https://tinyurl.com/4pvpzj6a)）。这些标准如下：
 - en: '**Well-characterized and scalable qubits**: Numerous quantum systems seen in
     nature are not qubits; thus, we must develop a means to make them act as such.
     Moreover, we must integrate several of these systems.'
+  id: totrans-87
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**良好表征且可扩展的量子比特**：自然界中看到的许多量子系统并非量子比特；因此，我们必须开发一种方法使它们表现得像量子比特。此外，我们还需要整合多个这样的系统。'
 - en: '**Qubit initialization**: We must be able to replicate the identical state
     within an acceptable error margin.'
+  id: totrans-88
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子比特初始化**：我们必须能够在可接受的误差范围内复制相同的状态。'
 - en: '**Extended coherence durations**: Qubits will lose their quantum characteristics
     after prolonged interaction with their surroundings. We would want them to be
     durable enough to enable quantum processes.'
+  id: totrans-89
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**延长的相干时间**：量子比特在与周围环境长时间交互后会失去其量子特性。我们希望它们足够耐用，以便支持量子过程的进行。'
 - en: '**Universal set of gates**: Arbitrary operations must be performed on the qubits.
     To do this, we need both single-qubit and two-qubit gates.'
+  id: totrans-90
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**通用门集**：必须对量子比特执行任意操作。为此，我们需要单量子比特门和双量子比特门。'
 - en: '**Quantification of individual qubits**: To determine the outcome of a quantum
     computation, it is necessary to precisely measure the end state of a predetermined
     set of qubits.'
+  id: totrans-91
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**单个量子比特的量化**：为了确定量子计算的结果，必须精确测量预定量子比特集的最终状态。'
 - en: '*Figure 1**.6* helps evaluate the promises and drawbacks of each kind of quantum
     technology based on DiVincenzo’s criteria:'
+  id: totrans-92
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图1.6* 有助于根据迪文琴佐标准评估每种量子技术的前景和缺点：'
 - en: '|  | **Superconducting** | **Trapped Ions** | **Photonics** | **Quantum** **Dots**
     | **Cold atoms** |'
+  id: totrans-93
   prefs: []
   type: TYPE_TB
+  zh: '|  | **超导** | **困束离子** | **光子学** | **量子** **点** | **冷原子** |'
 - en: '| Well-characterized and scalable qubit | Achieved | Achieved | Achieved |
     Achieved | Achieved |'
+  id: totrans-94
   prefs: []
   type: TYPE_TB
+  zh: '| 良好表征且可扩展的量子比特 | 已实现 | 已实现 | 已实现 | 已实现 | 已实现 |'
 - en: '| Qubit initialization | Achieved | Achieved | Achieved | Achieved | Achieved
     |'
+  id: totrans-95
   prefs: []
   type: TYPE_TB
+  zh: '| 量子比特初始化 | 已实现 | 已实现 | 已实现 | 已实现 | 已实现 |'
 - en: '| Extended coherence durations | 99.6% | 99.9% | 99.9% | 99% | 99% |'
+  id: totrans-96
   prefs: []
   type: TYPE_TB
+  zh: '| 延长的相干时间 | 99.6% | 99.9% | 99.9% | 99% | 99% |'
 - en: '| Universal set of gates | 10-50 ns | 1-50 us | 1 ns | 1-10 ns | 100 ns |'
+  id: totrans-97
   prefs: []
   type: TYPE_TB
+  zh: '| 通用门集 | 10-50 ns | 1-50 us | 1 ns | 1-10 ns | 100 ns |'
 - en: '| Quantification of individual qubits | Achieved | Achieved | Achieved | Achieved
     | Achieved |'
+  id: totrans-98
   prefs: []
   type: TYPE_TB
+  zh: '| 单个量子比特的量化 | 已实现 | 已实现 | 已实现 | 已实现 | 已实现 |'
 - en: Figure 1.6 – DiVincenzo’s criteria
+  id: totrans-99
   prefs: []
   type: TYPE_NORMAL
+  zh: 图1.6 – 迪文琴佐标准
 - en: On various parameters, technologies such as superconducting and trapped ions
     are showing the most promise in overcoming the challenges of quantum technology.
     While supergiants such as IBM and Google are betting on such technology to develop
     their quantum computers, new-age start-up technologies, including IQM and Rigetti,
     are exploring others that are more compatible with the current infrastructure.
+  id: totrans-100
   prefs: []
   type: TYPE_NORMAL
+  zh: 在各项参数上，超导和捕获离子等技术在克服量子技术挑战方面显示出最大的潜力。虽然像IBM和谷歌这样的超级巨头正押注于这类技术来开发它们的量子计算机，但包括IQM和Rigetti在内的新时代初创公司则在探索与当前基础设施更兼容的其他技术。
 - en: In the next section, we will detail the applications and technologies associated
     with the quantum computing ecosystem.
+  id: totrans-101
   prefs: []
   type: TYPE_NORMAL
+  zh: 在接下来的章节中，我们将详细介绍与量子计算生态系统相关的应用和技术。
 - en: Quantum computing value chain
+  id: totrans-102
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子计算价值链
 - en: Quantum computing technology is still in its infancy. If we have to draw parallels
     from a technology point of view, in 1975, most of the investors were investing
     in hardware firms such as IBM, HP, and later Apple, to make sure that people would
@@ -629,8 +852,10 @@
     the funds available are flowing toward hardware companies such as IonQ, ColdQuanta,
     and Pascal. Key engineering challenges that need to be overcome are scalability,
     stability, and operations.
+  id: totrans-103
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算技术仍处于起步阶段。如果从技术角度类比，1975年，大多数投资者都在投资硬件公司，如IBM、惠普，后来是苹果，以确保人们能够从大型主机迁移到个人计算机。一旦从硬件中获得了价值，他们开始关注软件，公司如微软因此崭露头角。根据BCG发布的报告，80%的资金正流向硬件公司，如IonQ、ColdQuanta和Pascal。需要克服的关键工程挑战包括可扩展性、稳定性和运营。
 - en: Several companies and start-ups are investing in quantum computing. Countries
     such as the USA ($2 billion), China ($1 billion), Canada ($1 billion), the UK
     (£1 billion), Germany (€2 billion), France (€1.8 billion), Russia ($790 million),
@@ -642,97 +867,136 @@
     investment in quantum technologies has increased from $93.5 million in 2015 to
     $1.02 billion in 2021\. A few well-known start-ups that have attracted huge investments
     recently are Arqit, Quantum eMotion, Quantinuum, Rigetti, D-Wave, and IonQ.
+  id: totrans-104
   prefs: []
   type: TYPE_NORMAL
+  zh: 多家公司和初创公司正在投资量子计算。美国（20亿美元）、中国（10亿美元）、加拿大（10亿美元）、英国（10亿英镑）、德国（20亿欧元）、法国（18亿欧元）、俄罗斯（7.9亿美元）和日本（2.7亿美元）已承诺巨额资金以实现量子霸权。有人推测，包括量子传感器、量子通信和量子互联网在内的量子解决方案需要大量投资，以帮助各国实现量子霸权。麦肯锡估计量子计算初创公司数量为200家。此外，根据PitchBook（市场数据分析公司）的数据，全球在量子技术领域的投资已从2015年的9350万美元增加到2021年的10.2亿美元。最近吸引了大量投资的一些知名初创公司包括Arqit、Quantum
+    eMotion、Quantinuum、Rigetti、D-Wave和IonQ。
 - en: '*Figure 1**.7* shows the potential application of quantum technologies in different
     fields based on the types of problems solved by quantum computers:'
+  id: totrans-105
   prefs: []
   type: TYPE_NORMAL
+  zh: '*图 1.7* 显示了量子技术在不同领域的潜在应用，依据量子计算机解决的各种问题类型：'
 - en: '![Figure 1.7 – Application of quantum computing](img/B19146_01_007.jpg)'
+  id: totrans-106
   prefs: []
   type: TYPE_IMG
+  zh: '![图 1.7 – 量子计算应用](img/B19146_01_007.jpg)'
 - en: Figure 1.7 – Application of quantum computing
+  id: totrans-107
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 1.7 – 量子计算应用
 - en: 'The following technologies are helping companies to create the value chain
     for end users in the quantum realm:'
+  id: totrans-108
   prefs: []
   type: TYPE_NORMAL
+  zh: 以下技术正在帮助公司在量子领域为最终用户创造价值链：
 - en: '**Quantum computing**: Quantum computing refers to developing software and
     hardware technologies using quantum mechanics principles.'
+  id: totrans-109
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子计算**：量子计算指的是利用量子力学原理开发软件和硬件技术。'
 - en: '**Quantum key distribution** (**QKD**): QKD, or quantum cryptography, provides
     a secure way for banks and other institutions to exchange encryption keys. It
     uses principles of quantum mechanics to secure the communication channels.'
+  id: totrans-110
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子密钥分发**（**QKD**）：QKD，或称量子加密，提供了一种安全的方式，供银行和其他机构交换加密密钥。它利用量子力学原理来保护通信通道。'
 - en: '**Quantum software and quantum clouds**: Quantum software, or programming languages
     such as Qiskit, provide a medium for end users to interface with system hardware
     and perform complex computing operations including simulation, optimization, and
     pattern recognition.'
+  id: totrans-111
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子软件和量子云**：量子软件，或如Qiskit这样的编程语言，为终端用户提供了与系统硬件接口并执行复杂计算操作的媒介，包括仿真、优化和模式识别。'
 - en: '![Figure 1.8 – Quantum technology](img/B19146_01_008.jpg)'
+  id: totrans-112
   prefs: []
   type: TYPE_IMG
+  zh: '![图1.8 – 量子技术](img/B19146_01_008.jpg)'
 - en: Figure 1.8 – Quantum technology
+  id: totrans-113
   prefs: []
   type: TYPE_NORMAL
+  zh: 图1.8 – 量子技术
 - en: '**Post-quantum encryption**: One of the key research areas that have prompted
     countries to invest billions of dollars is the hunch that current encryption software
     will be susceptible to quantum algorithms. They need algorithms that can secure
     these channels further.'
+  id: totrans-114
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**后量子加密**：国家投资数十亿美元的关键研究领域之一是当前加密软件可能会受到量子算法的威胁。它们需要能够进一步保障这些渠道安全的算法。'
 - en: '**Quantum sensors and atomic clocks**: These terms refer to the development
     of laser and trapped-ion technologies to control the atomic behavior of molecules.
     This has prompted researchers to develop use cases where next-gen technologies
     such as quantum sensors will be useful in the early detection of natural calamities,
     including tsunamis and earthquakes.'
+  id: totrans-115
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子传感器和原子钟**：这些术语指的是激光和困陷离子技术的发展，用于控制分子原子行为。这促使研究人员开发出使用量子传感器等下一代技术，在早期检测自然灾害（包括海啸和地震）的应用场景。'
 - en: '**Quantum materials**: Quantum materials refers to the cluster of world-class
     technologies that help capture and manipulate elements’ quantum properties for
     industrial usage.'
+  id: totrans-116
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子材料**：量子材料指的是一类世界级的技术，用于捕捉和操控元素的量子特性，以便在工业中应用。'
 - en: '**Quantum memories and other quantum components**: These devices carry information
     in qubit form via photons. It is complex technology that is still under development
     and is expected to overcome the memory barriers defined by current limitations.'
+  id: totrans-117
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**量子存储器和其他量子组件**：这些设备通过光子以量子位（qubit）形式携带信息。它是复杂的技术，仍在开发中，预计能够克服当前限制所定义的存储障碍。'
 - en: As observed in *Figure 1**.8*, the quantum computing ecosystem is vast. It has
     multiple facets such as quantum materials, memories, and sensors, empowering the
     user to collect and analyze data more effectively.
+  id: totrans-118
   prefs: []
   type: TYPE_NORMAL
+  zh: 如*图1.8*所示，量子计算生态系统广阔。它涵盖了多个方面，如量子材料、存储器和传感器，帮助用户更有效地收集和分析数据。
 - en: In the following section, we will look at the companies powering the revolution
     in quantum technologies.
+  id: totrans-119
   prefs: []
   type: TYPE_NORMAL
+  zh: 在接下来的章节中，我们将探讨推动量子技术革命的公司。
 - en: The business application of quantum computing
+  id: totrans-120
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 量子计算的商业应用
 - en: Although it is still in its infancy and yet to achieve a commercial application,
     quantum technology holds much promise. In the near future, quantum computers will
     be able to help accelerate the pace of solving complex problems in conjunction
     with classical computers. In this section, you will learn about the business applications
     of this wonderful technology.
+  id: totrans-121
   prefs: []
   type: TYPE_NORMAL
+  zh: 尽管量子技术仍处于起步阶段，尚未实现商业应用，但它具有巨大的潜力。在不久的将来，量子计算机将能够与经典计算机结合，加速解决复杂问题的进程。在本节中，您将了解这种令人惊叹的技术的商业应用。
 - en: Global players in the quantum computing domain across the value chain
+  id: totrans-122
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 量子计算领域在整个价值链中的全球参与者
 - en: 'According to a McKinsey report (Quantum computing funding remains strong, but
     talent gap raises concern, [https://tinyurl.com/5d826t55](https://tinyurl.com/5d826t55)),
     quantum technology has attracted a total investment of $700 million from various
@@ -743,64 +1007,84 @@
     community of researchers and end users alike to propagate the use of quantum computers.
     The following is a brief list of the companies doing pioneering work in the field
     of quantum technology:'
+  id: totrans-123
   prefs: []
   type: TYPE_NORMAL
+  zh: 根据麦肯锡报告（量子计算的资金持续强劲，但人才缺口引发担忧，[https://tinyurl.com/5d826t55](https://tinyurl.com/5d826t55)），量子技术已吸引了来自各国政府和资助机构的7亿美元投资。这项技术所展现的潜力促使业内资助各大高校和实验室的持续研究。D-Wave是首家在1999年通过量子退火技术开创量子计算解决方案的公司。此后，IBM等公司建立了强大的研究人员和终端用户社区，推动量子计算机的使用。以下是一些在量子技术领域做出开创性工作的公司：
 - en: '**IonQ** (NASDAQ: IONQ): IonQ was founded in 2015 by Christopher Monroe and
     Jungsang Kim. IonQ has received total funding of $432 million. IonQ builds quantum
     computers based on ion trap technology. It provides quantum computers as **Platform
     as a Service** (**PaaS**) to service providers.'
+  id: totrans-124
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**IonQ**（纳斯达克：IONQ）：IonQ由Christopher Monroe和Jungsang Kim于2015年创立，至今已获得4.32亿美元的融资。IonQ基于离子陷阱技术构建量子计算机，并将其作为**平台即服务**（**PaaS**）提供给服务提供商。'
 - en: '**Rigetti** (NASDAQ: RGTI): Rigetti Computing was founded in 2013 by Chad Rigetti.
     It has currently received funding of $500 million. Rigetti has developed a quantum
     computer based on superconducting technology.'
+  id: totrans-125
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Rigetti**（纳斯达克：RGTI）：Rigetti Computing由Chad Rigetti于2013年创立。目前已获得5亿美元的融资。Rigetti开发了一台基于超导技术的量子计算机。'
 - en: '**Quantum Computing Inc.**: Quantum Computing Inc. focuses on providing software
     and hardware solutions to the end user. It is also focusing on developing business
     use cases for companies, thus showcasing the potential of quantum computing in
     the near future.'
+  id: totrans-126
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Quantum Computing Inc.**：Quantum Computing Inc.专注于为最终用户提供软件和硬件解决方案。它还专注于为公司开发商业应用案例，从而展示量子计算在不久的未来的潜力。'
 - en: '**Archer** (ASX: AXE): Archer is an Australian company that is conducting research
     on developing a quantum computer at room temperature. It was founded by Dr. Mohammad
     Choucair. It aims to produce a quantum computer that can have a widespread reach.'
+  id: totrans-127
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Archer**（ASX：AXE）：Archer是一家澳大利亚公司，正在开展室温量子计算机的研发。由Mohammad Choucair博士创立，旨在生产能够广泛应用的量子计算机。'
 - en: '**D-Wave** (coming soon via SPAC merger): D-Wave is credited with introducing
     the world’s first quantum computer for commercial use. It uses the quantum annealing
     technique to develop quantum solutions for the end user. It offers a limited but
     powerful piece of technology with 5,000 qubits of quantum computer at its disposal,
     which has a lot of potential business applications.'
+  id: totrans-128
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**D-Wave**（即将通过SPAC合并推出）：D-Wave因推出全球首台商用量子计算机而闻名。它采用量子退火技术为最终用户开发量子解决方案。D-Wave提供一项有限但强大的技术，其量子计算机拥有5000个量子比特，具有广泛的潜在商业应用。'
 - en: '**Quantinuum**: Quantinuum was formed as a result of a merger between Cambridge
     Quantum and Honeywell Quantum Solutions. While the primary focus of Cambridge
     Quantum was on developing the operating system and software for quantum computers,
     Honeywell has focused primarily on developing the quantum computer using ion trap
     technology.'
+  id: totrans-129
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**Quantinuum**：Quantinuum的成立源于剑桥量子与霍尼韦尔量子解决方案的合并。剑桥量子的主要焦点是开发量子计算机的操作系统和软件，而霍尼韦尔则主要专注于利用离子陷阱技术开发量子计算机。'
 - en: Global players across the value chain in the quantum computing domain include
     giants such as IBM, Microsoft, and Google, and well-funded start-ups such as Rigetti,
     IQM, and Quantinuum. These companies have invested in different types of technologies
     (hardware as well as software) to catapult the research in this technology domain.
+  id: totrans-130
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算领域的全球玩家包括IBM、微软和谷歌等巨头，以及Rigetti、IQM和Quantinuum等资金充足的初创公司。这些公司已经在不同类型的技术（硬件和软件）上进行了投资，以推动这一技术领域的研究。
 - en: In the subsequent segment, we will evaluate the roadmap provided by different
     technology giants to achieve full-scale quantum supremacy.
+  id: totrans-131
   prefs: []
   type: TYPE_NORMAL
+  zh: 在接下来的部分中，我们将评估不同科技巨头为实现全面量子霸权所提供的路线图。
 - en: Building a quantum computing strategy implementation roadmap
+  id: totrans-132
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 构建量子计算战略实施路线图
 - en: 'Building quantum advantage to solve real-time business problems is the end
     goal of many companies operating in the quantum realm. This technology is perceived
     to aid companies in solving large-scale problems. Recently, BMW has commissioned
@@ -808,42 +1092,57 @@
     problem using the **AWS Amazon Braket** platform. In *Figure 1**.9*, you can chart
     the route that could potentially lead to the era in which quantum supremacy can
     be achieved, and see how we can solve more problems using quantum computing:'
+  id: totrans-133
   prefs: []
   type: TYPE_NORMAL
+  zh: 构建量子优势以解决实时业务问题是许多量子领域公司最终的目标。这项技术被认为有助于公司解决大规模问题。最近，宝马公司委托了一项价值百万美元的挑战，旨在通过**AWS
+    Amazon Braket**平台找到解决其库存调度问题的方法。在*图 1.9*中，你可以绘制出可能导致量子霸权时代的路径，并看到我们如何利用量子计算解决更多问题：
 - en: '![Figure 1.9 – Quantum computing era](img/B19146_01_009.jpg)'
+  id: totrans-134
   prefs: []
   type: TYPE_IMG
+  zh: '![图 1.9 – 量子计算时代](img/B19146_01_009.jpg)'
 - en: Figure 1.9 – Quantum computing era
+  id: totrans-135
   prefs: []
   type: TYPE_NORMAL
+  zh: 图 1.9 – 量子计算时代
 - en: 'Broadly, the quantum era can be divided into three parts:'
+  id: totrans-136
   prefs: []
   type: TYPE_NORMAL
+  zh: 广义上，量子时代可以分为三个部分：
 - en: '**Noisy intermediate-scale quantum** (**NISQ**): This era is marked by the
     availability of a lesser number of good-quality qubits (<50 to 100) to solve real-world
     problems. The word *noisy* refers to the tendency of the qubits to lose their
     quantum state due to disturbances. It is expected that the current technology
     setup will be able to come out of the NISQ era by 2030.'
+  id: totrans-137
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**噪声中等规模量子**（**NISQ**）：这一时代的特点是拥有较少数量的优质量子比特（<50到100）来解决现实问题。*噪声*一词指的是量子比特由于干扰而失去其量子态的倾向。预计目前的技术设置将在2030年之前摆脱NISQ时代。'
 - en: '**Broad quantum advantage**: IonQ has defined the broad quantum advantage as
     the advent of the era where quantum computers are available for developers and
     end users to solve real-life problems. Based on the consensus developed by industry
     practitioners, 72-qubit systems will start aiding the industry in solving commercial-grade
     problems. Thus, it will be possible in the future to access the platform enabled
     by demonstrating high-level application programming and HMI functions.'
+  id: totrans-138
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**广泛的量子优势**：IonQ将广泛的量子优势定义为量子计算机进入开发者和终端用户的时代，能够解决现实生活中的问题。根据行业从业者达成的共识，72量子比特的系统将开始帮助行业解决商业级问题。因此，未来将有可能通过展示高级应用编程和人机界面（HMI）功能来访问该平台。'
 - en: '**Full-scale fault tolerance**: This era refers to large-scale quantum computers
     that have achieved two-qubit gate fidelity of 99.5%. By 2040, it is expected that
     the existing efforts will help in solving the problem of **decoherence** (leakage
     of information due to large numbers of qubits), and will enable organizations
     to take full advantage of this amazing technology.'
+  id: totrans-139
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '**全规模容错**：这一时代指的是已经实现99.5%两量子比特门保真度的大规模量子计算机。到2040年，预计现有的努力将有助于解决**退相干**（由于大量量子比特而导致的信息泄漏）问题，并使组织能够充分利用这一令人惊叹的技术。'
 - en: Quantum technology in the near term is available for end users in the form of
     hybrid computing. To harness the full potential of existing quantum computers,
     players such as D-Wave and Rigetti have started providing an interface between
@@ -852,16 +1151,22 @@
     solving NP-hard problems. Quantum technology, through quantum annealers and universal
     quantum computers, and using technologies such as superconducting and ion trap,
     will be able to harness its full potential in the near future.
+  id: totrans-140
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子技术在近期将以混合计算的形式提供给终端用户。为了充分利用现有量子计算机的潜力，像D-Wave和Rigetti这样的公司已经开始通过微处理器提供经典计算与量子计算之间的接口。经典组件负责与终端用户的通信，而量子微处理器则用于解决NP-hard问题。量子技术通过量子退火器和通用量子计算机，利用超导和离子阱等技术，将能够在不久的将来充分发挥其潜力。
 - en: In the next section, let’s have a look at what kind of people are needed to
     build quantum technology and its ecosystem.
+  id: totrans-141
   prefs: []
   type: TYPE_NORMAL
+  zh: 在下一部分，我们将看看建设量子技术及其生态系统需要什么样的人才。
 - en: Building a workforce for a quantum leap
+  id: totrans-142
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: 为量子跃迁建设人才队伍
 - en: Quantum technology needs a variety of people in the workforce to harness its
     true potential. The entire technology stack can be divided into hardware, software,
     and related technologies. Currently, the technology has called for scientific
@@ -873,8 +1178,10 @@
     understanding of the underlying technologies such as annealing, superconducting,
     and ion trap. These technologies are at the forefront of the scientific breakthroughs
     that can be achieved with the help of a knowledgeable workforce.
+  id: totrans-143
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子技术需要多种类型的人才来发挥其真正的潜力。整个技术栈可以分为硬件、软件和相关技术。目前，该技术需要科学研究和技术实施专家。根据福布斯编制的一份调查报告，毕业生必须拥有STEM（科学、技术、工程和数学）学科的本科学位，才能理解量子计算机的基本工作原理。具备研究导向的思维方式对于进一步研究量子计算机的发展至关重要。为了实现与计算机硬件发展相关的科学突破，研究人员必须深入理解退火、超导和离子阱等底层技术。这些技术处于能够通过知识丰富的劳动力实现科学突破的前沿。
 - en: In addition to building a quantum computer, it is also challenging to operate
     one. The current focus of software development is to write low-level programs
     that can interface with the memory core of the quantum computer. IBM and Google
@@ -888,8 +1195,10 @@
     at below-freezing temperatures, and can be accessed remotely using cloud computing.
     The algorithms written for quantum computers are also used to boost the performance
     of existing machine learning algorithms.
+  id: totrans-144
   prefs: []
   type: TYPE_NORMAL
+  zh: 除了构建量子计算机，操作量子计算机同样具有挑战性。当前软件开发的重点是编写能够与量子计算机内存核心接口的低级程序。IBM和谷歌等公司已经开发了基于Python的**软件开发工具包**（**SDKs**），如Qiskit和Cirq。IBM暑期学校等项目是开发人员熟悉与量子内存处理器接口的方法论的良好起点。由于当前量子领域技术的限制，许多重点放在开发混合计算机上。软件开发人员需要了解云计算才能操作量子计算机。大多数量子计算机位于大房间内，温度低于冰点，并且可以通过云计算远程访问。为量子计算机编写的算法也被用来提升现有机器学习算法的性能。
 - en: 'Quantum solutions also include aided technologies, making quantum technologies
     an exciting field to work in. Quantum sensors, annealers, and the internet are
     the potential applications of quantum mechanics. In addition, quantum algorithms
@@ -897,27 +1206,39 @@
     healthcare, and cryptography. *Figure 1**.8* summarizes the discussion related
     to the aptitudes and qualifications related to starting a career in the field
     of quantum technologies:'
+  id: totrans-145
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子解决方案还包括辅助技术，这使得量子技术成为一个令人兴奋的领域。量子传感器、退火机和互联网是量子力学的潜在应用。此外，量子算法在解决与金融、供应链、医疗健康和密码学相关的问题方面也显示出了潜力。*图1.8*总结了与进入量子技术领域相关的能力和资格的讨论：
 - en: '|  | **Research Areas** | **Application** | **Potential** **Qualification**
     |'
+  id: totrans-146
   prefs: []
   type: TYPE_TB
+  zh: '|  | **研究领域** | **应用** | **潜力** **资格** |'
 - en: '| Hardware | Quantum Mechanics, Theoretical Physics, Applied Physics | Superconducting
     Ion Traps, Quantum Dot | PhD, Master’s in Quantum Physics |'
+  id: totrans-147
   prefs: []
   type: TYPE_TB
+  zh: '| 硬件 | 量子力学、理论物理、应用物理 | 超导离子阱、量子点 | 量子物理博士、硕士 |'
 - en: '| Software | Quantum Information Science | Quantum Algorithms, Quantum Machine
     Learning | Software Development, Master’s in Computer Science |'
+  id: totrans-148
   prefs: []
   type: TYPE_TB
+  zh: '| 软件 | 量子信息科学 | 量子算法、量子机器学习 | 软件开发、计算机科学硕士 |'
 - en: '| Quantum Business Technologies | Optimization, Simulation and Cryptography
     | Finance, Supply-Chain, Healthcare | Business Evangelist, Domain Expert |'
+  id: totrans-149
   prefs: []
   type: TYPE_TB
+  zh: '| 量子商业技术 | 优化、仿真与密码学 | 金融、供应链、医疗健康 | 商业倡导者、领域专家 |'
 - en: Figure 1.10 – List of qualifications
+  id: totrans-150
   prefs: []
   type: TYPE_NORMAL
+  zh: 图1.10 – 资格列表
 - en: From *Figure 1**.10*, it can be observed that a potential candidate for quantum
     technologies needs some background in STEM. Research aptitude and a capacity to
     learn, unlearn, relearn, and apply new concepts are a must to sustain in this
@@ -925,59 +1246,84 @@
     more toward inducting doctoral candidates from relevant fields. However, there
     is a significant demand for software engineers who can write code for hybrid computers
     to solve problems in a faster and more accurate way.
+  id: totrans-151
   prefs: []
   type: TYPE_NORMAL
+  zh: 从*图1.10*中可以观察到，潜在的量子技术候选人需要具备一定的STEM背景。研究能力以及学习、忘记、再学习和应用新概念的能力，是在这个动态领域中生存的必备条件。由于这是一个以研究为导向的领域，企业更倾向于招收相关领域的博士候选人。然而，能够为混合计算机编写代码以更快、更准确地解决问题的软件工程师需求也非常大。
 - en: Summary
+  id: totrans-152
   prefs:
   - PREF_H1
   type: TYPE_NORMAL
+  zh: 总结
 - en: Computing paradigms, such as calculators and analog and digital computers, have
     evolved over the years to assist humans in making rapid strides in technological
     developments and reaching new knowledge frontiers. The contributions of Jon von
     Neumann, Alan Turing, and Graham Moore have been immense in achieving superior
     computing power.
+  id: totrans-153
   prefs: []
   type: TYPE_NORMAL
+  zh: 计算范式，如计算器、模拟计算机和数字计算机，随着时间的推移不断发展，帮助人类在技术发展上取得迅速进展，达到新的知识前沿。Jon von Neumann、Alan
+    Turing和Graham Moore的贡献在实现更强大计算能力方面发挥了巨大作用。
 - en: The current business environment has given rise to the need to make faster and
     more accurate decisions based on data. Hence, there is a need for faster, optimized
     computers to process large amounts of data.
+  id: totrans-154
   prefs: []
   type: TYPE_NORMAL
+  zh: 当前的商业环境催生了基于数据做出更快速、更精准决策的需求。因此，需要更快速、优化的计算机来处理海量数据。
 - en: Digital computers cannot solve NP-hard problems, including simulation, optimization,
     and pattern-matching problems, thus emphasizing the need for new computing technologies
     to do faster and more accurate calculations.
+  id: totrans-155
   prefs: []
   type: TYPE_NORMAL
+  zh: 数字计算机无法解决NP难问题，包括模拟、优化和模式匹配问题，从而强调了需要新型计算技术来进行更快速、更精准的计算。
 - en: Emerging computing paradigms, such as quantum computing and molecular computing,
     promise to solve large-scale problems such as portfolio optimization, protein
     foldings, and supply chain route optimization more effectively and efficiently.
+  id: totrans-156
   prefs: []
   type: TYPE_NORMAL
+  zh: 新兴的计算范式，如量子计算和分子计算，承诺能够更有效、更高效地解决大规模问题，如投资组合优化、蛋白质折叠和供应链路线优化。
 - en: Quantum computing is based on the underlying principles of quantum mechanics
     such as qubits and the quantum states, superposition, interference, entanglement,
     and quantum measurement.
+  id: totrans-157
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算基于量子力学的基本原理，如量子比特（qubits）、量子态、叠加、干涉、纠缠和量子测量。
 - en: Current quantum hardware and microprocessors are based on technologies such
     as superconducting, trapped ions, annealing, cold atoms, and simulators.
+  id: totrans-158
   prefs: []
   type: TYPE_NORMAL
+  zh: 目前的量子硬件和微处理器基于超导、捕获离子、退火、冷原子和模拟器等技术。
 - en: The quantum computing value chain is based on the innovations achieved using
     quantum solutions and technologies such as quantum sensors, quantum communication,
     and the quantum internet.
+  id: totrans-159
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算的价值链基于通过量子传感器、量子通信和量子互联网等量子解决方案和技术所实现的创新。
 - en: Global players across the value chain in the quantum computing domain include
     giants such as IBM, Microsoft, and Google, and well-funded start-ups such as Rigetti,
     IQM, and Quantinuum.
+  id: totrans-160
   prefs: []
   type: TYPE_NORMAL
+  zh: 在量子计算领域的全球参与者包括IBM、微软、谷歌等巨头，以及资金充足的初创公司，如Rigetti、IQM和Quantinuum。
 - en: Aligning business strategy with quantum computing involves developing the strategy
     roadmap for companies based on quantum computing eras such as NISQ, broad quantum
     advantage, and full-scale fault tolerance.
+  id: totrans-161
   prefs: []
   type: TYPE_NORMAL
+  zh: 将商业战略与量子计算对接，涉及基于量子计算的不同阶段（如NISQ、广泛的量子优势和全规模容错）的战略路线图开发。
 - en: The future quantum workforce needs to work on three dimensions, concerning the
     development of hardware, software, and related quantum technologies.
+  id: totrans-162
   prefs: []
   type: TYPE_NORMAL
+  zh: 未来的量子工作力量需要在硬件、软件及相关量子技术的发展方面做好三方面的工作。

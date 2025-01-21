@@ -1,18 +1,24 @@
 - en: '1'
+  id: totrans-0
   prefs:
   - PREF_H2
   type: TYPE_NORMAL
+  zh: '1'
 - en: The Principles of Quantum Mechanics
+  id: totrans-1
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子力学原理
 - en: Quantum mechanics is a framework for the development of physical theories; it
     is not itself a physical theory  [[80](Biblography.xhtml#XDawar)]. Actual physical
     theories are built upon a foundation of quantum mechanics. This is why quantum
     mechanics plays such an important role in all natural sciences. Information theory
     is no exception and also derives inspiration from the ideas and methods of quantum
     mechanics.
+  id: totrans-2
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子力学是物理理论发展的框架；它本身并不是一种物理理论[[80](Biblography.xhtml#XDawar)]。实际的物理理论是建立在量子力学的基础之上的。这也是为什么量子力学在所有自然科学中扮演着如此重要的角色。信息理论也不例外，同样从量子力学的思想和方法中获得了启发。
 - en: Understanding quantum computing requires some familiarity with the basic principles
     of quantum mechanics. This book does not assume any prior knowledge of quantum
     mechanics and provides all the necessary definitions and explanations when needed.
@@ -32,12 +38,16 @@
     of quantum computing are covered in great detail in the book by Sutor  [[278](Biblography.xhtml#XSutor2019)],
     and anyone looking for a python quantum computing programming textbook will find
     it in the work by Loredo  [[195](Biblography.xhtml#XLoredo2020)].
+  id: totrans-3
   prefs: []
   type: TYPE_NORMAL
+  zh: 理解量子计算需要对量子力学的基本原理有一定的了解。本书不假定读者已有量子力学的背景知识，并在需要时提供所有必要的定义和解释。同时，鼓励读者根据自己熟悉的数学形式主义，进一步了解这一迷人的学科。在介绍量子力学的广泛教科书宇宙中，有必要提到经典的**兰道和李夫希茨**的书籍[[182](Biblography.xhtml#XLandau1965)]，以及同样经典的**尼尔森和程**关于量子计算的书籍[[223](Biblography.xhtml#XNielsen2010)]，它们从量子计算的角度涵盖了量子力学的最相关方面。对于刚开始接触量子计算并希望获得整体概念和历史视角的人来说，**伯恩哈特**的优秀书籍[[32](Biblography.xhtml#XBernhardt2019)]提供了这些内容，并且没有大量使用复杂的数学工具。寻求量子力学正式现代解读的读者可以参考**罗宾内特**的书籍[[249](Biblography.xhtml#XRobinett2006)]。量子计算的实际应用方面则在**苏托尔**的书籍[[278](Biblography.xhtml#XSutor2019)]中得到了详细阐述，任何寻求量子计算编程的Python教材的读者，都可以在**洛雷多**的著作[[195](Biblography.xhtml#XLoredo2020)]中找到。
 - en: 1.1 Linear Algebra for Quantum Mechanics
+  id: totrans-4
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 1.1 量子力学中的线性代数
 - en: Quantum computing and quantum mechanics rely on a specific notational formalism,
     due to Dirac, and are supported by classical linear algebra, in particular Hermitian
     structures of matrices and tensor products. We provide here a self-contained review
@@ -49,12 +59,16 @@
     and properties of complex matrices (decompositions, Hermitian property, and rotations).
     Sections [1.1.9](#x1-320009) to [1.1.11](#x1-3400011) introduce Dirac’s formalism
     and the essential aspects of quantum operators.
+  id: totrans-5
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算和量子力学依赖于一种特定的符号体系，这是由于**狄拉克**的贡献，并且得到了经典线性代数的支持，特别是矩阵的厄米结构和张量积。我们在这里提供了这些工具的独立回顾，以便于理解本书的其余部分。我们从基本的线性代数原理开始，然后介绍狄拉克符号和线性代数工具的量子对应物。第[1.1.1](#x1-240001)节到第[1.1.4](#x1-270004)节集中介绍有限维希尔伯特空间和矩阵的标准定义，而第[1.1.5](#x1-280005)节到第[1.1.7](#x1-300007)节回顾了复矩阵的关键细节和性质（分解、厄米性质和旋转）。第[1.1.9](#x1-320009)节到第[1.1.11](#x1-3400011)节介绍了狄拉克的形式主义及量子算符的基本方面。
 - en: 1.1.1 Basic definitions and notations
+  id: totrans-6
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.1 基本定义和符号
 - en: We let 𝔽 denote either the real field ℝ or the complex one ℂ. For a complex
     number *z* = *x*+i*y* ∈ℂ, with *x,y* ∈ℝ, we write the conjugate *z*^∗ := *x*−i*y*.
     We let ℳ[m,n](𝔽) denote the space of matrices of dimension *m* × *n* with entries
@@ -66,141 +80,216 @@
     is invertible (or non-singular) if there exists B ∈ℳ[n](𝔽) such that AB = BA =
     I[n]. Given two matrices A ∈ℳ[p,m](𝔽) and B ∈ℳ[q,n](𝔽), we define their tensor
     product as
+  id: totrans-7
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们令𝔽表示实数域ℝ或复数域ℂ。对于复数*z* = *x*+i*y* ∈ℂ，其中 *x,y* ∈ℝ，我们写作共轭 *z*^∗ := *x*−i*y*。我们令ℳ[m,n](𝔽)表示维度为*m*
+    × *n*，元素为𝔽的矩阵空间；当*m* = *n*时，写作ℳ[n](𝔽)。对于 A := (*a*[ij])[1≤i≤m; 1≤j≤n] ∈ℳ[m,n](𝔽)，A^∗
+    := (*a*[ij]^∗)[1≤i≤m; 1≤j≤n] 是其复共轭。如果 A ∈ℳ[n](𝔽)，我们写 A^⊤ 表示其转置，A^† := (A^∗)^⊤
+    表示其*厄米共轭*。最后，令I为单位矩阵，并在需要强调维度时写作I[n]，0[m,n]表示ℳ[m,n](𝔽)中的零矩阵。回想一下，若矩阵A ∈ℳ[n](𝔽)是可逆的（或非奇异的），则存在B
+    ∈ℳ[n](𝔽)使得 AB = BA = I[n]。对于两个矩阵A ∈ℳ[p,m](𝔽) 和 B ∈ℳ[q,n](𝔽)，我们定义它们的张量积为
 - en: '![ ⌊ ⌋ a11B ... a1mB || .. .. .. || A ⊗ B := ⌈ . . . ⌉ ∈ ℳpq,mn (𝔽). ap1B ...
     apmB ](img/file3.jpg)'
+  id: totrans-8
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ a11B ... a1mB || .. .. .. || A ⊗ B := ⌈ . . . ⌉ ∈ ℳpq,mn (𝔽). ap1B ...
+    apmB ](img/file3.jpg)'
 - en: Since a vector is a particular case of a matrix, for u ∈𝔽^m and v ∈𝔽^n, we can
     write
+  id: totrans-9
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于向量是矩阵的一种特例，对于 u ∈𝔽^m 和 v ∈𝔽^n，我们可以写作
 - en: '![ ⌊ ⌋ |u1v1 | ⌊ ⌋ ⌊ ⌋ || ... || u1 v1 | | || .. || || ..|| ||u1vn || mn u
     ⊗ v = ⌈ . ⌉ ⊗ ⌈ .⌉ = ||u v || ∈ 𝔽 . um vn || 2.1 || |⌈ .. |⌉ umvn ](img/file4.jpg)'
+  id: totrans-10
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ |u1v1 | ⌊ ⌋ ⌊ ⌋ || ... || u1 v1 | | || .. || || ..|| ||u1vn || mn u
+    ⊗ v = ⌈ . ⌉ ⊗ ⌈ .⌉ = ||u v || ∈ 𝔽 . um vn || 2.1 || |⌈ .. |⌉ umvn ](img/file4.jpg)'
 - en: 1.1.2 Inner products
+  id: totrans-11
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.2 内积
 - en: A vector space V over the field 𝔽 is a set endowed with
+  id: totrans-12
   prefs: []
   type: TYPE_NORMAL
+  zh: 定义域为𝔽的向量空间V是一个集合，并配备了
 - en: a commutative, associative addition operation,
+  id: totrans-13
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 一个交换的、结合的加法运算，
 - en: an operation of multiplication by a scalar.
+  id: totrans-14
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 一个标量乘法的操作。
 - en: 'The addition and the multiplication by a scalar have the following properties
     (for scalars *α,β* ∈𝔽 and vectors u*,*v ∈V):'
+  id: totrans-15
   prefs: []
   type: TYPE_NORMAL
+  zh: 加法和标量乘法具有以下性质（对于标量*α,β* ∈𝔽 和向量u*,*v ∈V）：
 - en: v + 0 = v;
+  id: totrans-16
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: v + 0 = v；
 - en: v + (−v) = 0;
+  id: totrans-17
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: v + (−v) = 0；
 - en: '*α*(*β*v) = (*αβ*)v;'
+  id: totrans-18
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*α*(*β*v) = (*αβ*)v；'
 - en: (*α* + *β*)v = *α*v + *β*v;
+  id: totrans-19
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: (*α* + *β*)v = *α*v + *β*v；
 - en: '*α*(u + v) = *α*u + *α*v;'
+  id: totrans-20
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*α*(u + v) = *α*u + *α*v；'
 - en: 1 ⋅ v = v.
+  id: totrans-21
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 1 ⋅ v = v。
 - en: 'Armed with this, we can now define an inner product on V:'
+  id: totrans-22
   prefs: []
   type: TYPE_NORMAL
+  zh: 有了这个，我们现在可以定义V上的内积：
 - en: '**Definition 1.** A map ⟨⋅*,*⋅⟩ : V ×V →𝔽 is called an *inner product* if,
     for u*,*v*,*w ∈V and *α* ∈𝔽,'
+  id: totrans-23
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义1.** 一个映射 ⟨⋅*,*⋅⟩ : V ×V →𝔽 被称为*内积*，如果对于 u*,*v*,*w ∈V 和 *α* ∈𝔽，'
 - en: '*(Positive definiteness)* ⟨u*,*u⟩≥ 0 and ⟨u*,*u⟩ = 0 if and only if u = 0;'
+  id: totrans-24
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*（正定性）* ⟨u*,*u⟩≥ 0，且 ⟨u*,*u⟩ = 0 当且仅当 u = 0；'
 - en: '*(Conjugate symmetry)* ⟨u*,*v⟩ = ⟨v*,*u⟩^∗;'
+  id: totrans-25
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*（共轭对称性）* ⟨u*,*v⟩ = ⟨v*,*u⟩^∗；'
 - en: '*(Linear in the first argument)* ⟨u + v*,*w⟩ = ⟨u*,*w⟩ + ⟨v*,*w⟩ and ⟨*α*u*,*v⟩
     = *α*⟨u*,*v⟩;'
+  id: totrans-26
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*（第一个参数是线性的）* ⟨u + v*,*w⟩ = ⟨u*,*w⟩ + ⟨v*,*w⟩ 且 ⟨*α*u*,*v⟩ = *α*⟨u*,*v⟩；'
 - en: '*(Antilinear in the second argument)* ⟨u*,*v + w⟩ = ⟨u*,*v⟩ + ⟨u*,*w⟩ and ⟨u*,α*v⟩
     = *α*^∗⟨u*,*v⟩.'
+  id: totrans-27
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*（第二个参数是反线性的）* ⟨u*,*v + w⟩ = ⟨u*,*v⟩ + ⟨u*,*w⟩ 且 ⟨u*,α*v⟩ = *α*^∗⟨u*,*v⟩。'
 - en: The inner product is further called non-degenerate if ⟨u*,*v⟩ = 0 for all v
     ∈V ∖{0} implies u = 0.
+  id: totrans-28
   prefs: []
   type: TYPE_NORMAL
+  zh: 内积进一步被称为非退化的，如果 ⟨u*,*v⟩ = 0 对所有 v ∈V ∖{0} 都意味着 u = 0。
 - en: 'For example, the following spaces carry a natural inner product:'
+  id: totrans-29
   prefs: []
   type: TYPE_NORMAL
+  zh: 例如，以下空间带有自然内积：
 - en: The vector space ℂ^n with the inner product ⟨u*,*v⟩ := u^†v = ∑ [i=1]^n*u*[i]^∗*v*[i];
+  id: totrans-30
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 向量空间ℂ^n的内积定义为 ⟨u*,*v⟩ := u^†v = ∑ [i=1]^n*u*[i]^∗*v*[i]；
 - en: The space of complex-valued continuous functions on [0*,*1] with ⟨*f,g*⟩ :=
     ∫ [0]¹*f*(*t*)^∗*g*(*t*)d*t*;
+  id: totrans-31
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 定义在[0*,*1]上的复值连续函数空间，其内积定义为 ⟨*f,g*⟩ := ∫ [0]¹*f*(*t*)^∗*g*(*t*)d*t*；
 - en: If X*,*Y ∈ℳ[m,n](ℝ), then ⟨X*,*Y⟩ := Tr(X^⊤Y) = ∑ [i=1]^m ∑ [j=1]^nX[ij]Y[ij]
     defines an inner product on the space of (real) matrices.
+  id: totrans-32
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: 如果 X*,*Y ∈ℳ[m,n](ℝ)，则 ⟨X*,*Y⟩ := Tr(X^⊤Y) = ∑ [i=1]^m ∑ [j=1]^nX[ij]Y[ij] 定义了（实数）矩阵空间上的内积。
 - en: 'Projection matrices are particularly useful for geometric purposes:'
+  id: totrans-33
   prefs: []
   type: TYPE_NORMAL
+  zh: 投影矩阵在几何中特别有用：
 - en: '**Definition 2.** A matrix P ∈ℳ[n](𝔽) is called a (orthogonal) *projection*
     if P² = P.'
+  id: totrans-34
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义2.** 一个矩阵P ∈ℳ[n](𝔽)称为（正交）*投影*，如果 P² = P。'
 - en: 'In particular, if W is a vector subspace of 𝔽^n with some orthonormal basis
     (w[1]*,…,*w[d]), it is then easy to check that the map 𝒫[W] : 𝔽^n →𝔽^n onto W
     satisfying'
+  id: totrans-35
   prefs: []
   type: TYPE_NORMAL
+  zh: '特别地，如果W是𝔽^n的一个向量子空间，并且有一个正交归一基 (w[1]*,…,*w[d])，那么很容易验证满足 𝒫[W] : 𝔽^n →𝔽^n 的映射，它将𝔽^n投影到W上。'
 - en: '| ![ ∑d 𝒫W (v) := ⟨v,wi⟩wi, for any v ∈ 𝔽n, i=1 ](img/file5.jpg) |  |'
+  id: totrans-36
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑d 𝒫W (v) := ⟨v,wi⟩wi, 对于任意 v ∈ 𝔽n, i=1 ](img/file5.jpg) |  |'
 - en: defines an orthogonal projection.
+  id: totrans-37
   prefs: []
   type: TYPE_NORMAL
+  zh: 定义了一个正交投影。
 - en: 1.1.3 From linear operators to matrices
+  id: totrans-38
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.3 从线性算子到矩阵
 - en: 'Let V be a finite-dimensional vector space over 𝔽 and ⟨⋅*,*⋅⟩ a non-degenerate
     inner product on V. Given a linear operator 𝒜 : V →V, then, by the Riesz representation
     theorem  [[309](Biblography.xhtml#Xyosida1965functional), Section III-6], there
     exists a unique linear operator 𝒜^† : V →V, called the adjoint operator, such
     that'
+  id: totrans-39
   prefs: []
   type: TYPE_NORMAL
+  zh: '设 V 是一个定义在 𝔽 上的有限维向量空间，且 ⟨⋅*,*⋅⟩ 是 V 上的非退化内积。给定线性算子 𝒜 : V →V，根据 Riesz 表示定理
+    [[309](Biblography.xhtml#Xyosida1965functional)，第 III-6 节]，存在唯一的线性算子 𝒜^† : V →V，称为伴随算子，使得'
 - en: '![⟨𝒜u, v⟩ = ⟨u,𝒜 †v⟩, for all u,v ∈ V. ](img/file6.jpg)'
+  id: totrans-40
   prefs: []
   type: TYPE_IMG
+  zh: '![⟨𝒜u, v⟩ = ⟨u,𝒜 †v⟩, 对所有 u,v ∈ V. ](img/file6.jpg)'
 - en: 'Indeed, for any v ∈V, the map u ∈V![↦→](img/file7.jpg)⟨𝒜u*,*v⟩ is a linear
     functional, hence an element of the dual space V^† (the space of bounded linear
     functionals on V), therefore for each v ∈V, there exists v′∈V such that ⟨𝒜u*,*v⟩
@@ -208,59 +297,92 @@
     proving that the adjoint operator is uniquely defined. In the particular case
     where 𝒜 = 𝒜^†, the operator 𝒜 is called Hermitian, a key requirement in quantum
     mechanics:'
+  id: totrans-41
   prefs: []
   type: TYPE_NORMAL
+  zh: 实际上，对于任何 v ∈V，映射 u ∈V![↦→](img/file7.jpg)⟨𝒜u*,*v⟩ 是一个线性泛函，因此它是对偶空间 V^†（V 上有界线性泛函的空间）中的一个元素，因此对于每个
+    v ∈V，存在 v′∈V 使得 ⟨𝒜u*,*v⟩ = ⟨u*,*v′⟩。然后可以容易地证明映射 v![↦→](img/file8.jpg)v′ 是线性的，从而证明伴随算子是唯一确定的。在特别的情况下，当
+    𝒜 = 𝒜^† 时，算子 𝒜 称为厄米算子，这是量子力学中的一个关键要求：
 - en: '**Definition 3.** The operator 𝒜 is called *Hermitian*, or *self-adjoint*,
     if 𝒜 = 𝒜^†.'
+  id: totrans-42
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义 3.** 如果 𝒜 = 𝒜^†，则称算子 𝒜 为 *厄米算子*，或 *自伴随算子*。'
 - en: For a Hermitian operator 𝒜, we then have, for any u ∈V,
+  id: totrans-43
   prefs: []
   type: TYPE_NORMAL
+  zh: 对于厄米算子 𝒜，我们有，对于任意 u ∈V，
 - en: '![⟨𝒜u, u⟩ = ⟨u,𝒜 †u⟩ = ⟨u,𝒜u ⟩ = ⟨𝒜u,u⟩∗ ](img/file9.jpg)'
+  id: totrans-44
   prefs: []
   type: TYPE_IMG
+  zh: '![⟨𝒜u, u⟩ = ⟨u,𝒜 †u⟩ = ⟨u,𝒜u ⟩ = ⟨𝒜u,u⟩∗ ](img/file9.jpg)'
 - en: by conjugate symmetry (Definition [1](#x1-25002r1)), and therefore ⟨𝒜u*,*u⟩
     is real. Conversely, if ⟨𝒜u*,*u⟩ is real, then
+  id: totrans-45
   prefs: []
   type: TYPE_NORMAL
+  zh: 通过共轭对称性（定义[1](#x1-25002r1)），因此 ⟨𝒜u*,*u⟩ 是实数。反之，如果 ⟨𝒜u*,*u⟩ 是实数，那么
 - en: '![ ∗ † ⟨𝒜u,u⟩ = ⟨𝒜u, u⟩ = ⟨u,𝒜u ⟩ = ⟨𝒜 u,u⟩. ](img/file10.jpg)'
+  id: totrans-46
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∗ † ⟨𝒜u,u⟩ = ⟨𝒜u, u⟩ = ⟨u,𝒜u ⟩ = ⟨𝒜 u,u⟩. ](img/file10.jpg)'
 - en: Therefore, ![⟨( ) ⟩ 𝒜 − 𝒜† u,u](img/file11.jpg) = 0; since this is true for
     all u ∈V, then 𝒜 = 𝒜^†.
+  id: totrans-47
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，![⟨( ) ⟩ 𝒜 − 𝒜† u,u](img/file11.jpg) = 0；因为对所有 u ∈V 这都成立，因此 𝒜 = 𝒜^†。
 - en: 'The following property of operators shall be useful to ensure that systems
     driven by operators preserve distances, or norms:'
+  id: totrans-48
   prefs: []
   type: TYPE_NORMAL
+  zh: 以下算子属性将有助于确保由算子驱动的系统保持距离或范数：
 - en: '**Definition 4.** The linear operator 𝒜 : V → V is called *unitary* if it is
     surjective and'
+  id: totrans-49
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义 4.** 线性算子 𝒜 : V → V 称为 *酉算子*，如果它是满射的，并且'
 - en: '![⟨𝒜u, 𝒜v ⟩ = ⟨u,v ⟩, for all u, v ∈ V. ](img/file12.jpg)'
+  id: totrans-50
   prefs: []
   type: TYPE_IMG
+  zh: '![⟨𝒜u, 𝒜v ⟩ = ⟨u,v ⟩, 对所有 u, v ∈ V. ](img/file12.jpg)'
 - en: Recall that a linear operator between two finite-dimensional normed spaces is
     bounded, and therefore continuous. For any u ∈V, this implies that ∥𝒜u∥ = ∥u∥,
     so that a unitary operator 𝒜 preserves the norm. In that case, 𝒜 is an isometry,
     therefore injective. Being also surjective, it is bijective and therefore its
     inverse exists. For a unitary operator 𝒜 and any u*,*v ∈V, we have
+  id: totrans-51
   prefs: []
   type: TYPE_NORMAL
+  zh: 回想一下，两个有限维范数空间之间的线性算子是有界的，因此是连续的。对于任何 u ∈V，这意味着 ∥𝒜u∥ = ∥u∥，因此酉算子 𝒜 保持范数。在这种情况下，𝒜
+    是等距的，因此是单射的。由于它也是满射的，它是双射的，因此其逆存在。对于酉算子 𝒜 和任何 u*,*v ∈V，我们有
 - en: '![ † ⟨u,v⟩ = ⟨𝒜u, 𝒜v⟩ = ⟨u,𝒜 𝒜v ⟩ ](img/file13.jpg)'
+  id: totrans-52
   prefs: []
   type: TYPE_IMG
+  zh: '![ † ⟨u,v⟩ = ⟨𝒜u, 𝒜v⟩ = ⟨u,𝒜 𝒜v ⟩ ](img/file13.jpg)'
 - en: by definition of the adjoint, implying that
+  id: totrans-53
   prefs: []
   type: TYPE_NORMAL
+  zh: 根据伴随算子的定义，意味着
 - en: '![𝒜 †𝒜 = ℐ = 𝒜 𝒜 †, ](img/file14.jpg)'
+  id: totrans-54
   prefs: []
   type: TYPE_IMG
+  zh: '![𝒜 †𝒜 = ℐ = 𝒜 𝒜 †, ](img/file14.jpg)'
 - en: where ℐ is the identity operator.
+  id: totrans-55
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 ℐ 是单位算子。
 - en: '**Example (Real Matrices):** If V = ℝ^n with inner product ⟨u*,*v⟩ := u^⊤v
     for u*,*v ∈ℝ^n, the linear operator 𝒜 can now be viewed as a matrix A in ℳ[n](ℝ).
     Its adjoint is nothing other than the transpose A^⊤, and therefore A is self-adjoint
@@ -268,52 +390,81 @@
     then it is invertible with A^(−1) = A^⊤. Rotation matrices in ℝ², which will play
     an important role later when constructing quantum circuits, are the only unitary
     maps of ℝ² onto itself and are of the form'
+  id: totrans-56
   prefs: []
   type: TYPE_NORMAL
+  zh: '**示例（实矩阵）：** 如果 V = ℝ^n 且内积 ⟨u*,*v⟩ := u^⊤v 对于 u*,*v ∈ℝ^n，则线性算子 𝒜 可以看作 ℳ[n](ℝ)
+    中的矩阵 A。其伴随算子无非就是转置矩阵 A^⊤，因此 A 当且仅当它是对称矩阵时才是自伴随的。在这种情况下，如果 A 是酉矩阵（或正交矩阵），那么它是可逆的，并且
+    A^(−1) = A^⊤。在 ℝ² 中的旋转矩阵将在后续构建量子电路时发挥重要作用，它们是 ℝ² 上到自身的唯一酉映射，形式为'
 - en: '| ![⌊ ⌋ cos(𝜃) δsin(𝜃) ⌈ ⌉, sin(𝜃) − δcos(𝜃) ](img/file15.jpg) |  |'
+  id: totrans-57
   prefs: []
   type: TYPE_TB
+  zh: '| ![⌊ ⌋ cos(𝜃) δsin(𝜃) ⌈ ⌉, sin(𝜃) − δcos(𝜃) ](img/file15.jpg) |  |'
 - en: for *𝜃* ∈ [0*,*2*π*) and *δ* ∈{−1*,*+1}.
+  id: totrans-58
   prefs: []
   type: TYPE_NORMAL
+  zh: 对于 *𝜃* ∈ [0*,*2*π*) 和 *δ* ∈{−1*,*+1}。
 - en: '**Example (Complex Matrices):** If V = ℂ^n with inner product ⟨u*,*v⟩ := v^†u
     for u*,*v ∈ℂ^n, the linear operator 𝒜 can now be viewed as a matrix in ℳ[n](ℂ).
     The adjoint of such a matrix is then the Hermitian conjugate A^† and A is called
     Hermitian if A = A^† and unitary if A^†A = I[n]. We shall denote by 𝒰[n](ℂ) the
     set of unitary matrices in ℳ[n](ℂ). We will discuss Hermitian matrices over ℂ
     in more detail in Section [1.1.6](#x1-290006).'
+  id: totrans-59
   prefs: []
   type: TYPE_NORMAL
+  zh: '**示例（复矩阵）：** 如果 V = ℂ^n，内积 ⟨u*,*v⟩ := v^†u，对于 u*,*v ∈ℂ^n，线性算子 𝒜 现在可以看作是 ℳ[n](ℂ)
+    中的一个矩阵。此时，该矩阵的伴随矩阵是 Hermitian 共轭 A^†，如果 A = A^† 则称 A 为 Hermitian 矩阵，如果 A^†A =
+    I[n]，则称 A 为酉矩阵。我们将用 𝒰[n](ℂ) 表示 ℳ[n](ℂ) 中的酉矩阵集合。我们将在第 [1.1.6](#x1-290006) 节中更详细地讨论复数域上的
+    Hermitian 矩阵。'
 - en: 1.1.4 Condition number
+  id: totrans-60
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.4 条件数
 - en: 'In order to manipulate matrices and measure them, we require matrix norms:'
+  id: totrans-61
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了操作矩阵并进行测量，我们需要矩阵范数：
 - en: '**Definition 5.** A matrix norm ∥⋅∥ : ℳ[m,n](𝔽) →ℝ is a function satisfying,
     for any *α* ∈𝔽 and A*,*B ∈ℳ[m,n](𝔽),'
+  id: totrans-62
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义 5.** 矩阵范数 ∥⋅∥ : ℳ[m,n](𝔽) →ℝ 是一个满足以下条件的函数，对于任意 *α* ∈𝔽 和 A,*B ∈ℳ[m,n](𝔽)，'
 - en: (positively valued) ∥A∥≥ 0;
+  id: totrans-63
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: （正值）∥A∥≥ 0；
 - en: (definite) ∥A∥ = 0 if and only if A = 0[m,n];
+  id: totrans-64
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: (确定的) ∥A∥ = 0 当且仅当 A = 0[m,n]；
 - en: (absolutely homogeneous) ∥*α*A∥ = |*α*|∥A∥;
+  id: totrans-65
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: （绝对齐次）∥*α*A∥ = |*α*|∥A∥；
 - en: (triangle inequality) ∥A + B∥≤∥A∥ + ∥B∥.
+  id: totrans-66
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: （三角不等式）∥A + B∥≤∥A∥ + ∥B∥。
 - en: The norm is further called sub-multiplicative if ∥AB∥≤∥A∥∥B∥.
+  id: totrans-67
   prefs: []
   type: TYPE_NORMAL
+  zh: 如果 ∥AB∥≤∥A∥∥B∥，则该范数进一步称为子乘法范数。
 - en: The condition number of a matrix is an important tool to understand the stability
     of linear equations of the form Ax = b, for A ∈ℳ[n](𝔽), b ∈𝔽^n. Assuming A to
     be non-singular, the true solution is clearly x[∗] := A^(−1)b. Suppose, however,
@@ -321,68 +472,105 @@
     error, and one observes instead b + Δ[b]. The solution is then A^(−1)(b + Δ[b])
     = x[∗] + Δ[x], with Δ[x] := A^(−1)Δ[b]. In particular, we can write, for any (sub-multiplicative)
     matrix norm ∥⋅∥,
+  id: totrans-68
   prefs: []
   type: TYPE_NORMAL
+  zh: 矩阵的条件数是理解线性方程组 Ax = b 稳定性的重要工具，其中 A ∈ℳ[n](𝔽)，b ∈𝔽^n。假设 A 非奇异，则真实解显然是 x[∗] :=
+    A^(−1)b。然而，假设向量 b 仅通过某些（不一定是量子）测量误差已知，实际观察到的是 b + Δ[b]。此时解为 A^(−1)(b + Δ[b]) =
+    x[∗] + Δ[x]，其中 Δ[x] := A^(−1)Δ[b]。特别地，对于任何（子乘法）矩阵范数 ∥⋅∥，我们可以写作：
 - en: '![ −1 ∥Δx-∥ = ∥A---Δb-∥≤ ∥A− 1∥ --∥b∥--∥Δb-∥ ≤ ∥A −1∥∥A∥ ∥Δb∥-. ∥x∥ ∥A −1b∥
     ∥A− 1b∥ ∥b∥ ∥b ∥ ](img/file16.jpg)'
+  id: totrans-69
   prefs: []
   type: TYPE_IMG
+  zh: '![ −1 ∥Δx-∥ = ∥A---Δb-∥≤ ∥A− 1∥ --∥b∥--∥Δb-∥ ≤ ∥A −1∥∥A∥ ∥Δb∥-. ∥x∥ ∥A −1b∥
+    ∥A− 1b∥ ∥b∥ ∥b ∥ ](img/file16.jpg)'
 - en: 'From this inequality, we see that the quantity ∥A^(−1)∥∥A∥ bounds the relative
     error in the solution with respect to the relative error in the measurement of
     the input vector b. This leads to the following terminology:'
+  id: totrans-70
   prefs: []
   type: TYPE_NORMAL
+  zh: 从这个不等式中，我们可以看出，数量 ∥A^(−1)∥∥A∥ 约束了解的相对误差与输入向量 b 测量误差的相对误差之间的关系。这引出了以下术语：
 - en: '**Definition 6.** Given a matrix A ∈ ℳ[n](𝔽) and a sub-multiplicative norm ∥⋅∥,
     we call'
+  id: totrans-71
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义 6.** 给定矩阵 A ∈ ℳ[n](𝔽) 和子乘法范数 ∥⋅∥，我们称'
 - en: '![κ ∥⋅∥(A) := ∥A −1∥∥A ∥ ](img/file17.jpg)'
+  id: totrans-72
   prefs: []
   type: TYPE_IMG
+  zh: '![κ ∥⋅∥(A) := ∥A −1∥∥A ∥ ](img/file17.jpg)'
 - en: the *condition number* (with respect to the norm ∥⋅∥) of the matrix A (and assign
     to it infinite value if A is singular).
+  id: totrans-73
   prefs: []
   type: TYPE_NORMAL
+  zh: '*条件数*（相对于范数 ∥⋅∥）是矩阵 A 的一个重要指标（如果 A 是奇异的，则赋予其无穷大值）。'
 - en: '**Remark:** The definition of the condition number above holds for any matrix
     norm ∥⋅∥, but admits a more explicit representation in the particular case of
     the spectral norm ∥⋅∥[2], defined as'
+  id: totrans-74
   prefs: []
   type: TYPE_NORMAL
+  zh: '**备注：** 上述条件数的定义适用于任何矩阵范数 ∥⋅∥，但在特定情况下，对于谱范数 ∥⋅∥[2]，具有更为明确的表示。'
 - en: '![∥A ∥2 := sup ∥Ax∥2-, x⁄=0 ∥x ∥2 ](img/file18.jpg)'
+  id: totrans-75
   prefs: []
   type: TYPE_IMG
+  zh: '![∥A ∥2 := sup ∥Ax∥2-, x⁄=0 ∥x ∥2 ](img/file18.jpg)'
 - en: where ∥x∥[2] := ![(∑ ) ni=1|xi|2](img/file19.jpg)^(![1 2](img/file20.jpg)) is
     the *L* [2] norm for vectors. If the matrix A is not singular, then
+  id: totrans-76
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 ∥x∥[2] := ![(∑ ) ni=1|xi|2](img/file19.jpg)^(![1 2](img/file20.jpg)) 是向量的
+    *L* [2] 范数。如果矩阵 A 非奇异，则
 - en: '![ |λ (A )| κ (A ) :=--max----, |λmin(A)| ](img/file21.jpg)'
+  id: totrans-77
   prefs: []
   type: TYPE_IMG
+  zh: '![ |λ (A )| κ (A ) :=--max----, |λmin(A)| ](img/file21.jpg)'
 - en: where *λ*[max](A) and *λ*[min](A) denote the largest and smallest eigenvalues
     of A.
+  id: totrans-78
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 *λ*[max](A) 和 *λ*[min](A) 分别表示矩阵 A 的最大和最小特征值。
 - en: 1.1.5 Matrix decompositions and spectral theorem
+  id: totrans-79
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.5 矩阵分解与谱定理
 - en: Having defined essential properties of (complex) matrices, we now introduce
     several essential tools that allow us to gain a better understanding of their
     properties.
+  id: totrans-80
   prefs: []
   type: TYPE_NORMAL
+  zh: 在定义了（复）矩阵的基本属性后，我们现在引入几个基本工具，帮助我们更好地理解它们的性质。
 - en: The Singular Value Decomposition is a key tool to analyse the properties and
     behaviours of matrices. It is ubiquitous in applied statistics and machine learning
     and allows us to reduce the explanatory dimension of a large matrix into a small
     number of meaningful components.
+  id: totrans-81
   prefs: []
   type: TYPE_NORMAL
+  zh: 奇异值分解是分析矩阵性质和行为的关键工具。它在应用统计学和机器学习中无处不在，能够将一个大矩阵的解释维度缩减为少数几个有意义的成分。
 - en: '**Theorem 1** (Singular Value Decomposition)**.** *Let* A ∈ℳ[m,n](𝔽) *and*
     *p* := min(*m,n*)*. There exist* U ∈𝒰[m](𝔽)*,* V ∈𝒰[n](𝔽) *and* *σ*[1] ≥![⋅⋅⋅](img/file22.jpg)≥
     *σ*[p] ≥ 0 *such* *that* A = UΣV^†*, where *Σ ∈ℳ[m,n](𝔽) *is diagonal with* Σ[ii]
     = *σ*[i] *for* *i* = 1*,…,p* *and* Σ[ii] = 0 *for* *i > p**.*'
+  id: totrans-82
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定理 1**（奇异值分解）**.** *设* A ∈ℳ[m,n](𝔽) *且* *p* := min(*m,n*)*。存在* U ∈𝒰[m](𝔽)*，*
+    V ∈𝒰[n](𝔽) *和* *σ*[1] ≥![⋅⋅⋅](img/file22.jpg)≥ *σ*[p] ≥ 0 *使得* A = UΣV^†*，其中 *Σ
+    ∈ℳ[m,n](𝔽) *是对角矩阵，且* Σ[ii] = *σ*[i] *对于* *i* = 1*,…,p*，*且* Σ[ii] = 0 *对于* *i >
+    p**。'
 - en: The numbers {*σ*[1]*,…,σ*[p]} are called the singular values of A and are uniquely
     defined. The columns of U and V are the left-singular and right-singular vectors
     of A, in the sense that, if *σ* ∈{*σ*[1]*,…,σ*[p]}, then there exist a column u
@@ -393,8 +581,11 @@
     Decomposition is general in the sense that it holds for any matrix. In the particular
     case of square matrices, the Schur decomposition and the Spectral Theorem provide
     refinements.
+  id: totrans-83
   prefs: []
   type: TYPE_NORMAL
+  zh: 数字 {*σ*[1]*,…,σ*[p]} 称为 A 的奇异值，并且是唯一确定的。U 和 V 的列向量分别是 A 的左奇异向量和右奇异向量，即如果 *σ*
+    ∈ {*σ*[1]*,…,σ*[p]}，则存在 U 的一列向量 u 和 V 的一列向量 v，使得 Av = *σ*u 和 A^†u = *σ*v。回顾一下，矩阵的秩定义为其列的张成空间的维度。根据奇异值分解定理，矩阵的秩等于非零奇异值的数量。奇异值分解是一般性的，即它适用于任何矩阵。在方阵的特定情况下，舒尔分解和谱定理提供了更精细的结果。
 - en: 'The Spectral Theorem is a cornerstone result in the theory of linear operators,
     and in particular for (finite-dimensional) matrices. Recall that an operator 𝒜
     : V →V is called normal if it commutes with its adjoint, namely if 𝒜𝒜^† = 𝒜^†𝒜.
@@ -402,17 +593,26 @@
     not true in general. Recall further that an eigenvector of 𝒜 is a non-zero vector
     u ∈V such that 𝒜u = *λ*u for some *λ* ∈ℂ, and we denote by *σ*(𝒜) the set of eigenvalues
     of 𝒜.'
+  id: totrans-84
   prefs: []
   type: TYPE_NORMAL
+  zh: '谱定理是线性算子理论中的基石结果，特别是对于（有限维）矩阵。回顾一下，算子 𝒜 : V →V 被称为正常的，如果它与其伴随算子对易，即 𝒜𝒜^† =
+    𝒜^†𝒜。自伴算子（或厄米算子）显然是正常的，但反之不一定成立。进一步回顾，𝒜 的特征向量是一个非零向量 u ∈V，满足 𝒜u = *λ*u，其中 *λ*
+    ∈ℂ，我们用 *σ*(𝒜) 表示 𝒜 的特征值集合。'
 - en: The following result, which is more general than the subsequent spectral theorem,
     allows us to decompose any arbitrary complex square matrix.
+  id: totrans-85
   prefs: []
   type: TYPE_NORMAL
+  zh: 以下结果比后续的谱定理更一般，它允许我们分解任何任意的复方阵。
 - en: '**Theorem 2** (Schur Decomposition)**.** *For any* A ∈ ℳ[n](ℂ) *there exits
     a* *unitary matrix *U ∈ 𝒰[n](ℂ) *and an upper triangular matrix *T *such that*
     A = UTU^(−1)*.*'
+  id: totrans-86
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定理 2**（舒尔分解）**.** *对于任意* A ∈ ℳ[n](ℂ) *，存在一个* *酉矩阵* U ∈ 𝒰[n](ℂ) *和一个上三角矩阵*
+    T *，使得* A = UTU^(−1)*。'
 - en: Note that since U is unitary, then U^(−1) = U^†. We call the matrix T the Schur
     transform of A and the identity in the theorem means that A and T are similar,
     so in particular, possess the same eigenvalues, all located on the diagonal of T.
@@ -420,395 +620,627 @@
     write T = D for clarity. In this case, we say that the matrix A is diagonalisable
     with A = UDU^†, where the diagonal entries of D are the eigenvalues of A and the
     column vectors of U are the orthonormal eigenvectors of A.
+  id: totrans-87
   prefs: []
   type: TYPE_NORMAL
+  zh: 注意，由于 U 是酉矩阵，因此 U^(−1) = U^†。我们称矩阵 T 为 A 的舒尔变换，定理中的恒等式意味着 A 和 T 是相似的，特别地，它们具有相同的特征值，这些特征值都位于
+    T 的对角线上。如果 A 是一个正常矩阵，则 T 也是正常矩阵，因此 T 必须是对角矩阵，且为清晰起见，我们写作 T = D。在这种情况下，我们称矩阵 A
+    是可对角化的，且 A = UDU^†，其中 D 的对角元素是 A 的特征值，U 的列向量是 A 的标准正交特征向量。
 - en: '**Theorem 3** (Spectral Theorem)**.** *The linear operator *𝒜 : V → V *is*
     *normal if and only if there exists an orthonormal basis of *V *consisting of*
     *eigenvectors of *A*.*'
+  id: totrans-88
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定理 3**（谱定理）**.** *线性算子* 𝒜 : V → V *是* *正常的当且仅当存在一个由* *A* 的特征向量组成的* *V* 的标准正交基*。'
 - en: For each eigenvalue *λ* ∈ *σ*(𝒜), denote the corresponding eigenspace
+  id: totrans-89
   prefs: []
   type: TYPE_NORMAL
+  zh: 对于每个特征值 *λ* ∈ *σ*(𝒜)，记对应的特征空间为
 - en: '![𝒱λ := {u ∈ V : 𝒜u = λu} . ](img/file23.jpg)'
+  id: totrans-90
   prefs: []
   type: TYPE_IMG
+  zh: '![𝒱λ := {u ∈ V : 𝒜u = λu} . ](img/file23.jpg)'
 - en: Since the vector space V is the orthogonal direct sum of the eigenspaces (indexed
     by the eigenvalues of 𝒜), we can then write the spectral decomposition
+  id: totrans-91
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于向量空间 V 是各个特征空间（按 𝒜 的特征值索引）的正交直和，因此我们可以写出谱分解
 - en: '| ![ ∑ 𝒜 = λ𝒫 λ, λ∈σ(𝒜) ](img/file24.jpg) |  |'
+  id: totrans-92
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑ 𝒜 = λ𝒫 λ, λ∈σ(𝒜) ](img/file24.jpg) |  |'
 - en: where 𝒫[λ] is the orthogonal projection operator onto 𝒱[λ]. Note that such an
     operator is naturally self-adjoint  [[309](Biblography.xhtml#Xyosida1965functional), Theorem
     2, Section III-1].
+  id: totrans-93
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 𝒫[λ] 是对 𝒱[λ] 的正交投影算子。注意，这样的算子自然是自伴的  [[309](Biblography.xhtml#Xyosida1965functional), 定理
+    2, 第III-1节]。
 - en: 1.1.6 Hermitian matrices
+  id: totrans-94
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.6 厄米矩阵
 - en: We introduced above Hermitian matrices as the set of matrices A over the complex
     field ℂ such that A = A^†. As fundamental building blocks of quantum computing,
     we investigate their properties further. Clearly, a real matrix is Hermitian if
     and only if it is symmetric, in which case A^⊤ = A.
+  id: totrans-95
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们上面介绍了厄米矩阵作为复数域 ℂ 上的矩阵集合 A，满足 A = A^†。作为量子计算的基础构建块，我们进一步研究了它们的性质。显然，一个实矩阵当且仅当它是对称矩阵时才是厄米矩阵，这时
+    A^⊤ = A。
 - en: '**Proposition 1.** *The eigenvalues of a Hermitian matrix are real.*'
+  id: totrans-96
   prefs: []
   type: TYPE_NORMAL
+  zh: '**命题 1。** *厄米矩阵的特征值是实数。*'
 - en: '*Proof.* If Ax = *λ*x for *λ* ∈ℂ and x ∈ℂ^n, then'
+  id: totrans-97
   prefs: []
   type: TYPE_NORMAL
+  zh: '*证明。* 如果 Ax = *λ*x 且 *λ* ∈ℂ 和 x ∈ℂ^n，那么'
 - en: '| ⟨Ax*,*x⟩ | = x^†Ax = *λ*x^†x = *λ*∥x∥²*,* |'
+  id: totrans-98
   prefs: []
   type: TYPE_TB
+  zh: '| ⟨Ax*,*x⟩ | = x^†Ax = *λ*x^†x = *λ*∥x∥²*,* |'
 - en: '| ⟨x*,*Ax⟩ | = (Ax)^†x = (*λ*x)^†x = *λ*^∗x^†x = *λ*^∗∥x∥²*.* |'
+  id: totrans-99
   prefs: []
   type: TYPE_TB
+  zh: '| ⟨x*,*Ax⟩ | = (Ax)^†x = (*λ*x)^†x = *λ*^∗x^†x = *λ*^∗∥x∥²*.* |'
 - en: Since both are equal by the Hermitian property, then *λ* = *λ*^∗, proving the
     proposition. □
+  id: totrans-100
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于这两者通过厄米性质相等，因此 *λ* = *λ*^∗，从而证明了命题。 □
 - en: 'The Singular Value Decomposition (Theorem [1](#x1-28002r1)) takes a particular
     flavour in the case of Hermitian matrices:'
+  id: totrans-101
   prefs: []
   type: TYPE_NORMAL
+  zh: 奇异值分解（定理 [1](#x1-28002r1)）在厄米矩阵的情况下有其特定的形式：
 - en: '**Theorem 4.** *With the notations of Theorem *[*1*](#x1-28002r1)*, if *A ∈
     ℳ[n](ℂ) *is* *Hermitian, then the matrices *U *and *V *are equal and the matrix *Σ
     *is* *diagonal with real entries.*'
+  id: totrans-102
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定理 4。** *根据定理 *[*1*](#x1-28002r1)*的符号，如果 *A ∈ ℳ[n](ℂ) *是* *厄米矩阵，那么矩阵 *U *和 *V
+    *是相等的，并且矩阵 *Σ *是* *实对角矩阵。*'
 - en: '**Theorem 5.** *For a Hermitian matrix* A ∈ ℳ[n](ℂ)*, the following are* *equivalent:*'
+  id: totrans-103
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定理 5。** *对于一个厄米矩阵* A ∈ ℳ[n](ℂ)*，以下条件是* *等价的：*'
 - en: '*The eigenvalues are non-negative.*'
+  id: totrans-104
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '*特征值是非负的。*'
 - en: '*There exists a Hermitian matrix *B ∈ℳ[n](ℂ) *such that* A = B²*.*'
+  id: totrans-105
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '*存在一个厄米矩阵 *B ∈ℳ[n](ℂ) *使得* A = B²*。*'
 - en: '*There exists a matrix *B ∈ℳ[n](ℂ) *such that* A = B^†B*.*'
+  id: totrans-106
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '*存在一个矩阵 *B ∈ℳ[n](ℂ) *使得* A = B^†B*。*'
 - en: '*For every* x ∈ℂ^n*,* ⟨Ax*,*x⟩≥ 0*.*'
+  id: totrans-107
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: '*对于每个* x ∈ℂ^n*,* ⟨Ax*,*x⟩≥ 0*。*'
 - en: '*Such a matrix is called positive semi-definite.*'
+  id: totrans-108
   prefs: []
   type: TYPE_NORMAL
+  zh: '*这样的矩阵称为半正定矩阵。*'
 - en: '*Proof.* The Spectral Theorem shows that there exist a unitary matrix U ∈𝒰[n](ℂ)
     and a diagonal matrix Σ ∈ℳ[n](ℂ) such that A = UΣU^†, where the diagonal elements
     of Σ are the eigenvalues of A. Assuming (i), we can define B = U![√ Σ-](img/file25.jpg)U^†∈ℳ[n](ℂ).
     Then clearly'
+  id: totrans-109
   prefs: []
   type: TYPE_NORMAL
+  zh: '*证明。* 谱定理表明，存在一个酉矩阵 U ∈𝒰[n](ℂ) 和一个对角矩阵 Σ ∈ℳ[n](ℂ)，使得 A = UΣU^†，其中 Σ 的对角元素是
+    A 的特征值。假设 (i)，我们可以定义 B = U![√ Σ-](img/file25.jpg)U^†∈ℳ[n](ℂ)。然后显然'
 - en: '![ † 2 ( √ -- †)( √ -- †) B = B and B = U ΣU U ΣU = A, ](img/file26.jpg)'
+  id: totrans-110
   prefs: []
   type: TYPE_IMG
+  zh: '![ † 2 ( √ -- †)( √ -- †) B = B and B = U ΣU U ΣU = A, ](img/file26.jpg)'
 - en: since U is unitary. The equality A = B^†B is also obvious. The latter implies
     that
+  id: totrans-111
   prefs: []
   type: TYPE_NORMAL
+  zh: 因为 U 是酉矩阵。等式 A = B^†B 也是显然的。后者意味着
 - en: '![ † 2 n ⟨Ax, x⟩ = ⟨B Bx,x⟩ = ⟨Bx,Bx ⟩ = ∥Bx ∥ ≥ 0, for any x ∈ ℂ . ](img/file27.jpg)'
+  id: totrans-112
   prefs: []
   type: TYPE_IMG
+  zh: '![ † 2 n ⟨Ax, x⟩ = ⟨B Bx,x⟩ = ⟨Bx,Bx ⟩ = ∥Bx ∥ ≥ 0, for any x ∈ ℂ . ](img/file27.jpg)'
 - en: Finally, assume (iv) and let *λ* be an eigenvalue of A with eigenvector u. Then
+  id: totrans-113
   prefs: []
   type: TYPE_NORMAL
+  zh: 最后，假设 (iv)，并且让 *λ* 是 A 的一个特征值，特征向量为 u。那么
 - en: '![ 2 ⟨Au, u⟩ = ⟨λu,u⟩ = λ⟨u,u⟩ = λ∥u∥ . ](img/file28.jpg)'
+  id: totrans-114
   prefs: []
   type: TYPE_IMG
+  zh: '![ 2 ⟨Au, u⟩ = ⟨λu,u⟩ = λ⟨u,u⟩ = λ∥u∥ . ](img/file28.jpg)'
 - en: Since the latter is strictly positive, then clearly *λ* ≥ 0.
+  id: totrans-115
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于后者严格大于零，因此显然 *λ* ≥ 0。
 - en: 'The following property lies at the core of Hamiltonian simulation of quantum
     systems:'
+  id: totrans-116
   prefs: []
   type: TYPE_NORMAL
+  zh: 以下性质是量子系统哈密顿量模拟的核心：
 - en: '**Theorem 6.** *If *A ∈ ℳ[n](ℂ) *is Hermitian, then, for any* *t* ∈ ℝ*,* e^(itA)
     *is unitary; conversely, every unitary matrix has the form* e^(itA) *for some*
     *Hermitian matrix *A*.*'
+  id: totrans-117
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定理 6。** *如果 *A ∈ ℳ[n](ℂ) *是厄米矩阵，那么，对于任何* *t* ∈ ℝ*，* e^(itA) *是酉矩阵；反之，每个酉矩阵都可以表示为*
+    e^(itA) *，其中 *A* 是某个厄米矩阵。*'
 - en: Recall that for a matrix A ∈ℳ[n](ℂ), its exponential is given by
+  id: totrans-118
   prefs: []
   type: TYPE_NORMAL
+  zh: 回顾一下，对于一个矩阵 A ∈ℳ[n](ℂ)，它的指数是由以下公式给出的
 - en: '![ A ∑ Ak- e = k! . k≥0 ](img/file29.jpg)'
+  id: totrans-119
   prefs: []
   type: TYPE_IMG
+  zh: '![ A ∑ Ak- e = k! . k≥0 ](img/file29.jpg)'
 - en: In practice, though, given a Hermitian matrix A, finding the corresponding unitary
     matrix U is not easy. The Hamiltonian simulation problem is defined as follows.
+  id: totrans-120
   prefs: []
   type: TYPE_NORMAL
+  zh: 然而在实践中，给定一个厄米矩阵 A，找到对应的酉矩阵 U 并不容易。哈密顿量模拟问题定义如下。
 - en: '**Hamiltonian Problem:** Given a Hermitian matrix A ∈ℳ[n](ℂ), a time *t >*
     0, a tolerance level *𝜀 >* 0, and some matrix norm ∥⋅∥, find a unitary matrix U
     such that ![∥∥ itA ∥∥ U − e](img/file30.jpg)≤ *𝜀*.'
+  id: totrans-121
   prefs: []
   type: TYPE_NORMAL
+  zh: '**哈密顿量问题：** 给定一个厄米矩阵 A ∈ℳ[n](ℂ)，一个时间 *t >* 0，一个容差水平 *𝜀 >* 0，以及某个矩阵范数 ∥⋅∥，找到一个酉矩阵 U，使得
+    ![∥∥ itA ∥∥ U − e](img/file30.jpg)≤ *𝜀*。'
 - en: 1.1.7 Rotation matrices
+  id: totrans-122
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.7 旋转矩阵
 - en: 'Rotation matrices, and later their quantum gate equivalents will play a key
     role in building quantum circuits. Let us start with the following lemma:'
+  id: totrans-123
   prefs: []
   type: TYPE_NORMAL
+  zh: 旋转矩阵以及它们的量子门等效形式将在构建量子电路中发挥关键作用。我们从以下引理开始：
 - en: '**Lemma 1.** *If a matrix* A ∈ℳ[n](ℂ) *is such that* A² = I*, then for any*
     *𝜃* ∈ℝ*,*'
+  id: totrans-124
   prefs: []
   type: TYPE_NORMAL
+  zh: '**引理 1.** *如果一个矩阵* A ∈ℳ[n](ℂ) *满足* A² = I*，那么对于任何* *𝜃* ∈ℝ*，*'
 - en: '![ei𝜃A = cos(𝜃)I + isin(𝜃)A. ](img/file31.jpg)'
+  id: totrans-125
   prefs: []
   type: TYPE_IMG
+  zh: '![ei𝜃A = cos(𝜃)I + isin(𝜃)A. ](img/file31.jpg)'
 - en: '*Proof.* This follows directly from the series expansion'
+  id: totrans-126
   prefs: []
   type: TYPE_NORMAL
+  zh: '*证明。* 这直接来自于级数展开'
 - en: '![ ∑ xk ex = --, k≥0 k! ](img/file32.jpg)'
+  id: totrans-127
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∑ xk ex = --, k≥0 k! ](img/file32.jpg)'
 - en: which has an infinite radius of convergence. □
+  id: totrans-128
   prefs: []
   type: TYPE_NORMAL
+  zh: 该式具有无限的收敛半径。□
 - en: 'Lemma [1](#x1-30002r1) will prove essential for computational purposes. As
     simple examples, consider the following:'
+  id: totrans-129
   prefs: []
   type: TYPE_NORMAL
+  zh: 引理 [1](#x1-30002r1) 对于计算目的将是至关重要的。作为简单的例子，考虑以下内容：
 - en: '**Exercise:** Compute e^(i𝜃A) for A ∈{X*,*Y*,*Z} and *𝜃* ∈ℝ, where'
+  id: totrans-130
   prefs: []
   type: TYPE_NORMAL
+  zh: '**练习：** 计算 A ∈{X*,*Y*,*Z} 和 *𝜃* ∈ℝ 时的 e^(i𝜃A)，其中'
 - en: '![ ⌊ ⌋ ⌊ ⌋ ⌊ ⌋ X = ⌈0 1⌉ , Y = ⌈0 − i⌉, Z = ⌈1 0 ⌉. 1 0 i 0 0 − 1 ](img/file33.jpg)'
+  id: totrans-131
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ ⌊ ⌋ ⌊ ⌋ X = ⌈0 1⌉ , Y = ⌈0 − i⌉, Z = ⌈1 0 ⌉. 1 0 i 0 0 − 1 ](img/file33.jpg)'
 - en: 'For any *α* ∈ [0*,*2*π*), consider now the map ℛ[α] : ℝ² →ℝ² such that'
+  id: totrans-132
   prefs: []
   type: TYPE_NORMAL
+  zh: '对于任意 *α* ∈ [0*,*2*π*)，现在考虑映射 ℛ[α] : ℝ² →ℝ²，使得'
 - en: '![ ( ) ( ) ℛ α r cos(𝜃),rsin(𝜃) := r cos(𝜃 + α),rsin(𝜃 + α ) , ](img/file34.jpg)![for
     any r ∈ ℝ and 𝜃 ∈ [0,2π), ](img/file35.jpg)'
+  id: totrans-133
   prefs: []
   type: TYPE_IMG
+  zh: '![ ( ) ( ) ℛ α r cos(𝜃),rsin(𝜃) := r cos(𝜃 + α),rsin(𝜃 + α ) , ](img/file34.jpg)![对于任意
+    r ∈ ℝ 和 𝜃 ∈ [0,2π), ](img/file35.jpg)'
 - en: 'which is basically a rotation of angle *α* and does not affect the norm of
     the input vector. To the map ℛ[α], we can associate the (rotation) matrix R[α]
     such that ℛ[α](u) = R[α]u for any u ∈ℝ². It is easy (exercise) to show the following:'
+  id: totrans-134
   prefs: []
   type: TYPE_NORMAL
+  zh: 其本质上是角度 *α* 的旋转，并且不会影响输入向量的范数。对于映射 ℛ[α]，我们可以关联矩阵 R[α]，使得对于任何 u ∈ℝ²，ℛ[α](u) =
+    R[α]u。很容易（练习）证明以下内容：
 - en: '**Lemma 2.** *The matrix *R[α] *has the form*'
+  id: totrans-135
   prefs: []
   type: TYPE_NORMAL
+  zh: '**引理 2.** *矩阵 *R[α] *具有以下形式*'
 - en: '![ ⌊ ⌋ cos(α ) − sin(α) R α = ⌈ ⌉ . sin (α ) cos(α) ](img/file36.jpg)'
+  id: totrans-136
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ cos(α ) − sin(α) R α = ⌈ ⌉ . sin (α ) cos(α) ](img/file36.jpg)'
 - en: This representation is the general form of a rotation matrix in ℝ² (introduced
     in ([1.1.3](#x1-26004r3))).
+  id: totrans-137
   prefs: []
   type: TYPE_NORMAL
+  zh: 这个表示是 ℝ² 中旋转矩阵的一般形式（在([1.1.3](#x1-26004r3))中引入）。
 - en: '**Exercise:** Write the matrices e^(i𝜃A) for A ∈{X*,*Y*,*Z} from the previous
     exercise as rotation matrices.'
+  id: totrans-138
   prefs: []
   type: TYPE_NORMAL
+  zh: '**练习：** 写出前面练习中 A ∈{X*,*Y*,*Z} 的矩阵 e^(i𝜃A) 作为旋转矩阵。'
 - en: 1.1.8 Polar coordinates
+  id: totrans-139
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.8 极坐标
 - en: Recall that a point *z* = *x* + i*y*, with *x,y* ∈ℝ, lying on the unit circle
     can be written as *z* = e^(i𝜃) with *𝜃* ∈ [0*,*2*π*). Indeed, simply let *x* =
     *r* cos(*𝜃*), *y* = *r* sin(*𝜃*) and add the constraint *r* = 1\. Consider now
     a general vector u ∈ℂ² of the form
+  id: totrans-140
   prefs: []
   type: TYPE_NORMAL
+  zh: 记住，一个点 *z* = *x* + i*y*，其中 *x,y* ∈ℝ，位于单位圆上，可以写作 *z* = e^(i𝜃)，其中 *𝜃* ∈ [0*,*2*π*)。事实上，只需让
+    *x* = *r* cos(*𝜃*)，*y* = *r* sin(*𝜃*) 并加上约束 *r* = 1。现在考虑一个形式为的通用向量 u ∈ℂ²
 - en: '![u = αe1 + βe2, ](img/file37.jpg)'
+  id: totrans-141
   prefs: []
   type: TYPE_IMG
+  zh: '![u = αe1 + βe2, ](img/file37.jpg)'
 - en: 'with *α,β* ∈ℂ such that |*α*|² + |*β*|² = 1\. Here, (e[1]*,*e[2]) forms a basis
     of ℝ²:'
+  id: totrans-142
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中，*α,β* ∈ℂ，满足 |*α*|² + |*β*|² = 1。这里，(e[1]*,*e[2]) 构成了 ℝ² 的一个基：
 - en: '![ ⌊ ⌋ ⌊ ⌋ 1 0 e1 := ⌈ ⌉, e2 := ⌈ ⌉ . 0 1 ](img/file38.jpg)'
+  id: totrans-143
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ ⌊ ⌋ 1 0 e1 := ⌈ ⌉, e2 := ⌈ ⌉ . 0 1 ](img/file38.jpg)'
 - en: In polar coordinates, we can then write
+  id: totrans-144
   prefs: []
   type: TYPE_NORMAL
+  zh: 在极坐标系中，我们可以写为
 - en: '![ i𝜃α i𝜃β u = rαe e1 + rβe e2\. ](img/file39.jpg)'
+  id: totrans-145
   prefs: []
   type: TYPE_IMG
+  zh: '![ i𝜃α i𝜃β u = rαe e1 + rβe e2\. ](img/file39.jpg)'
 - en: Note that arbitrary multiplication phases have no influence – a fact of key
     importance in quantum mechanics – because, for any *γ* ∈ℝ,
+  id: totrans-146
   prefs: []
   type: TYPE_NORMAL
+  zh: 请注意，任意的乘法相位没有影响——这是量子力学中的一个关键事实——因为，对于任何 *γ* ∈ℝ，
 - en: '![|eiγα|2 = (eiγα)∗eiγα = α ∗e−iγeiγα = α∗α = |α|2, ](img/file40.jpg)'
+  id: totrans-147
   prefs: []
   type: TYPE_IMG
+  zh: '![|eiγα|2 = (eiγα)∗eiγα = α ∗e−iγeiγα = α∗α = |α|2, ](img/file40.jpg)'
 - en: so that in fact, multiplying u by the global phase e^(−i𝜃[α]) and letting *𝜃*
     := *𝜃*[β] −*𝜃*[α], we consider
+  id: totrans-148
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，实际上，乘以全局相位 e^(−i𝜃[α]) 并令 *𝜃* := *𝜃*[β] −*𝜃*[α]，我们考虑
 - en: '![ i𝜃 u = rαe1 + rβe e2\. ](img/file41.jpg)'
+  id: totrans-149
   prefs: []
   type: TYPE_IMG
+  zh: '![ i𝜃 u = rαe1 + rβe e2\. ](img/file41.jpg)'
 - en: Write temporarily *r*[β]e^(i𝜃) = *x* + i*y*. Insisting on u being on the unit
     sphere further imposes ∥u∥² = 1, namely
+  id: totrans-150
   prefs: []
   type: TYPE_NORMAL
+  zh: 写下暂时的 *r*[β]e^(i𝜃) = *x* + i*y*。坚持让 u 在单位球面上，进一步要求 ∥u∥² = 1，即
 - en: '| 1 | = ∥u∥² = ![(](img/file42.jpg)*r*[α]e[1] + (*x* + i*y*)e[2]![)](img/file43.jpg)^†![(](img/file44.jpg)*r*[α]e[1]
     + (*x* + i*y*)e[2]![)](img/file45.jpg) |'
+  id: totrans-151
   prefs: []
   type: TYPE_TB
+  zh: '| 1 | = ∥u∥² = ![(](img/file42.jpg)*r*[α]e[1] + (*x* + i*y*)e[2]![)](img/file43.jpg)^†![(](img/file44.jpg)*r*[α]e[1]
+    + (*x* + i*y*)e[2]![)](img/file45.jpg) |'
 - en: '|  | = ![(](img/file46.jpg)*r*[α]e[1]^⊤ + (*x* − i*y*)e [2]^⊤![)](img/file47.jpg)![(](img/file48.jpg)*r*[α]e[1]
     + (*x* + i*y*)e[2]![)](img/file49.jpg) |'
+  id: totrans-152
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ![(](img/file46.jpg)*r*[α]e[1]^⊤ + (*x* − i*y*)e [2]^⊤![)](img/file47.jpg)![(](img/file48.jpg)*r*[α]e[1]
+    + (*x* + i*y*)e[2]![)](img/file49.jpg) |'
 - en: '|  | = *r*[α]² + *x*² + *y*²*,* |'
+  id: totrans-153
   prefs: []
   type: TYPE_TB
+  zh: '|  | = *r*[α]² + *x*² + *y*²*,* |'
 - en: since (e[1]*,*e[2]) is orthonormal. This is nothing more than the equation of
     the unit sphere. In polar coordinates, we can write
+  id: totrans-154
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于 (e[1]*,*e[2]) 是正交归一的。这不过是单位球面的方程。在极坐标中，我们可以写为
 - en: '| ![x = rsin(𝜃)cos(ϕ), y = rsin(𝜃)sin (ϕ ), rα = r cos(𝜃), ](img/file50.jpg)
     |  |'
+  id: totrans-155
   prefs: []
   type: TYPE_TB
+  zh: '| ![x = rsin(𝜃)cos(ϕ), y = rsin(𝜃)sin(ϕ), rα = r cos(𝜃), ](img/file50.jpg)
+    |  |'
 - en: and clearly *r* = 1 since we are on the unit sphere. Therefore
+  id: totrans-156
   prefs: []
   type: TYPE_NORMAL
+  zh: 并且显然 *r* = 1，因为我们位于单位球面上。因此
 - en: '| u | = cos(*𝜃*)e[1] + ![(](img/file51.jpg)sin(*𝜃*)cos(*ϕ*) + isin(*𝜃*)sin(*ϕ*)![)](img/file52.jpg)e[2]
     |'
+  id: totrans-157
   prefs: []
   type: TYPE_TB
+  zh: '| u | = cos(*𝜃*)e[1] + ![(](img/file51.jpg)sin(*𝜃*)cos(*ϕ*) + isin(*𝜃*)sin(*ϕ*)![)](img/file52.jpg)e[2]
+    |'
 - en: '|  | = cos(*𝜃*)e[1] + sin(*𝜃*)e^(iϕ)e [2]*.* |'
+  id: totrans-158
   prefs: []
   type: TYPE_TB
+  zh: '|  | = cos(*𝜃*)e[1] + sin(*𝜃*)e^(iϕ)e [2]*.* |'
 - en: 1.1.9 Dirac notations
+  id: totrans-159
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.9 狄拉克符号
 - en: Given a vector v ∈ℂ^n, Dirac’s *ket* and *bra* notations read
+  id: totrans-160
   prefs: []
   type: TYPE_NORMAL
+  zh: 给定一个向量 v ∈ℂ^n，狄拉克的 *ket* 和 *bra* 符号表示为
 - en: '| ![ ⌊ ⌋ &#124;v1&#124; &#124;v2&#124; &#124;v⟩ := &#124;&#124; .&#124;&#124;
     and ⟨v&#124; := [v∗1,v2∗,...,v∗n]. &#124;⌈ ..&#124;⌉ vn ](img/file53.jpg) |  |'
+  id: totrans-161
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ⌊ ⌋ &#124;v1&#124; &#124;v2&#124; &#124;v⟩ := &#124;&#124; .&#124;&#124;
+    和 ⟨v&#124; := [v∗1,v2∗,...,v∗n]. &#124;⌈ ..&#124;⌉ vn ](img/file53.jpg) |  |'
 - en: With these notations, the operation ![⟨u,v⟩](img/file54.jpg) := ⟨u|v⟩ defines
     an inner product on ℂ^n. The notation for the standard orthonormal basis in  ℂ^n
     is (![|i⟩](img/file55.jpg))[i=0,…,n−1], i.e.,
+  id: totrans-162
   prefs: []
   type: TYPE_NORMAL
+  zh: 使用这些符号，操作 ![⟨u,v⟩](img/file54.jpg) := ⟨u|v⟩ 定义了 ℂ^n 上的内积。标准正交归一基的符号是 (![|i⟩](img/file55.jpg))[i=0,…,n−1]，即，
 - en: '| ![ ⌊ 1⌋ ⌊ 0⌋ ⌊ 0⌋ &#124; &#124; &#124; &#124; &#124; &#124; &#124;&#124;
     0&#124;&#124; &#124;&#124; 1&#124;&#124; &#124;&#124; 0&#124;&#124; &#124;0⟩ :=
     &#124;&#124; ..&#124;&#124;, &#124;1⟩ := &#124;&#124; ..&#124;&#124; , ... &#124;n
     − 1⟩ := &#124;&#124; ..&#124;&#124;. ⌈ .⌉ ⌈ .⌉ ⌈ .⌉ 0 0 1 ](img/file56.jpg) |  |'
+  id: totrans-163
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ⌊ 1⌋ ⌊ 0⌋ ⌊ 0⌋ &#124; &#124; &#124; &#124; &#124; &#124; &#124;&#124;
+    0&#124;&#124; &#124;&#124; 1&#124;&#124; &#124;&#124; 0&#124;&#124; &#124;0⟩ :=
+    &#124;&#124; ..&#124;&#124;, &#124;1⟩ := &#124;&#124; ..&#124;&#124; , ... &#124;n
+    − 1⟩ := &#124;&#124; ..&#124;&#124;. ⌈ .⌉ ⌈ .⌉ ⌈ .⌉ 0 0 1 ](img/file56.jpg) |  |'
 - en: In coordinates, we can write, for any *u,v* ∈ℂ^n,
+  id: totrans-164
   prefs: []
   type: TYPE_NORMAL
+  zh: 在坐标系中，我们可以写出，对于任何 *u,v* ∈ℂ^n，
 - en: '![|u⟩ = ∑ u |i⟩ and |v⟩ = ∑ v |i⟩, i i i i ](img/file57.jpg)'
+  id: totrans-165
   prefs: []
   type: TYPE_IMG
+  zh: '![|u⟩ = ∑ u |i⟩ 和 |v⟩ = ∑ v |i⟩, i i i i ](img/file57.jpg)'
 - en: and therefore,
+  id: totrans-166
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，
 - en: '![ ∑ ⟨u,v⟩ = u ∗ivi. i ](img/file58.jpg)'
+  id: totrans-167
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∑ ⟨u,v⟩ = u ∗ivi. i ](img/file58.jpg)'
 - en: 1.1.10 Quantum operators
+  id: totrans-168
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.10 量子算子
 - en: In the language of Dirac’s notations, we can define the *outer product* ![|u⟩](img/file59.jpg)⟨v|
     (for u ∈U and v ∈V) as a linear operator from V to U, two vector spaces, as
+  id: totrans-169
   prefs: []
   type: TYPE_NORMAL
+  zh: 在狄拉克符号的语言中，我们可以定义 *外积* ![|u⟩](img/file59.jpg)⟨v|（对于 u ∈U 和 v ∈V）作为从 V 到 U 的线性算子，这里有两个向量空间，形式为
 - en: '| ![( ) &#124;u⟩ ⟨v&#124; &#124;w⟩ := ⟨v&#124;w ⟩ &#124;u⟩, for any w ∈ V.
     ](img/file60.jpg) |  |'
+  id: totrans-170
   prefs: []
   type: TYPE_TB
+  zh: '| ![( ) &#124;u⟩ ⟨v&#124; &#124;w⟩ := ⟨v&#124;w ⟩ &#124;u⟩，对于任何 w ∈ V. ](img/file60.jpg)
+    |  |'
 - en: In particular, ![|v⟩](img/file61.jpg)⟨v| is the projection on the one-dimensional
     space generated by ![|v ⟩](img/file62.jpg). Any linear operator can be expressed
     as a linear combination of outer products as
+  id: totrans-171
   prefs: []
   type: TYPE_NORMAL
+  zh: 特别地，![|v⟩](img/file61.jpg)⟨v| 是对由 ![|v ⟩](img/file62.jpg) 生成的一维空间的投影。任何线性算子都可以表示为外积的线性组合，形式为
 - en: '| ![ ∑ 𝒜 = Aij &#124;i⟩⟨j&#124;, ij ](img/file63.jpg) |  |'
+  id: totrans-172
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑ 𝒜 = Aij &#124;i⟩⟨j&#124;, ij ](img/file63.jpg) |  |'
 - en: where ![|i⟩](img/file64.jpg) and ![|j⟩](img/file65.jpg) are the standard basis
     vectors ([1.1.9](#x1-320009)).
+  id: totrans-173
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 ![|i⟩](img/file64.jpg) 和 ![|j⟩](img/file65.jpg) 是标准基向量（[1.1.9](#x1-320009)）。
 - en: 'Similarly to the linear algebra setting above, we can define an eigenvector
     of a linear operator 𝒜 : V →V as a non-zero vector ![|v ⟩](img/file66.jpg) such
     that'
+  id: totrans-174
   prefs: []
   type: TYPE_NORMAL
+  zh: '与上面线性代数的设置类似，我们可以定义线性算子 𝒜 : V →V 的特征向量为非零向量 ![|v ⟩](img/file66.jpg)，使得'
 - en: '| ![𝒜 &#124;v⟩ = λ &#124;v⟩ ](img/file67.jpg) |  |'
+  id: totrans-175
   prefs: []
   type: TYPE_TB
+  zh: '| ![𝒜 &#124;v⟩ = λ &#124;v⟩ ](img/file67.jpg) |  |'
 - en: for some complex eigenvalue *λ*. Associated with any linear operator 𝒜, the
     adjoint operator 𝒜^† satisfies
+  id: totrans-176
   prefs: []
   type: TYPE_NORMAL
+  zh: 对于某些复特征值 *λ*，与任何线性算子 𝒜 相关联的伴随算子 𝒜^† 满足
 - en: '| ![ ⟨ ⟩ ⟨u&#124;𝒜v ⟩ = 𝒜 †u&#124;v . ](img/file68.jpg) |  |'
+  id: totrans-177
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ⟨ ⟩ ⟨u&#124;𝒜v ⟩ = 𝒜 †u&#124;v . ](img/file68.jpg) |  |'
 - en: Indeed, in the language of linear operators above, we have
+  id: totrans-178
   prefs: []
   type: TYPE_NORMAL
+  zh: 事实上，在上述线性算子的语言中，我们有
 - en: '![⟨u,𝒜v ⟩ = ⟨𝒜v, u⟩∗ = ⟨v,𝒜 †u⟩∗ = ⟨𝒜 †u,v⟩, ](img/file69.jpg)'
+  id: totrans-179
   prefs: []
   type: TYPE_IMG
+  zh: '![⟨u,𝒜v ⟩ = ⟨𝒜v, u⟩∗ = ⟨v,𝒜 †u⟩∗ = ⟨𝒜 †u,v⟩, ](img/file69.jpg)'
 - en: by definition of the inner product (Definition [1](#x1-25002r1)).
+  id: totrans-180
   prefs: []
   type: TYPE_NORMAL
+  zh: 根据内积的定义（定义 [1](#x1-25002r1)）。
 - en: 1.1.11 Tensor product
+  id: totrans-181
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.1.11 张量积
 - en: 'Given two vector spaces U and V of dimensions *m* and *n*, the tensor product
     U ⊗V is a vector space of dimension *mn*. For u ∈U and v ∈V, we can form the vector
     ![|uv ⟩](img/file70.jpg) := ![|u⟩](img/file71.jpg)⊗![|v⟩](img/file72.jpg)∈U ⊗V
     with the following properties:'
+  id: totrans-182
   prefs: []
   type: TYPE_NORMAL
+  zh: 给定两个维度分别为 *m* 和 *n* 的向量空间 U 和 V，张量积 U ⊗V 是一个维度为 *mn* 的向量空间。对于 u ∈U 和 v ∈V，我们可以形成向量
+    ![|uv ⟩](img/file70.jpg) := ![|u⟩](img/file71.jpg)⊗![|v⟩](img/file72.jpg)∈U ⊗V，具有以下性质：
 - en: '![ ′ |(u + u )v⟩](img/file73.jpg) = ![|uv ⟩](img/file74.jpg) + ![ ′ |u v⟩](img/file75.jpg),
     for any u′∈U;'
+  id: totrans-183
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '![ ′ |(u + u )v⟩](img/file73.jpg) = ![|uv ⟩](img/file74.jpg) + ![ ′ |u v⟩](img/file75.jpg)，对于任何
+    u′∈U；'
 - en: '![|u(v + v′)⟩](img/file76.jpg) = ![|uv ⟩](img/file77.jpg) + ![|uv′⟩](img/file78.jpg),
     for any v′∈V;'
+  id: totrans-184
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '![|u(v + v′)⟩](img/file76.jpg) = ![|uv ⟩](img/file77.jpg) + ![|uv′⟩](img/file78.jpg)，对于任何
+    v′∈V；'
 - en: '*α*![|uv⟩](img/file79.jpg) = ![|(αu)v⟩](img/file80.jpg) = ![|u(αv)⟩](img/file81.jpg),
     for any *α* ∈ℂ.'
+  id: totrans-185
   prefs:
   - PREF_UL
   type: TYPE_NORMAL
+  zh: '*α* ![|uv⟩](img/file79.jpg) = ![|(αu)v⟩](img/file80.jpg) = ![|u(αv)⟩](img/file81.jpg)，对于任何
+    *α* ∈ℂ。'
 - en: 'Given the linear operators 𝒜 : U →U and ℬ : V →V, we can then define their
     tensor product as an operator 𝒜⊗ℬ on U ⊗V:'
+  id: totrans-186
   prefs: []
   type: TYPE_NORMAL
+  zh: '给定线性算子 𝒜 : U →U 和 ℬ : V →V，我们可以将它们的张量积定义为作用在 U ⊗V 上的算子 𝒜⊗ℬ：'
 - en: '| ![( ) 𝒜 ⊗ ℬ &#124;uv ⟩ := &#124;(𝒜u),(ℬv)⟩, ](img/file82.jpg) |  |'
+  id: totrans-187
   prefs: []
   type: TYPE_TB
+  zh: '| ![( ) 𝒜 ⊗ ℬ &#124;uv ⟩ := &#124;(𝒜u),(ℬv)⟩, ](img/file82.jpg) |  |'
 - en: which can be represented in matrix form as A ⊗ B ∈ℳ[mn,mn](ℂ).
+  id: totrans-188
   prefs: []
   type: TYPE_NORMAL
+  zh: 它可以用矩阵形式表示为 A ⊗ B ∈ℳ[mn,mn](ℂ)。
 - en: This Dirac formalism, fully anchored in (classical) linear algebra, now opens
     the gates to a proper dive into the foundations of quantum mechanics.
+  id: totrans-189
   prefs: []
   type: TYPE_NORMAL
+  zh: 这个狄拉克形式主义，完全植根于（经典）线性代数，现在为深入探索量子力学基础打开了大门。
 - en: 1.2 Postulates of Quantum Mechanics
+  id: totrans-190
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 1.2 量子力学的公设
 - en: 'Quantum mechanics states several mathematical postulates that a physical theory
     must satisfy. It turns out that the mathematics of quantum mechanics allows for
     more general *computation*: more general definition of the *memory state* in comparison
@@ -821,8 +1253,11 @@
     computational protocol performed on classical digital computers requires an enormous
     amount of memory. Exponential gains in computing power are offset by exponential
     memory requirements.'
+  id: totrans-191
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子力学陈述了物理理论必须满足的几个数学公设。事实证明，量子力学的数学允许更一般的 *计算*：与经典数字计算相比，更一般的 *记忆状态* 定义和更广泛的
+    *变换* 可能性。一个自然的问题是：为什么这种优越的计算模式直到最近才被使用？答案是，尽管量子力学几乎一个世纪前就被提出（保罗·狄拉克的开创性著作《量子力学原理》[[86](Biblography.xhtml#XDirac1930)]于1930年出版），但将量子力学的规则应用于在经典数字计算机上执行的计算协议需要巨大的内存。计算能力的指数增长被指数级的内存需求所抵消。
 - en: In order to perform quantum computations efficiently, we need to use actual
     quantum mechanical systems, with their ability to encode information in their
     states. To illustrate this point, the state of a quantum system consisting of *n*
@@ -831,43 +1266,62 @@
     and it would be impossible to store this information in classical memory. It took
     decades of technological progress before quantum processing units (QPUs) – devices
     that control quantum mechanical systems performing computations – became feasible.
+  id: totrans-192
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了高效地执行量子计算，我们需要使用实际的量子力学系统，利用其在状态中编码信息的能力。为了说明这一点，由 *n* 个量子比特（qubits）组成的量子系统的状态可以通过指定
+    2^n 个概率振幅来描述——即使对于非常小的系统（*n* ∼ 100）来说，这也是一个庞大的信息量，并且在经典内存中存储这些信息是不可能的。在量子处理单元（QPUs）——控制量子力学系统进行计算的设备——变得可行之前，经历了数十年的技术进步。
 - en: 'Let us now proceed with the formulation of the mathematical postulates that
     lie at the foundation of quantum mechanics. These postulates specify a general
     framework for describing the behaviour of a physical system  [[80](Biblography.xhtml#XDawar), [182](Biblography.xhtml#XLandau1965), [249](Biblography.xhtml#XRobinett2006)]:'
+  id: totrans-193
   prefs: []
   type: TYPE_NORMAL
+  zh: 现在让我们继续推导构成量子力学基础的数学公设。这些公设规定了描述物理系统行为的一般框架[[80](Biblography.xhtml#XDawar)，[182](Biblography.xhtml#XLandau1965)，[249](Biblography.xhtml#XRobinett2006)]：
 - en: How to describe the state of a closed system.
+  id: totrans-194
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 如何描述一个封闭系统的状态。
 - en: How to describe the evolution of a closed system.
+  id: totrans-195
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 如何描述一个封闭系统的演化。
 - en: How to describe the interactions of a system with external systems.
+  id: totrans-196
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 如何描述系统与外部系统的相互作用。
 - en: How to describe observables of a system.
+  id: totrans-197
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 如何描述系统的可观测量。
 - en: How to describe the state of a composite system in terms of its component parts.
+  id: totrans-198
   prefs:
   - PREF_OL
   type: TYPE_NORMAL
+  zh: 如何描述复合系统的状态，以及它的组成部分。
 - en: 1.2.1 First postulate – Statics
+  id: totrans-199
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.2.1 第一个公设——静力学
 - en: '**Postulate 1\.** *Associated to any physical system is a complex inner product
     space* *known as the state space of the system. The system is completely described
     at any* *given point in time by its state vector, which is a unit vector in its
     state space.*'
+  id: totrans-200
   prefs: []
   type: TYPE_NORMAL
+  zh: '**公设 1**。*与任何物理系统相关联的是一个复杂的内积空间*，*被称为该系统的状态空间。系统在任何给定时刻完全由其状态向量描述，该状态向量是其状态空间中的单位向量。*'
 - en: 'What is the importance of the first postulate from the quantum computing point
     of view? The answer is that quantum mechanics offers us a straightforward generalisation
     of the classical *binary digit* (bit). The classical bit is a two-state system
@@ -877,121 +1331,171 @@
     age of transistors, they illustrate an important point about computation in general:
     it is substrate independent. Exactly the same computational results can be obtained
     using electrical relays and CMOS transistors.'
+  id: totrans-201
   prefs: []
   type: TYPE_NORMAL
+  zh: 从量子计算的角度来看，第一个公设的重要性是什么？答案是，量子力学为我们提供了经典*二进制位*（bit）的直接推广。经典比特是一个二态系统，在这两个状态之间有控制的转换。例如，我们可以使用一个电气开关，它可以处于两个离散的、稳定的状态（“开”和“关”）之一。尽管在晶体管时代，电气开关似乎是比特的一个奇怪物理实现，但它们说明了一个关于计算的一般重要观点：它是独立于底层硬件的。使用电气继电器和CMOS晶体管可以获得完全相同的计算结果。
 - en: The quantum mechanical version of a bit, called a *quantum binary digit* (qubit),
     is a quantum mechanical two-state system. The first postulate of quantum mechanics
     tells us that the state of such a system can be represented mathematically by
     a unit vector in the two-dimensional complex vector space. This also means that
     such a system can exist in a superposition of basis states. Indeed, any vector
     ![|v⟩](img/file83.jpg) in the two-dimensional complex vector space,
+  id: totrans-202
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子力学中的比特版本，称为*量子二进制位*（量子比特，qubit），是一个量子力学的二态系统。量子力学的第一个公设告诉我们，这样一个系统的状态可以通过一个二维复数向量空间中的单位向量在数学上表示。这也意味着这样的系统可以存在于基态的叠加态中。事实上，任何向量![|v⟩](img/file83.jpg)在二维复数向量空间中，
 - en: '![ ⌊ ⌋ α |v⟩ = ⌈ ⌉ , β ](img/file84.jpg)'
+  id: totrans-203
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ α |v⟩ = ⌈ ⌉ , β ](img/file84.jpg)'
 - en: 'can be represented as a linear combination of the standard basis vectors:'
+  id: totrans-204
   prefs: []
   type: TYPE_NORMAL
+  zh: 可以表示为标准基向量的线性组合：
 - en: '![⌊ ⌋ ⌊ ⌋ ⌊ ⌋ ⌈ α⌉ ⌈1⌉ ⌈0⌉ β = α 0 + β 1 , |v⟩ = α |0⟩ + β |1⟩. ](img/file85.jpg)'
+  id: totrans-205
   prefs: []
   type: TYPE_IMG
+  zh: '![⌊ ⌋ ⌊ ⌋ ⌊ ⌋ ⌈ α⌉ ⌈1⌉ ⌈0⌉ β = α 0 + β 1 , |v⟩ = α |0⟩ + β |1⟩. ](img/file85.jpg)'
 - en: Since the state vector is a unit vector, the coefficients *α* and *β* must satisfy
+  id: totrans-206
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于状态向量是单位向量，系数*α*和*β*必须满足
 - en: '![|α|2 + |β|2 = 1\. ](img/file86.jpg)'
+  id: totrans-207
   prefs: []
   type: TYPE_IMG
+  zh: '![|α|2 + |β|2 = 1\. ](img/file86.jpg)'
 - en: 'The coefficients *α* and *β* are *probability amplitudes*. Even though a qubit
     can exist in a superposition of basis states, once *measured* (see Postulate 3),
     its state *collapses* to one of the basis states: |*α*|² and |*β*|² give us the
     probability of finding the qubit, respectively, in states ![|0⟩](img/file87.jpg)
     and ![|1⟩](img/file88.jpg) after measurement.'
+  id: totrans-208
   prefs: []
   type: TYPE_NORMAL
+  zh: 系数*α*和*β*是*概率振幅*。尽管一个量子比特可以存在于基态的叠加中，但一旦*测量*（见公设 3），其状态会*塌缩*到基态之一：|*α*|²和|*β*|²分别给出了在测量后找到量子比特处于状态![|0⟩](img/file87.jpg)和![|1⟩](img/file88.jpg)的概率。
 - en: One can draw an analogy with how the space of natural numbers, ℕ, can be extended
     to the space of real numbers, ℝ, and then to the space of complex numbers, ℂ.
     We have a much wider range of functions that can operate on and take values in
     ℝ and ℂ than in ℕ. Similarly, allowing the two-state system to exist in a superposition
     of states significantly extends the range of possible operators that can transform
     such states (i.e., perform computation).
+  id: totrans-209
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们可以类比自然数空间ℕ如何扩展到实数空间ℝ，然后扩展到复数空间ℂ。相比于ℕ，我们在ℝ和ℂ中有更多的函数可以操作并取得值。类似地，允许二态系统存在于叠加态显著扩展了可以转换这些状态的算子的范围（即进行计算）。
 - en: 'For example, there is no Boolean function *f* that, when applied twice to a
     classical bit, would result in a NOT gate: *f*(*f*(0)) = 1 and *f*(*f*(1)) = 0\.
     But there is such an operator in quantum computing. We can easily verify by direct
     calculations that the matrix'
+  id: totrans-210
   prefs: []
   type: TYPE_NORMAL
+  zh: 例如，不存在一个布尔函数*f*，当它作用于经典比特两次时，会产生一个 NOT 门：*f*(*f*(0)) = 1 且 *f*(*f*(1)) = 0。然而，在量子计算中，确实存在这样的算子。我们可以通过直接计算轻松验证，矩阵
 - en: '![ ⌊ ⌋ 1 + i 1 − i M := 1-⌈ ⌉ , 2 1 − i 1 + i ](img/file89.jpg)'
+  id: totrans-211
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ 1 + i 1 − i M := 1-⌈ ⌉ , 2 1 − i 1 + i ](img/file89.jpg)'
 - en: applied twice to the basis vector ![|0⟩](img/file90.jpg) would transform it
     to the basis vector ![|1⟩](img/file91.jpg), and applied twice to the basis vector
     ![|1⟩](img/file92.jpg) would transform it to the basis vector ![|0⟩](img/file93.jpg).
     M is an example of a *quantum logic gate* – an operator that transforms the state
     of a qubit, thus implementing the computation.
+  id: totrans-212
   prefs: []
   type: TYPE_NORMAL
+  zh: 对基向量![|0⟩](img/file90.jpg)应用两次会将其转换为基向量![|1⟩](img/file91.jpg)，对基向量![|1⟩](img/file92.jpg)应用两次会将其转换为基向量![|0⟩](img/file93.jpg)。M是一个*量子逻辑门*的例子——它是一个转换量子比特状态的算符，从而实现计算。
 - en: '**Remark:** The state space of a physical system can be infinite-dimensional.
     The quantum computing paradigm based on infinite-dimensional Hilbert spaces is
     called *continuous-variable quantum computing*, which is realised in, e.g., some
     photonic quantum computing systems. However, in the context of digital quantum
     computing, we will restrict our analysis to finite-dimensional state spaces.'
+  id: totrans-213
   prefs: []
   type: TYPE_NORMAL
+  zh: '**备注：** 物理系统的状态空间可以是无限维的。基于无限维希尔伯特空间的量子计算范式被称为*连续变量量子计算*，例如在一些光子量子计算系统中得以实现。然而，在数字量子计算的背景下，我们将限制分析为有限维状态空间。'
 - en: The state of a qubit (the fundamental memory unit of quantum computing that
     generalises the concept of a classical bit) can be described mathematically as
     a unit vector in the two-dimensional complex vector space. Any physical system
     whose state space can be described by ℂ² can serve as an implementation of a qubit.
+  id: totrans-214
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子比特（量子计算的基本存储单元，是经典比特概念的推广）的状态可以在数学上描述为二维复向量空间中的单位向量。任何其状态空间可以由ℂ²描述的物理系统都可以作为量子比特的实现。
 - en: 1.2.2 Second postulate – Dynamics
+  id: totrans-215
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.2.2 第二公设 – 动力学
 - en: '**Postulate 2\.** *The time evolution of a closed quantum system is described
     by the* *Schrödinger equation*'
+  id: totrans-216
   prefs: []
   type: TYPE_NORMAL
+  zh: '**公设2：** *闭合量子系统的时间演化由* *薛定谔方程* *描述*'
 - en: '| ![iℏd-&#124;ψ-(t)⟩ = ℋ &#124;ψ(t)⟩, dt ](img/file94.jpg) |  |'
+  id: totrans-217
   prefs: []
   type: TYPE_TB
+  zh: '| ![iℏd-&#124;ψ-(t)⟩ = ℋ &#124;ψ(t)⟩, dt ](img/file94.jpg) |  |'
 - en: '*where* ℏ *is Planck’s constant and* ℋ *is a time-independent Hermitian operator*
     *known as the Hamiltonian of the system.*'
+  id: totrans-218
   prefs: []
   type: TYPE_NORMAL
+  zh: '*其中* ℏ *是普朗克常数，* ℋ *是一个与时间无关的厄米算符*，*被称为系统的哈密顿量*。'
 - en: The Hamiltonian of a quantum system is an operator corresponding to the total
     energy of that system, and its eigenvalues are the possible energy levels of the
     system. The knowledge of the Hamiltonian provides all the necessary information
     about system dynamics.
+  id: totrans-219
   prefs: []
   type: TYPE_NORMAL
+  zh: 一个量子系统的哈密顿量是对应于该系统总能量的算符，其特征值是系统可能的能级。对哈密顿量的了解提供了关于系统动力学的所有必要信息。
 - en: In the Schrödinger equation ([1.2.2](#x1-370002)), the state ![|ψ(t1)⟩](img/file95.jpg)
     of a closed quantum system at time *t*[1] is related to the state ![|ψ (t2)⟩](img/file96.jpg)
     at time *t*[2] by a unitary operator 𝒰(*t*[1]*,t*[2]) that depends only on *t*[1]
     and *t*[2] via
+  id: totrans-220
   prefs: []
   type: TYPE_NORMAL
+  zh: 在薛定谔方程([1.2.2](#x1-370002))中，闭合量子系统在时间*t*[1]的状态![|ψ(t1)⟩](img/file95.jpg)与时间*t*[2]的状态![|ψ(t2)⟩](img/file96.jpg)之间通过仅依赖于*t*[1]和*t*[2]的单位算符𝒰(*t*[1]*,t*[2])相互联系：
 - en: '| ![&#124;ψ(t2)⟩ = 𝒰 (t1,t2) &#124;ψ(t1)⟩ , ](img/file97.jpg) |  |'
+  id: totrans-221
   prefs: []
   type: TYPE_TB
+  zh: '| ![&#124;ψ(t2)⟩ = 𝒰 (t1,t2) &#124;ψ(t1)⟩ , ](img/file97.jpg) |  |'
 - en: where 𝒰(*t*[1]*,t*[2]) is obtained from the Hamiltonian ℋ as
+  id: totrans-222
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中𝒰(*t*[1]*,t*[2])是由哈密顿量ℋ得到的。
 - en: '| ![ ( ) iℋ-(t2-−-t1) 𝒰 (t1,t2) = exp − ℏ . ](img/file98.jpg) |  |'
+  id: totrans-223
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ( ) iℋ-(t2-−-t1) 𝒰 (t1,t2) = exp − ℏ . ](img/file98.jpg) |  |'
 - en: 'Unitary operators preserve the inner product (and therefore norms, lengths,
     and distances), which means that for two vectors ![|u⟩](img/file99.jpg) and ![|v⟩](img/file100.jpg),
     if 𝒰 is a unitary operator, then the inner product between 𝒰![|u⟩](img/file101.jpg)
     and 𝒰![|v⟩](img/file102.jpg) is the same as the inner product between ![|u⟩](img/file103.jpg)
     and ![|v⟩](img/file104.jpg):'
+  id: totrans-224
   prefs: []
   type: TYPE_NORMAL
+  zh: 单位算符保持内积（因此保持范数、长度和距离），这意味着对于两个向量![|u⟩](img/file99.jpg)和![|v⟩](img/file100.jpg)，如果𝒰是单位算符，那么𝒰![|u⟩](img/file101.jpg)与𝒰![|v⟩](img/file102.jpg)之间的内积与![|u⟩](img/file103.jpg)和![|v⟩](img/file104.jpg)之间的内积是相同的：
 - en: '| ![ † ⟨u&#124;𝒰 𝒰 &#124;v⟩ = ⟨u&#124;v⟩ . ](img/file105.jpg) |  |'
+  id: totrans-225
   prefs: []
   type: TYPE_TB
+  zh: '| ![ † ⟨u&#124;𝒰 𝒰 &#124;v⟩ = ⟨u&#124;v⟩ . ](img/file105.jpg) |  |'
 - en: 'A unitary operator is a complex generalisation of a rotation: unitary operators
     take an orthonormal basis to another orthonormal basis, and any operator with
     this property is unitary. In quantum mechanics, physical transformations such
@@ -1000,133 +1504,202 @@
     product. This allows us to look at the unitary operators as the *quantum* *logic
     gates* implementing quantum computation protocols. Furthermore, unitary operators
     are invertible, a key property that ensures that quantum computing is *reversible*.'
+  id: totrans-226
   prefs: []
   type: TYPE_NORMAL
+  zh: 单位算符是旋转的复数推广：单位算符将正交基变换到另一个正交基，任何具备此性质的算符都是单位算符。在量子力学中，物理变换如旋转、平移和时间演化对应于将量子态映射到其他量子态的映射。这些映射应该是线性的，并且保持内积。这使得我们可以将单位算符视为实现量子计算协议的*量子*
+    *逻辑门*。此外，单位算符是可逆的，这一关键特性确保了量子计算是*可逆的*。
 - en: Quantum logic gates (quantum counterparts of the Boolean logic gates in classical
     computing) are unitary operators that transform quantum states, thus implementing
     the computation.
+  id: totrans-227
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子逻辑门（经典计算中的布尔逻辑门的量子对应物）是单位算符，能够变换量子态，从而实现计算。
 - en: 1.2.3 Third postulate – Measurement
+  id: totrans-228
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.2.3 第三公设 – 测量
 - en: Given a Hermitian operator 𝒜, the spectral theorem implies that the state ![|ψ⟩](img/file106.jpg)
     of a system can be written as a superposition
+  id: totrans-229
   prefs: []
   type: TYPE_NORMAL
+  zh: 给定一个厄米算符 𝒜，谱定理意味着系统的状态 ![|ψ⟩](img/file106.jpg) 可以写成一个叠加态
 - en: '| ![ ∑N &#124;ψ⟩ = αi &#124;ψi⟩ , i=1 ](img/file107.jpg) |  |'
+  id: totrans-230
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑N &#124;ψ⟩ = αi &#124;ψi⟩ , i=1 ](img/file107.jpg) |  |'
 - en: 'where the coefficients (*α*[i])[i=1,…,N] are complex *probability amplitudes*,
     assumed to be normalised with ∑ [i=1]^N|*α*[i]|² = 1, and where (![|ψi⟩](img/file108.jpg))[i=1,…,N]
     are eigenfunctions of 𝒜. The measurement postulate then reads as follows:'
+  id: totrans-231
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中系数(*α*[i])[i=1,…,N]是复数*概率振幅*，假设已标准化，满足∑ [i=1]^N|*α*[i]|² = 1，并且 (![|ψi⟩](img/file108.jpg))[i=1,…,N]
+    是𝒜的特征函数。测量公设则如下所述：
 - en: '**Postulate 3\.** *If we measure the Hermitian operator* 𝒜 *in the state* ![|ψ⟩](img/file109.jpg)
     *given* *in *([1.2.3](#x1-380003))*, the possible outcomes for the measurement
     are the eigenvalues* (*λ*[i])[i=1,…,N] *of *𝒜*, and the probability **p*[i] *to
     measure **λ*[i] *is given by* *p*[i] = |*α*[i]|²*. After* *the outcome **λ*[i]*,
     the state of the system becomes*'
+  id: totrans-232
   prefs: []
   type: TYPE_NORMAL
+  zh: '**公设 3**。*如果我们在状态* ![|ψ⟩](img/file109.jpg) *中测量厄米算符* 𝒜 *，则测量的可能结果是* 𝒜 *的特征值*
+    (*λ*[i])[i=1,…,N] *，并且测量到* λ*[i] *的概率* **p*[i] *由* *p*[i] = |*α*[i]|²*给出。测量结果*
+    **λ*[i]*后，系统的状态变为*'
 - en: '| ![&#124;ψ⟩ = &#124;ψi⟩. ](img/file110.jpg) |  |'
+  id: totrans-233
   prefs: []
   type: TYPE_TB
+  zh: '| ![&#124;ψ⟩ = &#124;ψi⟩. ](img/file110.jpg) |  |'
 - en: '*An immediate measurement in the same computational basis will deliver the
     same* *result without any uncertainty.*'
+  id: totrans-234
   prefs: []
   type: TYPE_NORMAL
+  zh: '*在相同计算基下的即时测量将给出相同的* *结果，没有任何不确定性。*'
 - en: The quantum measurements are described by *measurement operators* (𝒫[i])[i=1,…,N],
     acting on the state space of the system with *N* possible outcomes. If the state
     of the system is ![|ψ⟩](img/file111.jpg) before the measurement, then the probability
     of outcome *i* is
+  id: totrans-235
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子测量由*测量算符* (𝒫[i])[i=1,…,N] 描述，作用于系统的状态空间，具有*N*个可能结果。如果系统的状态在测量前是 ![|ψ⟩](img/file111.jpg)，则结果*i*的概率为
 - en: '![ℙ(i) = ⟨ψ |𝒫 †i𝒫i |ψ ⟩. ](img/file112.jpg)'
+  id: totrans-236
   prefs: []
   type: TYPE_IMG
+  zh: '![ℙ(i) = ⟨ψ |𝒫 †i𝒫i |ψ ⟩. ](img/file112.jpg)'
 - en: The measurement operators should also satisfy the *completeness condition*
+  id: totrans-237
   prefs: []
   type: TYPE_NORMAL
+  zh: 测量算符还应满足*完整性条件*
 - en: '| ![∑N 𝒫 †i𝒫i = ℐ, i=1 ](img/file113.jpg) |  |'
+  id: totrans-238
   prefs: []
   type: TYPE_TB
+  zh: '| ![∑N 𝒫 †i𝒫i = ℐ, i=1 ](img/file113.jpg) |  |'
 - en: where ℐ is the identity operator. This ensures that the sum of the probabilities
     of all outcomes adds up to 1.
+  id: totrans-239
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中ℐ是单位算符。这确保了所有结果的概率之和为1。
 - en: These measurement operators are linear but not unitary. From the quantum computing
     perspective, we are interested in measurement operators that are *projections*
     (Definition [2](#x1-25004r2)) onto the *computational basis*, such as the standard
     orthonormal basis given by ([1.1.9](#x1-320009)).
+  id: totrans-240
   prefs: []
   type: TYPE_NORMAL
+  zh: 这些测量算符是线性的，但不是单位的。从量子计算的角度来看，我们关注的是*投影*测量算符（定义 [2](#x1-25004r2)），它们是*计算基*的投影，例如由 ([1.1.9](#x1-320009))给出的标准正交基。
 - en: For example, the measurement operators for a single qubit can be defined as
+  id: totrans-241
   prefs: []
   type: TYPE_NORMAL
+  zh: 例如，单个量子比特的测量算符可以定义为
 - en: '![ ⌊ ⌋ ⌊ ⌋ 1 0 0 0 𝒫0 := |0⟩⟨0| = ⌈ ⌉ and 𝒫1 := |1⟩⟨1| = ⌈ ⌉ . 0 0 0 1 ](img/file114.jpg)'
+  id: totrans-242
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ ⌊ ⌋ 1 0 0 0 𝒫0 := |0⟩⟨0| = ⌈ ⌉ and 𝒫1 := |1⟩⟨1| = ⌈ ⌉ . 0 0 0 1 ](img/file114.jpg)'
 - en: We can easily verify that 𝒫[0]² = 𝒫[0] and 𝒫[1]² = 𝒫[1], as should be the case
     for projection operators, and that the completeness condition ([1.2.3](#x1-380003))
     is satisfied. If the qubit is in state ![|ψ⟩](img/file115.jpg) = *α*![|0⟩](img/file116.jpg)
     + *β*![|1⟩](img/file117.jpg), then the measurement operator 𝒫[0] will give us
     ![|0⟩](img/file118.jpg) with probability |*α*|², and the measurement operator 𝒫[1]
     will give us ![|1⟩](img/file119.jpg) with probability |*β*|². Indeed,
+  id: totrans-243
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们可以很容易验证𝒫[0]² = 𝒫[0]且𝒫[1]² = 𝒫[1]，这正是投影算符的性质，并且满足完整性条件([1.2.3](#x1-380003))。如果量子比特处于状态![|ψ⟩](img/file115.jpg)
+    = *α*![|0⟩](img/file116.jpg) + *β*![|1⟩](img/file117.jpg)，那么测量算符𝒫[0]将以概率|*α*|²给出![|0⟩](img/file118.jpg)，测量算符𝒫[1]将以概率|*β*|²给出![|1⟩](img/file119.jpg)。实际上，
 - en: '| 𝒫[0]![&#124;ψ ⟩](img/file120.jpg) | = ![&#124;0⟩](img/file121.jpg)⟨0&#124;![(](img/file122.jpg)*α*![&#124;0⟩](img/file123.jpg)
     + *β*![&#124;1⟩](img/file124.jpg)![)](img/file125.jpg) = *α*![&#124;0⟩](img/file126.jpg)⟨0&#124;![&#124;0⟩](img/file127.jpg)
     + *β*![&#124;0⟩](img/file128.jpg)⟨0&#124;![&#124;1⟩](img/file129.jpg) = *α*![&#124;0⟩](img/file130.jpg)*,*
     |'
+  id: totrans-244
   prefs: []
   type: TYPE_TB
+  zh: '| 𝒫[0]![&#124;ψ ⟩](img/file120.jpg) | = ![&#124;0⟩](img/file121.jpg)⟨0&#124;![(](img/file122.jpg)*α*![&#124;0⟩](img/file123.jpg)
+    + *β*![&#124;1⟩](img/file124.jpg)![)](img/file125.jpg) = *α*![&#124;0⟩](img/file126.jpg)⟨0&#124;![&#124;0⟩](img/file127.jpg)
+    + *β*![&#124;0⟩](img/file128.jpg)⟨0&#124;![&#124;1⟩](img/file129.jpg) = *α*![&#124;0⟩](img/file130.jpg)*,*
+    |'
 - en: '| 𝒫[1]![&#124;ψ ⟩](img/file131.jpg) | = ![&#124;1⟩](img/file132.jpg)⟨1&#124;![(](img/file133.jpg)*α*![&#124;0⟩](img/file134.jpg)
     + *β*![&#124;1⟩](img/file135.jpg)![)](img/file136.jpg) = *α*![&#124;1⟩](img/file137.jpg)⟨1&#124;![&#124;0⟩](img/file138.jpg)
     + *β*![&#124;1⟩](img/file139.jpg)⟨1&#124;![&#124;1⟩](img/file140.jpg) = *β*![&#124;1⟩](img/file141.jpg)*.*
     |'
+  id: totrans-245
   prefs: []
   type: TYPE_TB
+  zh: '| 𝒫[1]![&#124;ψ ⟩](img/file131.jpg) | = ![&#124;1⟩](img/file132.jpg)⟨1&#124;![(](img/file133.jpg)*α*![&#124;0⟩](img/file134.jpg)
+    + *β*![&#124;1⟩](img/file135.jpg)![)](img/file136.jpg) = *α*![&#124;1⟩](img/file137.jpg)⟨1&#124;![&#124;0⟩](img/file138.jpg)
+    + *β*![&#124;1⟩](img/file139.jpg)⟨1&#124;![&#124;1⟩](img/file140.jpg) = *β*![&#124;1⟩](img/file141.jpg)*.*
+    |'
 - en: The measurement postulate of quantum mechanics states that an immediate measurement
     in the same computational basis will deliver the same result without any uncertainty.
     The key words here are "the same computational basis". What would happen if the
     subsequent measurement is performed in another basis (the basis specified by another
     set of linearly independent unit vectors from the state space)? For example, assume
     that the qubit is in state
+  id: totrans-246
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子力学的测量公设表明，在相同的计算基中进行的直接测量将返回相同的结果，不会有任何不确定性。这里的关键词是“相同的计算基”。如果接下来的测量是在另一个基中进行（由来自状态空间的另一组线性无关的单位向量指定的基）会发生什么呢？例如，假设量子比特处于状态
 - en: '![ 1 1 |ψ⟩ = √---|0⟩ + √---|1⟩. 2 2 ](img/file142.jpg)'
+  id: totrans-247
   prefs: []
   type: TYPE_IMG
+  zh: '![ 1 1 |ψ⟩ = √---|0⟩ + √---|1⟩. 2 2 ](img/file142.jpg)'
 - en: Measuring ![|ψ⟩](img/file143.jpg) in {![|0⟩](img/file144.jpg)*,*![|1⟩](img/file145.jpg)}
     computational basis will result in observing states ![|0⟩](img/file146.jpg) and ![|1⟩](img/file147.jpg)
     with equal probability 1*∕*2\. Let us assume that we measured ![|0⟩](img/file148.jpg).
     The qubit state is now
+  id: totrans-248
   prefs: []
   type: TYPE_NORMAL
+  zh: 测量![|ψ⟩](img/file143.jpg)在{![|0⟩](img/file144.jpg)*,*![|1⟩](img/file145.jpg)}计算基中，将以相等的概率1*∕*2观察到态![|0⟩](img/file146.jpg)和![|1⟩](img/file147.jpg)。假设我们测量了![|0⟩](img/file148.jpg)，此时量子比特的状态为
 - en: '![ ′⟩ |ψ = 1 ⋅ |0⟩+ 0 ⋅ |1⟩. ](img/file149.jpg)'
+  id: totrans-249
   prefs: []
   type: TYPE_IMG
+  zh: '![ ′⟩ |ψ = 1 ⋅ |0⟩+ 0 ⋅ |1⟩. ](img/file149.jpg)'
 - en: If we repeat the measurement in the same {![|0⟩](img/file150.jpg)*,*![|1⟩](img/file151.jpg)}
     computational basis, we obtain state ![|0⟩](img/file152.jpg) with probability 1
     in accordance with the measurement postulate. However, had we measured state ![|ψ′⟩](img/file153.jpg)
     in the *Hadamard basis* {![|+ ⟩](img/file154.jpg)*,*![|− ⟩](img/file155.jpg)},
     given by
+  id: totrans-250
   prefs: []
   type: TYPE_NORMAL
+  zh: 如果我们在相同的{![|0⟩](img/file150.jpg)*,*![|1⟩](img/file151.jpg)}计算基中重复测量，我们将以概率1得到状态![|0⟩](img/file152.jpg)，这符合测量公设。然而，如果我们在*哈达玛基*{![|+
+    ⟩](img/file154.jpg)*,*![|− ⟩](img/file155.jpg)}基中测量状态![|ψ′⟩](img/file153.jpg)，则由下式给出
 - en: '| ![&#124;+ ⟩ := √1-(&#124;0⟩+ &#124;1⟩) and &#124;− ⟩ := 1√--(&#124;0⟩ − &#124;1⟩),
     2 2 ](img/file156.jpg) |  |'
+  id: totrans-251
   prefs: []
   type: TYPE_TB
+  zh: '| ![&#124;+ ⟩ := √1-(&#124;0⟩+ &#124;1⟩) 和 &#124;− ⟩ := 1√--(&#124;0⟩ − &#124;1⟩),
+    2 2 ](img/file156.jpg) |  |'
 - en: we would have equal probabilities of ![|+⟩](img/file157.jpg) and ![|− ⟩](img/file158.jpg)
     outcomes. Let us assume that we measured ![|− ⟩](img/file159.jpg) and the state
     of the qubit is now
+  id: totrans-252
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们将有相等的概率得到![|+⟩](img/file157.jpg)和![|− ⟩](img/file158.jpg)的结果。假设我们测量了![|− ⟩](img/file159.jpg)，此时量子比特的状态为
 - en: '![ ′′⟩ |ψ = 0 ⋅ |+ ⟩+ 1 ⋅ |− ⟩ . ](img/file160.jpg)'
+  id: totrans-253
   prefs: []
   type: TYPE_IMG
+  zh: '![ ′′⟩ |ψ = 0 ⋅ |+ ⟩+ 1 ⋅ |− ⟩ . ](img/file160.jpg)'
 - en: If we repeat the measurement of state ![|ψ ′′⟩](img/file161.jpg) in the Hadamard
     basis {![|+⟩](img/file162.jpg)*,*![|− ⟩](img/file163.jpg)}, we obtain state ![|−
     ⟩](img/file164.jpg) with probability 1\. But the state of the qubit is an equal
@@ -1134,117 +1707,170 @@
     the {![|0⟩](img/file167.jpg)*,*![|1⟩](img/file168.jpg)} computational basis perspective
     and we have an equal chance of measuring either ![|0⟩](img/file169.jpg) or ![|1⟩](img/file170.jpg)
     in this basis.
+  id: totrans-254
   prefs: []
   type: TYPE_NORMAL
+  zh: 如果我们在哈达马尔基{![|+⟩](img/file162.jpg)*,*![|− ⟩](img/file163.jpg)}中重复测量态![|ψ ′′⟩](img/file161.jpg)，我们以概率1获得态![|−
+    ⟩](img/file164.jpg)。但是从{![|0⟩](img/file167.jpg)*,*![|1⟩](img/file168.jpg)}计算基的角度看，量子比特的状态是态![|0
+    ⟩](img/file165.jpg)和![|1⟩](img/file166.jpg)的等幅叠加，在这个基中我们有相等的机会测量到![|0⟩](img/file169.jpg)或![|1⟩](img/file170.jpg)。
 - en: '**Remark:** The basis vectors ![|0⟩](img/file171.jpg) and ![|1⟩](img/file172.jpg)
     that form the standard computational basis can be transformed into the basis vectors
     ![|+⟩](img/file173.jpg) and ![|− ⟩](img/file174.jpg) that form the Hadamard basis
     by applying the following unitary operator (rotation), called the *Hadamard gate*:'
+  id: totrans-255
   prefs: []
   type: TYPE_NORMAL
+  zh: '**备注：** 组成标准计算基的基向量![|0⟩](img/file171.jpg)和![|1⟩](img/file172.jpg)可以通过应用以下幺正算符（旋转），称为*哈达马尔门*，转换为组成哈达马尔基的基向量![|+⟩](img/file173.jpg)和![|−
+    ⟩](img/file174.jpg)。'
 - en: '| ![ ⌊ ⌋ -1-⌈1 1 ⌉ H = √2-- 1 − 1 . ](img/file175.jpg) |  |'
+  id: totrans-256
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ⌊ ⌋ -1-⌈1 1 ⌉ H = √2-- 1 − 1 . ](img/file175.jpg) |  |'
 - en: Chapters [6](Chapter_6.xhtml#x1-1190006), [10](Chapter_10.xhtml#x1-20200010)
     and [11](Chapter_11.xhtml#x1-21700011) provide examples of applications of the
     Hadamard gate.
+  id: totrans-257
   prefs: []
   type: TYPE_NORMAL
+  zh: 第[6](Chapter_6.xhtml#x1-1190006)、[10](Chapter_10.xhtml#x1-20200010)和[11](Chapter_11.xhtml#x1-21700011)章提供了哈达马尔门应用的示例。
 - en: 'The measurement plays a crucial role in quantum computing. This is the process
     of *collapsing* a quantum state and reading out the classical information: measuring
     qubits encoding a quantum state will produce a classical bit string. The measurement
     process generates probabilistic outcomes. Therefore, we need to perform measurements
     on the same quantum state multiple times to generate a sufficiently large number
     of classical bit strings to produce reliable statistics.'
+  id: totrans-258
   prefs: []
   type: TYPE_NORMAL
+  zh: 测量在量子计算中起着至关重要的作用。这个过程是*坍缩*量子态并读取经典信息：测量编码量子态的量子比特将产生一个经典比特串。测量过程会生成概率性的结果。因此，我们需要对同一个量子态进行多次测量，以生成足够多的经典比特串，从而产生可靠的统计数据。
 - en: The process of measurement describes the collapse of the quantum state due to
     contact with the environment. After measurement, the states of the qubits are
     known without any uncertainty. It is possible to extract at most 1 bit of information
     from a qubit. In order to extract more information about the probability distribution
     encoded in a given quantum state, it is necessary to perform measurement of the
     same state multiple times.
+  id: totrans-259
   prefs: []
   type: TYPE_NORMAL
+  zh: 测量过程描述了量子态由于与环境的接触而坍缩的过程。测量后，量子比特的状态是已知的且没有任何不确定性。从一个量子比特中最多可以提取1比特信息。为了提取有关给定量子态中编码的概率分布的更多信息，需要对同一个状态进行多次测量。
 - en: 1.2.4 Fourth postulate – Observable
+  id: totrans-260
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.2.4 第四公设 – 可观察量
 - en: '**Postulate 4\.** *For every measurable property of a physical system, there
     exists a* *corresponding Hermitian operator. The values of the physical observables*
     *correspond to the expectation values of Hermitian operators. The expectation
     value* ![⟨𝒜 ⟩](img/file176.jpg) *of the Hermitian operator *𝒜 *in the normalised
     state *![|ψ ⟩](img/file177.jpg) *is given by*'
+  id: totrans-261
   prefs: []
   type: TYPE_NORMAL
+  zh: '**公设 4**。*对于物理系统的每个可测量属性，都存在一个* *相应的厄米算符。物理可观察量的值* *对应于厄米算符的期望值。厄米算符* ![⟨𝒜
+    ⟩](img/file176.jpg) *在归一化态*![|ψ ⟩](img/file177.jpg) *中的期望值由下式给出*'
 - en: '| ![⟨𝒜 ⟩ := ⟨ψ&#124;𝒜 &#124;ψ⟩. ](img/file178.jpg) |  |'
+  id: totrans-262
   prefs: []
   type: TYPE_TB
+  zh: '| ![⟨𝒜 ⟩ := ⟨ψ&#124;𝒜 &#124;ψ⟩. ](img/file178.jpg) |  |'
 - en: Let us consider the general case where the expectation value of a Hermitian
     operator 𝒜 is calculated in state ![|ψ ⟩](img/file179.jpg), which is not an eigenfunction
     of 𝒜. By the Spectral Theorem [3](#x1-28006r3) (see also ([1.2.3](#x1-380003))),
     the state ![|ψ ⟩](img/file180.jpg) of a system can be represented as the superposition
+  id: totrans-263
   prefs: []
   type: TYPE_NORMAL
+  zh: 让我们考虑一般情况，其中厄米算符𝒜在态![|ψ ⟩](img/file179.jpg)中计算其期望值，且此态并不是𝒜的本征函数。根据谱定理[3](#x1-28006r3)（另见([1.2.3](#x1-380003))），系统的态![|ψ
+    ⟩](img/file180.jpg)可以表示为叠加态
 - en: '![ N ∑ |ψ⟩ = αi |ψi⟩ , i=1 ](img/file181.jpg)'
+  id: totrans-264
   prefs: []
   type: TYPE_IMG
+  zh: '![ N ∑ |ψ⟩ = αi |ψi⟩ , i=1 ](img/file181.jpg)'
 - en: where (![|ψi⟩](img/file182.jpg))[i=1,…,N] are the eigenfunctions of 𝒜 and (*α*[i])[i=1,…,N]
     the corresponding probability amplitudes.
+  id: totrans-265
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 (![|ψi⟩](img/file182.jpg))[i=1,…,N]是𝒜的本征函数，(*α*[i])[i=1,…,N]是相应的概率幅度。
 - en: Therefore, the *expectation value* of 𝒜 in state ![|ψ⟩](img/file183.jpg), given
     in ([1.2.4](#x1-390004)), is calculated as
+  id: totrans-266
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，给定状态![|ψ⟩](img/file183.jpg)下𝒜的*期望值*，根据([1.2.4](#x1-390004))，其计算公式为
 - en: '![ ∑N ∑N N∑ ∑N ⟨𝒜⟩ = α∗iαj ⟨ψi|𝒜 |ψj⟩ = α ∗iαjλj ⟨ψi|ψj⟩, i=1j=1 i=1 j=1 ](img/file184.jpg)'
+  id: totrans-267
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∑N ∑N N∑ ∑N ⟨𝒜⟩ = α∗iαj ⟨ψi|𝒜 |ψj⟩ = α ∗iαjλj ⟨ψi|ψj⟩, i=1j=1 i=1 j=1 ](img/file184.jpg)'
 - en: where (*λ*[i])[i=1,…,N] are the eigenvalues of 𝒜. The only terms that survive
     in the expression for ![⟨𝒜 ⟩](img/file185.jpg) are those with *i* = *j* due to
     the orthogonality of the eigenfunctions, so that
+  id: totrans-268
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 (*λ*[i])[i=1,…,N] 是𝒜的特征值。由于特征函数的正交性，只有当 *i* = *j* 时，表达式中的项才会存在，因此
 - en: '![ N N ∑ ∗ ∑ 2 ⟨𝒜 ⟩ = α iαiλi = |αi| λi. i=1 i=1 ](img/file186.jpg)'
+  id: totrans-269
   prefs: []
   type: TYPE_IMG
+  zh: '![ N N ∑ ∗ ∑ 2 ⟨𝒜 ⟩ = α iαiλi = |αi| λi. i=1 i=1 ](img/file186.jpg)'
 - en: Therefore, the value of the observable is a weighted average of the eigenvalues
     of the corresponding Hermitian operator. The weights are the coefficients (|*α*[i]|²)[i=1,…,N],
     which are the probabilities of measuring the corresponding eigenstate of 𝒜.
+  id: totrans-270
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，物理可观测量的值是对应的厄米算符特征值的加权平均值。加权因子是系数 (|*α*[i]|²)[i=1,…,N]，它们是测量𝒜对应特征态的概率。
 - en: Hermitian operators play an exceptionally important role in quantum mechanics
     since their expectation values correspond to physical observables.
+  id: totrans-271
   prefs: []
   type: TYPE_NORMAL
+  zh: 厄米算符在量子力学中扮演着异常重要的角色，因为它们的期望值对应于物理可观测量。
 - en: 1.2.5 Fifth postulate – Composite System
+  id: totrans-272
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.2.5 第五公设 – 复合系统
 - en: '**Postulate 5\.** *The state space of a composite physical system is the tensor*
     *product of the state spaces of the individual component physical systems.*'
+  id: totrans-273
   prefs: []
   type: TYPE_NORMAL
+  zh: '**公设 5.** *复合物理系统的状态空间是各个组分物理系统状态空间的张量积。*'
 - en: If the first component physical system is in state ![|ψA ⟩](img/file187.jpg)
     and the second component physical system is in state ![|ψB⟩](img/file188.jpg),
     then the state of the combined system, ![|ψ⟩](img/file189.jpg), is given by the
     tensor product
+  id: totrans-274
   prefs: []
   type: TYPE_NORMAL
+  zh: 如果第一个组分物理系统处于状态![|ψA ⟩](img/file187.jpg)，而第二个组分物理系统处于状态![|ψB⟩](img/file188.jpg)，那么组合系统的状态![|ψ⟩](img/file189.jpg)由张量积给出：
 - en: '| ![&#124;ψ⟩ = &#124;ψA⟩ ⊗ &#124;ψB⟩ . ](img/file190.jpg) |  |'
+  id: totrans-275
   prefs: []
   type: TYPE_TB
+  zh: '| ![&#124;ψ⟩ = &#124;ψA⟩ ⊗ &#124;ψB⟩ . ](img/file190.jpg) |  |'
 - en: Not all states of a combined system can be separated into the tensor product
     of states of individual components. If the state of a system cannot be separated
     into component parts, we say that the component parts are *entangled*.
+  id: totrans-276
   prefs: []
   type: TYPE_NORMAL
+  zh: 并非所有组合系统的状态都可以分解为单个组分状态的张量积。如果一个系统的状态无法分解为组分部分的状态，我们称这些组分部分是*纠缠*的。
 - en: The entanglement of quantum systems is one of the major sources of computational
     power of quantum computing. It allows us to store exponentially more information
     in the correlations between the states of individual subsystems (in the limit
     – individual qubits) than directly in the states of individual subsystems.
+  id: totrans-277
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子系统的纠缠是量子计算计算能力的主要来源之一。它使得我们可以将信息以指数级别存储在各个子系统（在极限情况下——单个量子比特）的状态之间的关联中，而不是直接存储在各个子系统的状态中。
 - en: To illustrate this point, we can look at the number of probability amplitudes
     needed to describe the state of an *n*-qubit system. An individual qubit can be
     found in one of the two possible states after measurement – one of the two basis
@@ -1252,355 +1878,558 @@
     need to specify two probability amplitudes to fully describe the state of the
     qubit before measurement. If all our qubits are independent and the state of the
     system can be represented as a tensor product of individual qubit states,
+  id: totrans-278
   prefs: []
   type: TYPE_NORMAL
+  zh: 为了说明这一点，我们可以看一下描述*n*量子比特系统状态所需的概率幅度的数量。经过测量后，单个量子比特可以处于两种可能的状态之一——两种基态之一，![|0⟩](img/file191.jpg)
+    或![|1⟩](img/file192.jpg)。这意味着我们需要指定两个概率幅度来完全描述量子比特在测量之前的状态。如果所有量子比特是独立的，并且系统的状态可以表示为单个量子比特状态的张量积，
 - en: '| ![&#124;ψ⟩ = &#124;ψ1 ⟩⊗ &#124;ψ2⟩⊗ ...⊗ &#124;ψn ⟩, ](img/file193.jpg) |  |'
+  id: totrans-279
   prefs: []
   type: TYPE_TB
+  zh: '| ![&#124;ψ⟩ = &#124;ψ1 ⟩⊗ &#124;ψ2⟩⊗ ...⊗ &#124;ψn ⟩, ](img/file193.jpg) |  |'
 - en: then we need to specify 2*n* probability amplitudes (two for each individual
     quantum states) to describe the state ![|ψ ⟩](img/file194.jpg) of the system.
     If, however, all individual qubits are entangled and the tensor product representation
     of the system state ![|ψ ⟩](img/file195.jpg) does not exist, we need to specify
     2^n probability amplitudes – this is an effective measure of useful information
     that can be stored in the system.
+  id: totrans-280
   prefs: []
   type: TYPE_NORMAL
+  zh: 然后，我们需要指定2*n*个概率振幅（每个单独量子态都有两个）来描述系统的态![|ψ ⟩](img/file194.jpg)。然而，如果所有单个量子比特都发生纠缠，并且系统态的张量积表示![|ψ
+    ⟩](img/file195.jpg)不存在，我们则需要指定2^n个概率振幅——这是可以存储在系统中的有效信息度量。
 - en: The power of quantum computing is derived from the principles of superposition
     and entanglement. Entanglement allows us to store most of the information in correlations
     between the qubit states.
+  id: totrans-281
   prefs: []
   type: TYPE_NORMAL
+  zh: 量子计算的力量源自叠加原理和纠缠原理。纠缠使我们能够将大部分信息存储在量子比特态之间的关联中。
 - en: 1.3 Pure and Mixed States
+  id: totrans-282
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 1.3 纯态与混合态
 - en: There are situations where the state of a quantum mechanical system cannot be
     described with the help of a state vector. Here, we look at such situations and
     provide a mathematical tool for describing them.
+  id: totrans-283
   prefs: []
   type: TYPE_NORMAL
+  zh: 在某些情况下，量子力学系统的态不能通过状态向量来描述。在这里，我们将讨论这种情况，并提供一个数学工具来描述它们。
 - en: 1.3.1 Density matrix
+  id: totrans-284
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.3.1 密度矩阵
 - en: 'Let us start with the state of a combined two-component physical system given
     by ([1.2.5](#x1-400005)). Let (![|i⟩](img/file196.jpg))[i=1,...,N] and (![|j⟩](img/file197.jpg))[j=1,...,M]
     denote, respectively, the standard orthonormal bases of the Hilbert spaces of
     systems *A* and *B*:'
+  id: totrans-285
   prefs: []
   type: TYPE_NORMAL
+  zh: 让我们从一个由两个组成部分的物理系统的态开始，该系统由公式（[1.2.5](#x1-400005)）给出。让 (![|i⟩](img/file196.jpg))[i=1,...,N]
+    和 (![|j⟩](img/file197.jpg))[j=1,...,M] 分别表示系统*A*和*B*的希尔伯特空间的标准正交基：
 - en: '| ![ N M ∑ ∑ &#124;ψA ⟩ = αi &#124;i⟩, &#124;ψB ⟩ = βj &#124;j⟩, i=1 j=1 ](img/file198.jpg)
     |  |'
+  id: totrans-286
   prefs: []
   type: TYPE_TB
+  zh: '| ![ N M ∑ ∑ &#124;ψA ⟩ = αi &#124;i⟩, &#124;ψB ⟩ = βj &#124;j⟩, i=1 j=1 ](img/file198.jpg)
+    |  |'
 - en: where (*α*[i])[i=1,...,N] and (*β*[j])[j=1,...,M] are some probability amplitudes.
     The states that allow the state vector representation ([1.3.1](#x1-420001)) are
     called *pure* states. In this case, the state of the combined system is
+  id: totrans-287
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中(*α*[i])[i=1,...,N] 和 (*β*[j])[j=1,...,M]是一些概率振幅。允许通过状态向量表示的态（[1.3.1](#x1-420001)）称为*纯态*。在这种情况下，组合系统的状态为
 - en: '| ![ ∑N M∑ &#124;ψ ⟩ = &#124;ψA ⟩⊗ &#124;ψB ⟩ = αiβj &#124;i⟩⊗ &#124;j⟩. i=1
     j=1 ](img/file199.jpg) |  |'
+  id: totrans-288
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑N M∑ &#124;ψ ⟩ = &#124;ψA ⟩⊗ &#124;ψB ⟩ = αiβj &#124;i⟩⊗ &#124;j⟩. i=1
+    j=1 ](img/file199.jpg) |  |'
 - en: However, in general, the state of the combined system would look like
+  id: totrans-289
   prefs: []
   type: TYPE_NORMAL
+  zh: 然而，通常情况下，组合系统的状态将呈现如下形式：
 - en: '| ![ ∑N ∑M &#124;ψ⟩ = γij &#124;i⟩⊗ &#124;j⟩, i=1 j=1 ](img/file200.jpg) |  |'
+  id: totrans-290
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑N ∑M &#124;ψ⟩ = γij &#124;i⟩⊗ &#124;j⟩, i=1 j=1 ](img/file200.jpg) |  |'
 - en: where *γ*[ij] are probability amplitudes that may not necessarily be factorised
     as the product of probability amplitudes (*α*[i])[i=1,...,N] and (*β*[j])[j=1,...,M].
     If *γ*[ij] cannot be factorised as *α*[i]*β*[j], then the component systems *A*
     and *B* are entangled and their states cannot be represented by the state vectors ([1.3.1](#x1-420001)).
     Such states of systems *A* and *B* are called *mixed* states.
+  id: totrans-291
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中*γ*[ij]是可能不能分解为概率振幅的乘积（*α*[i])[i=1,...,N] 和 (*β*[j])[j=1,...,M]）的概率振幅。如果*γ*[ij]不能分解为*α*[i]*β*[j]，则组成系统*A*和*B*是纠缠的，其状态不能通过状态向量表示（[1.3.1](#x1-420001)）。这种系统*A*和*B*的态称为*混合态*。
 - en: 'The more general setup is that of an *ensemble* of states of the form {*p*[k]*,*![|ψk
     ⟩](img/file201.jpg)}[k=1,…,N], where each ![|ψi⟩](img/file202.jpg) is a quantum
     state whose wavefunction is known with certainty (although this does not necessarily
     provide full knowledge of the measurement statistics), and each *p*[k] is the
     associated probability (not amplitude) in [0*,*1]. In order to define properly
     pure and mixed states, introduce the *density operator* as follows:'
+  id: totrans-292
   prefs: []
   type: TYPE_NORMAL
+  zh: 更一般的设置是由*集合*形式的态组成，形式为 {*p*[k]*,*![|ψk ⟩](img/file201.jpg)}[k=1,…,N]，其中每个![|ψi⟩](img/file202.jpg)是一个量子态，其波函数已知且确定（尽管这并不一定提供测量统计的完整知识），而每个*p*[k]是与之关联的概率（而非振幅），范围在[0*,*1]之间。为了正确定义纯态和混合态，引入*密度算符*如下：
 - en: '**Definition 7.** A density operator *ρ* is a positive semidefinite Hermitian
     operator with unit trace and takes the form'
+  id: totrans-293
   prefs: []
   type: TYPE_NORMAL
+  zh: '**定义 7.** 密度算符*ρ*是一个正半定的厄米算符，其迹为1，并且形式为'
 - en: '| ![ ∑N ρ := pk &#124;ψk⟩⟨ψk&#124;, k=1 ](img/file203.jpg) |  |'
+  id: totrans-294
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑N ρ := pk &#124;ψk⟩⟨ψk&#124;, k=1 ](img/file203.jpg) |  |'
 - en: where ∑ [k=1]^N*p*[k] = 1 and ![⟨ψ |ψ ⟩ k l](img/file204.jpg) equals 1 if *k*
     = *l* and zero otherwise.
+  id: totrans-295
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 ∑ [k=1]^N*p*[k] = 1，且![⟨ψ |ψ ⟩ k l](img/file204.jpg)当*k* = *l*时为1，否则为零。
 - en: Mathematically, such a density operator *ρ* corresponds to a *density matrix*
     (*ρ*[kl])[k,l=1,…,N] such that
+  id: totrans-296
   prefs: []
   type: TYPE_NORMAL
+  zh: 从数学上讲，这样的密度算子 *ρ* 对应于一个 *密度矩阵* (*ρ*[kl])[k,l=1,…,N]，使得
 - en: '![ N ρ = ρ†, Tr(ρ) ≡ ∑ ρ = 1, ρ ≥ 0, for all k = 1,...,N. kk kk k=1 ](img/file205.jpg)'
+  id: totrans-297
   prefs: []
   type: TYPE_IMG
+  zh: '![ N ρ = ρ†, Tr(ρ) ≡ ∑ ρ = 1, ρ ≥ 0, for all k = 1,...,N. kk kk k=1 ](img/file205.jpg)'
 - en: 1.3.2 Pure state
+  id: totrans-298
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.3.2 纯态
 - en: A pure state is one that can be represented by a state vector
+  id: totrans-299
   prefs: []
   type: TYPE_NORMAL
+  zh: 纯态是可以通过一个态向量表示的。
 - en: '| ![ N∑ &#124;ψ⟩ = αi &#124;i⟩, i=1 ](img/file206.jpg) |  |'
+  id: totrans-300
   prefs: []
   type: TYPE_TB
+  zh: '| ![ N∑ &#124;ψ⟩ = αi &#124;i⟩, i=1 ](img/file206.jpg) |  |'
 - en: 'where (*α*[i])[i=1,...,N] are probability amplitudes in ℂ such that ∑ [i=1]^N|*α*[i]|²
     = 1\. In the ensemble setup above, this means that there exists *k*^∗∈{1*,…,N*}
     such that *p*[k^∗] = 1 and hence ![|ψ⟩](img/file207.jpg) = ![|ψk∗⟩](img/file208.jpg)
     and therefore *ρ* = ![|ψ ⟩](img/file209.jpg)⟨*ψ*|. The density matrix also allows
     us to compute expectations of the form ([1.2.4](#x1-390004)):'
+  id: totrans-301
   prefs: []
   type: TYPE_NORMAL
+  zh: 其中 (*α*[i])[i=1,...,N] 是在 ℂ 中的概率振幅，满足 ∑ [i=1]^N|*α*[i]|² = 1。在上述集合设置中，这意味着存在
+    *k*^∗∈{1*,…,N*} 使得 *p*[k^∗] = 1，因此 ![|ψ⟩](img/file207.jpg) = ![|ψk∗⟩](img/file208.jpg)，因此
+    *ρ* = ![|ψ ⟩](img/file209.jpg)⟨*ψ*|。密度矩阵还允许我们计算类似于（[1.2.4](#x1-390004)）的期望值：
 - en: '**Lemma 3.** *Let **ρ* *be the density matrix associated to the pure state *([1.3.2](#x1-430002))
     *and let *𝒜 *be an observable (Hermitian operator), then*'
+  id: totrans-302
   prefs: []
   type: TYPE_NORMAL
+  zh: '**引理 3.** *设 **ρ* *为与纯态关联的密度矩阵（[1.3.2](#x1-430002)），且 *𝒜 *为可观测量（厄米算子），则*'
 - en: '![⟨𝒜⟩ := ⟨ψ |𝒜 |ψ ⟩ = Tr (ρ𝒜 ). ](img/file210.jpg)'
+  id: totrans-303
   prefs: []
   type: TYPE_IMG
+  zh: '![⟨𝒜⟩ := ⟨ψ |𝒜 |ψ ⟩ = Tr (ρ𝒜 ). ](img/file210.jpg)'
 - en: '*Proof.* The lemma follows from the immediate computation'
+  id: totrans-304
   prefs: []
   type: TYPE_NORMAL
+  zh: '*证明。* 该引理由直接计算得出。'
 - en: '| ⟨*ψ*&#124;𝒜![&#124;ψ⟩](img/file211.jpg) | = ⟨*ψ*&#124;𝒜∑ [i=1]^N*α* [i]![&#124;i⟩](img/file212.jpg)
     |'
+  id: totrans-305
   prefs: []
   type: TYPE_TB
+  zh: '| ⟨*ψ*&#124;𝒜![&#124;ψ⟩](img/file211.jpg) | = ⟨*ψ*&#124;𝒜∑ [i=1]^N*α* [i]![&#124;i⟩](img/file212.jpg)
+    |'
 - en: '|  | = ∑ [i=1]^N*α* [i] ⟨*ψ*&#124;𝒜![&#124;i⟩](img/file213.jpg) |'
+  id: totrans-306
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ∑ [i=1]^N*α* [i] ⟨*ψ*&#124;𝒜![&#124;i⟩](img/file213.jpg) |'
 - en: '|  | = ∑ [i=1]^N![⟨i&#124;ψ ⟩](img/file214.jpg)⟨*ψ*&#124;𝒜![&#124;i⟩](img/file215.jpg)
     |'
+  id: totrans-307
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ∑ [i=1]^N![⟨i&#124;ψ ⟩](img/file214.jpg)⟨*ψ*&#124;𝒜![&#124;i⟩](img/file215.jpg)
+    |'
 - en: '|  | = ∑ [i=1]^N ⟨*i*&#124;*ρ*𝒜![&#124;i⟩](img/file216.jpg) = Tr(*ρ*𝒜)*.* |'
+  id: totrans-308
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ∑ [i=1]^N ⟨*i*&#124;*ρ*𝒜![&#124;i⟩](img/file216.jpg) = Tr(*ρ*𝒜)*.* |'
 - en: □
+  id: totrans-309
   prefs: []
   type: TYPE_NORMAL
+  zh: □
 - en: With the state ![|ψ ⟩](img/file217.jpg) given by ([1.3.2](#x1-430002)), we obtain
+  id: totrans-310
   prefs: []
   type: TYPE_NORMAL
+  zh: 通过状态 ![|ψ ⟩](img/file217.jpg) 给定的（[1.3.2](#x1-430002)），我们得到
 - en: '| ![ N∑ ∑N ⟨𝒜 ⟩ = αiα ∗j ⟨j&#124;𝒜 &#124;i⟩. i=1 j=1 ](img/file218.jpg) |  |'
+  id: totrans-311
   prefs: []
   type: TYPE_TB
+  zh: '| ![ N∑ ∑N ⟨𝒜 ⟩ = αiα ∗j ⟨j&#124;𝒜 &#124;i⟩. i=1 j=1 ](img/file218.jpg) |  |'
 - en: At the same time we have
+  id: totrans-312
   prefs: []
   type: TYPE_NORMAL
+  zh: 同时我们有
 - en: '| ![ ∑N ∑N ⟨𝒜 ⟩ = Tr(ρ𝒜) = ρij ⟨j&#124;𝒜 &#124;i⟩. i=1j=1 ](img/file219.jpg)
     |  |'
+  id: totrans-313
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ∑N ∑N ⟨𝒜 ⟩ = Tr(ρ𝒜) = ρij ⟨j&#124;𝒜 &#124;i⟩. i=1j=1 ](img/file219.jpg)
+    |  |'
 - en: 'Comparison of ([1.3.2](#x1-43002r2)) and ([1.3.2](#x1-43002r2)) yields the
     following expression for the density matrix of a pure state:'
+  id: totrans-314
   prefs: []
   type: TYPE_NORMAL
+  zh: 比较（[1.3.2](#x1-43002r2)）和（[1.3.2](#x1-43002r2)）得到纯态密度矩阵的以下表达式：
 - en: '![ ∑N ∑N ρij = αiα∗, ρ = αiα∗ |i⟩⟨j| = |ψ ⟩⟨ψ |. j i=1 j=1 j ](img/file220.jpg)'
+  id: totrans-315
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∑N ∑N ρij = αiα∗, ρ = αiα∗ |i⟩⟨j| = |ψ ⟩⟨ψ |. j i=1 j=1 j ](img/file220.jpg)'
 - en: '**Example:** An example of a pure state is the Hadamard state'
+  id: totrans-316
   prefs: []
   type: TYPE_NORMAL
+  zh: '**示例：** 纯态的一个例子是哈达玛尔态'
 - en: '![ ⌊ ⌋ -1- -1- 1 |+ ⟩ = √2-(|0⟩+ |1⟩) = √2-⌈ ⌉, 1 ](img/file221.jpg)'
+  id: totrans-317
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ -1- -1- 1 |+ ⟩ = √2-(|0⟩+ |1⟩) = √2-⌈ ⌉, 1 ](img/file221.jpg)'
 - en: with corresponding density matrix
+  id: totrans-318
   prefs: []
   type: TYPE_NORMAL
+  zh: 对应的密度矩阵为
 - en: '![ ⌊ ⌋ ρ = |+ ⟩⟨+ | = 1-⌈1 1⌉ . 2 1 1 ](img/file222.jpg)'
+  id: totrans-319
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ ρ = |+ ⟩⟨+ | = 1-⌈1 1⌉ . 2 1 1 ](img/file222.jpg)'
 - en: 1.3.3 Mixed state
+  id: totrans-320
   prefs:
   - PREF_H4
   type: TYPE_NORMAL
+  zh: 1.3.3 混合态
 - en: A mixed state is one that cannot be represented by a single pure state vector,
     and is therefore represented as a statistical distribution of pure states in the
     form of an ensemble of quantum states {*p*[k]*,*![|ψk ⟩](img/file223.jpg)}[k=1,…,N],
     where ∑ [k=1]^N*p*[k] = 1 and *p*[k] ∈ [0*,*1] for each *k*. The density of a
     mixed state therefore reads
+  id: totrans-321
   prefs: []
   type: TYPE_NORMAL
+  zh: 混合态是无法用单一的纯态向量表示的，因此它被表示为纯态的统计分布，形式为量子态的集合 {*p*[k]*,*![|ψk ⟩](img/file223.jpg)}[k=1,…,N]，其中
+    ∑ [k=1]^N*p*[k] = 1 且 *p*[k] ∈ [0*,*1] 对每个 *k* 都成立。因此，混合态的密度表示为
 - en: '| ![ N ∑ ρ = pk &#124;ψk ⟩⟨ψk&#124;. k=1 ](img/file224.jpg) |  |'
+  id: totrans-322
   prefs: []
   type: TYPE_TB
+  zh: '| ![ N ∑ ρ = pk &#124;ψk ⟩⟨ψk&#124;. k=1 ](img/file224.jpg) |  |'
 - en: 'Similarly to Lemma [3](#x1-43002r3), we can write expectations of observables
     with respect to mixed states using the density matrix:'
+  id: totrans-323
   prefs: []
   type: TYPE_NORMAL
+  zh: 类似于引理 [3](#x1-43002r3)，我们可以使用密度矩阵表示关于混合态的观测量期望：
 - en: '**Lemma 4.** *Let **ρ* *be the density matrix associated to the mixed state *([1.3.3](#x1-440003))
     *and let *𝒜 *be an observable (Hermitian operator), then*'
+  id: totrans-324
   prefs: []
   type: TYPE_NORMAL
+  zh: '**引理 4.** *设 **ρ* *为与混合态关联的密度矩阵（[1.3.3](#x1-440003)），且 *𝒜 *为可观测量（厄米算子），则*'
 - en: '![ ∑N Tr(ρ𝒜 ) = pk⟨ψk|𝒜 |ψk⟩ . k=1 ](img/file225.jpg)'
+  id: totrans-325
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∑N Tr(ρ𝒜 ) = pk⟨ψk|𝒜 |ψk⟩ . k=1 ](img/file225.jpg)'
 - en: '*Proof.* The lemma follows from the immediate computation'
+  id: totrans-326
   prefs: []
   type: TYPE_NORMAL
+  zh: '*证明。* 该引理由直接计算得出。'
 - en: '| Tr(*ρ*𝒜) | = ∑ [i=1]^N ⟨*i*&#124;*ρ*𝒜![&#124;i⟩](img/file226.jpg) |'
+  id: totrans-327
   prefs: []
   type: TYPE_TB
+  zh: '| Tr(*ρ*𝒜) | = ∑ [i=1]^N ⟨*i*&#124;*ρ*𝒜![&#124;i⟩](img/file226.jpg) |'
 - en: '|  | = ∑ [i=1]^N ⟨*i*&#124;![( N∑ ) pk &#124;ψk ⟩⟨ψk&#124; k=1](img/file227.jpg)𝒜![&#124;i⟩](img/file228.jpg)
     |'
+  id: totrans-328
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ∑ [i=1]^N ⟨*i*&#124;![( N∑ ) pk &#124;ψk ⟩⟨ψk&#124; k=1](img/file227.jpg)𝒜![&#124;i⟩](img/file228.jpg)
+    |'
 - en: '|  | = ∑ [k=1]^N*p* [k]![(∑N ) ⟨i&#124;ψ ⟩⟨ψ &#124;𝒜 &#124;i⟩ i=1 k k](img/file229.jpg)
     |'
+  id: totrans-329
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ∑ [k=1]^N*p* [k]![(∑N ) ⟨i&#124;ψ ⟩⟨ψ &#124;𝒜 &#124;i⟩ i=1 k k](img/file229.jpg)
+    |'
 - en: '|  | = ∑ [k=1]^N*p* [k] ⟨*ψ*[k]&#124;𝒜![&#124;ψk⟩](img/file230.jpg)*.* |'
+  id: totrans-330
   prefs: []
   type: TYPE_TB
+  zh: '|  | = ∑ [k=1]^N*p* [k] ⟨*ψ*[k]&#124;𝒜![&#124;ψk⟩](img/file230.jpg)*.* |'
 - en: □
+  id: totrans-331
   prefs: []
   type: TYPE_NORMAL
+  zh: □
 - en: Let us see now how the density matrix formalism can help us describe the state
     of a combined system. Consider an entangled state of two systems, *A* and *B*,
     given by ([1.3.1](#x1-420001)), and a Hermitian operator 𝒜 that only acts within
     the Hilbert space of system *A*. What would be the expectation value of 𝒜 in this
     state? Starting with ([1.2.4](#x1-390004)), we obtain
+  id: totrans-332
   prefs: []
   type: TYPE_NORMAL
+  zh: 现在让我们看看密度矩阵形式如何帮助我们描述复合系统的状态。考虑一个由两个系统 *A* 和 *B* 组成的纠缠态，给定为 ([1.3.1](#x1-420001))，并且一个只在系统
+    *A* 的希尔伯特空间内起作用的厄米算符 𝒜。这个态中 𝒜 的期望值是多少？从 ([1.2.4](#x1-390004)) 开始，我们得到
 - en: '| ![ N∑ ∑M ∑N M∑ ∗ ⟨𝒜 ⟩ = γijγ kl⟨k&#124;𝒜 &#124;i⟩⟨l&#124;j⟩. i=1 j=1k=1 l=1
     ](img/file231.jpg) |  |'
+  id: totrans-333
   prefs: []
   type: TYPE_TB
+  zh: '| ![ N∑ ∑M ∑N M∑ ∗ ⟨𝒜 ⟩ = γijγ kl⟨k&#124;𝒜 &#124;i⟩⟨l&#124;j⟩. i=1 j=1k=1 l=1
+    ](img/file231.jpg) |  |'
 - en: Since only terms with *l* = *j* survive in ([1.3.3](#x1-44002r3)) due to the
     orthogonality of the basis states, we have
+  id: totrans-334
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于在 ([1.3.3](#x1-44002r3)) 中，只有 *l* = *j* 的项才会存活，这是因为基态的正交性，我们得到
 - en: '| ![ ( ) ∑N ∑N ∑M ⟨𝒜 ⟩ = ( γijγ∗kj) ⟨k&#124;𝒜 &#124;i⟩. i=1 k=1 j=1 ](img/file232.jpg)
     |  |'
+  id: totrans-335
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ( ) ∑N ∑N ∑M ⟨𝒜 ⟩ = ( γijγ∗kj) ⟨k&#124;𝒜 &#124;i⟩. i=1 k=1 j=1 ](img/file232.jpg)
+    |  |'
 - en: Thus, the density matrix that describes the mixed state of system *A* is
+  id: totrans-336
   prefs: []
   type: TYPE_NORMAL
+  zh: 因此，描述系统 *A* 的混合态的密度矩阵为
 - en: '![ M ∑ ∗ ρik = γijγkj. j=1 ](img/file233.jpg)'
+  id: totrans-337
   prefs: []
   type: TYPE_IMG
+  zh: '![ M ∑ ∗ ρik = γijγkj. j=1 ](img/file233.jpg)'
 - en: Note that in the case where the probability amplitudes *γ*[ij] can be factorised
     as the product of probability amplitudes (*α*[i])[i=1,...,N] and (*β*[j])[j=1,...,M],
     we obtain
+  id: totrans-338
   prefs: []
   type: TYPE_NORMAL
+  zh: 注意，如果概率幅度 *γ*[ij] 可以分解为概率幅度 (*α*[i])[i=1,…,N] 和 (*β*[j])[j=1,…,M] 的乘积，则我们得到
 - en: '![ M∑ ∗ ∗ ∗∑M 2 ∗ ρik = αiβjαkβj = αiα k |βj| = αiαk, j=1 j=1 ](img/file234.jpg)'
+  id: totrans-339
   prefs: []
   type: TYPE_IMG
+  zh: '![ M∑ ∗ ∗ ∗∑M 2 ∗ ρik = αiβjαkβj = αiα k |βj| = αiαk, j=1 j=1 ](img/file234.jpg)'
 - en: which describes a pure state.
+  id: totrans-340
   prefs: []
   type: TYPE_NORMAL
+  zh: 这描述了一个纯态。
 - en: 'A simple criterion to distinguish a pure state from a mixed state is the following:'
+  id: totrans-341
   prefs: []
   type: TYPE_NORMAL
+  zh: 区分纯态和混合态的一个简单标准如下：
 - en: '**Lemma 5.** *Let **ρ* *be a density matrix. The inequality* Tr(*ρ*²) ≤ 1 *always*
     *holds and* Tr(*ρ*²) = 1 *if and only if **ρ* *corresponds to a pure state.*'
+  id: totrans-342
   prefs: []
   type: TYPE_NORMAL
+  zh: '**引理 5.** *令 **ρ* *为一个密度矩阵。* 不等式 *Tr(*ρ*²) ≤ 1* *始终成立，且当且仅当 *ρ* *对应纯态时* Tr(*ρ*²)
+    = 1*。'
 - en: '*Proof.* Consider an ensemble of pure states {*p*[i]*,*![|ψi⟩](img/file235.jpg)}[i=1,…,N],
     with density matrix given by ([1.3.3](#x1-440003)). Therefore'
+  id: totrans-343
   prefs: []
   type: TYPE_NORMAL
+  zh: '*证明。* 考虑一个由纯态组成的集合 {*p*[i]*,*![|ψi⟩](img/file235.jpg)}[i=1,…,N]，其密度矩阵由 ([1.3.3](#x1-440003))
+    给出。因此'
 - en: '| Tr(*ρ*²) | = Tr![( ( ) ( ) ) ∑N ∑N ( pi &#124;ψi⟩⟨ψi&#124; ( pj &#124;ψj⟩⟨ψj&#124;)
     ) i=1 j=1](img/file236.jpg) |'
+  id: totrans-344
   prefs: []
   type: TYPE_TB
+  zh: '| Tr(*ρ*²) | = Tr![( ( ) ( ) ) ∑N ∑N ( pi &#124;ψi⟩⟨ψi&#124; ( pj &#124;ψj⟩⟨ψj&#124;)
+    ) i=1 j=1](img/file236.jpg) |'
 - en: '|  | = Tr![( ) ( ∑N ∑N ) pipj &#124;ψi⟩⟨ψi&#124; &#124;ψj⟩ ⟨ψj &#124; i=1 j=1](img/file237.jpg)
     |'
+  id: totrans-345
   prefs: []
   type: TYPE_TB
+  zh: '|  | = Tr![( ) ( ∑N ∑N ) pipj &#124;ψi⟩⟨ψi&#124; &#124;ψj⟩ ⟨ψj &#124; i=1 j=1](img/file237.jpg)
+    |'
 - en: '|  | = Tr![( ∑N ) p2i &#124;ψi⟩ ⟨ψi&#124; i=1](img/file238.jpg) = ∑ [i=1]^N*p*
     [i]²Tr![(](img/file239.jpg)![&#124;ψi⟩](img/file240.jpg)⟨*ψ*[i]&#124;![)](img/file241.jpg)
     = ∑ [i=1]^N*p* [i]²![⟨ψi&#124;ψi⟩](img/file242.jpg) = ∑ [i=1]^N*p* [i]²*,* |'
+  id: totrans-346
   prefs: []
   type: TYPE_TB
+  zh: '|  | = Tr![( ∑N ) p2i &#124;ψi⟩ ⟨ψi&#124; i=1](img/file238.jpg) = ∑ [i=1]^N*p*
+    [i]²Tr![(](img/file239.jpg)![&#124;ψi⟩](img/file240.jpg)⟨*ψ*[i]&#124;![)](img/file241.jpg)
+    = ∑ [i=1]^N*p* [i]²![⟨ψi&#124;ψi⟩](img/file242.jpg) = ∑ [i=1]^N*p* [i]²*,* |'
 - en: which is smaller than 1 since the *p*[i] are probabilities in [0*,*1] summing
     up to 1\. Assume now that Tr(*ρ*²) equals one, then so does ∑ [i=1]^N*p*[i]².
     If *p*[i] ∈ (0*,*1) for all *i* = 1*,…,N*, then
+  id: totrans-347
   prefs: []
   type: TYPE_NORMAL
+  zh: 由于 *p*[i] 是位于 [0*,*1] 之间的概率，且其和为 1，因此它小于 1。现在假设 Tr(*ρ*²) 等于 1，那么 ∑ [i=1]^N*p*[i]²
+    也成立。如果对于所有 *i* = 1*,…,N*，*p*[i] ∈ (0*,*1)，则
 - en: '![ ∑N 2 ∑N 1 = pi < pi = 1, i=1 i=1 ](img/file243.jpg)'
+  id: totrans-348
   prefs: []
   type: TYPE_IMG
+  zh: '![ ∑N 2 ∑N 1 = pi < pi = 1, i=1 i=1 ](img/file243.jpg)'
 - en: which is a contradiction, and therefore there exists *i*^∗∈{1*,…,N*} such that
     *p*[i^∗] = 1, so that *ρ* = ![|ψi∗⟩](img/file244.jpg)⟨*ψ*[i^∗]| is a pure state.
     Conversely, if *ρ* = ![|ψi⟩](img/file245.jpg)⟨*ψ*[i]| for some *i* ∈{1*,…,N*}
     represents a pure state, then
+  id: totrans-349
   prefs: []
   type: TYPE_NORMAL
+  zh: 这是一个矛盾，因此存在 *i*^∗∈{1*,…,N*}，使得 *p*[i^∗] = 1，从而 *ρ* = ![|ψi∗⟩](img/file244.jpg)⟨*ψ*[i^∗]|
+    是纯态。反之，如果 *ρ* = ![|ψi⟩](img/file245.jpg)⟨*ψ*[i]| 对某些 *i* ∈{1*,…,N*} 代表纯态，那么
 - en: '![Tr(ρ2) = Tr(|ψ ⟩⟨ψ | |ψ ⟩⟨ψ |) = Tr(|ψ ⟩⟨ψ |) = ⟨ψ |ψ ⟩ = 1\. i i i i i i
     i i ](img/file246.jpg)□'
+  id: totrans-350
   prefs: []
   type: TYPE_NORMAL
+  zh: '![Tr(ρ2) = Tr(|ψ ⟩⟨ψ | |ψ ⟩⟨ψ |) = Tr(|ψ ⟩⟨ψ |) = ⟨ψ |ψ ⟩ = 1\. i i i i i i
+    i i ](img/file246.jpg)□'
 - en: '**Example:** An example of a mixed state is a *statistical ensemble* of states
     ![|0⟩](img/file247.jpg) and ![|1⟩](img/file248.jpg). If a physical system is prepared
     to be either in state ![|0⟩](img/file249.jpg) or state ![|1⟩](img/file250.jpg)
     with equal probability, it can be described by the mixed state'
+  id: totrans-351
   prefs: []
   type: TYPE_NORMAL
+  zh: '**示例：** 一个混合态的示例是*统计集*，由状态![|0⟩](img/file247.jpg)和![|1⟩](img/file248.jpg)组成。如果一个物理系统以相等的概率处于状态![|0⟩](img/file249.jpg)或状态![|1⟩](img/file250.jpg)，则它可以用混合态来描述。'
 - en: '| ![ ⌊ ⌋ 1- 1- 1-⌈1 0⌉ ρ = 2 &#124;0⟩⟨0&#124;+ 2 &#124;1⟩⟨1&#124; = 2 0 1 .
     ](img/file251.jpg) |  |'
+  id: totrans-352
   prefs: []
   type: TYPE_TB
+  zh: '| ![ ⌊ ⌋ 1- 1- 1-⌈1 0⌉ ρ = 2 &#124;0⟩⟨0&#124;+ 2 &#124;1⟩⟨1&#124; = 2 0 1 .
+    ](img/file251.jpg) |  |'
 - en: Note that this is different from the density matrix of the pure state
+  id: totrans-353
   prefs: []
   type: TYPE_NORMAL
+  zh: 请注意，这与纯态的密度矩阵不同
 - en: '![|ψ ⟩ = 1√--(|0⟩ + |1⟩), 2 ](img/file252.jpg)'
+  id: totrans-354
   prefs: []
   type: TYPE_IMG
+  zh: '![|ψ ⟩ = 1√--(|0⟩ + |1⟩), 2 ](img/file252.jpg)'
 - en: which reads
+  id: totrans-355
   prefs: []
   type: TYPE_NORMAL
+  zh: 它的表达式为
 - en: '![ ⌊ ⌋ ρ = |ψ⟩⟨ψ | = 1(|0⟩+ |1⟩)(⟨0|+ ⟨1|) = 1(|0⟩⟨0|+|1⟩⟨0|+ |0⟩⟨1|+ |1⟩⟨1|)
     = 1⌈1 1⌉. ψ 2 2 2 1 1 ](img/file253.jpg)'
+  id: totrans-356
   prefs: []
   type: TYPE_IMG
+  zh: '![ ⌊ ⌋ ρ = |ψ⟩⟨ψ | = 1(|0⟩+ |1⟩)(⟨0|+ ⟨1|) = 1(|0⟩⟨0|+|1⟩⟨0|+ |0⟩⟨1|+ |1⟩⟨1|)
+    = 1⌈1 1⌉. ψ 2 2 2 1 1 ](img/file253.jpg)'
 - en: Unlike pure quantum states, mixed quantum states cannot be described by a single
     state vector. However, the pure states and the mixed states can be described by
     the density matrix.
+  id: totrans-357
   prefs: []
   type: TYPE_NORMAL
+  zh: 与纯量子态不同，混合量子态无法用单一的态矢量来描述。然而，纯态和混合态都可以通过密度矩阵来描述。
 - en: Summary
+  id: totrans-358
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 总结
 - en: In this chapter, we learned the key principles of quantum mechanics, starting
     with a review of the basic elements of linear algebra, followed by an introduction
     to Dirac notations.
+  id: totrans-359
   prefs: []
   type: TYPE_NORMAL
+  zh: 在本章中，我们学习了量子力学的关键原理，首先回顾了线性代数的基本元素，然后介绍了狄拉克符号。
 - en: We then covered the main postulates of quantum mechanics and their relevance
     to quantum computing. We learned how to describe the state (statics) and the evolution
     (dynamics) of a closed system, the interactions of a system with external systems
     (measurement), observables, as well as the state of a composite system in terms
     of its component parts.
+  id: totrans-360
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们接着介绍了量子力学的主要公设及其在量子计算中的相关性。我们学习了如何描述一个封闭系统的状态（静态）和演化（动态），系统与外部系统的相互作用（测量），可观察量，以及复合系统的状态如何通过其组成部分来表示。
 - en: We finally introduced the density operator, which allows us to describe both
     pure and mixed quantum states, contrasting with the state vector, which can only
     represent pure quantum states.
+  id: totrans-361
   prefs: []
   type: TYPE_NORMAL
+  zh: 我们最终介绍了密度算符，它使我们能够描述纯态和混合态量子态，并与只能表示纯量子态的态矢量进行对比。
 - en: In the next chapter, we will look at an application of the principles of quantum
     mechanics to analog quantum computing – quantum annealing.
+  id: totrans-362
   prefs: []
   type: TYPE_NORMAL
+  zh: 在下一章中，我们将探讨量子力学原理在模拟量子计算中的应用——量子退火。
 - en: Join our book’s Discord space
+  id: totrans-363
   prefs:
   - PREF_H3
   type: TYPE_NORMAL
+  zh: 加入我们书籍的 Discord 空间
 - en: 'Join our Discord community to meet like-minded people and learn alongside more
     than 2000 members at: [https://packt.link/quantum](https://packt.link/quantum)'
+  id: totrans-364
   prefs: []
   type: TYPE_NORMAL
+  zh: 加入我们的 Discord 社区，结识志同道合的人，并与2000多名成员一起学习：[https://packt.link/quantum](https://packt.link/quantum)
 - en: '![PIC](img/file1.png)'
+  id: totrans-365
   prefs: []
   type: TYPE_IMG
+  zh: '![图片](img/file1.png)'
