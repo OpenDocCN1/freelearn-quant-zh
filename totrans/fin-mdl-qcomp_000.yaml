@@ -1,0 +1,314 @@
+- en: Preface
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Welcome to the fascinating world of financial modeling through the lens of quantum
+    computing. This book seeks to offer an enlightening exploration into the uncharted
+    territory of quantum computing applications in the financial realm. Our journey
+    begins with a comprehensive understanding of digital technology’s limitations
+    and how quantum computing serves to transcend these boundaries.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Within these pages, we delve into the nuances of **Quantum Machine Learning**
+    (**QML**) and how its unique attributes can be harnessed to revolutionize various
+    aspects of financial modeling. We will explore derivatives valuation, portfolio
+    management, and credit risk analysis, laying bare the transformative potential
+    of QML algorithms in these areas.
+  prefs: []
+  type: TYPE_NORMAL
+- en: However, as with any technological implementation, simply understanding quantum
+    technology doesn’t ensure smooth sailing. Thus, this book also provides guidance
+    on how institutions such as fintech firms and banks can navigate these project
+    implementations, minimizing risks and ensuring successful, uninterrupted execution.
+  prefs: []
+  type: TYPE_NORMAL
+- en: This book also elucidates the role of classical means and high-performance hardware
+    in achieving a short-term quantum advantage. It further explores the potential
+    evolution of noisy intermediate-scale hardware based on different provider strategies,
+    emphasizing its long-term implications.
+  prefs: []
+  type: TYPE_NORMAL
+- en: We have curated this material based on years of research and experience in quantum
+    technology and financial modeling. The insights you will find here are the result
+    of comprehensive research and extensive interviews with industry experts leading
+    the field of quantum finance.
+  prefs: []
+  type: TYPE_NORMAL
+- en: As per recent reports, quantum computing is poised to revolutionize the financial
+    industry. As more institutions adopt this technology and the complexity of the
+    financial models increase, understanding and successfully implementing quantum
+    computing strategies will become a necessity rather than an option. This book
+    aims to guide you through this transition, preparing you for the quantum leap
+    in financial modeling.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Who this book is for
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: This book is for financial practitioners, quantitative analysts, or developers;
+    looking to bring the power of quantum computing to their organizations. This is
+    an essential resource written for finance professionals, who want to harness the
+    power of quantum computers for solving real-world financial problems. A basic
+    understanding of Python, calculus, linear algebra, and quantum computing is a
+    prerequisite.
+  prefs: []
+  type: TYPE_NORMAL
+- en: What this book covers
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: '[*Chapter 1*](B19146_01.xhtml#_idTextAnchor016), *Quantum Computing Paradigm*,
+    helps readers understand the challenges and limitations of digital technology
+    and how quantum computing can help them overcome these.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 2*](B19146_02.xhtml#_idTextAnchor032), *Quantum Machine Learning
+    and Optimization Algorithms*, considers how quantum machine learning utilizes
+    qubits and quantum operations for specialized quantum systems to improve computational
+    speed and data storage. This is done by algorithms in a program. This chapters
+    explain how the quantum machine learning algorithm works in theory and in real
+    life.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 3*](B19146_03.xhtml#_idTextAnchor056), *Quantum Finance Landscape*,
+    helps readers understand the quantum finance landscape and the types of financial
+    problems to which quantum computing principles can be applied.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 4*](B19146_04.xhtml#_idTextAnchor079), *Derivatives Valuation*, highlights
+    that the valuation of derivatives is often highly complex and can only be carried
+    out numerically—which requires a correspondingly high computing effort. This chapter
+    examines the role of QML algorithms in derivatives valuation.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 5*](B19146_05.xhtml#_idTextAnchor100), *Portfolio Optimization*,
+    considers portfolio management as the process of managing a group of financial
+    securities and making ongoing decisions to meet investment objectives. Portfolio
+    management also includes a number of steps, such as managing costs and risks,
+    allocating assets, researching the market, and choosing securities. This chapter
+    examines the role of QML algorithms in portfolio allocation.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 6*](B19146_06.xhtml#_idTextAnchor124), *Credit Risk Analytics*, outlines
+    how credit risk is associated with the possibility of a client failing to meet
+    contractual obligations, such as mortgages, credit card debts, and other types
+    of loans. Minimizing the risk of default is a major concern for financial institutions.
+    Machine learning models have been helping these companies to improve the accuracy
+    of their credit risk analysis, providing a scientific method to identify potential
+    debtors in advance. Learn how a QML algorithm can help solve this problem using
+    real-world data.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 7*](B19146_07.xhtml#_idTextAnchor145), *Implementation in Quantum
+    Clouds*, dicusses how the implementation of quantum machine learning and optimization
+    architectures in productive environments, or as a backtest for current systems,
+    is a crucial part to retrieve knowledge and start using this technology.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 8*](B19146_08.xhtml#_idTextAnchor157), *Simulators’ and HPCs’ roles
+    in the NISQ Era*, highlights how classical means and in particular, high-performance
+    hardware, have a key part to play in the delivery of short-term quantum advantage.
+    In this chapter, we will explore some of the most relevant approaches in order
+    to map the quantum-classical landscape comprehensively.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 9*](B19146_09.xhtml#_idTextAnchor165), *NISQ Quantum Hardware Roadmap*,
+    demonstrates how Noisy Intermediate-Scale Quantum (NISQ) Hardware can evolve in
+    various ways depending on the provider. Different approaches, ranging from fault-tolerant
+    logical qubits to circuit knitting, could be among the early steps towards achieving
+    fault-tolerant devices. In this chapter, we outline the key aspects of these approaches
+    and their long-term potential.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[*Chapter 10*](B19146_10.xhtml#_idTextAnchor181), *Business Implementation*,
+    underlines that knowing quantum technology does not guarantee that companies will
+    successfully implement quantum computing with the lowest risk possible. In this
+    chapter, we will provide helpful information for how fintech firms and banks can
+    implement these kinds of projects without getting stuck half-way.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: To get the most out of this book
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: '| **Software/hardware covered in** **the book** | **Operating** **system requirements**
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Python | Windows, macOS, or Linux |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Jupyter notebook | Windows, macOS, or Linux |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Dwave Leap | Windows, macOS, or Linux |'
+  prefs: []
+  type: TYPE_TB
+- en: '| AWS Braket | Windows, macOS, or Linux |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Azure | Windows, macOS, or Linux |'
+  prefs: []
+  type: TYPE_TB
+- en: '**If you are using the digital version of this book, we advise you to type
+    the code yourself or access the code from the book’s GitHub repository (a link
+    is available in the next section). Doing so will help you avoid any potential
+    errors related to the copying and pasting** **of code.**'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Download the example code files
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: You can download the example code files for this book from GitHub at [https://github.com/PacktPublishing/Financial-Modeling-using-Quantum-Computing](https://github.com/PacktPublishing/Financial-Modeling-using-Quantum-Computing).
+    If there’s an update to the code, it will be updated in the GitHub repository.
+  prefs: []
+  type: TYPE_NORMAL
+- en: We also have other code bundles from our rich catalog of books and videos available
+    at [https://github.com/PacktPublishing/](https://github.com/PacktPublishing/).
+    Check them out!
+  prefs: []
+  type: TYPE_NORMAL
+- en: Download the color images
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: 'We also provide a PDF file that has color images of the screenshots and diagrams
+    used in this book. You can download it here: [https://packt.link/1xxSu](https://packt.link/1xxSu).'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Conventions used
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: There are a number of text conventions used throughout this book.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '`Code in text`: Indicates code words in text, database table names, folder
+    names, filenames, file extensions, pathnames, dummy URLs, user input, and Twitter
+    handles. Here is an example: “Mount the downloaded `WebStorm-10*.dmg` disk image
+    file as another disk in your system.”'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'A block of code is set as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[PRE0]'
+  prefs: []
+  type: TYPE_PRE
+- en: 'When we wish to draw your attention to a particular part of a code block, the
+    relevant lines or items are set in bold:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[PRE1]'
+  prefs: []
+  type: TYPE_PRE
+- en: 'Any command-line input or output is written as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '[PRE2]'
+  prefs: []
+  type: TYPE_PRE
+- en: '**Bold**: Indicates a new term, an important word, or words that you see onscreen.
+    For instance, words in menus or dialog boxes appear in **bold**. Here is an example:
+    “Select **System info** from the **Administration** panel.”'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Tips or important notes
+  prefs: []
+  type: TYPE_NORMAL
+- en: Appear like this.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Get in touch
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Feedback from our readers is always welcome.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**General feedback**: If you have questions about any aspect of this book,
+    email us at [customercare@packtpub.com](mailto:customercare@packtpub.com) and
+    mention the book title in the subject of your message.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Errata**: Although we have taken every care to ensure the accuracy of our
+    content, mistakes do happen. If you have found a mistake in this book, we would
+    be grateful if you would report this to us. Please visit [www.packtpub.com/support/errata](http://www.packtpub.com/support/errata)
+    and fill in the form.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Piracy**: If you come across any illegal copies of our works in any form
+    on the internet, we would be grateful if you would provide us with the location
+    address or website name. Please contact us at [copyright@packtpub.com](mailto:copyright@packtpub.com)
+    with a link to the material.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**If you are interested in becoming an author**: If there is a topic that you
+    have expertise in and you are interested in either writing or contributing to
+    a book, please visit [authors.packtpub.com](http://authors.packtpub.com).'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Share Your Thoughts
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Once you’ve read *Financial Modeling using Quantum Computing*, we’d love to
+    hear your thoughts! Scan the QR code below to go straight to the Amazon review
+    page for this book and share your feedback.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![](img/B19146_QR.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: '[https://packt.link/r/1-804-61842-X](https://packt.link/r/1-804-61842-X)'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Your review is important to us and the tech community and will help us make
+    sure we’re delivering excellent quality content.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Download a free PDF copy of this book
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Thanks for purchasing this book!
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Do you like to read on the go but are unable to carry your print books everywhere?     Is your eBook purchase not compatible with the device of your choice?'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Don’t worry, now with every Packt book you get a DRM-free PDF version of that
+    book at no cost.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Read anywhere, any place, on any device. Search, copy, and paste code from your
+    favorite technical books directly into your application.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The perks don’t stop there, you can get exclusive access to discounts, newsletters,
+    and great free content in your inbox daily
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Follow these simple steps to get the benefits:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Scan the QR code or visit the link below
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: '![](img/B19146_QR_Free_PDF.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: https://packt.link/free-ebook/9781804618424
+  prefs: []
+  type: TYPE_NORMAL
+- en: Submit your proof of purchase
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: That’s it! We’ll send your free PDF and other benefits to your email directly
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL

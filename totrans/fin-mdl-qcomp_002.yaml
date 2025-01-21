@@ -1,0 +1,983 @@
+- en: '1'
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Quantum Computing Paradigm
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Quantum computers have shown the potential to be game-changing for large-scale
+    industries in the near future. Quantum solutions (hardware and software), in their
+    prime, have the potential to put humankind on planet Pluto with their optimized
+    calculations. According to a Gartner report, 20% of organizations will be budgeting
+    for quantum computing projects by 2023 (*The CIO’s Guide to Quantum Computing*,
+    [https://tinyurl.com/yrk4rp2u](https://tinyurl.com/yrk4rp2u)). This technology
+    promises to achieve better accuracy and deliver real-world experiences via simulations.
+    This book delves into the potential applications of quantum solutions to solve
+    real-world financial problems.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In this chapter, we will discuss various computing paradigms currently in the
+    research phase. A chronicle of quantum computing is also curated and presented.
+    Then, we will cover the limitations faced by classical computers and how these
+    challenges will be overcome with the help of quantum computers. After that, the
+    role of quantum computing in shaping the next generation of business is defined.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Later in the chapter, we will go through the basics of quantum computing. The
+    types of hardware powering quantum computers are described in a subsequent section.
+    We will also look into the potential business applications of this technology
+    and how organizations can align their business strategy accordingly to harness
+    their true potential.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The following topics will be covered in this chapter:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The evolution of quantum technology and its related paradigms
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: Basic quantum mechanics principles and their application
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: The business applications of quantum computing
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: The evolution of quantum technology and its related paradigms
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Computing paradigms can be defined as the significant milestones that have been
+    achieved over the years. To say that computers have made the lives of humans easier
+    is an understatement. On a daily basis, we need machines that can analyze, simulate,
+    and optimize solutions to complex problems. Although the shapes and sizes of computers
+    have changed over time, they still operate on the doctrines proposed by Alan Turing
+    and John von Neumann.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In this section, we will study the evolution of quantum technology over the
+    years. We will also study some of the technology’s limitations in the face of
+    certain business challenges.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The evolution of computing paradigms
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: 'Turing showed us the types of problems computers can solve, von Neumann built
+    programmable computers, and Michael Moore’s pioneering work in semiconductors
+    made computers more capable. *Figure 1**.1* shows the advancement of computing
+    paradigms over the years, and their ability to affect growth in human history:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| 1821 | Mechanical calculator | Has Enabled humans to migrate from mechanical
+    devices to electronic devices with better accuracy in calculations. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1890 | Punch-card system | Demonstrated first use case of large-scale computing
+    by aiding in the US Census. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1936 | Turing machine | Theoretical conceptual framework was laid down to
+    solve large computational problems. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1941 | Digital electronic computer | First time a computer was able to store
+    information on its main memory. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1945 | Electronic Numerical Integrator and Calculator (ENIAC) | First digital
+    computer to perform large class of numerical problems through reprogramming. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1958 | Integrated Circuit (IC) | Helped in the transition of enterprise-level
+    computing to personal computing. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1976 | Cray-1 Supercomputer | Aided 240 million calculations useful for large-scale
+    scientific applications and simulations. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1997 | Parallel computing | Multiple-CPU core was used to solve complex problems
+    in a limited timeframe, enabling Google to form a better search engine. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 2006 | Cloud computing | Technology has enabled users to access large computational
+    resources from remote locations. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 2016 | Reprogrammable quantum computer | Offers a better platform to solve
+    complex simulation or optimization problems in comparison to classical computers
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 2017 | Molecular informatics | Harnesses molecular properties for rapid,
+    scalable information storage and processing. |'
+  prefs: []
+  type: TYPE_TB
+- en: Figure 1.1 – Evolution of computing paradigms
+  prefs: []
+  type: TYPE_NORMAL
+- en: The evolution of computing technology has enabled humans to evolve from an agrarian
+    society to an industrial society. Progress in computing prowess has catapulted
+    society from bartering goods to building e-commerce platforms. *Figure 1**.1*
+    has given a conclusive summary of how computing technology has benefitted society
+    through its progression from a device that merely performs calculations to the
+    multifunction device in its present form. In the next section, we are going to
+    assess the challenges faced by large-scale businesses and the limitations of current
+    digital technology in addressing them.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Business challenges and technology solutions
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: 'Current digital technologies have advantages as well as limitations in providing
+    solutions and insights in real time. The rise of numerous variables and their
+    increasing complexity can affect decision-making in the real world. It is essential
+    to have technology that is reliable and accurate, and fast-paced at the same time.
+    The need for a reliable technology stack has prompted scientists worldwide to
+    investigate technology that is beyond the reach of humans. The current challenges
+    faced by large-scale businesses are as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Faster task completion**: In the current era, where manufacturing firms are
+    looking to achieve super-large-scale production capacity and efficiency, there
+    is a need to build faster and more reliable systems. For instance, according to
+    an exciting study by Artificial Brain (*How Artificial Brain is Building an Optimal
+    Algorithm for EV Charger Placement Using Quantum Annealing and a Genetic Algorithm,
+    Quantum Zeitgeist*, [https://tinyurl.com/bdep5eze](https://tinyurl.com/bdep5eze))
+    regarding setting up charging stations within a 50-mile radius in the San Francisco
+    Bay Area, around 8,543,811,434,435,330 combinations were possible. Now, how can
+    this distribution be optimized when such a large number of combinations is possible?
+    A quantum computer theoretically solved this problem in less than 3 seconds.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Content discovery**: With the advent of social media websites, a plethora
+    of content is available to analyze. This content is available in different sizes
+    and shapes, in the form of text and images. An organization would need a computer
+    with superior computing power to explore this content. This special computing
+    prowess was achieved through parallel computing and local optimization of the
+    machines. However, much needs to be achieved in this field in order to mine real-time
+    business insights from the underlying data. **Quantum natural language processing**
+    (**QNLP**) is a promising technique to resolve problems in real time.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Lower administration cost****s**: It is always a good strategy to optimize
+    costs. Automation of mega factories has provided the owners with a solution in
+    the right direction. Large-scale automation comes with a set of problems of its
+    own, but precision and real-time decision-making help to make it more accurate
+    and reliable. Recently, BMW has come up with a challenge where competitors have
+    to focus on solving problems based on pre-production vehicle configuration, material
+    deformation in production, vehicle sensor placement, and machine learning for
+    automated quality assessment. Based on the results obtained, Dr. Peter Lehnert,
+    BMW Group’s Vice President of Research and New Technologies Digital Car, commented:
+    “We at the BMW Group are convinced that future technologies such as quantum computing
+    have the potential to make our products more desirable and sustainable” (*Winners
+    announced in the BMW Group Quantum Computing Challenge, AWS Quantum Computing*
+    *Blog*, [https://aws.amazon.com/blogs/quantum-computing/winners-announced-in-the-bmw-group-quantum-computing-challenge/](https://aws.amazon.com/blogs/quantum-computing/winners-announced-in-the-bmw-group-quantum-computing-challenge/)).'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Remote working**: The year 2020 played a pivotal role in the history of humankind.
+    Due to the advent of COVID-19, humans have discovered that they can work from
+    anywhere in the world. This has given rise to the demand for remote working from
+    management and employees. Since there are some instances where you need higher
+    computing power, remote working might not be feasible at all times. However, with
+    most technologies going online and providing a real-time experience of working
+    in the office environment through virtual and augmented reality and better connectivity,
+    businesses can overcome this particular challenge. At the same time, it lowers
+    the administration costs for management. It also helps in reducing storage costs
+    further, which helps in reducing the unit cost for the company.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: In order to perform a business task more efficiently and optimally, the business
+    fraternity has started looking for technological solutions. Digital computing
+    in its current state has helped businesses to achieve more efficiency via automation
+    and augmented intelligence. However, current hardware technology has not been
+    able to solve a few complex tasks, which can be associated with an abundance of
+    data and the limitation of computing memory. The following section highlights
+    the types of problems that can be solved by digital computing, and other problems
+    that have generated the need to look beyond the current computing paradigm.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Current business challenges and limitations of digital technology
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: Digital computers are powered by **integrated circuits** (**ICs**), a technology
+    that reached its peak in the 20th century. According to Moore’s law, the number
+    of transistors powering microchips will double every year. In 2021, IBM announced
+    that it can fit 50 billion transistors into its 2 nm chip technology, which basically
+    allows a chip to fit in a space the size of a fingernail. The presence of a large
+    number of transistors has enabled the classical computer to perform large calculations
+    and complex procedures that help in solving day-to-day problems much faster.
+  prefs: []
+  type: TYPE_NORMAL
+- en: However, due to internal leakages and the miniaturization effect, classical
+    gates (OR and AND gates) have been showcasing the quantum effect. Also, digital
+    computers are traditionally unable to solve NP-hard problems (*Figure 1**.2*).
+    In layman’s language, NP-hard problems are measured by the amount of time it takes
+    to solve a problem based on the complexity and number of variables. An example
+    of this, as discussed previously, is how to choose the optimum route out of the
+    8,543,811,434,435,330 combinations determined for charging station locations in
+    the San Francisco Bay Area. While it would take years for a classical computer
+    to solve the aforementioned problem, ideally, quantum computers can solve it in
+    3 seconds.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![Figure 1.2 – Classification of NP-hard problems based on level of complexity](img/B19146_01_002.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Figure 1.2 – Classification of NP-hard problems based on level of complexity
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'To understand the limitations of classical computers in a better way, imagine
+    that you have to pick a portfolio of 100 penny stocks with a limited budget, and
+    let’s assume that the prices are discrete (for example, tick size on stock markets).
+    Suppose you have to construct a portfolio in polynomial time (p = problems a computer
+    can solve in a reasonable amount of time) and assume that it takes 100 steps (n
+    = no. of inputs) to obtain an optimized portfolio or, in other words, n3 time.
+    Theoretically, digital computers will solve the problem in three hours. This problem
+    was easy to solve, and experts can easily verify the solution since we are dealing
+    with stocks of the same class. Hence, we can confidently say that p-class problems
+    are easy to check and solve. Now, the same problem but with a variation (a portfolio
+    optimization of 100 stocks belonging to different risk classes in a limited time)
+    will take around 300 quintillion years to solve, because although the solution
+    is verifiable in a polynomial (n) timeframe, it is obtained in an exponential
+    (NP) timeframe. This problem is classified as an NP problem. For an analogy, imagine
+    a sudoku or tic-tac-toe problem: this is an NP problem for which it is difficult
+    to obtain the solution (it takes exponential time), but easy to verify in polynomial
+    time.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Following on from the preceding discussion, four types of NP problems that
+    are deemed difficult to be solved by digital computers are as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Simulation**: Computation simulation is modeling a natural world or physical
+    system into a virtual scenario to understand its outcome and impact in advance.
+    For instance, after the subprime crisis of 2008, financial institutions must run
+    a stress test on their underlying assets and their crossholdings to predict the
+    scenario in which the next financial crash could occur. According to one estimate,
+    assessing the probability of a financial crash for a simple network of 20-30 institutions,
+    having exposure in equity, derivatives, fixed income securities, and risk exposure
+    to each other, would take 13.7 billion years, as calculated by a digital computer.
+    This is the estimated time of running a simulation problem that is deterministic
+    in nature and hints at solving a problem’s complexity in n steps in p time, which
+    will not work using current digital technology and thus requires an advanced system
+    to give a faster turnaround.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Optimization**: Optimization refers to improving the efficiency of an existing
+    algorithm to reduce time complexity. Suppose you have to build a portfolio of
+    1,000 stocks belonging to 10 sectors. Your client, an international hedge fund,
+    will have to generate several scenarios based on market conditions and thus look
+    for an efficient frontier. These scenarios need to be updated in real time, adjusting
+    themselves based on the risk tolerance limit defined for the portfolio. The classical
+    computer may be able to solve the puzzle using parallel computing, but this might
+    not be the most cost-effective and time-effective strategy. This problem underlies
+    a need for an efficient computer to solve the puzzle in real time.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Pattern recognition**: The pattern recognition method uses underlying data
+    to discover hidden patterns and trends using machine learning algorithms. However,
+    recent advances in GPU and related technology have enabled programmers to meet
+    with decent success in understanding and uncovering hidden patterns in the given
+    data. In financial fraud, however, the complexity of human behavior makes it difficult
+    for machine learning algorithms to understand the patterns. Theoretically, a computer
+    able to comprehend data in real time can help decode the patterns of financial
+    fraud more successfully.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Cryptography**: Providing a secure channel for customers to do transactions
+    online in this e-connected world is a foremost priority for banks in the 21st
+    century. All over the world, banks use **Rivest, Shamir, and Adleman** (**RSA**)
+    technology based on linear factorization. The recent development of computing
+    prowess hints that such encryption can be easily broken using quantum computers.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: To summarize, it will suffice to say that with the limitations observed in current
+    technology, it is time to explore new computing paradigms that can help solve
+    the problems faced by the business fraternity at large and help the industry bring
+    in innovations and creativity.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Basic quantum mechanics principles and their application
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Quantum computers use principles and theories (such as quantum field theory
+    and group theory) to describe the quantum mechanics phenomenon. Quantum mechanics
+    principles, such as superposition, decoherence, and entanglement, have been utilized
+    to build processors that process and relay information at exponential speed. The
+    following section maps the quantum computer’s evolution journey and briefly describes
+    quantum mechanics principles.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The emerging role of quantum computing technology for next-generation businesses
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: For a long time, advances in digital computers at economies of scale have suppressed
+    the development of other computing paradigms. Moore’s law (*Figure 1**.3*) has
+    predicted exponential growth and advancement in the microprocessor. However, the
+    presence of a large amount of data collected over decades of computing advancements
+    has put a limitation on computing power, storage, and communication. To overcome
+    the limits of the current architectures, we must overcome challenges such as finite
+    memory, self-programmable computers, large number factorization, and faster microprocessors.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![Figure 1.3 – Transistor number growth according to Moore’s law](img/B19146_01_003.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Figure 1.3 – Transistor number growth according to Moore’s law
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Looking at the current limitations of digital computers due to their fundamental
+    principles and assumptions, there is a need for new computing paradigms to emerge.
+    To solve the problems related to various domains related to climate, process automation,
+    industry mechanizations, and autonomous systems, there is a need to overcome the
+    current challenges. Quantum computing, molecular computing, nature-inspired algorithms,
+    and synergistic human-machine interaction (Computer’s Special Issue September
+    2016 Examines “Next-Generation Computing Paradigms,” IEEE Computer Society, [https://tinyurl.com/4b5wjepk](https://tinyurl.com/4b5wjepk))
+    are the current areas of interest and innovation in the pursuit of overcoming
+    the aforementioned challenges. *Figure 1**.4* charts the journey and impact of
+    the quantum-computing paradigm from theoretical to practical application:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| **Year** | **Phenomenon** | **Effect** |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1905 | Photoelectric effect was discovered by Albert Einstein and discovery
+    of photon took place. | Laid the foundation to discover quantum behavior in atomic
+    particles. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1924 to 1927 | Max Born coined the term Quantum Mechanics and Heisenberg,
+    Born, and Jordan discovered matrix mechanics. | Discovery of quantum mechanics
+    principles, which were harnessed to produce the quantum processor. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1935 | Erwin Schrödinger conceptualized and wrote his thought experiment
+    known as Schrödinger’s cat. | The principle of quantum entanglement was discovered.
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1976 | Quantum information theory was proposed by Roman Stanisław Ingarden.
+    | Quantum Information science as a discipline was formulated, which laid the foundation
+    for quantum algorithms. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1981 | Richard Feynman proposed that a quantum computer had the potential
+    to simulate physical phenomena. | The practical application of quantum mechanics
+    was harnessed to develop working quantum computers. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1994 | Shor’s algorithm for factoring integers was discovered. | Formulated
+    the basis of cryptography for post quantum key distribution. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 1996 | Grover’s algorithm was discovered. | Laid the way for storing information
+    in database form. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 2011 | D-Wave offered the first quantum computing solution using quantum
+    annealing. | Opened up the possibilities of using quantum computers for commercial
+    purposes. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 2019 | Google claimed quantum supremacy. | Showed a use case of quantum supremacy
+    that can help in better encryption. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 2021 | IBM unveiled the first 127-qubit quantum computer named Eagle. | Facilitated
+    faster processing of the complex NP-hard problem. |'
+  prefs: []
+  type: TYPE_TB
+- en: Figure 1.4 – Journey from quantum mechanics to quantum computing
+  prefs: []
+  type: TYPE_NORMAL
+- en: As you can see from the evolution point of view (*Figure 1**.4*), quantum technologies
+    are making rapid strides to overcome problems such as accurate simulation, efficient
+    optimization, and correct pattern recognition. Once researchers can overcome the
+    related problems that limit current users, and implement quantum technology to
+    solve day-to-day problems, one can see how the industry-wide adoption of quantum
+    technology can solve large-scale problems.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The next section describes some of the common terminologies and principles of
+    quantum mechanics used in building and operating quantum computers.
+  prefs: []
+  type: TYPE_NORMAL
+- en: From quantum mechanics to quantum computing
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: Deciphering the quantum mechanics principles involved in quantum computing is
+    an uphill task for a layperson. This section describes each quantum mechanics
+    postulate in easy-to-understand language, explaining how it is involved in the
+    quantum computing mechanism.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| Postulate | Definition | Usage | Further Reading |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Qubits | The qubit is a basic unit of quantum information stored on a two-state
+    device encoding information in 0s and 1s) · | Facilitates faster processing of
+    information for complex processes like simulation and optimization. | What is
+    a qubit? (quantuminspire.com) |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantum State | Quantum state is the position and value of attributes (change
+    and spin) of atomic particles obtained naturally or induced by creating physical
+    environments (e.g. laser and heat). | Used in processing and transforming information
+    using qubits in a controlled environment. | Superposition and entanglement     (quantuminspire.com) |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantum Superposition | It refers to a phenomenon that tells us that quantum
+    superposition can be seen as the linear combination of quantum states. | This
+    property makes it hard for a system to decrypt quantum communication and thus
+    provides a safer way to transfer information. | Superposition and entanglement     (quantuminspire.com) |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantum Entanglement | Quantum entanglement refers to the linking of two
+    particles in the same quantum state and the existence of correlation between them.
+    | Facilitates the ability of a system to do calculations exponentially faster
+    by more and more qubits. | Superposition and entanglement     (quantuminspire.com) |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantum Measurement | A set of mathematical operators to understand and measure
+    the amount of information that can be recovered and processed from qubits. | Useful
+    in understanding the complexities of quantum mechanics. | Quantum measurement
+    splits information three ways - Physics World. |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantum Interference | It refers to the ability of atomic particles to behave
+    like wave particles, thus resulting in information or the collapse of qubit state
+    thus leading to quantum coherence or dechorence. | It measures the ability of
+    quantum computers to accurately compute and carry the information stored in them.
+    | What is quantum mechanics? Institute for Quantum Computing (uwaterloo.ca) |'
+  prefs: []
+  type: TYPE_TB
+- en: '| No Cloning Theorem | The “**no cloning theorem**” is a result of quantum
+    mechanics that forbids the creation of identical copies of an arbitrary unknown
+    quantum state. | The no cloning theorem is a vital ingredient in quantum cryptography,
+    as it forbids eavesdroppers fom creating copies of a transmitted quantum cryptographic
+    key. | The no cloning theorem – Quantiki |'
+  prefs: []
+  type: TYPE_TB
+- en: Figure 1.5 – Quantum computing glossary
+  prefs: []
+  type: TYPE_NORMAL
+- en: The postulates mentioned in *Figure 1**.5* have enabled computer scientists
+    to migrate from classical to quantum computers. As we will see in subsequent sections,
+    postulates such as quantum interference and the no-cloning theorem have enabled
+    quantum technologies to come to the fore, and laid the basis for achieving faster,
+    more efficient, and more accurate computational power. The following section will
+    look at technologies fueling innovations in quantum computing paradigms.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Approaches to quantum innovation
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: 'In its current form, quantum computing relies on a plethora of technologies
+    to expand its footprint. It will take years for quantum computers to fully reach
+    their commercial potential. However, when they work in hybrid mode (in tandem
+    with classical computers), they are expected to produce much better results than
+    in standalone mode. Let’s have a look at the technologies that make them tick:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Superconducting**: This technology takes advantage of the superposition property
+    of quantum physics. Information is circulated by two charged electron currents
+    flowing in opposite directions around the superconductor, and then exchanging
+    the info stored in the qubit while entangling each other. This technology needs
+    the quantum computer to be operated at extremely low temperatures.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Trapped ions**: An ion is a charged atom (Ca+ or Br+). Suppose a piece of
+    information is coded on this charged atom. The atom is transported from state
+    0 to state 1 by emitting an energy pulse. This charged atom will carry the information
+    and be decoded with the help of lasers. These ions are trapped in electric fields.
+    Information coded is interpreted using a photonic unit and then passed on using
+    optic fibers.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Photonics**: This technology uses photons to carry information in a quantum
+    state. Using current silicon chips, the behavior of photons is controlled, and
+    the information is transmitted over the circuit. Due to its compatibility with
+    existing infrastructure and chip-making capabilities, it shows promise to achieve
+    great success.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum dots**: Quantum dots are small semiconducting nanocrystals made up
+    of elements such as silicon and cadmium. Their size ranges from 2 to 10 nm. The
+    physical implementation of a qubit involves exchanging information via charged
+    qubits in capacitive states. Due to its conducive conditions, photonics is less
+    error-prone.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Cold atoms**: Cold atoms use a ploy similar to trapped ions, where atoms
+    are cooled below 1 mK and then used as an information highway to bounce off the
+    information. Lasers are programmed to control the quantum behavior of cold atoms,
+    and to then leverage them to transfer data.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: 'To understand the milestones achieved by each technology, we will take the
+    help of DiVincenzo’s criteria. In the year 2000, David DiVincenzo proposed a wish
+    list of the experimental characteristics of a quantum computer. DiVincenzo’s criteria
+    have since become the main guidelines for physicists and engineers building quantum
+    computers (Alvaro Ballon, *Quantum computing with superconducting qubits*, PennyLane,
+    [https://tinyurl.com/4pvpzj6a](https://tinyurl.com/4pvpzj6a)). These criteria
+    are as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Well-characterized and scalable qubits**: Numerous quantum systems seen in
+    nature are not qubits; thus, we must develop a means to make them act as such.
+    Moreover, we must integrate several of these systems.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Qubit initialization**: We must be able to replicate the identical state
+    within an acceptable error margin.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Extended coherence durations**: Qubits will lose their quantum characteristics
+    after prolonged interaction with their surroundings. We would want them to be
+    durable enough to enable quantum processes.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Universal set of gates**: Arbitrary operations must be performed on the qubits.
+    To do this, we need both single-qubit and two-qubit gates.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantification of individual qubits**: To determine the outcome of a quantum
+    computation, it is necessary to precisely measure the end state of a predetermined
+    set of qubits.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*Figure 1**.6* helps evaluate the promises and drawbacks of each kind of quantum
+    technology based on DiVincenzo’s criteria:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '|  | **Superconducting** | **Trapped Ions** | **Photonics** | **Quantum** **Dots**
+    | **Cold atoms** |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Well-characterized and scalable qubit | Achieved | Achieved | Achieved |
+    Achieved | Achieved |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Qubit initialization | Achieved | Achieved | Achieved | Achieved | Achieved
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Extended coherence durations | 99.6% | 99.9% | 99.9% | 99% | 99% |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Universal set of gates | 10-50 ns | 1-50 us | 1 ns | 1-10 ns | 100 ns |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantification of individual qubits | Achieved | Achieved | Achieved | Achieved
+    | Achieved |'
+  prefs: []
+  type: TYPE_TB
+- en: Figure 1.6 – DiVincenzo’s criteria
+  prefs: []
+  type: TYPE_NORMAL
+- en: On various parameters, technologies such as superconducting and trapped ions
+    are showing the most promise in overcoming the challenges of quantum technology.
+    While supergiants such as IBM and Google are betting on such technology to develop
+    their quantum computers, new-age start-up technologies, including IQM and Rigetti,
+    are exploring others that are more compatible with the current infrastructure.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In the next section, we will detail the applications and technologies associated
+    with the quantum computing ecosystem.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Quantum computing value chain
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: Quantum computing technology is still in its infancy. If we have to draw parallels
+    from a technology point of view, in 1975, most of the investors were investing
+    in hardware firms such as IBM, HP, and later Apple, to make sure that people would
+    be able to migrate from mainframe to personal computers. Once the value from hardware
+    had been derived, they started paying attention to software, and firms such as
+    Microsoft came into prominence. According to a report published by BCG, 80% of
+    the funds available are flowing toward hardware companies such as IonQ, ColdQuanta,
+    and Pascal. Key engineering challenges that need to be overcome are scalability,
+    stability, and operations.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Several companies and start-ups are investing in quantum computing. Countries
+    such as the USA ($2 billion), China ($1 billion), Canada ($1 billion), the UK
+    (£1 billion), Germany (€2 billion), France (€1.8 billion), Russia ($790 million),
+    and Japan ($270 million) have pledged huge amounts to achieve quantum supremacy.
+    It has been speculated that quantum solutions, including quantum sensors, quantum
+    communication, and quantum internet, need huge investments to help countries in
+    achieving quantum supremacy. McKinsey has pegged the number of quantum computing
+    start-ups at 200\. Also, according to PitchBook (market data analyst), global
+    investment in quantum technologies has increased from $93.5 million in 2015 to
+    $1.02 billion in 2021\. A few well-known start-ups that have attracted huge investments
+    recently are Arqit, Quantum eMotion, Quantinuum, Rigetti, D-Wave, and IonQ.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Figure 1**.7* shows the potential application of quantum technologies in different
+    fields based on the types of problems solved by quantum computers:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![Figure 1.7 – Application of quantum computing](img/B19146_01_007.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Figure 1.7 – Application of quantum computing
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The following technologies are helping companies to create the value chain
+    for end users in the quantum realm:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Quantum computing**: Quantum computing refers to developing software and
+    hardware technologies using quantum mechanics principles.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum key distribution** (**QKD**): QKD, or quantum cryptography, provides
+    a secure way for banks and other institutions to exchange encryption keys. It
+    uses principles of quantum mechanics to secure the communication channels.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum software and quantum clouds**: Quantum software, or programming languages
+    such as Qiskit, provide a medium for end users to interface with system hardware
+    and perform complex computing operations including simulation, optimization, and
+    pattern recognition.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '![Figure 1.8 – Quantum technology](img/B19146_01_008.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Figure 1.8 – Quantum technology
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Post-quantum encryption**: One of the key research areas that have prompted
+    countries to invest billions of dollars is the hunch that current encryption software
+    will be susceptible to quantum algorithms. They need algorithms that can secure
+    these channels further.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum sensors and atomic clocks**: These terms refer to the development
+    of laser and trapped-ion technologies to control the atomic behavior of molecules.
+    This has prompted researchers to develop use cases where next-gen technologies
+    such as quantum sensors will be useful in the early detection of natural calamities,
+    including tsunamis and earthquakes.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum materials**: Quantum materials refers to the cluster of world-class
+    technologies that help capture and manipulate elements’ quantum properties for
+    industrial usage.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum memories and other quantum components**: These devices carry information
+    in qubit form via photons. It is complex technology that is still under development
+    and is expected to overcome the memory barriers defined by current limitations.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: As observed in *Figure 1**.8*, the quantum computing ecosystem is vast. It has
+    multiple facets such as quantum materials, memories, and sensors, empowering the
+    user to collect and analyze data more effectively.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In the following section, we will look at the companies powering the revolution
+    in quantum technologies.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The business application of quantum computing
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Although it is still in its infancy and yet to achieve a commercial application,
+    quantum technology holds much promise. In the near future, quantum computers will
+    be able to help accelerate the pace of solving complex problems in conjunction
+    with classical computers. In this section, you will learn about the business applications
+    of this wonderful technology.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Global players in the quantum computing domain across the value chain
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: 'According to a McKinsey report (Quantum computing funding remains strong, but
+    talent gap raises concern, [https://tinyurl.com/5d826t55](https://tinyurl.com/5d826t55)),
+    quantum technology has attracted a total investment of $700 million from various
+    governments and funding agencies. The promise shown by this technology has prompted
+    the industry to fund ongoing research in various universities and labs. D-Wave
+    was the first company to pioneer the quantum computing solution in 1999, through
+    quantum annealing. Since then, other companies such as IBM have built a robust
+    community of researchers and end users alike to propagate the use of quantum computers.
+    The following is a brief list of the companies doing pioneering work in the field
+    of quantum technology:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**IonQ** (NASDAQ: IONQ): IonQ was founded in 2015 by Christopher Monroe and
+    Jungsang Kim. IonQ has received total funding of $432 million. IonQ builds quantum
+    computers based on ion trap technology. It provides quantum computers as **Platform
+    as a Service** (**PaaS**) to service providers.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Rigetti** (NASDAQ: RGTI): Rigetti Computing was founded in 2013 by Chad Rigetti.
+    It has currently received funding of $500 million. Rigetti has developed a quantum
+    computer based on superconducting technology.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantum Computing Inc.**: Quantum Computing Inc. focuses on providing software
+    and hardware solutions to the end user. It is also focusing on developing business
+    use cases for companies, thus showcasing the potential of quantum computing in
+    the near future.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Archer** (ASX: AXE): Archer is an Australian company that is conducting research
+    on developing a quantum computer at room temperature. It was founded by Dr. Mohammad
+    Choucair. It aims to produce a quantum computer that can have a widespread reach.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**D-Wave** (coming soon via SPAC merger): D-Wave is credited with introducing
+    the world’s first quantum computer for commercial use. It uses the quantum annealing
+    technique to develop quantum solutions for the end user. It offers a limited but
+    powerful piece of technology with 5,000 qubits of quantum computer at its disposal,
+    which has a lot of potential business applications.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Quantinuum**: Quantinuum was formed as a result of a merger between Cambridge
+    Quantum and Honeywell Quantum Solutions. While the primary focus of Cambridge
+    Quantum was on developing the operating system and software for quantum computers,
+    Honeywell has focused primarily on developing the quantum computer using ion trap
+    technology.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: Global players across the value chain in the quantum computing domain include
+    giants such as IBM, Microsoft, and Google, and well-funded start-ups such as Rigetti,
+    IQM, and Quantinuum. These companies have invested in different types of technologies
+    (hardware as well as software) to catapult the research in this technology domain.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In the subsequent segment, we will evaluate the roadmap provided by different
+    technology giants to achieve full-scale quantum supremacy.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Building a quantum computing strategy implementation roadmap
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: 'Building quantum advantage to solve real-time business problems is the end
+    goal of many companies operating in the quantum realm. This technology is perceived
+    to aid companies in solving large-scale problems. Recently, BMW has commissioned
+    a million-dollar challenge to discover a solution to its inventory scheduling
+    problem using the **AWS Amazon Braket** platform. In *Figure 1**.9*, you can chart
+    the route that could potentially lead to the era in which quantum supremacy can
+    be achieved, and see how we can solve more problems using quantum computing:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![Figure 1.9 – Quantum computing era](img/B19146_01_009.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Figure 1.9 – Quantum computing era
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Broadly, the quantum era can be divided into three parts:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Noisy intermediate-scale quantum** (**NISQ**): This era is marked by the
+    availability of a lesser number of good-quality qubits (<50 to 100) to solve real-world
+    problems. The word *noisy* refers to the tendency of the qubits to lose their
+    quantum state due to disturbances. It is expected that the current technology
+    setup will be able to come out of the NISQ era by 2030.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Broad quantum advantage**: IonQ has defined the broad quantum advantage as
+    the advent of the era where quantum computers are available for developers and
+    end users to solve real-life problems. Based on the consensus developed by industry
+    practitioners, 72-qubit systems will start aiding the industry in solving commercial-grade
+    problems. Thus, it will be possible in the future to access the platform enabled
+    by demonstrating high-level application programming and HMI functions.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '**Full-scale fault tolerance**: This era refers to large-scale quantum computers
+    that have achieved two-qubit gate fidelity of 99.5%. By 2040, it is expected that
+    the existing efforts will help in solving the problem of **decoherence** (leakage
+    of information due to large numbers of qubits), and will enable organizations
+    to take full advantage of this amazing technology.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: Quantum technology in the near term is available for end users in the form of
+    hybrid computing. To harness the full potential of existing quantum computers,
+    players such as D-Wave and Rigetti have started providing an interface between
+    classical and quantum computing via microprocessors. While classical components
+    take care of communication with end users, quantum microprocessors are used in
+    solving NP-hard problems. Quantum technology, through quantum annealers and universal
+    quantum computers, and using technologies such as superconducting and ion trap,
+    will be able to harness its full potential in the near future.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In the next section, let’s have a look at what kind of people are needed to
+    build quantum technology and its ecosystem.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Building a workforce for a quantum leap
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: Quantum technology needs a variety of people in the workforce to harness its
+    true potential. The entire technology stack can be divided into hardware, software,
+    and related technologies. Currently, the technology has called for scientific
+    research and technology implementation experts. According to a survey report prepared
+    by Forbes, a graduate must have a primary degree in STEM to understand the basic
+    workings of quantum computers. A research-oriented mindset is essential to further
+    investigate the development of quantum computers. To achieve scientific breakthroughs
+    related to the development of computer hardware, a researcher must have a deep
+    understanding of the underlying technologies such as annealing, superconducting,
+    and ion trap. These technologies are at the forefront of the scientific breakthroughs
+    that can be achieved with the help of a knowledgeable workforce.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In addition to building a quantum computer, it is also challenging to operate
+    one. The current focus of software development is to write low-level programs
+    that can interface with the memory core of the quantum computer. IBM and Google
+    are among the companies that have developed Python-based **software development
+    toolkits** (**SDKs**) such as Qiskit and Cirq. Programs such as IBM Summer School
+    are good starting points for developers to get acquainted with the methodology
+    of software interfacing with quantum memory processors. Due to the limitations
+    of the current technology in the quantum field, a lot of emphasis is given to
+    developing a hybrid computer. A software developer needs to know about cloud computing
+    to operate a quantum computer. Most quantum computers are nested in big rooms
+    at below-freezing temperatures, and can be accessed remotely using cloud computing.
+    The algorithms written for quantum computers are also used to boost the performance
+    of existing machine learning algorithms.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Quantum solutions also include aided technologies, making quantum technologies
+    an exciting field to work in. Quantum sensors, annealers, and the internet are
+    the potential applications of quantum mechanics. In addition, quantum algorithms
+    have also shown promise in solving problems related to finance, supply chain,
+    healthcare, and cryptography. *Figure 1**.8* summarizes the discussion related
+    to the aptitudes and qualifications related to starting a career in the field
+    of quantum technologies:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '|  | **Research Areas** | **Application** | **Potential** **Qualification**
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Hardware | Quantum Mechanics, Theoretical Physics, Applied Physics | Superconducting
+    Ion Traps, Quantum Dot | PhD, Master’s in Quantum Physics |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Software | Quantum Information Science | Quantum Algorithms, Quantum Machine
+    Learning | Software Development, Master’s in Computer Science |'
+  prefs: []
+  type: TYPE_TB
+- en: '| Quantum Business Technologies | Optimization, Simulation and Cryptography
+    | Finance, Supply-Chain, Healthcare | Business Evangelist, Domain Expert |'
+  prefs: []
+  type: TYPE_TB
+- en: Figure 1.10 – List of qualifications
+  prefs: []
+  type: TYPE_NORMAL
+- en: From *Figure 1**.10*, it can be observed that a potential candidate for quantum
+    technologies needs some background in STEM. Research aptitude and a capacity to
+    learn, unlearn, relearn, and apply new concepts are a must to sustain in this
+    dynamic field. Since it’s a research-oriented field, companies’ inclination is
+    more toward inducting doctoral candidates from relevant fields. However, there
+    is a significant demand for software engineers who can write code for hybrid computers
+    to solve problems in a faster and more accurate way.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Summary
+  prefs:
+  - PREF_H1
+  type: TYPE_NORMAL
+- en: Computing paradigms, such as calculators and analog and digital computers, have
+    evolved over the years to assist humans in making rapid strides in technological
+    developments and reaching new knowledge frontiers. The contributions of Jon von
+    Neumann, Alan Turing, and Graham Moore have been immense in achieving superior
+    computing power.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The current business environment has given rise to the need to make faster and
+    more accurate decisions based on data. Hence, there is a need for faster, optimized
+    computers to process large amounts of data.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Digital computers cannot solve NP-hard problems, including simulation, optimization,
+    and pattern-matching problems, thus emphasizing the need for new computing technologies
+    to do faster and more accurate calculations.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Emerging computing paradigms, such as quantum computing and molecular computing,
+    promise to solve large-scale problems such as portfolio optimization, protein
+    foldings, and supply chain route optimization more effectively and efficiently.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Quantum computing is based on the underlying principles of quantum mechanics
+    such as qubits and the quantum states, superposition, interference, entanglement,
+    and quantum measurement.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Current quantum hardware and microprocessors are based on technologies such
+    as superconducting, trapped ions, annealing, cold atoms, and simulators.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The quantum computing value chain is based on the innovations achieved using
+    quantum solutions and technologies such as quantum sensors, quantum communication,
+    and the quantum internet.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Global players across the value chain in the quantum computing domain include
+    giants such as IBM, Microsoft, and Google, and well-funded start-ups such as Rigetti,
+    IQM, and Quantinuum.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Aligning business strategy with quantum computing involves developing the strategy
+    roadmap for companies based on quantum computing eras such as NISQ, broad quantum
+    advantage, and full-scale fault tolerance.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The future quantum workforce needs to work on three dimensions, concerning the
+    development of hardware, software, and related quantum technologies.
+  prefs: []
+  type: TYPE_NORMAL

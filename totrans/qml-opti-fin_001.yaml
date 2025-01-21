@@ -1,0 +1,1606 @@
+- en: '1'
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: The Principles of Quantum Mechanics
+  prefs: []
+  type: TYPE_NORMAL
+- en: Quantum mechanics is a framework for the development of physical theories; it
+    is not itself a physical theory  [[80](Biblography.xhtml#XDawar)]. Actual physical
+    theories are built upon a foundation of quantum mechanics. This is why quantum
+    mechanics plays such an important role in all natural sciences. Information theory
+    is no exception and also derives inspiration from the ideas and methods of quantum
+    mechanics.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Understanding quantum computing requires some familiarity with the basic principles
+    of quantum mechanics. This book does not assume any prior knowledge of quantum
+    mechanics and provides all the necessary definitions and explanations when needed.
+    At the same time, the reader is encouraged to learn more about this fascinating
+    subject at the level of mathematical formalism that she is comfortable with. Out
+    of the extensive universe of textbooks on quantum mechanics that provide an introduction
+    to this discipline, it is necessary to mention the classical book by Landau and
+    Lifshitz  [[182](Biblography.xhtml#XLandau1965)] as well as the equally classical
+    book on quantum computing by Nielsen and Chuang  [[223](Biblography.xhtml#XNielsen2010)],
+    which covers the most relevant aspects of quantum mechanics from the quantum computing
+    perspective. For someone taking their first steps in quantum computing who would
+    like to get the overall picture and some historical perspective, the excellent
+    book by Bernhardt  [[32](Biblography.xhtml#XBernhardt2019)] provides both without
+    the heavy usage of complex mathematical apparatus. Readers looking for a more
+    formal modern take on the subject of quantum mechanics may find it in the book
+    by Robinett   [[249](Biblography.xhtml#XRobinett2006)]. The practical aspects
+    of quantum computing are covered in great detail in the book by Sutor  [[278](Biblography.xhtml#XSutor2019)],
+    and anyone looking for a python quantum computing programming textbook will find
+    it in the work by Loredo  [[195](Biblography.xhtml#XLoredo2020)].
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1 Linear Algebra for Quantum Mechanics
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: Quantum computing and quantum mechanics rely on a specific notational formalism,
+    due to Dirac, and are supported by classical linear algebra, in particular Hermitian
+    structures of matrices and tensor products. We provide here a self-contained review
+    of these tools to facilitate the understanding of the rest of the book. We start
+    with basic linear algebra principles before introducing Dirac notations and the
+    quantum counterparts of linear algebra tools. Sections [1.1.1](#x1-240001) to [1.1.4](#x1-270004)
+    concentrate on standard definitions of finite-dimensional Hilbert spaces and matrices,
+    while Sections [1.1.5](#x1-280005) to [1.1.7](#x1-300007) review the key details
+    and properties of complex matrices (decompositions, Hermitian property, and rotations).
+    Sections [1.1.9](#x1-320009) to [1.1.11](#x1-3400011) introduce Dirac’s formalism
+    and the essential aspects of quantum operators.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.1 Basic definitions and notations
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: We let 𝔽 denote either the real field ℝ or the complex one ℂ. For a complex
+    number *z* = *x*+i*y* ∈ℂ, with *x,y* ∈ℝ, we write the conjugate *z*^∗ := *x*−i*y*.
+    We let ℳ[m,n](𝔽) denote the space of matrices of dimension *m* × *n* with entries
+    in 𝔽 and ℳ[n](𝔽) whenever *m* = *n*. For A := (*a*[ij])[1≤i≤m; 1≤j≤n] ∈ℳ[m,n](𝔽),
+    A^∗ := (*a*[ij]^∗)[1≤i≤m; 1≤j≤n] is the complex conjugate. If A ∈ℳ[n](𝔽), we write
+    A^⊤ for its transpose and A^† := (A^∗)^⊤ for its *Hermitian conjugate*. We finally
+    denote I the identity matrix and write I[n] whenever we wish to emphasise the
+    dimension, and 0[m,n] the null matrix in ℳ[m,n](𝔽). Recall that a matrix A ∈ℳ[n](𝔽)
+    is invertible (or non-singular) if there exists B ∈ℳ[n](𝔽) such that AB = BA =
+    I[n]. Given two matrices A ∈ℳ[p,m](𝔽) and B ∈ℳ[q,n](𝔽), we define their tensor
+    product as
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ a11B ... a1mB || .. .. .. || A ⊗ B := ⌈ . . . ⌉ ∈ ℳpq,mn (𝔽). ap1B ...
+    apmB ](img/file3.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Since a vector is a particular case of a matrix, for u ∈𝔽^m and v ∈𝔽^n, we can
+    write
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ |u1v1 | ⌊ ⌋ ⌊ ⌋ || ... || u1 v1 | | || .. || || ..|| ||u1vn || mn u
+    ⊗ v = ⌈ . ⌉ ⊗ ⌈ .⌉ = ||u v || ∈ 𝔽 . um vn || 2.1 || |⌈ .. |⌉ umvn ](img/file4.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 1.1.2 Inner products
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: A vector space V over the field 𝔽 is a set endowed with
+  prefs: []
+  type: TYPE_NORMAL
+- en: a commutative, associative addition operation,
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: an operation of multiplication by a scalar.
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: 'The addition and the multiplication by a scalar have the following properties
+    (for scalars *α,β* ∈𝔽 and vectors u*,*v ∈V):'
+  prefs: []
+  type: TYPE_NORMAL
+- en: v + 0 = v;
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: v + (−v) = 0;
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*α*(*β*v) = (*αβ*)v;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: (*α* + *β*)v = *α*v + *β*v;
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*α*(u + v) = *α*u + *α*v;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: 1 ⋅ v = v.
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: 'Armed with this, we can now define an inner product on V:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 1.** A map ⟨⋅*,*⋅⟩ : V ×V →𝔽 is called an *inner product* if,
+    for u*,*v*,*w ∈V and *α* ∈𝔽,'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*(Positive definiteness)* ⟨u*,*u⟩≥ 0 and ⟨u*,*u⟩ = 0 if and only if u = 0;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*(Conjugate symmetry)* ⟨u*,*v⟩ = ⟨v*,*u⟩^∗;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*(Linear in the first argument)* ⟨u + v*,*w⟩ = ⟨u*,*w⟩ + ⟨v*,*w⟩ and ⟨*α*u*,*v⟩
+    = *α*⟨u*,*v⟩;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*(Antilinear in the second argument)* ⟨u*,*v + w⟩ = ⟨u*,*v⟩ + ⟨u*,*w⟩ and ⟨u*,α*v⟩
+    = *α*^∗⟨u*,*v⟩.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: The inner product is further called non-degenerate if ⟨u*,*v⟩ = 0 for all v
+    ∈V ∖{0} implies u = 0.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'For example, the following spaces carry a natural inner product:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The vector space ℂ^n with the inner product ⟨u*,*v⟩ := u^†v = ∑ [i=1]^n*u*[i]^∗*v*[i];
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: The space of complex-valued continuous functions on [0*,*1] with ⟨*f,g*⟩ :=
+    ∫ [0]¹*f*(*t*)^∗*g*(*t*)d*t*;
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: If X*,*Y ∈ℳ[m,n](ℝ), then ⟨X*,*Y⟩ := Tr(X^⊤Y) = ∑ [i=1]^m ∑ [j=1]^nX[ij]Y[ij]
+    defines an inner product on the space of (real) matrices.
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: 'Projection matrices are particularly useful for geometric purposes:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 2.** A matrix P ∈ℳ[n](𝔽) is called a (orthogonal) *projection*
+    if P² = P.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'In particular, if W is a vector subspace of 𝔽^n with some orthonormal basis
+    (w[1]*,…,*w[d]), it is then easy to check that the map 𝒫[W] : 𝔽^n →𝔽^n onto W
+    satisfying'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑d 𝒫W (v) := ⟨v,wi⟩wi, for any v ∈ 𝔽n, i=1 ](img/file5.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: defines an orthogonal projection.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.3 From linear operators to matrices
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: 'Let V be a finite-dimensional vector space over 𝔽 and ⟨⋅*,*⋅⟩ a non-degenerate
+    inner product on V. Given a linear operator 𝒜 : V →V, then, by the Riesz representation
+    theorem  [[309](Biblography.xhtml#Xyosida1965functional), Section III-6], there
+    exists a unique linear operator 𝒜^† : V →V, called the adjoint operator, such
+    that'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![⟨𝒜u, v⟩ = ⟨u,𝒜 †v⟩, for all u,v ∈ V. ](img/file6.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'Indeed, for any v ∈V, the map u ∈V![↦→](img/file7.jpg)⟨𝒜u*,*v⟩ is a linear
+    functional, hence an element of the dual space V^† (the space of bounded linear
+    functionals on V), therefore for each v ∈V, there exists v′∈V such that ⟨𝒜u*,*v⟩
+    = ⟨u*,*v′⟩. It is then easy to show that the map v![↦→](img/file8.jpg)v′ is linear,
+    proving that the adjoint operator is uniquely defined. In the particular case
+    where 𝒜 = 𝒜^†, the operator 𝒜 is called Hermitian, a key requirement in quantum
+    mechanics:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 3.** The operator 𝒜 is called *Hermitian*, or *self-adjoint*,
+    if 𝒜 = 𝒜^†.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: For a Hermitian operator 𝒜, we then have, for any u ∈V,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![⟨𝒜u, u⟩ = ⟨u,𝒜 †u⟩ = ⟨u,𝒜u ⟩ = ⟨𝒜u,u⟩∗ ](img/file9.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: by conjugate symmetry (Definition [1](#x1-25002r1)), and therefore ⟨𝒜u*,*u⟩
+    is real. Conversely, if ⟨𝒜u*,*u⟩ is real, then
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∗ † ⟨𝒜u,u⟩ = ⟨𝒜u, u⟩ = ⟨u,𝒜u ⟩ = ⟨𝒜 u,u⟩. ](img/file10.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Therefore, ![⟨( ) ⟩ 𝒜 − 𝒜† u,u](img/file11.jpg) = 0; since this is true for
+    all u ∈V, then 𝒜 = 𝒜^†.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The following property of operators shall be useful to ensure that systems
+    driven by operators preserve distances, or norms:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 4.** The linear operator 𝒜 : V → V is called *unitary* if it is
+    surjective and'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![⟨𝒜u, 𝒜v ⟩ = ⟨u,v ⟩, for all u, v ∈ V. ](img/file12.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Recall that a linear operator between two finite-dimensional normed spaces is
+    bounded, and therefore continuous. For any u ∈V, this implies that ∥𝒜u∥ = ∥u∥,
+    so that a unitary operator 𝒜 preserves the norm. In that case, 𝒜 is an isometry,
+    therefore injective. Being also surjective, it is bijective and therefore its
+    inverse exists. For a unitary operator 𝒜 and any u*,*v ∈V, we have
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ † ⟨u,v⟩ = ⟨𝒜u, 𝒜v⟩ = ⟨u,𝒜 𝒜v ⟩ ](img/file13.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: by definition of the adjoint, implying that
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![𝒜 †𝒜 = ℐ = 𝒜 𝒜 †, ](img/file14.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: where ℐ is the identity operator.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Example (Real Matrices):** If V = ℝ^n with inner product ⟨u*,*v⟩ := u^⊤v
+    for u*,*v ∈ℝ^n, the linear operator 𝒜 can now be viewed as a matrix A in ℳ[n](ℝ).
+    Its adjoint is nothing other than the transpose A^⊤, and therefore A is self-adjoint
+    if and only if it is symmetric. In this case, if A is unitary (or orthogonal),
+    then it is invertible with A^(−1) = A^⊤. Rotation matrices in ℝ², which will play
+    an important role later when constructing quantum circuits, are the only unitary
+    maps of ℝ² onto itself and are of the form'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![⌊ ⌋ cos(𝜃) δsin(𝜃) ⌈ ⌉, sin(𝜃) − δcos(𝜃) ](img/file15.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: for *𝜃* ∈ [0*,*2*π*) and *δ* ∈{−1*,*+1}.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Example (Complex Matrices):** If V = ℂ^n with inner product ⟨u*,*v⟩ := v^†u
+    for u*,*v ∈ℂ^n, the linear operator 𝒜 can now be viewed as a matrix in ℳ[n](ℂ).
+    The adjoint of such a matrix is then the Hermitian conjugate A^† and A is called
+    Hermitian if A = A^† and unitary if A^†A = I[n]. We shall denote by 𝒰[n](ℂ) the
+    set of unitary matrices in ℳ[n](ℂ). We will discuss Hermitian matrices over ℂ
+    in more detail in Section [1.1.6](#x1-290006).'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.4 Condition number
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: 'In order to manipulate matrices and measure them, we require matrix norms:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 5.** A matrix norm ∥⋅∥ : ℳ[m,n](𝔽) →ℝ is a function satisfying,
+    for any *α* ∈𝔽 and A*,*B ∈ℳ[m,n](𝔽),'
+  prefs: []
+  type: TYPE_NORMAL
+- en: (positively valued) ∥A∥≥ 0;
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: (definite) ∥A∥ = 0 if and only if A = 0[m,n];
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: (absolutely homogeneous) ∥*α*A∥ = |*α*|∥A∥;
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: (triangle inequality) ∥A + B∥≤∥A∥ + ∥B∥.
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: The norm is further called sub-multiplicative if ∥AB∥≤∥A∥∥B∥.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The condition number of a matrix is an important tool to understand the stability
+    of linear equations of the form Ax = b, for A ∈ℳ[n](𝔽), b ∈𝔽^n. Assuming A to
+    be non-singular, the true solution is clearly x[∗] := A^(−1)b. Suppose, however,
+    that the vector b is only known up to some (not necessarily quantum) measurement
+    error, and one observes instead b + Δ[b]. The solution is then A^(−1)(b + Δ[b])
+    = x[∗] + Δ[x], with Δ[x] := A^(−1)Δ[b]. In particular, we can write, for any (sub-multiplicative)
+    matrix norm ∥⋅∥,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ −1 ∥Δx-∥ = ∥A---Δb-∥≤ ∥A− 1∥ --∥b∥--∥Δb-∥ ≤ ∥A −1∥∥A∥ ∥Δb∥-. ∥x∥ ∥A −1b∥
+    ∥A− 1b∥ ∥b∥ ∥b ∥ ](img/file16.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'From this inequality, we see that the quantity ∥A^(−1)∥∥A∥ bounds the relative
+    error in the solution with respect to the relative error in the measurement of
+    the input vector b. This leads to the following terminology:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 6.** Given a matrix A ∈ ℳ[n](𝔽) and a sub-multiplicative norm ∥⋅∥,
+    we call'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![κ ∥⋅∥(A) := ∥A −1∥∥A ∥ ](img/file17.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: the *condition number* (with respect to the norm ∥⋅∥) of the matrix A (and assign
+    to it infinite value if A is singular).
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Remark:** The definition of the condition number above holds for any matrix
+    norm ∥⋅∥, but admits a more explicit representation in the particular case of
+    the spectral norm ∥⋅∥[2], defined as'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![∥A ∥2 := sup ∥Ax∥2-, x⁄=0 ∥x ∥2 ](img/file18.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: where ∥x∥[2] := ![(∑ ) ni=1|xi|2](img/file19.jpg)^(![1 2](img/file20.jpg)) is
+    the *L* [2] norm for vectors. If the matrix A is not singular, then
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ |λ (A )| κ (A ) :=--max----, |λmin(A)| ](img/file21.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: where *λ*[max](A) and *λ*[min](A) denote the largest and smallest eigenvalues
+    of A.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.5 Matrix decompositions and spectral theorem
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: Having defined essential properties of (complex) matrices, we now introduce
+    several essential tools that allow us to gain a better understanding of their
+    properties.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The Singular Value Decomposition is a key tool to analyse the properties and
+    behaviours of matrices. It is ubiquitous in applied statistics and machine learning
+    and allows us to reduce the explanatory dimension of a large matrix into a small
+    number of meaningful components.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Theorem 1** (Singular Value Decomposition)**.** *Let* A ∈ℳ[m,n](𝔽) *and*
+    *p* := min(*m,n*)*. There exist* U ∈𝒰[m](𝔽)*,* V ∈𝒰[n](𝔽) *and* *σ*[1] ≥![⋅⋅⋅](img/file22.jpg)≥
+    *σ*[p] ≥ 0 *such* *that* A = UΣV^†*, where *Σ ∈ℳ[m,n](𝔽) *is diagonal with* Σ[ii]
+    = *σ*[i] *for* *i* = 1*,…,p* *and* Σ[ii] = 0 *for* *i > p**.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The numbers {*σ*[1]*,…,σ*[p]} are called the singular values of A and are uniquely
+    defined. The columns of U and V are the left-singular and right-singular vectors
+    of A, in the sense that, if *σ* ∈{*σ*[1]*,…,σ*[p]}, then there exist a column u
+    of U and a column v of V such that Av = *σ*u and A^†u = *σ*v. Recall that the
+    rank of a matrix is defined as the dimension of the span of its columns. As a
+    corollary of the Singular Value Decomposition theorem, the rank of a matrix is
+    therefore equal to the number of non-zero singular values. The Singular Value
+    Decomposition is general in the sense that it holds for any matrix. In the particular
+    case of square matrices, the Schur decomposition and the Spectral Theorem provide
+    refinements.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The Spectral Theorem is a cornerstone result in the theory of linear operators,
+    and in particular for (finite-dimensional) matrices. Recall that an operator 𝒜
+    : V →V is called normal if it commutes with its adjoint, namely if 𝒜𝒜^† = 𝒜^†𝒜.
+    Self-adjoint (or Hermitian) operators are clearly normal, yet the converse is
+    not true in general. Recall further that an eigenvector of 𝒜 is a non-zero vector
+    u ∈V such that 𝒜u = *λ*u for some *λ* ∈ℂ, and we denote by *σ*(𝒜) the set of eigenvalues
+    of 𝒜.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The following result, which is more general than the subsequent spectral theorem,
+    allows us to decompose any arbitrary complex square matrix.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Theorem 2** (Schur Decomposition)**.** *For any* A ∈ ℳ[n](ℂ) *there exits
+    a* *unitary matrix *U ∈ 𝒰[n](ℂ) *and an upper triangular matrix *T *such that*
+    A = UTU^(−1)*.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Note that since U is unitary, then U^(−1) = U^†. We call the matrix T the Schur
+    transform of A and the identity in the theorem means that A and T are similar,
+    so in particular, possess the same eigenvalues, all located on the diagonal of T.
+    If A is a normal matrix, then so is T, and therefore T must be diagonal and we
+    write T = D for clarity. In this case, we say that the matrix A is diagonalisable
+    with A = UDU^†, where the diagonal entries of D are the eigenvalues of A and the
+    column vectors of U are the orthonormal eigenvectors of A.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Theorem 3** (Spectral Theorem)**.** *The linear operator *𝒜 : V → V *is*
+    *normal if and only if there exists an orthonormal basis of *V *consisting of*
+    *eigenvectors of *A*.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: For each eigenvalue *λ* ∈ *σ*(𝒜), denote the corresponding eigenspace
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![𝒱λ := {u ∈ V : 𝒜u = λu} . ](img/file23.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Since the vector space V is the orthogonal direct sum of the eigenspaces (indexed
+    by the eigenvalues of 𝒜), we can then write the spectral decomposition
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑ 𝒜 = λ𝒫 λ, λ∈σ(𝒜) ](img/file24.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where 𝒫[λ] is the orthogonal projection operator onto 𝒱[λ]. Note that such an
+    operator is naturally self-adjoint  [[309](Biblography.xhtml#Xyosida1965functional), Theorem
+    2, Section III-1].
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.6 Hermitian matrices
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: We introduced above Hermitian matrices as the set of matrices A over the complex
+    field ℂ such that A = A^†. As fundamental building blocks of quantum computing,
+    we investigate their properties further. Clearly, a real matrix is Hermitian if
+    and only if it is symmetric, in which case A^⊤ = A.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Proposition 1.** *The eigenvalues of a Hermitian matrix are real.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Proof.* If Ax = *λ*x for *λ* ∈ℂ and x ∈ℂ^n, then'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ⟨Ax*,*x⟩ | = x^†Ax = *λ*x^†x = *λ*∥x∥²*,* |'
+  prefs: []
+  type: TYPE_TB
+- en: '| ⟨x*,*Ax⟩ | = (Ax)^†x = (*λ*x)^†x = *λ*^∗x^†x = *λ*^∗∥x∥²*.* |'
+  prefs: []
+  type: TYPE_TB
+- en: Since both are equal by the Hermitian property, then *λ* = *λ*^∗, proving the
+    proposition. □
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The Singular Value Decomposition (Theorem [1](#x1-28002r1)) takes a particular
+    flavour in the case of Hermitian matrices:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Theorem 4.** *With the notations of Theorem *[*1*](#x1-28002r1)*, if *A ∈
+    ℳ[n](ℂ) *is* *Hermitian, then the matrices *U *and *V *are equal and the matrix *Σ
+    *is* *diagonal with real entries.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Theorem 5.** *For a Hermitian matrix* A ∈ ℳ[n](ℂ)*, the following are* *equivalent:*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*The eigenvalues are non-negative.*'
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: '*There exists a Hermitian matrix *B ∈ℳ[n](ℂ) *such that* A = B²*.*'
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: '*There exists a matrix *B ∈ℳ[n](ℂ) *such that* A = B^†B*.*'
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: '*For every* x ∈ℂ^n*,* ⟨Ax*,*x⟩≥ 0*.*'
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: '*Such a matrix is called positive semi-definite.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Proof.* The Spectral Theorem shows that there exist a unitary matrix U ∈𝒰[n](ℂ)
+    and a diagonal matrix Σ ∈ℳ[n](ℂ) such that A = UΣU^†, where the diagonal elements
+    of Σ are the eigenvalues of A. Assuming (i), we can define B = U![√ Σ-](img/file25.jpg)U^†∈ℳ[n](ℂ).
+    Then clearly'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ † 2 ( √ -- †)( √ -- †) B = B and B = U ΣU U ΣU = A, ](img/file26.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: since U is unitary. The equality A = B^†B is also obvious. The latter implies
+    that
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ † 2 n ⟨Ax, x⟩ = ⟨B Bx,x⟩ = ⟨Bx,Bx ⟩ = ∥Bx ∥ ≥ 0, for any x ∈ ℂ . ](img/file27.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Finally, assume (iv) and let *λ* be an eigenvalue of A with eigenvector u. Then
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ 2 ⟨Au, u⟩ = ⟨λu,u⟩ = λ⟨u,u⟩ = λ∥u∥ . ](img/file28.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Since the latter is strictly positive, then clearly *λ* ≥ 0.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The following property lies at the core of Hamiltonian simulation of quantum
+    systems:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Theorem 6.** *If *A ∈ ℳ[n](ℂ) *is Hermitian, then, for any* *t* ∈ ℝ*,* e^(itA)
+    *is unitary; conversely, every unitary matrix has the form* e^(itA) *for some*
+    *Hermitian matrix *A*.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Recall that for a matrix A ∈ℳ[n](ℂ), its exponential is given by
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ A ∑ Ak- e = k! . k≥0 ](img/file29.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: In practice, though, given a Hermitian matrix A, finding the corresponding unitary
+    matrix U is not easy. The Hamiltonian simulation problem is defined as follows.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Hamiltonian Problem:** Given a Hermitian matrix A ∈ℳ[n](ℂ), a time *t >*
+    0, a tolerance level *𝜀 >* 0, and some matrix norm ∥⋅∥, find a unitary matrix U
+    such that ![∥∥ itA ∥∥ U − e](img/file30.jpg)≤ *𝜀*.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.7 Rotation matrices
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: 'Rotation matrices, and later their quantum gate equivalents will play a key
+    role in building quantum circuits. Let us start with the following lemma:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Lemma 1.** *If a matrix* A ∈ℳ[n](ℂ) *is such that* A² = I*, then for any*
+    *𝜃* ∈ℝ*,*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ei𝜃A = cos(𝜃)I + isin(𝜃)A. ](img/file31.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: '*Proof.* This follows directly from the series expansion'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∑ xk ex = --, k≥0 k! ](img/file32.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: which has an infinite radius of convergence. □
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Lemma [1](#x1-30002r1) will prove essential for computational purposes. As
+    simple examples, consider the following:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Exercise:** Compute e^(i𝜃A) for A ∈{X*,*Y*,*Z} and *𝜃* ∈ℝ, where'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ ⌊ ⌋ ⌊ ⌋ X = ⌈0 1⌉ , Y = ⌈0 − i⌉, Z = ⌈1 0 ⌉. 1 0 i 0 0 − 1 ](img/file33.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'For any *α* ∈ [0*,*2*π*), consider now the map ℛ[α] : ℝ² →ℝ² such that'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ( ) ( ) ℛ α r cos(𝜃),rsin(𝜃) := r cos(𝜃 + α),rsin(𝜃 + α ) , ](img/file34.jpg)![for
+    any r ∈ ℝ and 𝜃 ∈ [0,2π), ](img/file35.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'which is basically a rotation of angle *α* and does not affect the norm of
+    the input vector. To the map ℛ[α], we can associate the (rotation) matrix R[α]
+    such that ℛ[α](u) = R[α]u for any u ∈ℝ². It is easy (exercise) to show the following:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Lemma 2.** *The matrix *R[α] *has the form*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ cos(α ) − sin(α) R α = ⌈ ⌉ . sin (α ) cos(α) ](img/file36.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: This representation is the general form of a rotation matrix in ℝ² (introduced
+    in ([1.1.3](#x1-26004r3))).
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Exercise:** Write the matrices e^(i𝜃A) for A ∈{X*,*Y*,*Z} from the previous
+    exercise as rotation matrices.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.8 Polar coordinates
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: Recall that a point *z* = *x* + i*y*, with *x,y* ∈ℝ, lying on the unit circle
+    can be written as *z* = e^(i𝜃) with *𝜃* ∈ [0*,*2*π*). Indeed, simply let *x* =
+    *r* cos(*𝜃*), *y* = *r* sin(*𝜃*) and add the constraint *r* = 1\. Consider now
+    a general vector u ∈ℂ² of the form
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![u = αe1 + βe2, ](img/file37.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'with *α,β* ∈ℂ such that |*α*|² + |*β*|² = 1\. Here, (e[1]*,*e[2]) forms a basis
+    of ℝ²:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ ⌊ ⌋ 1 0 e1 := ⌈ ⌉, e2 := ⌈ ⌉ . 0 1 ](img/file38.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: In polar coordinates, we can then write
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ i𝜃α i𝜃β u = rαe e1 + rβe e2\. ](img/file39.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Note that arbitrary multiplication phases have no influence – a fact of key
+    importance in quantum mechanics – because, for any *γ* ∈ℝ,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![|eiγα|2 = (eiγα)∗eiγα = α ∗e−iγeiγα = α∗α = |α|2, ](img/file40.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: so that in fact, multiplying u by the global phase e^(−i𝜃[α]) and letting *𝜃*
+    := *𝜃*[β] −*𝜃*[α], we consider
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ i𝜃 u = rαe1 + rβe e2\. ](img/file41.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Write temporarily *r*[β]e^(i𝜃) = *x* + i*y*. Insisting on u being on the unit
+    sphere further imposes ∥u∥² = 1, namely
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| 1 | = ∥u∥² = ![(](img/file42.jpg)*r*[α]e[1] + (*x* + i*y*)e[2]![)](img/file43.jpg)^†![(](img/file44.jpg)*r*[α]e[1]
+    + (*x* + i*y*)e[2]![)](img/file45.jpg) |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ![(](img/file46.jpg)*r*[α]e[1]^⊤ + (*x* − i*y*)e [2]^⊤![)](img/file47.jpg)![(](img/file48.jpg)*r*[α]e[1]
+    + (*x* + i*y*)e[2]![)](img/file49.jpg) |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = *r*[α]² + *x*² + *y*²*,* |'
+  prefs: []
+  type: TYPE_TB
+- en: since (e[1]*,*e[2]) is orthonormal. This is nothing more than the equation of
+    the unit sphere. In polar coordinates, we can write
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![x = rsin(𝜃)cos(ϕ), y = rsin(𝜃)sin (ϕ ), rα = r cos(𝜃), ](img/file50.jpg)
+    |  |'
+  prefs: []
+  type: TYPE_TB
+- en: and clearly *r* = 1 since we are on the unit sphere. Therefore
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| u | = cos(*𝜃*)e[1] + ![(](img/file51.jpg)sin(*𝜃*)cos(*ϕ*) + isin(*𝜃*)sin(*ϕ*)![)](img/file52.jpg)e[2]
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = cos(*𝜃*)e[1] + sin(*𝜃*)e^(iϕ)e [2]*.* |'
+  prefs: []
+  type: TYPE_TB
+- en: 1.1.9 Dirac notations
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: Given a vector v ∈ℂ^n, Dirac’s *ket* and *bra* notations read
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ⌊ ⌋ &#124;v1&#124; &#124;v2&#124; &#124;v⟩ := &#124;&#124; .&#124;&#124;
+    and ⟨v&#124; := [v∗1,v2∗,...,v∗n]. &#124;⌈ ..&#124;⌉ vn ](img/file53.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: With these notations, the operation ![⟨u,v⟩](img/file54.jpg) := ⟨u|v⟩ defines
+    an inner product on ℂ^n. The notation for the standard orthonormal basis in  ℂ^n
+    is (![|i⟩](img/file55.jpg))[i=0,…,n−1], i.e.,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ⌊ 1⌋ ⌊ 0⌋ ⌊ 0⌋ &#124; &#124; &#124; &#124; &#124; &#124; &#124;&#124;
+    0&#124;&#124; &#124;&#124; 1&#124;&#124; &#124;&#124; 0&#124;&#124; &#124;0⟩ :=
+    &#124;&#124; ..&#124;&#124;, &#124;1⟩ := &#124;&#124; ..&#124;&#124; , ... &#124;n
+    − 1⟩ := &#124;&#124; ..&#124;&#124;. ⌈ .⌉ ⌈ .⌉ ⌈ .⌉ 0 0 1 ](img/file56.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: In coordinates, we can write, for any *u,v* ∈ℂ^n,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![|u⟩ = ∑ u |i⟩ and |v⟩ = ∑ v |i⟩, i i i i ](img/file57.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: and therefore,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∑ ⟨u,v⟩ = u ∗ivi. i ](img/file58.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 1.1.10 Quantum operators
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: In the language of Dirac’s notations, we can define the *outer product* ![|u⟩](img/file59.jpg)⟨v|
+    (for u ∈U and v ∈V) as a linear operator from V to U, two vector spaces, as
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![( ) &#124;u⟩ ⟨v&#124; &#124;w⟩ := ⟨v&#124;w ⟩ &#124;u⟩, for any w ∈ V.
+    ](img/file60.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: In particular, ![|v⟩](img/file61.jpg)⟨v| is the projection on the one-dimensional
+    space generated by ![|v ⟩](img/file62.jpg). Any linear operator can be expressed
+    as a linear combination of outer products as
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑ 𝒜 = Aij &#124;i⟩⟨j&#124;, ij ](img/file63.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where ![|i⟩](img/file64.jpg) and ![|j⟩](img/file65.jpg) are the standard basis
+    vectors ([1.1.9](#x1-320009)).
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Similarly to the linear algebra setting above, we can define an eigenvector
+    of a linear operator 𝒜 : V →V as a non-zero vector ![|v ⟩](img/file66.jpg) such
+    that'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![𝒜 &#124;v⟩ = λ &#124;v⟩ ](img/file67.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: for some complex eigenvalue *λ*. Associated with any linear operator 𝒜, the
+    adjoint operator 𝒜^† satisfies
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ⟨ ⟩ ⟨u&#124;𝒜v ⟩ = 𝒜 †u&#124;v . ](img/file68.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Indeed, in the language of linear operators above, we have
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![⟨u,𝒜v ⟩ = ⟨𝒜v, u⟩∗ = ⟨v,𝒜 †u⟩∗ = ⟨𝒜 †u,v⟩, ](img/file69.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: by definition of the inner product (Definition [1](#x1-25002r1)).
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.1.11 Tensor product
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: 'Given two vector spaces U and V of dimensions *m* and *n*, the tensor product
+    U ⊗V is a vector space of dimension *mn*. For u ∈U and v ∈V, we can form the vector
+    ![|uv ⟩](img/file70.jpg) := ![|u⟩](img/file71.jpg)⊗![|v⟩](img/file72.jpg)∈U ⊗V
+    with the following properties:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ′ |(u + u )v⟩](img/file73.jpg) = ![|uv ⟩](img/file74.jpg) + ![ ′ |u v⟩](img/file75.jpg),
+    for any u′∈U;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '![|u(v + v′)⟩](img/file76.jpg) = ![|uv ⟩](img/file77.jpg) + ![|uv′⟩](img/file78.jpg),
+    for any v′∈V;'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: '*α*![|uv⟩](img/file79.jpg) = ![|(αu)v⟩](img/file80.jpg) = ![|u(αv)⟩](img/file81.jpg),
+    for any *α* ∈ℂ.'
+  prefs:
+  - PREF_UL
+  type: TYPE_NORMAL
+- en: 'Given the linear operators 𝒜 : U →U and ℬ : V →V, we can then define their
+    tensor product as an operator 𝒜⊗ℬ on U ⊗V:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![( ) 𝒜 ⊗ ℬ &#124;uv ⟩ := &#124;(𝒜u),(ℬv)⟩, ](img/file82.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: which can be represented in matrix form as A ⊗ B ∈ℳ[mn,mn](ℂ).
+  prefs: []
+  type: TYPE_NORMAL
+- en: This Dirac formalism, fully anchored in (classical) linear algebra, now opens
+    the gates to a proper dive into the foundations of quantum mechanics.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.2 Postulates of Quantum Mechanics
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: 'Quantum mechanics states several mathematical postulates that a physical theory
+    must satisfy. It turns out that the mathematics of quantum mechanics allows for
+    more general *computation*: more general definition of the *memory state* in comparison
+    with classical digital computing and a wider range of possible *transformations*
+    of such memory states. A natural question arises: what is the reason for this
+    superior mode of computation not being used until very recently? The answer is
+    that although quantum mechanics was formulated almost a century ago (Paul Dirac’s
+    seminal work "The Principles of Quantum Mechanics"  [[86](Biblography.xhtml#XDirac1930)]
+    was published in 1930), the realisation of the rules of quantum mechanics in the
+    computational protocol performed on classical digital computers requires an enormous
+    amount of memory. Exponential gains in computing power are offset by exponential
+    memory requirements.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: In order to perform quantum computations efficiently, we need to use actual
+    quantum mechanical systems, with their ability to encode information in their
+    states. To illustrate this point, the state of a quantum system consisting of *n*
+    quantum bits (qubits) can be described by specifying 2^n probability amplitudes
+    – this is a huge amount of information even for very small systems (*n* ∼ 100)
+    and it would be impossible to store this information in classical memory. It took
+    decades of technological progress before quantum processing units (QPUs) – devices
+    that control quantum mechanical systems performing computations – became feasible.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Let us now proceed with the formulation of the mathematical postulates that
+    lie at the foundation of quantum mechanics. These postulates specify a general
+    framework for describing the behaviour of a physical system  [[80](Biblography.xhtml#XDawar), [182](Biblography.xhtml#XLandau1965), [249](Biblography.xhtml#XRobinett2006)]:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: How to describe the state of a closed system.
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: How to describe the evolution of a closed system.
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: How to describe the interactions of a system with external systems.
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: How to describe observables of a system.
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: How to describe the state of a composite system in terms of its component parts.
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: 1.2.1 First postulate – Statics
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: '**Postulate 1\.** *Associated to any physical system is a complex inner product
+    space* *known as the state space of the system. The system is completely described
+    at any* *given point in time by its state vector, which is a unit vector in its
+    state space.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'What is the importance of the first postulate from the quantum computing point
+    of view? The answer is that quantum mechanics offers us a straightforward generalisation
+    of the classical *binary digit* (bit). The classical bit is a two-state system
+    with controlled transitions between them. As an example, we can use an electrical
+    switch that can exist in one of the two discrete, stable states ("on" and "off").
+    Although electrical switches may seem an odd physical realisation of bits in the
+    age of transistors, they illustrate an important point about computation in general:
+    it is substrate independent. Exactly the same computational results can be obtained
+    using electrical relays and CMOS transistors.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The quantum mechanical version of a bit, called a *quantum binary digit* (qubit),
+    is a quantum mechanical two-state system. The first postulate of quantum mechanics
+    tells us that the state of such a system can be represented mathematically by
+    a unit vector in the two-dimensional complex vector space. This also means that
+    such a system can exist in a superposition of basis states. Indeed, any vector
+    ![|v⟩](img/file83.jpg) in the two-dimensional complex vector space,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ α |v⟩ = ⌈ ⌉ , β ](img/file84.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'can be represented as a linear combination of the standard basis vectors:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![⌊ ⌋ ⌊ ⌋ ⌊ ⌋ ⌈ α⌉ ⌈1⌉ ⌈0⌉ β = α 0 + β 1 , |v⟩ = α |0⟩ + β |1⟩. ](img/file85.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Since the state vector is a unit vector, the coefficients *α* and *β* must satisfy
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![|α|2 + |β|2 = 1\. ](img/file86.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 'The coefficients *α* and *β* are *probability amplitudes*. Even though a qubit
+    can exist in a superposition of basis states, once *measured* (see Postulate 3),
+    its state *collapses* to one of the basis states: |*α*|² and |*β*|² give us the
+    probability of finding the qubit, respectively, in states ![|0⟩](img/file87.jpg)
+    and ![|1⟩](img/file88.jpg) after measurement.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: One can draw an analogy with how the space of natural numbers, ℕ, can be extended
+    to the space of real numbers, ℝ, and then to the space of complex numbers, ℂ.
+    We have a much wider range of functions that can operate on and take values in
+    ℝ and ℂ than in ℕ. Similarly, allowing the two-state system to exist in a superposition
+    of states significantly extends the range of possible operators that can transform
+    such states (i.e., perform computation).
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'For example, there is no Boolean function *f* that, when applied twice to a
+    classical bit, would result in a NOT gate: *f*(*f*(0)) = 1 and *f*(*f*(1)) = 0\.
+    But there is such an operator in quantum computing. We can easily verify by direct
+    calculations that the matrix'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ 1 + i 1 − i M := 1-⌈ ⌉ , 2 1 − i 1 + i ](img/file89.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: applied twice to the basis vector ![|0⟩](img/file90.jpg) would transform it
+    to the basis vector ![|1⟩](img/file91.jpg), and applied twice to the basis vector
+    ![|1⟩](img/file92.jpg) would transform it to the basis vector ![|0⟩](img/file93.jpg).
+    M is an example of a *quantum logic gate* – an operator that transforms the state
+    of a qubit, thus implementing the computation.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Remark:** The state space of a physical system can be infinite-dimensional.
+    The quantum computing paradigm based on infinite-dimensional Hilbert spaces is
+    called *continuous-variable quantum computing*, which is realised in, e.g., some
+    photonic quantum computing systems. However, in the context of digital quantum
+    computing, we will restrict our analysis to finite-dimensional state spaces.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The state of a qubit (the fundamental memory unit of quantum computing that
+    generalises the concept of a classical bit) can be described mathematically as
+    a unit vector in the two-dimensional complex vector space. Any physical system
+    whose state space can be described by ℂ² can serve as an implementation of a qubit.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.2.2 Second postulate – Dynamics
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: '**Postulate 2\.** *The time evolution of a closed quantum system is described
+    by the* *Schrödinger equation*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![iℏd-&#124;ψ-(t)⟩ = ℋ &#124;ψ(t)⟩, dt ](img/file94.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: '*where* ℏ *is Planck’s constant and* ℋ *is a time-independent Hermitian operator*
+    *known as the Hamiltonian of the system.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The Hamiltonian of a quantum system is an operator corresponding to the total
+    energy of that system, and its eigenvalues are the possible energy levels of the
+    system. The knowledge of the Hamiltonian provides all the necessary information
+    about system dynamics.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In the Schrödinger equation ([1.2.2](#x1-370002)), the state ![|ψ(t1)⟩](img/file95.jpg)
+    of a closed quantum system at time *t*[1] is related to the state ![|ψ (t2)⟩](img/file96.jpg)
+    at time *t*[2] by a unitary operator 𝒰(*t*[1]*,t*[2]) that depends only on *t*[1]
+    and *t*[2] via
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![&#124;ψ(t2)⟩ = 𝒰 (t1,t2) &#124;ψ(t1)⟩ , ](img/file97.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where 𝒰(*t*[1]*,t*[2]) is obtained from the Hamiltonian ℋ as
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ( ) iℋ-(t2-−-t1) 𝒰 (t1,t2) = exp − ℏ . ](img/file98.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: 'Unitary operators preserve the inner product (and therefore norms, lengths,
+    and distances), which means that for two vectors ![|u⟩](img/file99.jpg) and ![|v⟩](img/file100.jpg),
+    if 𝒰 is a unitary operator, then the inner product between 𝒰![|u⟩](img/file101.jpg)
+    and 𝒰![|v⟩](img/file102.jpg) is the same as the inner product between ![|u⟩](img/file103.jpg)
+    and ![|v⟩](img/file104.jpg):'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ † ⟨u&#124;𝒰 𝒰 &#124;v⟩ = ⟨u&#124;v⟩ . ](img/file105.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: 'A unitary operator is a complex generalisation of a rotation: unitary operators
+    take an orthonormal basis to another orthonormal basis, and any operator with
+    this property is unitary. In quantum mechanics, physical transformations such
+    as rotations, translations and time evolution correspond to maps that take quantum
+    states to other quantum states. These maps should be linear and preserve the inner
+    product. This allows us to look at the unitary operators as the *quantum* *logic
+    gates* implementing quantum computation protocols. Furthermore, unitary operators
+    are invertible, a key property that ensures that quantum computing is *reversible*.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Quantum logic gates (quantum counterparts of the Boolean logic gates in classical
+    computing) are unitary operators that transform quantum states, thus implementing
+    the computation.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.2.3 Third postulate – Measurement
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: Given a Hermitian operator 𝒜, the spectral theorem implies that the state ![|ψ⟩](img/file106.jpg)
+    of a system can be written as a superposition
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑N &#124;ψ⟩ = αi &#124;ψi⟩ , i=1 ](img/file107.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: 'where the coefficients (*α*[i])[i=1,…,N] are complex *probability amplitudes*,
+    assumed to be normalised with ∑ [i=1]^N|*α*[i]|² = 1, and where (![|ψi⟩](img/file108.jpg))[i=1,…,N]
+    are eigenfunctions of 𝒜. The measurement postulate then reads as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Postulate 3\.** *If we measure the Hermitian operator* 𝒜 *in the state* ![|ψ⟩](img/file109.jpg)
+    *given* *in *([1.2.3](#x1-380003))*, the possible outcomes for the measurement
+    are the eigenvalues* (*λ*[i])[i=1,…,N] *of *𝒜*, and the probability **p*[i] *to
+    measure **λ*[i] *is given by* *p*[i] = |*α*[i]|²*. After* *the outcome **λ*[i]*,
+    the state of the system becomes*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![&#124;ψ⟩ = &#124;ψi⟩. ](img/file110.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: '*An immediate measurement in the same computational basis will deliver the
+    same* *result without any uncertainty.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The quantum measurements are described by *measurement operators* (𝒫[i])[i=1,…,N],
+    acting on the state space of the system with *N* possible outcomes. If the state
+    of the system is ![|ψ⟩](img/file111.jpg) before the measurement, then the probability
+    of outcome *i* is
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ℙ(i) = ⟨ψ |𝒫 †i𝒫i |ψ ⟩. ](img/file112.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: The measurement operators should also satisfy the *completeness condition*
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![∑N 𝒫 †i𝒫i = ℐ, i=1 ](img/file113.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where ℐ is the identity operator. This ensures that the sum of the probabilities
+    of all outcomes adds up to 1.
+  prefs: []
+  type: TYPE_NORMAL
+- en: These measurement operators are linear but not unitary. From the quantum computing
+    perspective, we are interested in measurement operators that are *projections*
+    (Definition [2](#x1-25004r2)) onto the *computational basis*, such as the standard
+    orthonormal basis given by ([1.1.9](#x1-320009)).
+  prefs: []
+  type: TYPE_NORMAL
+- en: For example, the measurement operators for a single qubit can be defined as
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ ⌊ ⌋ 1 0 0 0 𝒫0 := |0⟩⟨0| = ⌈ ⌉ and 𝒫1 := |1⟩⟨1| = ⌈ ⌉ . 0 0 0 1 ](img/file114.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: We can easily verify that 𝒫[0]² = 𝒫[0] and 𝒫[1]² = 𝒫[1], as should be the case
+    for projection operators, and that the completeness condition ([1.2.3](#x1-380003))
+    is satisfied. If the qubit is in state ![|ψ⟩](img/file115.jpg) = *α*![|0⟩](img/file116.jpg)
+    + *β*![|1⟩](img/file117.jpg), then the measurement operator 𝒫[0] will give us
+    ![|0⟩](img/file118.jpg) with probability |*α*|², and the measurement operator 𝒫[1]
+    will give us ![|1⟩](img/file119.jpg) with probability |*β*|². Indeed,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| 𝒫[0]![&#124;ψ ⟩](img/file120.jpg) | = ![&#124;0⟩](img/file121.jpg)⟨0&#124;![(](img/file122.jpg)*α*![&#124;0⟩](img/file123.jpg)
+    + *β*![&#124;1⟩](img/file124.jpg)![)](img/file125.jpg) = *α*![&#124;0⟩](img/file126.jpg)⟨0&#124;![&#124;0⟩](img/file127.jpg)
+    + *β*![&#124;0⟩](img/file128.jpg)⟨0&#124;![&#124;1⟩](img/file129.jpg) = *α*![&#124;0⟩](img/file130.jpg)*,*
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '| 𝒫[1]![&#124;ψ ⟩](img/file131.jpg) | = ![&#124;1⟩](img/file132.jpg)⟨1&#124;![(](img/file133.jpg)*α*![&#124;0⟩](img/file134.jpg)
+    + *β*![&#124;1⟩](img/file135.jpg)![)](img/file136.jpg) = *α*![&#124;1⟩](img/file137.jpg)⟨1&#124;![&#124;0⟩](img/file138.jpg)
+    + *β*![&#124;1⟩](img/file139.jpg)⟨1&#124;![&#124;1⟩](img/file140.jpg) = *β*![&#124;1⟩](img/file141.jpg)*.*
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: The measurement postulate of quantum mechanics states that an immediate measurement
+    in the same computational basis will deliver the same result without any uncertainty.
+    The key words here are "the same computational basis". What would happen if the
+    subsequent measurement is performed in another basis (the basis specified by another
+    set of linearly independent unit vectors from the state space)? For example, assume
+    that the qubit is in state
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ 1 1 |ψ⟩ = √---|0⟩ + √---|1⟩. 2 2 ](img/file142.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Measuring ![|ψ⟩](img/file143.jpg) in {![|0⟩](img/file144.jpg)*,*![|1⟩](img/file145.jpg)}
+    computational basis will result in observing states ![|0⟩](img/file146.jpg) and ![|1⟩](img/file147.jpg)
+    with equal probability 1*∕*2\. Let us assume that we measured ![|0⟩](img/file148.jpg).
+    The qubit state is now
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ′⟩ |ψ = 1 ⋅ |0⟩+ 0 ⋅ |1⟩. ](img/file149.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: If we repeat the measurement in the same {![|0⟩](img/file150.jpg)*,*![|1⟩](img/file151.jpg)}
+    computational basis, we obtain state ![|0⟩](img/file152.jpg) with probability 1
+    in accordance with the measurement postulate. However, had we measured state ![|ψ′⟩](img/file153.jpg)
+    in the *Hadamard basis* {![|+ ⟩](img/file154.jpg)*,*![|− ⟩](img/file155.jpg)},
+    given by
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![&#124;+ ⟩ := √1-(&#124;0⟩+ &#124;1⟩) and &#124;− ⟩ := 1√--(&#124;0⟩ − &#124;1⟩),
+    2 2 ](img/file156.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: we would have equal probabilities of ![|+⟩](img/file157.jpg) and ![|− ⟩](img/file158.jpg)
+    outcomes. Let us assume that we measured ![|− ⟩](img/file159.jpg) and the state
+    of the qubit is now
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ′′⟩ |ψ = 0 ⋅ |+ ⟩+ 1 ⋅ |− ⟩ . ](img/file160.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: If we repeat the measurement of state ![|ψ ′′⟩](img/file161.jpg) in the Hadamard
+    basis {![|+⟩](img/file162.jpg)*,*![|− ⟩](img/file163.jpg)}, we obtain state ![|−
+    ⟩](img/file164.jpg) with probability 1\. But the state of the qubit is an equal
+    superposition of states ![|0 ⟩](img/file165.jpg) and ![|1⟩](img/file166.jpg) from
+    the {![|0⟩](img/file167.jpg)*,*![|1⟩](img/file168.jpg)} computational basis perspective
+    and we have an equal chance of measuring either ![|0⟩](img/file169.jpg) or ![|1⟩](img/file170.jpg)
+    in this basis.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Remark:** The basis vectors ![|0⟩](img/file171.jpg) and ![|1⟩](img/file172.jpg)
+    that form the standard computational basis can be transformed into the basis vectors
+    ![|+⟩](img/file173.jpg) and ![|− ⟩](img/file174.jpg) that form the Hadamard basis
+    by applying the following unitary operator (rotation), called the *Hadamard gate*:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ⌊ ⌋ -1-⌈1 1 ⌉ H = √2-- 1 − 1 . ](img/file175.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Chapters [6](Chapter_6.xhtml#x1-1190006), [10](Chapter_10.xhtml#x1-20200010)
+    and [11](Chapter_11.xhtml#x1-21700011) provide examples of applications of the
+    Hadamard gate.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The measurement plays a crucial role in quantum computing. This is the process
+    of *collapsing* a quantum state and reading out the classical information: measuring
+    qubits encoding a quantum state will produce a classical bit string. The measurement
+    process generates probabilistic outcomes. Therefore, we need to perform measurements
+    on the same quantum state multiple times to generate a sufficiently large number
+    of classical bit strings to produce reliable statistics.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: The process of measurement describes the collapse of the quantum state due to
+    contact with the environment. After measurement, the states of the qubits are
+    known without any uncertainty. It is possible to extract at most 1 bit of information
+    from a qubit. In order to extract more information about the probability distribution
+    encoded in a given quantum state, it is necessary to perform measurement of the
+    same state multiple times.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.2.4 Fourth postulate – Observable
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: '**Postulate 4\.** *For every measurable property of a physical system, there
+    exists a* *corresponding Hermitian operator. The values of the physical observables*
+    *correspond to the expectation values of Hermitian operators. The expectation
+    value* ![⟨𝒜 ⟩](img/file176.jpg) *of the Hermitian operator *𝒜 *in the normalised
+    state *![|ψ ⟩](img/file177.jpg) *is given by*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![⟨𝒜 ⟩ := ⟨ψ&#124;𝒜 &#124;ψ⟩. ](img/file178.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Let us consider the general case where the expectation value of a Hermitian
+    operator 𝒜 is calculated in state ![|ψ ⟩](img/file179.jpg), which is not an eigenfunction
+    of 𝒜. By the Spectral Theorem [3](#x1-28006r3) (see also ([1.2.3](#x1-380003))),
+    the state ![|ψ ⟩](img/file180.jpg) of a system can be represented as the superposition
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ N ∑ |ψ⟩ = αi |ψi⟩ , i=1 ](img/file181.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: where (![|ψi⟩](img/file182.jpg))[i=1,…,N] are the eigenfunctions of 𝒜 and (*α*[i])[i=1,…,N]
+    the corresponding probability amplitudes.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Therefore, the *expectation value* of 𝒜 in state ![|ψ⟩](img/file183.jpg), given
+    in ([1.2.4](#x1-390004)), is calculated as
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∑N ∑N N∑ ∑N ⟨𝒜⟩ = α∗iαj ⟨ψi|𝒜 |ψj⟩ = α ∗iαjλj ⟨ψi|ψj⟩, i=1j=1 i=1 j=1 ](img/file184.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: where (*λ*[i])[i=1,…,N] are the eigenvalues of 𝒜. The only terms that survive
+    in the expression for ![⟨𝒜 ⟩](img/file185.jpg) are those with *i* = *j* due to
+    the orthogonality of the eigenfunctions, so that
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ N N ∑ ∗ ∑ 2 ⟨𝒜 ⟩ = α iαiλi = |αi| λi. i=1 i=1 ](img/file186.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Therefore, the value of the observable is a weighted average of the eigenvalues
+    of the corresponding Hermitian operator. The weights are the coefficients (|*α*[i]|²)[i=1,…,N],
+    which are the probabilities of measuring the corresponding eigenstate of 𝒜.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Hermitian operators play an exceptionally important role in quantum mechanics
+    since their expectation values correspond to physical observables.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.2.5 Fifth postulate – Composite System
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: '**Postulate 5\.** *The state space of a composite physical system is the tensor*
+    *product of the state spaces of the individual component physical systems.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: If the first component physical system is in state ![|ψA ⟩](img/file187.jpg)
+    and the second component physical system is in state ![|ψB⟩](img/file188.jpg),
+    then the state of the combined system, ![|ψ⟩](img/file189.jpg), is given by the
+    tensor product
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![&#124;ψ⟩ = &#124;ψA⟩ ⊗ &#124;ψB⟩ . ](img/file190.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Not all states of a combined system can be separated into the tensor product
+    of states of individual components. If the state of a system cannot be separated
+    into component parts, we say that the component parts are *entangled*.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The entanglement of quantum systems is one of the major sources of computational
+    power of quantum computing. It allows us to store exponentially more information
+    in the correlations between the states of individual subsystems (in the limit
+    – individual qubits) than directly in the states of individual subsystems.
+  prefs: []
+  type: TYPE_NORMAL
+- en: To illustrate this point, we can look at the number of probability amplitudes
+    needed to describe the state of an *n*-qubit system. An individual qubit can be
+    found in one of the two possible states after measurement – one of the two basis
+    states, ![|0⟩](img/file191.jpg) or ![|1⟩](img/file192.jpg). This means that we
+    need to specify two probability amplitudes to fully describe the state of the
+    qubit before measurement. If all our qubits are independent and the state of the
+    system can be represented as a tensor product of individual qubit states,
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![&#124;ψ⟩ = &#124;ψ1 ⟩⊗ &#124;ψ2⟩⊗ ...⊗ &#124;ψn ⟩, ](img/file193.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: then we need to specify 2*n* probability amplitudes (two for each individual
+    quantum states) to describe the state ![|ψ ⟩](img/file194.jpg) of the system.
+    If, however, all individual qubits are entangled and the tensor product representation
+    of the system state ![|ψ ⟩](img/file195.jpg) does not exist, we need to specify
+    2^n probability amplitudes – this is an effective measure of useful information
+    that can be stored in the system.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The power of quantum computing is derived from the principles of superposition
+    and entanglement. Entanglement allows us to store most of the information in correlations
+    between the qubit states.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.3 Pure and Mixed States
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: There are situations where the state of a quantum mechanical system cannot be
+    described with the help of a state vector. Here, we look at such situations and
+    provide a mathematical tool for describing them.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 1.3.1 Density matrix
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: 'Let us start with the state of a combined two-component physical system given
+    by ([1.2.5](#x1-400005)). Let (![|i⟩](img/file196.jpg))[i=1,...,N] and (![|j⟩](img/file197.jpg))[j=1,...,M]
+    denote, respectively, the standard orthonormal bases of the Hilbert spaces of
+    systems *A* and *B*:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ N M ∑ ∑ &#124;ψA ⟩ = αi &#124;i⟩, &#124;ψB ⟩ = βj &#124;j⟩, i=1 j=1 ](img/file198.jpg)
+    |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where (*α*[i])[i=1,...,N] and (*β*[j])[j=1,...,M] are some probability amplitudes.
+    The states that allow the state vector representation ([1.3.1](#x1-420001)) are
+    called *pure* states. In this case, the state of the combined system is
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑N M∑ &#124;ψ ⟩ = &#124;ψA ⟩⊗ &#124;ψB ⟩ = αiβj &#124;i⟩⊗ &#124;j⟩. i=1
+    j=1 ](img/file199.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: However, in general, the state of the combined system would look like
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑N ∑M &#124;ψ⟩ = γij &#124;i⟩⊗ &#124;j⟩, i=1 j=1 ](img/file200.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where *γ*[ij] are probability amplitudes that may not necessarily be factorised
+    as the product of probability amplitudes (*α*[i])[i=1,...,N] and (*β*[j])[j=1,...,M].
+    If *γ*[ij] cannot be factorised as *α*[i]*β*[j], then the component systems *A*
+    and *B* are entangled and their states cannot be represented by the state vectors ([1.3.1](#x1-420001)).
+    Such states of systems *A* and *B* are called *mixed* states.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The more general setup is that of an *ensemble* of states of the form {*p*[k]*,*![|ψk
+    ⟩](img/file201.jpg)}[k=1,…,N], where each ![|ψi⟩](img/file202.jpg) is a quantum
+    state whose wavefunction is known with certainty (although this does not necessarily
+    provide full knowledge of the measurement statistics), and each *p*[k] is the
+    associated probability (not amplitude) in [0*,*1]. In order to define properly
+    pure and mixed states, introduce the *density operator* as follows:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Definition 7.** A density operator *ρ* is a positive semidefinite Hermitian
+    operator with unit trace and takes the form'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑N ρ := pk &#124;ψk⟩⟨ψk&#124;, k=1 ](img/file203.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: where ∑ [k=1]^N*p*[k] = 1 and ![⟨ψ |ψ ⟩ k l](img/file204.jpg) equals 1 if *k*
+    = *l* and zero otherwise.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Mathematically, such a density operator *ρ* corresponds to a *density matrix*
+    (*ρ*[kl])[k,l=1,…,N] such that
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ N ρ = ρ†, Tr(ρ) ≡ ∑ ρ = 1, ρ ≥ 0, for all k = 1,...,N. kk kk k=1 ](img/file205.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 1.3.2 Pure state
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: A pure state is one that can be represented by a state vector
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ N∑ &#124;ψ⟩ = αi &#124;i⟩, i=1 ](img/file206.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: 'where (*α*[i])[i=1,...,N] are probability amplitudes in ℂ such that ∑ [i=1]^N|*α*[i]|²
+    = 1\. In the ensemble setup above, this means that there exists *k*^∗∈{1*,…,N*}
+    such that *p*[k^∗] = 1 and hence ![|ψ⟩](img/file207.jpg) = ![|ψk∗⟩](img/file208.jpg)
+    and therefore *ρ* = ![|ψ ⟩](img/file209.jpg)⟨*ψ*|. The density matrix also allows
+    us to compute expectations of the form ([1.2.4](#x1-390004)):'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Lemma 3.** *Let **ρ* *be the density matrix associated to the pure state *([1.3.2](#x1-430002))
+    *and let *𝒜 *be an observable (Hermitian operator), then*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![⟨𝒜⟩ := ⟨ψ |𝒜 |ψ ⟩ = Tr (ρ𝒜 ). ](img/file210.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: '*Proof.* The lemma follows from the immediate computation'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ⟨*ψ*&#124;𝒜![&#124;ψ⟩](img/file211.jpg) | = ⟨*ψ*&#124;𝒜∑ [i=1]^N*α* [i]![&#124;i⟩](img/file212.jpg)
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ∑ [i=1]^N*α* [i] ⟨*ψ*&#124;𝒜![&#124;i⟩](img/file213.jpg) |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ∑ [i=1]^N![⟨i&#124;ψ ⟩](img/file214.jpg)⟨*ψ*&#124;𝒜![&#124;i⟩](img/file215.jpg)
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ∑ [i=1]^N ⟨*i*&#124;*ρ*𝒜![&#124;i⟩](img/file216.jpg) = Tr(*ρ*𝒜)*.* |'
+  prefs: []
+  type: TYPE_TB
+- en: □
+  prefs: []
+  type: TYPE_NORMAL
+- en: With the state ![|ψ ⟩](img/file217.jpg) given by ([1.3.2](#x1-430002)), we obtain
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ N∑ ∑N ⟨𝒜 ⟩ = αiα ∗j ⟨j&#124;𝒜 &#124;i⟩. i=1 j=1 ](img/file218.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: At the same time we have
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ∑N ∑N ⟨𝒜 ⟩ = Tr(ρ𝒜) = ρij ⟨j&#124;𝒜 &#124;i⟩. i=1j=1 ](img/file219.jpg)
+    |  |'
+  prefs: []
+  type: TYPE_TB
+- en: 'Comparison of ([1.3.2](#x1-43002r2)) and ([1.3.2](#x1-43002r2)) yields the
+    following expression for the density matrix of a pure state:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∑N ∑N ρij = αiα∗, ρ = αiα∗ |i⟩⟨j| = |ψ ⟩⟨ψ |. j i=1 j=1 j ](img/file220.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: '**Example:** An example of a pure state is the Hadamard state'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ -1- -1- 1 |+ ⟩ = √2-(|0⟩+ |1⟩) = √2-⌈ ⌉, 1 ](img/file221.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: with corresponding density matrix
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ ρ = |+ ⟩⟨+ | = 1-⌈1 1⌉ . 2 1 1 ](img/file222.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: 1.3.3 Mixed state
+  prefs:
+  - PREF_H4
+  type: TYPE_NORMAL
+- en: A mixed state is one that cannot be represented by a single pure state vector,
+    and is therefore represented as a statistical distribution of pure states in the
+    form of an ensemble of quantum states {*p*[k]*,*![|ψk ⟩](img/file223.jpg)}[k=1,…,N],
+    where ∑ [k=1]^N*p*[k] = 1 and *p*[k] ∈ [0*,*1] for each *k*. The density of a
+    mixed state therefore reads
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ N ∑ ρ = pk &#124;ψk ⟩⟨ψk&#124;. k=1 ](img/file224.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: 'Similarly to Lemma [3](#x1-43002r3), we can write expectations of observables
+    with respect to mixed states using the density matrix:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Lemma 4.** *Let **ρ* *be the density matrix associated to the mixed state *([1.3.3](#x1-440003))
+    *and let *𝒜 *be an observable (Hermitian operator), then*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∑N Tr(ρ𝒜 ) = pk⟨ψk|𝒜 |ψk⟩ . k=1 ](img/file225.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: '*Proof.* The lemma follows from the immediate computation'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| Tr(*ρ*𝒜) | = ∑ [i=1]^N ⟨*i*&#124;*ρ*𝒜![&#124;i⟩](img/file226.jpg) |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ∑ [i=1]^N ⟨*i*&#124;![( N∑ ) pk &#124;ψk ⟩⟨ψk&#124; k=1](img/file227.jpg)𝒜![&#124;i⟩](img/file228.jpg)
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ∑ [k=1]^N*p* [k]![(∑N ) ⟨i&#124;ψ ⟩⟨ψ &#124;𝒜 &#124;i⟩ i=1 k k](img/file229.jpg)
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = ∑ [k=1]^N*p* [k] ⟨*ψ*[k]&#124;𝒜![&#124;ψk⟩](img/file230.jpg)*.* |'
+  prefs: []
+  type: TYPE_TB
+- en: □
+  prefs: []
+  type: TYPE_NORMAL
+- en: Let us see now how the density matrix formalism can help us describe the state
+    of a combined system. Consider an entangled state of two systems, *A* and *B*,
+    given by ([1.3.1](#x1-420001)), and a Hermitian operator 𝒜 that only acts within
+    the Hilbert space of system *A*. What would be the expectation value of 𝒜 in this
+    state? Starting with ([1.2.4](#x1-390004)), we obtain
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ N∑ ∑M ∑N M∑ ∗ ⟨𝒜 ⟩ = γijγ kl⟨k&#124;𝒜 &#124;i⟩⟨l&#124;j⟩. i=1 j=1k=1 l=1
+    ](img/file231.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Since only terms with *l* = *j* survive in ([1.3.3](#x1-44002r3)) due to the
+    orthogonality of the basis states, we have
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ( ) ∑N ∑N ∑M ⟨𝒜 ⟩ = ( γijγ∗kj) ⟨k&#124;𝒜 &#124;i⟩. i=1 k=1 j=1 ](img/file232.jpg)
+    |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Thus, the density matrix that describes the mixed state of system *A* is
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ M ∑ ∗ ρik = γijγkj. j=1 ](img/file233.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Note that in the case where the probability amplitudes *γ*[ij] can be factorised
+    as the product of probability amplitudes (*α*[i])[i=1,...,N] and (*β*[j])[j=1,...,M],
+    we obtain
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ M∑ ∗ ∗ ∗∑M 2 ∗ ρik = αiβjαkβj = αiα k |βj| = αiαk, j=1 j=1 ](img/file234.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: which describes a pure state.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'A simple criterion to distinguish a pure state from a mixed state is the following:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Lemma 5.** *Let **ρ* *be a density matrix. The inequality* Tr(*ρ*²) ≤ 1 *always*
+    *holds and* Tr(*ρ*²) = 1 *if and only if **ρ* *corresponds to a pure state.*'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Proof.* Consider an ensemble of pure states {*p*[i]*,*![|ψi⟩](img/file235.jpg)}[i=1,…,N],
+    with density matrix given by ([1.3.3](#x1-440003)). Therefore'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| Tr(*ρ*²) | = Tr![( ( ) ( ) ) ∑N ∑N ( pi &#124;ψi⟩⟨ψi&#124; ( pj &#124;ψj⟩⟨ψj&#124;)
+    ) i=1 j=1](img/file236.jpg) |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = Tr![( ) ( ∑N ∑N ) pipj &#124;ψi⟩⟨ψi&#124; &#124;ψj⟩ ⟨ψj &#124; i=1 j=1](img/file237.jpg)
+    |'
+  prefs: []
+  type: TYPE_TB
+- en: '|  | = Tr![( ∑N ) p2i &#124;ψi⟩ ⟨ψi&#124; i=1](img/file238.jpg) = ∑ [i=1]^N*p*
+    [i]²Tr![(](img/file239.jpg)![&#124;ψi⟩](img/file240.jpg)⟨*ψ*[i]&#124;![)](img/file241.jpg)
+    = ∑ [i=1]^N*p* [i]²![⟨ψi&#124;ψi⟩](img/file242.jpg) = ∑ [i=1]^N*p* [i]²*,* |'
+  prefs: []
+  type: TYPE_TB
+- en: which is smaller than 1 since the *p*[i] are probabilities in [0*,*1] summing
+    up to 1\. Assume now that Tr(*ρ*²) equals one, then so does ∑ [i=1]^N*p*[i]².
+    If *p*[i] ∈ (0*,*1) for all *i* = 1*,…,N*, then
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ∑N 2 ∑N 1 = pi < pi = 1, i=1 i=1 ](img/file243.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: which is a contradiction, and therefore there exists *i*^∗∈{1*,…,N*} such that
+    *p*[i^∗] = 1, so that *ρ* = ![|ψi∗⟩](img/file244.jpg)⟨*ψ*[i^∗]| is a pure state.
+    Conversely, if *ρ* = ![|ψi⟩](img/file245.jpg)⟨*ψ*[i]| for some *i* ∈{1*,…,N*}
+    represents a pure state, then
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![Tr(ρ2) = Tr(|ψ ⟩⟨ψ | |ψ ⟩⟨ψ |) = Tr(|ψ ⟩⟨ψ |) = ⟨ψ |ψ ⟩ = 1\. i i i i i i
+    i i ](img/file246.jpg)□'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Example:** An example of a mixed state is a *statistical ensemble* of states
+    ![|0⟩](img/file247.jpg) and ![|1⟩](img/file248.jpg). If a physical system is prepared
+    to be either in state ![|0⟩](img/file249.jpg) or state ![|1⟩](img/file250.jpg)
+    with equal probability, it can be described by the mixed state'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '| ![ ⌊ ⌋ 1- 1- 1-⌈1 0⌉ ρ = 2 &#124;0⟩⟨0&#124;+ 2 &#124;1⟩⟨1&#124; = 2 0 1 .
+    ](img/file251.jpg) |  |'
+  prefs: []
+  type: TYPE_TB
+- en: Note that this is different from the density matrix of the pure state
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![|ψ ⟩ = 1√--(|0⟩ + |1⟩), 2 ](img/file252.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: which reads
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![ ⌊ ⌋ ρ = |ψ⟩⟨ψ | = 1(|0⟩+ |1⟩)(⟨0|+ ⟨1|) = 1(|0⟩⟨0|+|1⟩⟨0|+ |0⟩⟨1|+ |1⟩⟨1|)
+    = 1⌈1 1⌉. ψ 2 2 2 1 1 ](img/file253.jpg)'
+  prefs: []
+  type: TYPE_IMG
+- en: Unlike pure quantum states, mixed quantum states cannot be described by a single
+    state vector. However, the pure states and the mixed states can be described by
+    the density matrix.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Summary
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: In this chapter, we learned the key principles of quantum mechanics, starting
+    with a review of the basic elements of linear algebra, followed by an introduction
+    to Dirac notations.
+  prefs: []
+  type: TYPE_NORMAL
+- en: We then covered the main postulates of quantum mechanics and their relevance
+    to quantum computing. We learned how to describe the state (statics) and the evolution
+    (dynamics) of a closed system, the interactions of a system with external systems
+    (measurement), observables, as well as the state of a composite system in terms
+    of its component parts.
+  prefs: []
+  type: TYPE_NORMAL
+- en: We finally introduced the density operator, which allows us to describe both
+    pure and mixed quantum states, contrasting with the state vector, which can only
+    represent pure quantum states.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In the next chapter, we will look at an application of the principles of quantum
+    mechanics to analog quantum computing – quantum annealing.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Join our book’s Discord space
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: 'Join our Discord community to meet like-minded people and learn alongside more
+    than 2000 members at: [https://packt.link/quantum](https://packt.link/quantum)'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '![PIC](img/file1.png)'
+  prefs: []
+  type: TYPE_IMG

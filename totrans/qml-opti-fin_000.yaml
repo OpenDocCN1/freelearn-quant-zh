@@ -1,0 +1,415 @@
+- en: Preface
+  prefs:
+  - PREF_H2
+  type: TYPE_NORMAL
+- en: Quantum Machine Learning – Most **overhyped** and **underestimated** field at
+    the same time
+  prefs: []
+  type: TYPE_NORMAL
+- en: '* * *'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Iordanis Kerenidis
+  prefs: []
+  type: TYPE_NORMAL
+- en: Introduction
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: '**Why Quantum Computing?** Quantum computing and AI will revolutionise and
+    disrupt our society in the same way as classical digital computing did in the
+    second half of the 20th century and the internet did in the first two decades
+    of the 21st century.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Quantum computing (or, more generally, Quantum Information Theory) has been
+    the subject of extensive research since the 1960s, but it was only in the last
+    decade that progress on the hardware side has made it possible to test quantum
+    computing algorithms; and it was only in the last several years that quantum computing’s
+    supremacy was finally claimed as an experimental fact (i.e., a landmark experiment
+    conducted on Google’s 53-qubit Sycamore quantum chip  [[16](Biblography.xhtml#XArute2019)]).
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The story of quantum computing is, in this respect, similar to the story of
+    AI: AI was born in the 1950s but then experienced two “winters”, when interest
+    in AI and Machine Learning declined considerably (following the Lighthill report
+    in the UK and the Speech Understanding Research debacle in the US in the 1970s,
+    and the LISP collapse in the 1990s), before becoming widely used and adopted to
+    the point that we can no longer imagine our life without it.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Even though we cannot rule out a “quantum computing winter” before quantum computing
+    technology becomes embedded in everyday life to the same extent as the internet,
+    smartphones, and AI, the whole range of quantum computing breakthroughs we have
+    witnessed in the last few years makes it somewhat unlikely.
+  prefs: []
+  type: TYPE_NORMAL
+- en: With recent advances in the field, we have finally reached the era of Noisy
+    Intermediate-Scale Quantum (NISQ) computing  [[237](Biblography.xhtml#XPreskill2018)].
+    NISQ-era computers are powerful enough to test quantum computing algorithms and
+    solve non-trivial real-world problems – and establish quantum speedup and quantum
+    advantage over comparable classical hardware.
+  prefs: []
+  type: TYPE_NORMAL
+- en: However, it is likely that the first real-world production-level business applications
+    will be a hybrid quantum-classical protocol, where most of the computation and
+    data processing is done classically, but the hardest problems are outsourced to
+    the quantum chip. In finance, discrete portfolio optimisation problems, which
+    are NP-hard, are such examples and clear objectives to tackle.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Why Quantum Machine Learning?** It is a combination of quantum computing
+    and AI that will likely generate the most exciting opportunities, including a
+    whole range of possible applications in finance, but also in medicine, chemistry,
+    physics, etc. We have already witnessed the first promising results achieved with
+    Parameterised Quantum Circuits trained as either generative models (such as Quantum
+    Circuit Born Machine, which can be used as a synthetic data generator) or discriminative
+    models (such as a Quantum Neural Network that can be trained as a classifier).
+    The possible use cases include market generators, data anonymisers, credit scoring,
+    and the generation of trading signals.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: All the models and techniques mentioned so far rely on the existence of universal,
+    gate model quantum computers. However, there is another type of quantum hardware
+    – quantum annealers – which realise the principle of adiabatic quantum computing.
+    Quantum annealers are analog quantum computers that are very well suited for solving
+    complex optimisation problems that are NP-hard for classical computers. Optimisation
+    problems form a large class of hard-to-solve financial problems, not to mention
+    the fact that many supervised and reinforcement learning tools used in finance
+    are trained via solving optimisation problems (minimisation of a cost function,
+    maximisation of reward).
+  prefs: []
+  type: TYPE_NORMAL
+- en: An example of discriminative machine learning problems solved using quantum
+    annealers includes building a strong classifier from several weak ones – the Quantum
+    Boosting algorithm. The strong classifier is highly resilient against overtraining
+    and against errors in the correlations of the physical observables in the training
+    data. The quantum annealing-trained classifiers perform comparably to the state-of-the-art
+    classical machine learning methods. However, in contrast to these methods, the
+    annealing-based classifiers are simple functions of directly interpretable experimental
+    parameters with clear physical meaning and demonstrate some advantage over traditional
+    machine learning methods for small training datasets.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Another application of quantum annealing is in generative learning. In Deep
+    Learning, a well-known approach for training a deep neural network starts with
+    training a generative Deep Boltzmann Machine, typically using the Contrastive
+    Divergence (CD) algorithm, then fine-tuning the weights using backpropagation
+    or other discriminative techniques. However, generative training is often time
+    consuming due to the slow mixing of Boltzmann (Gibbs) sampling. The quantum sampling-based
+    training approach can achieve comparable or better accuracy with significantly
+    fewer iterations of generative training than conventional CD-based training.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The main focus of this book is therefore on tackling practical real-world applications
+    of Quantum Machine Learning (QML) algorithms executable on NISQ hardware rather
+    than adopting the more traditional quantum computing textbook approach, diligently
+    describing standard quantum computing algorithms (Shor’s, Grover’s, *…*), the
+    quantum hardware demands of which are well beyond the capabilities of NISQ computers.
+    The focus is also on the hybrid quantum-classical computational protocols that
+    reflect the most productive way of harnessing the power of quantum computing –
+    it is in tandem with classical computing that quantum computing solutions can
+    provide maximum benefits to the users.
+  prefs: []
+  type: TYPE_NORMAL
+- en: In this book, we cover all major QML algorithms that have been the subject of
+    intensive research by the industry and that have shown early signs of potential
+    quantum advantage. We also provide a balanced view of both analog and digital
+    quantum computers and do not try to make a call on which quantum computing technology
+    (superconducting qubits, trapped ions, neutral atoms, etc.) will be the eventual
+    winner. The material is presented in a hardware-agnostic way with a strong emphasis
+    on the fundamental characteristics of the algorithms rather than their hardware
+    realisations, although we do not ignore the question of algorithms’ embedding
+    and the practical limitations of the existing quantum computing hardware.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Why Finance?** It is reasonable to expect that the incredibly fast rate of
+    quantum hardware improvements we have witnessed over the last several years will
+    lead to the widespread adoption of quantum computing techniques in finance. The
+    finance industry is already investigating the potential of QML to solve classically
+    hard practical problems and assist in achieving digital transformation. We might
+    have moved past the point of quantum computing supremacy, but our quest to establish
+    quantum computing advantage has just begun.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Quantitative finance is a discipline rich in interesting but computationally
+    hard problems. Many such problems are interdisciplinary in nature and often require
+    the transformation and adoption of mathematical and computational techniques developed
+    in other fields. Here, we can mention, for example, the application of the theory
+    of stochastic differential equations to option pricing  [[226](Biblography.xhtml#XOksendal2000)],
+    methods of optimal control theory to management science and economics  [[260](Biblography.xhtml#XSethi2019)],
+    machine learning techniques to portfolio construction, and optimisation  [[193](Biblography.xhtml#XMLDP2018)].
+  prefs: []
+  type: TYPE_NORMAL
+- en: This is why we turn to finance when we are looking for a wide range of real-world
+    use cases to test (and improve!) quantum computing algorithms. The book provides
+    many examples of the quantum computing techniques and algorithms applied to solving
+    practical financial problems such as portfolio optimisation, credit card default
+    prediction, credit approvals, and generation of synthetic market data. At the
+    same time, the methods and techniques are formulated and presented in the most
+    general form – we hope our readers will discover many new exciting quantum computing
+    use cases in finance and beyond.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Who this book is for
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: 'The book is primarily aimed at three main groups: academic researchers and
+    STEM students; finance professionals working in the field of quantitative finance
+    and related areas; computer scientists and ML/AI experts. At the same time, the
+    book is organised in such a way as to be accessible and useful to a much wider
+    audience.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'The book does not require any prior knowledge of quantum mechanics and the
+    complexity of the mathematical apparatus should not feel intimidating: although
+    we do not sacrifice mathematical rigour, the emphasis is very much on the understanding
+    of the fundamental properties of the models and algorithms.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: What this book covers
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: The book is split into two parts reflecting the natural progression from analog
+    to digital quantum computing, with an increasing depth in the analysis and understanding
+    of algorithms. However, we start with a chapter that covers the basic principles
+    of quantum mechanics and provides the motivation for the computational methods
+    based on those principles.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 1, The Principles of Quantum Mechanics*, covers the basic mathematical
+    principles of quantum mechanics. It provides the necessary definitions and discusses
+    the postulates of quantum mechanics and their relevance to quantum computing.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Part I: Analog Quantum Computing – Quantum Annealing**'
+  prefs: []
+  type: TYPE_NORMAL
+- en: For a number of years, quantum annealers were the only large-scale quantum computing
+    devices available for experiments in solving non-trivial NP-hard combinatorial
+    optimisation problems. Although quantum annealing specifically targets solving
+    classically hard optimisation problems, it can also be used for many different
+    hybrid quantum-classical problems, such as samplers and classifiers. The book
+    provides detailed coverage of these applications and illustrates them on specific
+    financial use cases.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 2, Adiabatic Quantum Computing*, introduces the concept of analog
+    quantum computing. The chapter starts with the principles of adiabatic quantum
+    computing and proceeds with the quantum adiabatic theorem. The physical realisation
+    of adiabatic quantum computing is quantum annealing, which is explained alongside
+    its classical counterpart – simulated annealing. The chapter also discusses the
+    implementation, limitations, and universality of adiabatic quantum computing.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 3, Quadratic Unconstrained Binary Optimisation*, describes the single
+    most important application of quantum annealing: solving classically hard optimisation
+    problems. A wide range of combinatorial optimisation problems can be formulated
+    as Quadratic Unconstrained Binary Optimisation (QUBO) problems (or, equivalently,
+    as Ising problems) solvable on a quantum annealer. The chapter provides in-depth
+    coverage of the forward and reverse quantum annealing techniques and demonstrates
+    the power of quantum annealing on a discrete portfolio optimisation use case.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 4, Quantum Boosting*, extends the range of QUBO applications beyond
+    combinatorial optimisation and outlines the Quantum Boosting algorithm designed
+    to combine a large number of weak classical classifiers into a strong classifier.
+    The algorithm is formulated as a QUBO problem executable on a quantum annealer
+    and applied to the use case of building a strong predictor of credit card defaults
+    from a large number of weak predictors.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 5, Quantum Boltzmann Machine*, explores further machine learning applications
+    of quantum annealing. The Quantum Boltzmann Machine can be used as a generative
+    model for sampling from a learned probability distribution as well as an efficient
+    method of pre-training deep feedforward neural networks.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Part II: Gate Model Quantum Computing**'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Gate model quantum computing hardware has demonstrated enormous progress in
+    recent years and is quickly approaching the quantum advantage threshold. The search
+    for quantum advantage – the real-world productive application of a quantum computing
+    solution that outperforms any viable classical alternative – is one of the strongest
+    motivations for quantum computing research in finance and elsewhere. The book
+    explores the main quantum computing algorithms implementable on existing NISQ
+    devices and highlights a range of possible financial applications that may benefit
+    from this new quantum computing paradigm.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 6, Qubits and Quantum Logic Gates*, introduces the paradigm of gate
+    model quantum computing. We start with the basic concepts of classical digital
+    computing and expand the computational logic to accommodate the new principles
+    of superposition and entanglement. The chapter draws parallels between and contrasts
+    classical and quantum logic gates and shows how to assemble quantum circuits from
+    individual quantum logic gates.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 7, Parameterised Quantum Circuits and Data Encoding*, proceeds with
+    the construction of quantum algorithms covering both the theoretical and the practical
+    aspects of building Parameterised Quantum Circuits (PQCs), and demonstrates how
+    classical samples can be encoded into quantum states processed by the PQCs. The
+    chapter provides a detailed description of specific data encoding techniques.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 8, Quantum Neural Network*, considers parameterised quantum circuits
+    trained as classifiers. Throughout this chapter, we show how differentiable and
+    non-differentiable learning algorithms can be used to efficiently train quantum
+    neural networks. The chapter also discusses the limitations of existing QPUs and
+    how to design quantum circuits that extract maximum benefit from the available
+    quantum computing hardware. We investigate QNN performance on a credit approval
+    use case and benchmark it against several standard classical classifiers.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 9, Quantum Circuit Born Machine*, introduces a quantum counterpart
+    to classical generative models such as Boltzmann Machines – the Quantum Circuit
+    Born Machine (QCBM). The chapter starts with the definition of QCBM and how it
+    can be efficiently configured and run on available QPUs, continues with the differentiable
+    and non-differentiable learning and training procedures, and concludes with the
+    market generator use case benchmarked against classical Restricted Boltzmann Machine.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 10, Variational Quantum Eigensolver*, introduces the variational principle
+    and formulates the Variational Quantum Eigensolver (VQE) approach to optimisation
+    problems. The chapter discusses a hybrid quantum-classical approach to training
+    the VQE and looks at the practical aspects of running it on NISQ devices.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 11, Quantum Approximate Optimisation Algorithm*, describes the gate
+    model quantum computing approach (inspired by quantum annealing) to solving QUBO-type
+    problems, such as NP-hard Max-Cut optimisation problems.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 12, The Power of Parameterised Quantum Circuits*, investigates the
+    main sources of quantum advantage we expect to demonstrate on practical applications
+    of parameterised quantum circuits. The chapter focuses on two elements: strong
+    regularisation provided by quantum neural networks and the expressive power of
+    quantum generative models.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '*Chapter 13, Looking Ahead*, discusses new promising quantum algorithms and
+    techniques such as the quantum kernel method, quantum GAN, Bayesian quantum circuit,
+    and quantum semi-definite programming.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: To get the most out of this book
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: This book is intended as an in-depth introduction to the power of quantum computing
+    techniques for quantitative finance problems. While it is designed as self-contained,
+    this book assumes that the reader has some familiarity with basic mathematical
+    concepts in algebra, analysis, and computing. Knowledge of quantum mechanics is
+    not required, and the main tools thereof shall be explained and made accessible
+    to non-physicists.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Conventions used
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: There are a number of text conventions used throughout this book.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '`CodeInText`: indicates code words in the text, software packages, folder names,
+    path names, etc.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: When we wish to draw your attention to a particular definition or notation,
+    the relevant lines or items are set in either *italic* or **bold**.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Important remarks and conclusions are shown in boxes.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Get in touch
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: Feedback from our readers is always welcome.
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**General feedback:** Email [feedback@packtpub.com](mailto:feedback@packtpub.com),
+    and mention the book’s title in the subject of your message. If you have questions
+    about any aspect of this book, please email us at [questions@packtpub.com](mailto:questions@packtpub.com).'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Errata:** Although we have taken every care to ensure the accuracy of our
+    content, mistakes do happen. If you have found a mistake in this book, we would
+    be grateful if you could report this to us. Please visit [http://www.packtpub.com/submit-errata](http://www.packtpub.com/submit-errata),
+    select your book, click on the Errata Submission Form link, and enter the details.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**Piracy:** If you come across any illegal copies of our works in any form
+    on the internet, we would be grateful if you would provide us with the location
+    address or website name. Please contact us at [copyright@packtpub.com](mailto:copyright@packtpub.com)
+    with a link to the material.'
+  prefs: []
+  type: TYPE_NORMAL
+- en: '**If you are interested in becoming an author:** If there is a topic that you
+    have expertise in, and you are interested in either writing or contributing to
+    a book, please visit [http://authors.packtpub.com](http://authors.packtpub.com).'
+  prefs: []
+  type: TYPE_NORMAL
+- en: Share your thoughts
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: Once you’ve read *Quantum Machine Learning and Optimisation in Finance*, we’d
+    love to hear your thoughts! Please [click here to go straight to the Amazon review
+    page for this book](https://packt.link/r/1801813574) and share your feedback.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Your review is important to us and the tech community and helps us deliver excellent
+    content.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Download a free PDF copy of this book
+  prefs:
+  - PREF_H3
+  type: TYPE_NORMAL
+- en: Thanks for purchasing this book!
+  prefs: []
+  type: TYPE_NORMAL
+- en: Do you like to read on the go but are unable to carry your print books everywhere?
+    Is your eBook purchase not compatible with the device of your choice?
+  prefs: []
+  type: TYPE_NORMAL
+- en: Don’t worry, now with every Packt book you get a DRM-free PDF version of that
+    book at no cost.
+  prefs: []
+  type: TYPE_NORMAL
+- en: Read anywhere, any place, on any device. Search, copy, and paste code from your
+    favorite technical books directly into your application.
+  prefs: []
+  type: TYPE_NORMAL
+- en: The perks don’t stop there, you can get exclusive access to discounts, newsletters,
+    and great free content in your inbox daily.
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Follow these simple steps to get the benefits:'
+  prefs: []
+  type: TYPE_NORMAL
+- en: 'Scan the QR code or visit the link below:'
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: '![PIC](img/file2.png)'
+  prefs:
+  - PREF_IND
+  type: TYPE_IMG
+- en: '[https://packt.link/free-ebook/9781801813570](https://packt.link/free-ebook/9781801813570)'
+  prefs:
+  - PREF_IND
+  type: TYPE_NORMAL
+- en: Submit your proof of purchase
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
+- en: That’s it! We’ll send your free PDF and other benefits to your email directly
+  prefs:
+  - PREF_OL
+  type: TYPE_NORMAL
