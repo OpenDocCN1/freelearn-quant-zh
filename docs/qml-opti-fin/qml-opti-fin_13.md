@@ -1,4 +1,4 @@
-## 参考文献
+## 第十四章：参考文献
 
 [1]   A. Abbas, D. Sutter, C. Zoufal, A. Lucchi, A. Figalli 和 S. Woerner。量子神经网络的强大能力。*自然* *计算科学*，`1`，2021 年。
 
