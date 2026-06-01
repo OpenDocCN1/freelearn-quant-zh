@@ -729,9 +729,6 @@ Moderna Momentum 策略的独特性在于其整合性方法。摒弃传统仅专
                     limit_price=api.get_last_trade('MRNA').price
                 )
                 print(f'Sell signal on {date} at {api.get_last_trade("MRNA").price}')
-        ```
-
-    ```py
     'moderna' is mentioned in the title, it generates a buy signal. Conversely, if the title indicates regulatory rejection of a new drug/vaccine or a critical safety concern is raised, and 'moderna' is mentioned in the title, it generates a sell signal.
     ```
 

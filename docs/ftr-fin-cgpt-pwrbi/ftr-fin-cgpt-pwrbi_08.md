@@ -1170,9 +1170,6 @@ BankRegulatorGPT 评估多种金融指标，以提供全面的银行财务状况
 
     ```py
     Statista website:
-    ```
-
-    ```py
     pip install requests beautiful soup4 pandas
     import requests
     from bs4 import BeautifulSoup

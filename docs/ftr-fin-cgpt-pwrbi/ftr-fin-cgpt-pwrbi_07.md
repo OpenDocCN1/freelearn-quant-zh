@@ -343,9 +343,6 @@ Salesforce 是一家广泛分析的公司，其许多优势和劣势已经为竞
             except Error as e:
                 print(f'Error {e} occurred')
         fetch_data(conn)
-        ```
-
-    ```py
     conn.close()
     ```
 
