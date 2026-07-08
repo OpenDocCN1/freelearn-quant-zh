@@ -1,6 +1,6 @@
 # 量子计算金融建模
 
-> 原文：[`zh.annas-archive.org/md5/https://annas-archive.org/md5/ef973b945f5447d43944f207d023e727`](https://zh.annas-archive.org/md5/https://annas-archive.org/md5/ef973b945f5447d43944f207d023e727)
+> 原文：[Financial Modeling Using Quantum Computing : Design and Manage Quantum Machine Learning Solutions for Financial Analysis and Decision Making](https://annas-archive.gl/md5/ef973b945f5447d43944f207d023e727)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

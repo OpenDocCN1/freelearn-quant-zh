@@ -1,6 +1,6 @@
 # C++ 高级量化金融
 
-> 原文：[`zh.annas-archive.org/md5/0F4C0352DDAD129C371BB77E739BD2E4`](https://zh.annas-archive.org/md5/0F4C0352DDAD129C371BB77E739BD2E4)
+> 原文：[Advanced Quantitative Finance with C++](https://zh.annas-archive.gl/md5/0F4C0352DDAD129C371BB77E739BD2E4)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

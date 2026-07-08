@@ -1,6 +1,6 @@
 # Python 金融交易实用指南
 
-> 原文：[`zh.annas-archive.org/md5/6efde0935976ca50d877b2b5774aeade`](https://zh.annas-archive.org/md5/6efde0935976ca50d877b2b5774aeade)
+> 原文：[Hands-On Financial Trading with Python : A Practical Guide to Using Zipline and Other Python Libraries for Backtesting Trading Strategies](https://zh.annas-archive.gl/md5/6efde0935976ca50d877b2b5774aeade)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 
