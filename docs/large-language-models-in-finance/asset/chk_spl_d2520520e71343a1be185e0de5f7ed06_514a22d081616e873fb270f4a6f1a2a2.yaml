@@ -1,0 +1,19 @@
+reviews:
+- 'no': 12207
+  overturn_probability: 0.08
+  alternative: 孤立章号标记/排版断行
+  counter_evidence:
+  - 该行仅包含“# 14”，缺少标题语义；真正的章标题“生成式前沿…”出现在两行后的“###”三级标题行，更符合正文小标题或排版碎片特征，而非规范章节开篇
+  keep_split: true
+- 'no': 12938
+  overturn_probability: 0.05
+  alternative: 插入式附录或英文片段标题
+  counter_evidence:
+  - 标题下方正文立即切换为英文（“This chapter provides...”），与周围中文章节语言不一致，可能为排版插入或译文附录，其章节身份可能来自布局而非语义
+  keep_split: true
+- 'no': 14732
+  overturn_probability: 0.3
+  alternative: 末材料内的二级小标题/索引专节
+  counter_evidence:
+  - 使用“##”二级标题而非“#”一级标题，且后续全为带连字符的列表式索引条目，更像是第 15 章或末材料内的索引专节，而非独立最高层级章节
+  keep_split: true

@@ -1,0 +1,40 @@
+chapter_starts:
+- 'no': 0
+  confidence: 0.95
+  final_reason: 正文前辅助内容（书名页、贡献者、关于作者、前言等）按规则统一划为一章，从文档首行 line 0 开始；复核方关于书名元数据并入前置章节、不单独分章的观点成立，故不以
+    line 1 单独触发分章
+  accepted_evidence:
+  - 规则：前言、序言、致谢、关于作者等正文之前的内容统一划分为一章
+  - line 0 为书名页，单独成行，末尾无标点，长度小于30字
+  - line 262 之前无其他最高层级章标题
+  rejected_evidence:
+  - line 1 为空行，不具备章标题特征
+  need_human_review: false
+- 'no': 262
+  confidence: 1.0
+  final_reason: 双方一致保留；# 1 大型语言模型简介 为全书最高层级章标题，单独成行，末尾无标点，长度小于30字，后接正文与子节
+  accepted_evidence:
+  - 判断方：一级标题，编号连贯，单独成行
+  - '复核方：推翻概率极低，结合#2 #3上下文确认为章编号'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 834
+  confidence: 1.0
+  final_reason: 双方一致保留；# 2 金融 LLM 的基础与系统设计 编号连贯，单独成行，符合章标题格式与语义
+  accepted_evidence:
+  - 判断方：正文第二章，编号连贯
+  - '复核方：与#1 #3属同一体系，标题长度<30，无末尾标点'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2028
+  confidence: 1.0
+  final_reason: 双方一致保留；# 3 针对金融任务对大语言模型进行微调 编号连贯，单独成行，后接正文段落
+  accepted_evidence:
+  - 判断方：正文第三章，一级标题
+  - '复核方：与前文#1 #2连贯，不存在子层级编号特征'
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 1
+  reason: 该行为空行，且属于正文前出版元数据区域；复核方成立：书名元数据应并入前置章节，不单独触发分章
+  need_human_review: false

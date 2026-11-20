@@ -7,6 +7,7 @@
 +   [Python 金融交易实用指南](docs/hsn-fin-trd-py/README.md)
 +   [Python 机器学习算法交易实用指南](docs/hsn-ml-algo-trd/README.md)
 +   [R 量化金融入门指南](docs/intd-r-quant-fin/README.md)
++   [金融大型语言模型](docs/large-language-models-in-finance/README.md)
 +   [R 量化金融学习指南](docs/lrn-quant-fin-r/README.md)
 +   [机器学习算法交易教程第二版](docs/ml-algo-trd-2e/README.md)
 +   [面向金融的机器学习](docs/ml-fin/README.md)

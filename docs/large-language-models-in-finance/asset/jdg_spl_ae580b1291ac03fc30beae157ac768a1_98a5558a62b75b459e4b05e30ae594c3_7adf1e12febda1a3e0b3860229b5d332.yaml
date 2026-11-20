@@ -1,0 +1,43 @@
+chapter_starts:
+- 'no': 6277
+  confidence: 0.9
+  final_reason: 后文紧跟6.x系列子节，前文为第5章收尾及跨页过渡内容，语义上构成第6章开头；复核方提出的无序号和长度疑虑不足以推翻其章标题地位。
+  accepted_evidence:
+  - 单独成行的一级标题（#）
+  - 后文紧跟6.x系列子节（如6287行“## 6.1 MCP 标准化了什么以及未标准化什么”）
+  - 前文6263-6266行为第5章收尾，6267-6276为书籍过渡/广告页
+  - 语义统领后续MCP与金融系统工具调用内容
+  rejected_evidence:
+  - 复核方指出标题缺少显式章序号、长度接近或超过30字、可能为第5章后记
+  need_human_review: false
+- 'no': 6866
+  confidence: 0.95
+  final_reason: 显式最高层级章号“7”，单独成行，后文紧跟7.x系列子节，符合全书最高层级大章特征，采纳分章。
+  accepted_evidence:
+  - 显式章号“7”，单独成行
+  - 后文紧跟7.x系列子节
+  - 前文为第6章正文与结尾内容
+  rejected_evidence:
+  - 复核方指出章号缺少“第”字前缀，可能被误读为部分标题
+  need_human_review: false
+- 'no': 7636
+  confidence: 0.95
+  final_reason: 显式最高层级章号“8”，单独成行，后文紧跟8.x系列子节，语义构成新章开头，采纳分章。
+  accepted_evidence:
+  - 显式章号“8”，单独成行
+  - 后文紧跟8.x系列子节
+  - 前文为第7章结尾内容
+  rejected_evidence:
+  - 复核方指出章号缺少“第”字，可能为第7章结尾预告片段
+  need_human_review: false
+- 'no': 8217
+  confidence: 0.95
+  final_reason: 显式最高层级章号“9”，单独成行，后文紧跟9.x系列子节，符合新章特征，采纳分章。
+  accepted_evidence:
+  - 显式章号“9”，单独成行
+  - 后文紧跟9.x系列子节
+  - 前文为第8章结尾内容
+  rejected_evidence:
+  - 复核方指出章号缺少“第”字，较短且可能为下章预告片段
+  need_human_review: false
+rejected_lines: []

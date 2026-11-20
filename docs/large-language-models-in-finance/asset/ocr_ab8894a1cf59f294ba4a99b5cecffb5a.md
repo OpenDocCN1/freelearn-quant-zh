@@ -1,0 +1,17 @@
+# 11.2.2 The three-pillar model
+
+The framework rests on three pillars. None is sufficient in isolation. Technical robustness without behavioral oversight can produce a stable system that acts in undesirable ways; behavioral monitoring without accountability can detect problems that no one owns; and ethical or regulatory principles without engineering controls remain aspirational.
+
+# Pillar I: Technical robustness and operational excellence
+
+This pillar combines model engineering, data governance, cybersecurity, and operational resilience. It covers data provenance, retrieval quality, versioning, access control, testing, observability, fallback modes, incident response, and recovery. It also requires that the complete deployed system, not only the base model, be reproducible and auditable. The relevant unit of control includes prompts, retrieval indexes, tools, permissions, memory, and post-processing rules.
+
+A central design principle is defensive AI development: systems should be constructed with explicit assumptions about where they may fail. Defensive development includes adversarial and out-of-distribution testing, uncertainty and abstention mechanisms, least-privilege tool access, deterministic validation of critical calculations, and hard limits that cannot be modified by the model itself. The objective is graceful degradation rather than the unrealistic promise of error-free generation [National Institute of Standards and Technology, 2024, Vassilev et al., 2025].
+
+# Pillar II: Behavioral governance and market dynamics
+
+This pillar addresses how LLM-based agents behave over time and in interaction with other participants. Controlled market studies show that behavior depends materially on model family, role instructions, prompts, information, and experimental design. Some studies find more fundamental-value-oriented behavior than in human experimental markets, while others document extrapolative beliefs, disposition effects, bubbles, or prompt-induced common behavior [Henning et al., 2025, Lopez-Lira, 2025, Ouyang and Sui, 2026, Anand et al., 2026]. These findings are not contradictory; they show why behavior must be measured for the particular system and environment rather than inferred from the label “LLM.”
+
+Behavioral governance monitors decision distributions, calibration, abstention, sensitivity to prompt and context changes, adaptation after distribution shifts, tool-use patterns, and interactions among agents. The Financial Stability Board treats market correlation as a potential AI-related vulnerability, and broader algorithmic research shows that independently learning agents can converge to strategically similar behavior in controlled environments [Financial Stability Board, 2024, Calvano et al., 2020]. This does not establish that LLMs have caused a real market-wide coordination event. It establishes a credible common-mode risk that merits testing, diversity analysis, and escalation rules.
+
+Diversity should therefore be measured behaviorally rather than cosmetically. Two systems built by different vendors may still be strategically redundant if they rely on similar base model data, prompts, objectives, and risk signals. Conversely, two instances of the same base model may behave differently when their information sets and constraints differ. Institutions should

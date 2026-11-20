@@ -1,0 +1,44 @@
+chapter_starts:
+- 'no': 9851
+  confidence: 0.98
+  final_reason: 双方一致保留分章。Markdown 一级标题 '# 10 基础设施与性能'，单独成行，无结束标点，语义统领后续第 10 章内容。
+  accepted_evidence:
+  - Markdown 一级标题格式
+  - 章序号 10 连贯
+  - 后文跟随 10.1 等小节
+  rejected_evidence:
+  - 复核方担忧序号格式及空行，但不影响其作为顶级章节的判定
+  need_human_review: false
+- 'no': 10222
+  confidence: 0.98
+  final_reason: 双方一致保留分章。Markdown 一级标题 '# 11 伦理、治理与合规：面向金融大语言模型的综合框架'，位于第 10 章摘要之后，语义统领第
+    11 章。
+  accepted_evidence:
+  - Markdown 一级标题格式
+  - 章序号 11 连贯
+  - 前文为第 10 章总结
+  rejected_evidence:
+  - 复核方担忧标题过长，但书中允许长标题章节
+  need_human_review: false
+- 'no': 10671
+  confidence: 0.98
+  final_reason: 双方一致保留分章。Markdown 一级标题 '# 12 数学创新与实证证据'，单独成行，语义统领第 12 章。
+  accepted_evidence:
+  - Markdown 一级标题格式
+  - 章序号 12 连贯
+  - 后文跟随 12.1 等小节
+  rejected_evidence:
+  - 复核方担忧序号格式，但 '# 12' 等效于顶级章
+  need_human_review: false
+- 'no': 11389
+  confidence: 0.97
+  final_reason: 双方一致保留分章。Markdown 一级标题 '# 13 高级主题：金融领域的推理、多模态与时间序列大语言模型'，位于第 12 章总结之后，语义统领第
+    13 章。
+  accepted_evidence:
+  - Markdown 一级标题格式
+  - 章序号 13 连贯
+  - 前文为第 12 章总结
+  rejected_evidence:
+  - 复核方担忧标题过长及序号格式，但不影响章节划分
+  need_human_review: false
+rejected_lines: []

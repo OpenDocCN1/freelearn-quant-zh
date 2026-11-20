@@ -1,0 +1,9 @@
+# Get this book's PDF version and more
+
+Scan the QR code (or go to packtpub.com/unlock). Search for this book by name, confirm the edition, and then follow the steps on the page.
+
+![](bbox=[0.39, 0.22, 0.6, 0.4])
+
+UNLOCK NOW
+
+*Note: Keep your invoice handy. Purchases made directly from Packt do not require an invoice.*

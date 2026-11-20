@@ -1,0 +1,14 @@
+relatively limited domain-specific financial data, can yield highly effective performance in tasks such as:
+
++   - **Risk analysis and compliance**: Extracting risk factors, sentiment, and compliance checks from news, social media, and regulatory documents.
++   - **Algorithmic trading support**: Generating trading ideas, summarizing market news relevant to specific assets, or even assisting in coding trading algorithms.
++   - **Enhanced customer support**: Powering sophisticated chatbots and virtual assistants capable of understanding complex financial queries.
++   - **Report generation**: Automating the drafting of market summaries, earnings reports, and investment memos.
+
+# 1.9.3 Custom fine-tuned models
+
+Most institutions do not train models like BloombergGPT from scratch. A prevalent approach is to adapt a capable general-purpose model, but the available adaptation route depends on what the provider actually exposes, and the four are not interchangeable. **Open-weight adaptation** (Llama, Mistral, Qwen) permits full fine-tuning, LoRA, and quantized training on weights the institution holds. **Provider-managed fine-tuning** is offered by some closed APIs for those models, on the provider’s infrastructure and subject to their terms. **Provider-managed fine-tuning via a cloud partner** is a distinct route that is easy to miss: a model may have no self-service fine-tuning on its own public API while managed fine-tuning is nonetheless available through a cloud arrangement — Anthropic’s direct API does not currently expose ordinary self-service fine-tuning, but managed fine-tuning has been offered through platforms such as Amazon Bedrock. **Prompt, retrieval, and tool adaptation** is the route that always exists, and it is more capable than its reputation suggests. **Private enterprise arrangements** exist but are bespoke and cannot be assumed. Naming a model family is therefore not the same as naming an adaptation strategy, and a design that assumes fine-tuning availability without checking it will fail at procurement, not at training.
+
+Custom fine-tuned models occupy a pragmatic middle ground. They offer significantly better performance on in-house financial tasks than off-the-shelf models, while avoiding the data requirements and operational complexity of training a fully domain-specific model. For banks, asset managers, and fintech firms, this approach provides a practical path to regulatory alignment.
+
+In practice, custom fine-tuning allows organizations to encode proprietary knowledge, internal terminology, and task-specific reasoning patterns directly into the model, making it more effective for several financial use cases such as risk assessment, compliance automation, research summarization, and decision support.

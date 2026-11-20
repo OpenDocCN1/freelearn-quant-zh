@@ -1,0 +1,469 @@
+
+Fengbin Zhu, Wenqiang Lei, Youcheng Huang, Chao Wang, Shuo Zhang, Jiancheng Lv, Fuli Feng, and Tat-Seng Chua. TAT-QA: 针对金融领域表格与文本混合内容的问答基准. In *第59届计算语言学协会年会和第11届国际自然语言处理联合会议论文集*, pages 3277–3287, 2021. doi: 10.18653/v1/2021.acl-long.254. URL https://aclanthology.org/2021.acl-long.254/.
+
+## 索引
+
+- A/B testing in production, 118, 119
+
+- ACME Corp pre-investment memo, 186, 187
+
+- AdamW, 84
+
+- advanced document intelligence
+  - applications, 265
+  - multi-document reasoning and synthesis, 265, 267
+
+- advanced financial LLM topics, 385
+
+- advanced RAG patterns, 155
+
+- Agentic RAG, 157, 158
+  - Corrective RAG, 155, 156
+  - selection, 158
+  - Self-RAG, 155–157
+
+- advanced reasoning
+  - future directions, 418, 420
+
+- advanced retrieval techniques, 146
+  - long-context prompting, versus RAG, 149, 150
+  - metadata filtering, 148
+  - parent document retrieval, 149
+  - query expansion, 147
+  - re-ranking, 148
+
+- advanced RL techniques, for financial LLMs, 309
+  - hierarchical reinforcement learning, 309, 310
+  - multi-agent reinforcement learning, 310
+
+- adversarial testing, 231
+
+- agent contract, 179, 180, 182
+
+- agent flow illustration, 184, 186
+
+- agent interactions
+  - mathematical model, 439, 441
+  - system risk, 439
+  - systemic risk, 440
+
+- agent memory, 175, 183, 184
+  - long-term memory, 183
+  - medium-term memory, 183
+  - short-term memory, 183
+
+- agent roles, 183
+
+- agent workflows safety, 212
+
+- agent workflows: safety, 213
+
+- Agentic RAG, 157, 158
+
+- agentic systems, 177
+
+- benchmarking, 210
+
+- control and coordination, 211
+
+- evaluation, 210
+
+- governance, 211
+
+- LLM agent, 177, 178
+
+- memory, 183
+
+- memory state management, 183
+
+- multi-agent system (MAS), 178, 179
+
+- AI ethics, 337
+
+- AI governance, 337, 338
+
+- ALiBi, 31
+
+- alpha parameter, 94
+
+- Amazon Bedrock, 19
+
+- AML investigation, 253
+
+- anti-money-laundering (AML) detection, 373
+
+- Apache Avro, 324
+
+- Apache Flink, 324
+
+- Apache Kafka, 324
+
+- architectural components, LLMs, 10
+  - feedforward neural networks, 12
+  - layer normalization, 12
+  - multi-head self-attention, 11
+  - positional encodings, 11
+  - residual connections, 12
+
+- architecture
+  - control envelope, 215
+  - trust boundary, 185
+  - audit trail, 227
+
+- audit-grade fine-tuning, 127, 129
+
+- audited implementation case, 252
+
+- authorization, 217
+
+- autonomous financial agents, 425, 426
+  - architecture, 427
+  - behavioral primacy, 430–434
+  - cognitive leap, 435
+  - conceptual architecture, 429
+  - core components, 427
+  - core engine, 427
+  - formal theory of governed financial agency, 428
+  - long-term memory, 428
+  - planning module, 428
+
+- back office, LLM applications in finance, 249
+  - credit underwriting and review, 249
+  - fraud detection and case investigation, 250, 251
+  - KYC and AML workflows, 251
+  - operational workflows, 252
+
+- Back-off models, 5
+
+- back-office applications, 249
+
+- backtesting leakage, 402
+
+- batch processing, 168
+
+- batch sizes, 83
+
+- benchmark contamination, 378
+
+- BERT, 9, 14, 29, 40, 87
+  - derivatives, 9
+
+- BERT fine-tuning case study, 123
+
+- BERT fine-tuning lineage, 124
+
+- BloombergGPT, 14, 16, 19, 29, 41, 44, 122, 123, 360, 361
+
+- bounded autonomy, 425
+
+- byte-pair encoding (BPE), 36
+
+- caching, 168
+
+- catastrophic forgetting, 78
+
+- Causal Language Modeling (CLM), 13, 40
+
+- Chain-of-Thought (CoT) prompting, 386
+
+- Chain-of-Thought (CoT) reasoning, 49, 51, 52
+
+- Chronos, 396
+
+- Chronos-2, 396
+
+- chunking, 131, 143
+  - financial document chunking, 145
+  - fixed-size chunking, 144
+  - recursive splitting, 144
+  - semantic chunking, 145
+  - chunking problem, 143
+
+- claim-level faithfulness, 131
+
+- classical statistical models, 4
+
+- classification tasks, 115
+
+- Claude, 41
+
+- Claude 3, 18
+
+- client services, 267
+  - chatbots, 269, 272
+  - investment advisory, 267–269
+  - personalized financial planning platforms, 272, 274
+
+- CLM-trained models, 13
+
+- CLO indenture, 262
+
+- cloud versus on-premises, 317, 321
+  - advantages, 322
+  - considerations, 322
+  - edge architectures, 323
+  - hybrid architectures, 323
+  - limits, 322
+
+- comparative evidence matrix, 378
+  - evidence-status taxonomy, 380
+  - minimum comparison record, 380
+
+- compliance, 337
+
+- comprehensive financial pre-training corpus, 41
+
+- comprehensive governance, 338
+
+- comprehensive monitoring framework, 328
+  - cost metrics, 329
+  - infrastructure monitoring, 328
+  - latency, 328
+  - production model metrics, 329
+  - retrieval performance metrics, 329
+
+- compute_metrics, 89
+
+- constrained alignment, 277
+
+- contextual numerical tokenization, 60
+
+- continuous improvement, 168
+
+- continuous optimization, 329
+  - automated performance tuning, 330
+
+- controlled experimentation, 329
+
+- contract analysis, 259
+
+- control envelope, 218
+
+- controlled market studies, 342
+
+- coordinator or orchestrator agent, 176
+
+- Corrective RAG (CRAG), 155, 156
+
+- covenant monitoring, 254
+
+- credit modeling, 373
+
+- credit review, 254
+
+- cross-encoder re-ranking, 148
+
+- cross-modality reprogramming, 397
+  - semantic knowledge, testing, 398
+
+- custom fine-tuned models, 19
+  - continued pre-training, 20
+  - fine-tuning, 20
+
+- customer service automation, 259
+  - chatbots, 269
+
+- concrete escalation and handoff scoring, 270, 272
+
+- enterprise identity and privacy boundary, 269
+
+- predictive financial insights, 274, 275
+
+- data analyst agent, 176, 186
+
+- data architecture and pipeline design, 323
+  - real-time data ingestion systems, 323
+  - vector database implementation, 324
+
+- data augmentation, 79
+
+- data preprocessing pipelines structuring, 61
+
+- data splits, 82
+
+- data-to-decision blueprint, 256, 257
+
+- dataset preparation, full fine-tuning, 80
+  - data preprocessing, 81
+  - data sourcing, 80
+  - quality filtering, 82, 83
+
+- datasets
+  - CUAD, 247
+  - Financial PhraseBank, 18
+  - FinQA, 21
+
+- decoder block, 459
+
+- Decoder-only TSFMs, 396
+
+- deduplication, 42
+
+- deep learning models, 6
+
+- DeepSeek models, 18
+
+- DeFi, 378
+
+- delegated financial agents, 181
+
+- design patterns, for agentic workflows, 203
+  - cost, 207
+  - critic agent, 208
+  - documentation, 207
+  - evaluation, 206
+  - guardrails, 206
+  - human-in-the-loop, 205
+  - latency, 207
+  - model-risk artifacts, 207
+  - monitoring, 206
+  - observable and testable workflows, 205
+  - permissioning, 206
+  - policy-as-code, 206
+  - privacy, 206
+  - role-based prompts, 204
+  - security, 206
+  - structured outputs, 209
+  - supervisor-and-specialist pattern, 207, 208
+  - tool-centric agents, 203
+  - user experience, 207
+  - verifier agent, 208
+  - versioning and change management, 205
+
+- deterministic execution, 175
+
+- dimensionally consistent capacity objective, 229
+
+- direct preference optimization (DPO), 13, 113, 114, 296
+  - implementation for financial applications, 296, 299
+    - mathematical formulation, 296
+
+- domain-specific financial AI models, 14
+
+- FinBERT, 14
+
+- domain-specific models, 16
+
+- domain-specific strategies, 52
+  - continual learning and model updates, 55
+  - curriculum learning, 54
+  - quantitative integration prompting, 54
+  - regulatory-aware prompting, 52
+
+- risk-integrated prompting, 53
+
+- dynamic hedging agent, 304
+
+- earnings call assistant, 1, 2, 6
+  - case study, 23
+
+- earnings-call research, 252
+
+- east privilege, 223
+
+- EBITDA, 104
+
+- edge AI acceleration, 334
+
+- Elastic Weight Consolidation (EWC), 55
+
+- embedding models, 137
+  - contrastive learning, 138
+  - dense embeddings, 137
+  - financial embedding models, 138
+  - Matryoshka embeddings, 139
+
+- embeddings, 35, 38
+  - dimensions, 38
+  - domain-specific initialization, 38
+  - pre-trained embeddings, 38
+
+- empirical evidence, 341
+  - controlled market studies, 342
+  - governance implications, 343
+  - research, translating into practice, 343
+
+- empirical evidence for financial LLMs, 359
+
+- empirical standard, 381, 382
+
+- encoder block, 459
+
+- escalation, 189
+
+- evaluation, 115
+  - claim-level grounding, 2
+  - offline metrics, 115
+  - point-in-time discipline, 215
+  - walk-forward validation, 241
+
+- evidence matrix, 378
+
+- execution semantics, 227
+  - audit record, 227, 228
+  - canonical request hashing, 227
+
+- Facebook AI Similarity Search (FAISS), 141
+
+- factual grounding evaluation, 117
+
+- failure modes and control requirements, 187
+
+- Federal Reserve report, 5
+
+- few-shot meta-learning, 80
+
+- few-shot prompting, 49
+  - earnings analysis examples, 50
+
+- FinAgent, 372
+
+- finance-specific evaluation checklist, 119
+
+- financial AI evolution, 14
+  - domain-specific financial AI models, 14
+  - LLMs in finance, 14
+  - rule-based expert systems, 14
+
+- financial AI system architecture, 344
+  - behavioral monitoring and control, 347
+  - ethical and regulatory alignment, 348
+  - foundational layer, 346
+  - risk management integration, 347, 348
+
+- financial alignment objective, 277, 278
+
+- financial control envelope, 218
+  - minimal deterministic gate, 220
+  - minimum invariants, 220
+  - typed request contract, 219
+
+- financial corpus construction, 57–59
+
+- financial data preprocessing pipeline, 61
+
+- financial data resources, 468
+  - market data sources, 468, 470
+  - public financial datasets, 468
+
+- financial datasets, 453
+
+- financial document chunking, 145
+
+- financial document intelligence, 259
+  - automated compliance check, 263, 264
+  - document analysis, 260
+  - key financial terms, extracting from contracts, 261
+  - structured-credit documents, 262
+
+- financial forecasting, 399
+  - covariance forecasting, 399
+  - event response forecasting, 400
+  - execution and liquidity forecasting, 400
+  - tail-risk forecasting, 399
+  - volatility forecasting, 399
+
+- financial format tokenization, 60
+
+- financial LLM manuscript, 454
+  - attention mechanisms, 455

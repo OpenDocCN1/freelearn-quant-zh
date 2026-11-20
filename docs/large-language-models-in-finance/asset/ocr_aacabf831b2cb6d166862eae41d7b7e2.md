@@ -1,0 +1,9 @@
+# 4
+
+# Retrieval-Augmented Generation for Financial Tasks
+
+Retrieval-Augmented Generation (RAG) is a central engineering pattern for knowledge-intensive AI systems: it augments language model generation with external evidence retrieved at inference time. This chapter provides a practical treatment of RAG for financial applications, covering theoretical foundations, embedding models, vector databases, chunking strategies, advanced retrieval techniques, and production considerations. The implementation examples are compact reference designs rather than full production platforms. They are meant to show the essential control flow, data structures, and failure points that arise in financial use cases such as earnings analysis, regulatory compliance, and investment research.
+
+In doing so, we will treat RAG not merely as a retrieval layer, but as an engineered knowledge system for finance. We begin with the limitations of static model knowledge in financial tasks, then move through the core RAG architecture, formal retrieval-generation framework, and more. The chapter then shows how these components come together in an end-to-end financial Q and A implementation before turning to advanced RAG patterns as well as evaluation protocols for regulated financial use cases.
+
+> Reader note: Code and compliance scope The code listings in this chapter are intentionally illustrative. They show implementable skeletons and scoring ideas, but they omit many production controls: identity and access management, secrets management, tenant isolation, personally identifiable information (PII) redaction, audit logging, human approval workflows, model-risk review, and jurisdiction-specific legal checks. In regulated financial settings, a RAG answer should be treated as decision support unless it has passed the institution’s suitability, disclosure, compliance, and supervisory-approval process.

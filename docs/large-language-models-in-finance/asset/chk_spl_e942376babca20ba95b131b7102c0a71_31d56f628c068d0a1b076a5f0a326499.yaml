@@ -1,0 +1,122 @@
+reviews:
+- 'no': 14753
+  overturn_probability: 1.0
+  alternative: 索引条目（主条目）
+  counter_evidence:
+  - 行首带“  - ”并以无页码或跟页码形式出现，符合图书索引格式，而非章标题规范；
+  - 前后连续多行均为相同结构的索引条目，缺乏章标题后应出现的正文概述段落或子节；
+  - advanced reasoning
+  - 为具体技术术语，不具备统领整章内容的概括性语义。
+  keep_split: false
+- 'no': 14836
+  overturn_probability: 1.0
+  alternative: 索引条目（主条目）
+  counter_evidence:
+  - 以“- architecture”形式出现，属于索引按字母顺序排列的主条目；
+  - 无章号编号（无“第 X 章”或“X.”），且长度极短、无统领性语义；
+  - 下方紧跟缩进子项（control envelope 等），这是索引的典型子条目结构，非章节正文。
+  keep_split: false
+- 'no': 15201
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目）
+  counter_evidence:
+  - 行首带“- ”且后跟页码“455”，明显是索引条目格式；
+  - 上下文全为中英文混排的索引列表，不存在章标题应有的前后正文段落；
+  - “数学基础”仅为具体概念术语，不足以作为统领后续大章的标题。
+  keep_split: false
+- 'no': 15207
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目）
+  counter_evidence:
+  - 格式为“- 金融 LLM 系统, 2”，带页码且前有连字符，属于索引条目；
+  - 不符合章标题编号特征（无“第 X 章”或最高层级“X.”）；
+  - 语义为具体系统名称，而非具备概括性的章节主题。
+  keep_split: false
+- 'no': 15214
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目，无页码）
+  counter_evidence:
+  - 虽无页码，但前有“- ”且与上下文所有索引条目排版一致；
+  - “金融 LLM 未来”为模糊泛指，缺乏章标题所需的统领性与独立成章语义；
+  - 下方缩进子项（新兴趋势、金融相似性等）是索引的子条目结构，非子节。
+  keep_split: false
+- 'no': 15257
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目）
+  counter_evidence:
+  - 行首“- 金融分词”无页码，但延续了索引条目的排版模式；
+  - 上下文均为术语+页码或术语+子项，不存在章标题前后应出现的正文段落；
+  - “金融分词”是具体技术点，属于索引收录项，而非章标题。
+  keep_split: false
+- 'no': 15339
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目，无页码）
+  counter_evidence:
+  - “未来研究方向”虽像标题，但前有“- ”且位于索引片段中，更可能是索引主条目；
+  - 无章号，且上下文全是书名、术语及页码的索引格式；
+  - 缺乏章标题后应有的正文概述段落与子节结构。
+  keep_split: false
+- 'no': 15506
+  overturn_probability: 1.0
+  alternative: 索引条目（英文主条目，无页码）
+  counter_evidence:
+  - 以“- LLM 部署”形式出现，属于索引主条目；
+  - 前后均为索引条目，无正文段落支撑其为章节起点；
+  - 语义为具体主题，非最高层级章标题。
+  keep_split: false
+- 'no': 15592
+  overturn_probability: 1.0
+  alternative: 索引条目（英文主条目，无页码）
+  counter_evidence:
+  - “- MCP 辅助系统”符合索引条目格式，下方有缩进子项（局限性、开放问题）；
+  - 缩进子项是索引的子条目特征，非章节下的子节；
+  - 无最高层级编号，且语义为具体系统组件。
+  keep_split: false
+- 'no': 15600
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目，无页码）
+  counter_evidence:
+  - “- 方法”过于泛短，且前有连字符，符合索引主条目形式；
+  - 上下文均为术语索引，不存在章标题应有的独立正文块；
+  - 无法作为统领后续内容的章标题语义。
+  keep_split: false
+- 'no': 15825
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目，无页码）
+  counter_evidence:
+  - “- 监管”前带“- ”，与前后巴塞尔 III、GDPR 等索引条目格式一致；
+  - 属于按字母/拼音排序的索引收录项，非章节标题；
+  - 缺少章标题后应出现的概述段落和子节引导。
+  keep_split: false
+- 'no': 15858
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目，无页码）
+  counter_evidence:
+  - “- 风险”过于简略，且与前后风险评估、风险报告等条目同属索引列表；
+  - 无章号，语义为具体风险概念，不具备章统领性；
+  - 排版为索引格式，非独立成章标题。
+  keep_split: false
+- 'no': 15203
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目）
+  counter_evidence:
+  - “- 参考包结构, 454”带页码且前有连字符，属索引条目；
+  - 上下文均为书名、术语与页码的索引格式，无正文段落；
+  - 语义为具体文档结构，非章标题。
+  keep_split: false
+- 'no': 15205
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目）
+  counter_evidence:
+  - “- 自注意力机制, 455”格式为索引条目，带页码；
+  - 属于模型架构相关术语的索引收录项，非章节主题；
+  - 无最高层级编号，且不具备统领全章的语义。
+  keep_split: false
+- 'no': 15208
+  overturn_probability: 1.0
+  alternative: 索引条目（中文主条目）
+  counter_evidence:
+  - “- 金融 LLM 案例研究, 122”带页码且下方有缩进子项（BloombergGPT 等），是典型索引主条目；
+  - 缩进子项是索引的子条目，而非章下的子节；
+  - 语义为具体案例研究，不具备章标题概括性。
+  keep_split: false

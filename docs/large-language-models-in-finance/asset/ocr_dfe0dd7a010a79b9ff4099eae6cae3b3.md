@@ -1,0 +1,17 @@
++   • **Code:** the pipeline should expose document ingestion, temporal filtering, retrieval, generation, numerical checks, and audit logging as separate modules rather than as one opaque prompt.
+
++   • **Controls:** unsupported claims, stale documents, missing citations, restricted-list conflicts, and material investment recommendations trigger rejection or human review.
+
+This pattern will recur throughout the book. Whenever a theorem is stated, read it as a contract: the assumptions describe what the implementation and governance process must enforce. Whenever code is shown, read it as a map from abstract objects to operational artifacts. Whenever a case study is discussed, ask which of the four layers would fail first under stress: motivation, mathematics, code, or controls.
+
+# ## 1.3 Understanding language models
+
+Language models are fundamental tools in modern natural language processing (NLP). They estimate the probability distribution over sequences of words and are used in a plethora of applications such as translation, summarization, and question answering. At their core, most language models answer a deceptively simple question: given a sequence of words, what word is most likely to come next? This seemingly straightforward task underlies everything from autocomplete suggestions to sophisticated financial report generation.
+
+The journey of language models began with simple counting methods. Early statistical models would literally count how often words appeared together in training texts. For instance, if "interest" was followed by "rate" 80% of the time in financial documents, the model would predict "rate" as the likely next word after "interest." While crude, these models established the fundamental principle that language follows predictable patterns that can be learned from data.
+
+However, financial language presents unique challenges that have pushed the evolution of these models. Financial texts contain specialized terminology, complex numerical relationships, and contextual nuances that simple statistical models struggle to capture. A phrase like "the Fed raised rates" has implications that cascade through various financial instruments, market sectors, and economic indicators, which are connections that require deep understanding rather than simple pattern matching.
+
+Modern language models represent language using learned high-dimensional embeddings. Instead of handling words as discrete units with predefined rules, they encode patterns of co-occurrence and context in continuous vector spaces. In these spaces, semantic and syntactic relationships arise from the statistical structure of the training data. A word like "default" might have different representations depending on whether it appears in a software context or a credit risk discussion, a distinction crucial for financial applications.
+
+The evolution from simple statistical models to sophisticated neural architectures directly informs how modern financial AI systems process complex documents, extract insights from earnings calls, and generate market commentary. Today's LLMs can understand that a sentence like "the company's leverage ratio improved despite challenging market conditions," implies positive news about creditworthiness, even though the sentence contains the negative

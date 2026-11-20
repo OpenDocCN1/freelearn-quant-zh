@@ -1,0 +1,15 @@
+metrics, risk flags, unresolved questions, and an audit log. Requiring this structure changes agent behavior: agents are less likely to hide uncertainty because the output format gives uncertainty a defined place to appear.
+
++   3. **What are the permissions?** In a conservative pilot, early versions should be read-only. The workstation may retrieve documents, query market data, and check portfolio constraints, but it should not submit trades, modify official records, or send communications outside the firm. If later versions add write actions, those actions should be isolated behind separate tools, stronger approvals, and more stringent logging.
+
++   4. **Where are the review gates?** A conservative design attaches human review to the workflow, rather than adding it as an afterthought. The workstation should have at least three review gates: evidence review by an analyst, investment-thesis review by a portfolio manager, and risk or compliance review for flagged outputs. The system should record who reviewed what, what changes were made, and which version of the memo was approved.
+
++   5. **How will success be measured?** A useful pilot can measure more than user satisfaction. It should track citation coverage, numerical accuracy, stale-data detection, frequency of escalations, review turnaround time, and the number of unsupported claims caught before approval. These metrics convert a subjective demo into an operationally measurable workflow.
+
+These proposed criteria prepare the ground for the guided build below. The code sketch is not intended to be a production implementation; rather, it shows how to translate roles, tools, state, and review gates into an inspectable workflow that can later be implemented with a concrete agent framework.
+
+# 5.3.5 Guided build: Minimal multi-agent research workstation
+
+The following guided build turns the running workstation example into a minimal, end-to-end design. The code remains framework-neutral pseudocode, but it is structured enough that a reader could translate it into Python with an LLM API, a retrieval layer, and a few mocked data tools. A full implementation would be a natural candidate for a companion repository: the chapter can explain the architecture, while the repository can contain runnable notebooks, fixtures, tests, and examples of tool schemas.
+
+The pseudocode intentionally omits several production concerns in order to keep the architecture readable. In a deployed system, the same workflow would need explicit versioning for prompts, models, tools, schemas, retrieval indexes, and policy rules; concurrency controls for parallel tool calls and simultaneous reviewers; error handling for timeouts, partial results, permission failures, and malformed outputs; source hashing for retrieved documents and data snapshots; and evidence linkage from each material memo claim back to the documents, metrics, and policy checks that support it. The code below therefore illustrates the control flow, not a complete production implementation.

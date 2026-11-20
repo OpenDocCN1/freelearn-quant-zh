@@ -1,0 +1,11 @@
+# ## 9.7 Summary
+
+This chapter introduced reinforcement learning (RL) as a framework for aligning LLM behavior with feedback, preferences, and longer-term objectives. It explained how RL differs from supervised learning by optimizing model behavior through reward signals rather than only learning from fixed input-output examples.
+
+The chapter covered the basic RL formulation for language models, including states, actions, policies, rewards, and trajectories. It then discussed reward modeling and human feedback collection, showing how preference data can be used to train models toward more useful, accurate, compliant, and risk-aware outputs.
+
+We also examined modern alignment methods such as PPO, GRPO, and DPO. PPO uses clipped policy updates to improve stability, GRPO compares groups of responses to estimate relative advantages, and DPO optimizes directly from preferred and rejected responses without requiring a separate reward model.
+
+The financial examples showed how RL concepts can be applied to trading research, risk management, hedging, and portfolio optimization. These examples should be understood as conceptual decision-support architectures rather than production-ready systems. In real financial settings, such systems require extensive validation, backtesting, stress testing, risk controls, compliance review, and human oversight.
+
+Finally, the chapter discussed advanced techniques and future directions, including hierarchical RL, multi-agent RL, offline RL, and constitutional AI. These approaches may help make financial LLM systems more adaptive and better governed, but they also introduce challenges around reward design, distribution shift, non-stationarity, interpretability, safety, and regulatory accountability [Daníelsson et al., 2022]. The practical conclusion is that alignment objectives and code-level safeguards must be evaluated together: neither a sophisticated loss function nor a fluent model substitutes for independent validation, deterministic controls, and accountable human oversight.

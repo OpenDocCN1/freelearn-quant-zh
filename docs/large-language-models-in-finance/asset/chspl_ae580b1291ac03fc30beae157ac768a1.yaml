@@ -1,0 +1,13 @@
+chapter_starts:
+- 'no': 6277
+  confidence: 0.9
+  reason: 一级标题，无显式章序号，但后续紧跟6.x子节，语义上构成第6章开头
+- 'no': 6866
+  confidence: 0.95
+  reason: 明确章号'7'，一级标题，后续为7.x子节
+- 'no': 7636
+  confidence: 0.95
+  reason: 明确章号'8'，一级标题，后续为8.x子节
+- 'no': 8217
+  confidence: 0.95
+  reason: 明确章号'9'，一级标题，后续为9.x子节
